@@ -1,0 +1,19 @@
+{
+  "specStatus": "unofficial",
+  "shortName": "vc-api-issuer-test-suite",
+  "subtitle": "Test Interoperability Report for Verifiable Credentials API Issuer",
+  "github": "https://github.com/w3c-ccg/vc-api-issuer-test-suite",
+  "edDraftURI": "https://w3c-ccg.github.io/vc-api/#issue-credential",
+  "doJsonLd": true,
+  "includePermalinks": false,
+  "editors": [
+    { "name": "Andrew Jones", "url": "https://github.com/aljones15",
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" }
+  ],
+  "authors": [
+    { "name": "Andrew Jones", "url": "https://github.com/aljones15",
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" },
+    { "name": "Manu Sporny", "url": "http://manu.sporny.org/",
+      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" }
+    ]
+}
