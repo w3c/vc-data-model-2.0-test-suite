@@ -21,6 +21,16 @@ export const createRequestBody = ({issuer, vc = validVc}) => {
   };
 };
 
+export const createVerifyRequestBody = ({vc}) => {
+  const body = {
+    verifiableCredential: vc,
+    options: {
+      checks: ['proof'],
+    }
+  };
+  return body;
+}
+
 /**
  * Creates an ISO TimeStamp seconds precision.
  *

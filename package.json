@@ -1,7 +1,7 @@
 {
-  "name": "vc-api-issuer-test-suite",
+  "name": "vcdm2-test-suite",
   "version": "0.1.0",
-  "description": "Test Suite for checking issuers.",
+  "description": "Test Suite for checking Verifiable Credentials Data Model 2.0 compliance.",
   "main": "index.js",
   "directories": {
     "test": "tests"
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/w3c-ccg/vc-api-issuer-test-suite.git"
+    "url": "git+https://github.com/w3c-ccg/vcdm2-test-suite.git"
   },
   "keywords": [
     "test",
@@ -29,9 +29,9 @@
     "node": ">=16.0.0"
   },
   "bugs": {
-    "url": "https://github.com/w3c-ccg/vc-api-issuer-test-suite/issues"
+    "url": "https://github.com/w3c-ccg/vcdm2-test-suite/issues"
   },
-  "homepage": "https://github.com/w3c-ccg/vc-api-issuer-test-suite#readme",
+  "homepage": "https://github.com/w3c-ccg/vcdm2-test-suite#readme",
   "dependencies": {
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.3.0",
     "chai": "^4.3.6",
