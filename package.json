@@ -25,6 +25,7 @@
     "email": "support@digitalbazaar.com",
     "url": "https://digitalbazaar.com/"
   },
+  "license": "(BSD-3-Clause OR LicenseRef-scancode-w3c-test-suite)",
   "engines": {
     "node": ">=16.0.0"
   },
