@@ -87,7 +87,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         req.on('error', reject);
         req.end(postData);
       });
-      return await receiveJson(res);
+      const result = await receiveJson(res);
+      if(res.statusCode >= 400) {
+        throw new Error(result);
+      }
+      if(res.statusCode >= 300) {
+        throw new Error('Redirect not supported');
+      }
+      return result;
     }
 
     async function issue(credential) {

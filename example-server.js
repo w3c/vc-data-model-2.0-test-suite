@@ -57,11 +57,12 @@ async function handleReq(req, res) {
       return await handleVerifyVp(req, res);
     }
     res.statusCode = 404;
-    res.end('Not Found');
+    return serveJson(res, 'Not Found');
   } catch(e) {
-    console.error(req.url, e);
-    res.statusCode = 500;
-    res.end(e.message);
+    if(res.statusCode === 200) {
+      res.statusCode = 500;
+    }
+    serveJson(res, e.message || e);
   }
 }
 
@@ -80,30 +81,30 @@ function concatProof(existingProof, newProof) {
   return [existingProof, newProof];
 }
 
+function validateContext(context) {
+  if(!Array.isArray(context) || context[0] !== baseContext) {
+    throw 'Expected @context ordered set with v2 base context';
+  }
+}
+
 async function handleIssue(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
-    return res.end('Expected POST');
+    throw 'Expected POST';
   }
   const obj = await receiveJson(req);
   const {credential} = obj;
+  res.statusCode = 400;
   if(!credential) {
-    res.statusCode = 400;
-    return res.end('Expected credential property');
+    throw 'Expected credential property';
   }
   if(!Array.isArray(credential.type)) {
-    res.statusCode = 400;
-    return res.end('Expected credential type array');
+    throw 'Expected credential type array';
   }
   if(credential.type[0] !== 'VerifiableCredential') {
-    res.statusCode = 400;
-    return res.end('Expected credential type VerifiableCredential');
+    throw 'Expected credential type VerifiableCredential';
   }
-  const context = credential['@context'];
-  if(!Array.isArray(context) || context[0] !== baseContext) {
-    res.statusCode = 400;
-    return res.end('Expected @context ordered set with v2 base context');
-  }
+  validateContext(credential['@context']);
   let vc = {};
   for(const key in credential) {
     if(key === 'proof') {
@@ -114,13 +115,14 @@ async function handleIssue(req, res) {
   vc.proof = concatProof(credential.proof, {
     type: 'https://example.org/#ExampleTestSuiteProof'
   });
+  res.statusCode = 200;
   serveJson(res, vc);
 }
 
 async function handleVerify(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
-    return res.end('Expected POST');
+    throw 'Expected POST';
   }
   let checks = [];
   let warnings = [];
@@ -137,10 +139,7 @@ async function handleVerify(req, res) {
     if(vc.type[0] !== 'VerifiableCredential') {
       throw 'Expected type VerifiableCredential';
     }
-    const context = vc['@context'];
-    if(!context) {
-      throw 'Expected verifiableCredential @context property';
-    }
+    validateContext(vc['@context']);
   } catch(e) {
     errors.push(e);
   }
@@ -156,23 +155,15 @@ async function handleVerify(req, res) {
 async function handleProve(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
-    return res.end('Expected POST');
+    throw 'Expected POST';
   }
   const obj = await receiveJson(req);
   const {presentation} = obj;
+  res.statusCode = 400;
   if(!presentation) {
-    res.statusCode = 400;
-    return res.end('Expected presentation property');
+    throw 'Expected presentation property';
   }
-  const context = presentation['@context'];
-  if(!context) {
-    res.statusCode = 400;
-    return res.end('Expected presentation @context property');
-  }
-  if(!Array.isArray(context) || context[0] !== baseContext) {
-    res.statusCode = 400;
-    return res.end('Expected @context ordered set with v2 base context');
-  }
+  validateContext(presentation['@context']);
   let vp = {};
   for(const key in presentation) {
     if(key === 'proof') {
@@ -183,13 +174,14 @@ async function handleProve(req, res) {
   vp.proof = concatProof(presentation.proof, {
     type: 'https://example.org/#ExampleTestSuiteProof'
   });
+  res.statusCode = 200;
   serveJson(res, vp);
 }
 
 async function handleVerifyVp(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
-    return res.end('Expected POST');
+    throw 'Expected POST';
   }
   let checks = [];
   let warnings = [];
@@ -200,11 +192,7 @@ async function handleVerifyVp(req, res) {
     if(!vp) {
       throw 'Expected verifiablePresentation property';
     }
-    const context = vp['@context'];
-    if(!context) {
-      throw 'Expected verifiablePresentation @context property';
-    }
-    // const proofs = Array.isArray(vp.proof) ? vp.proof : [vp.proof];
+    validateContext(vp['@context']);
   } catch(e) {
     errors.push(e);
   }
