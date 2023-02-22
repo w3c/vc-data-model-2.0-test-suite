@@ -234,6 +234,9 @@ async function handleProve(req, res) {
   if(!presentation) {
     throw 'Expected presentation property';
   }
+  if(!Array.isArray(presentation.type)) {
+    throw 'Expected presentation type array';
+  }
   validateContext(presentation['@context']);
   validateId(presentation.id);
   let vp = {};
