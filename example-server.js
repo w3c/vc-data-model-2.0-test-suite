@@ -1,5 +1,7 @@
 import {createServer} from 'http'
-import {Implementation} from 'vc-api-test-suite-implementations/lib/Implementation.js';
+import {
+  Implementation
+} from 'vc-api-test-suite-implementations/lib/Implementation.js';
 import receiveJson from './tests/receive-json.js';
 const baseContext = 'https://www.w3.org/ns/credentials/v2';
 
@@ -42,16 +44,16 @@ export default async function doServer() {
 
 async function handleReq(req, res) {
   try {
-    if (req.url === '/credentials/issue') {
+    if(req.url === '/credentials/issue') {
       return await handleIssue(req, res);
     }
-    if (req.url === '/credentials/verify') {
+    if(req.url === '/credentials/verify') {
       return await handleVerify(req, res);
     }
-    if (req.url === '/presentations/prove') {
+    if(req.url === '/presentations/prove') {
       return await handleProve(req, res);
     }
-    if (req.url === '/presentations/verify') {
+    if(req.url === '/presentations/verify') {
       return await handleVerifyVp(req, res);
     }
     res.statusCode = 404;
@@ -69,42 +71,42 @@ function serveJson(res, obj) {
 }
 
 function concatProof(existingProof, newProof) {
-  if (!existingProof) {
+  if(!existingProof) {
     return newProof;
-  } else if (!Array.isArray(existingProof)) {
-    return [existingProof, newProof];
-  } else {
+  }
+  if(Array.isArray(existingProof)) {
     return existingProof.concat(newProof);
   }
+  return [existingProof, newProof];
 }
 
 async function handleIssue(req, res) {
-  if (req.method !== 'POST') {
+  if(req.method !== 'POST') {
     res.statusCode = 405;
     return res.end('Expected POST');
   }
   const obj = await receiveJson(req);
   const {credential} = obj;
-  if (!credential) {
+  if(!credential) {
     res.statusCode = 400;
     return res.end('Expected credential property');
   }
-  if (!Array.isArray(credential.type)) {
+  if(!Array.isArray(credential.type)) {
     res.statusCode = 400;
     return res.end('Expected credential type array');
   }
-  if (credential.type[0] !== 'VerifiableCredential') {
+  if(credential.type[0] !== 'VerifiableCredential') {
     res.statusCode = 400;
     return res.end('Expected credential type VerifiableCredential');
   }
   const context = credential['@context'];
-  if (!Array.isArray(context) || context[0] !== baseContext) {
+  if(!Array.isArray(context) || context[0] !== baseContext) {
     res.statusCode = 400;
     return res.end('Expected @context ordered set with v2 base context');
   }
   let vc = {};
-  for (const key in credential) {
-    if (key === 'proof') {
+  for(const key in credential) {
+    if(key === 'proof') {
       continue;
     }
     vc[key] = credential[key];
@@ -116,7 +118,7 @@ async function handleIssue(req, res) {
 }
 
 async function handleVerify(req, res) {
-  if (req.method !== 'POST') {
+  if(req.method !== 'POST') {
     res.statusCode = 405;
     return res.end('Expected POST');
   }
@@ -126,17 +128,17 @@ async function handleVerify(req, res) {
   const obj = await receiveJson(req);
   const {verifiableCredential: vc} = obj;
   try {
-    if (!vc) {
+    if(!vc) {
       throw 'Expected verifiableCredential property';
     }
-    if (!Array.isArray(vc.type)) {
+    if(!Array.isArray(vc.type)) {
       throw 'Expected verifiableCredential type array';
     }
-    if (vc.type[0] !== 'VerifiableCredential') {
+    if(vc.type[0] !== 'VerifiableCredential') {
       throw 'Expected type VerifiableCredential';
     }
     const context = vc['@context'];
-    if (!context) {
+    if(!context) {
       throw 'Expected verifiableCredential @context property';
     }
   } catch(e) {
@@ -152,28 +154,28 @@ async function handleVerify(req, res) {
 }
 
 async function handleProve(req, res) {
-  if (req.method !== 'POST') {
+  if(req.method !== 'POST') {
     res.statusCode = 405;
     return res.end('Expected POST');
   }
   const obj = await receiveJson(req);
   const {presentation} = obj;
-  if (!presentation) {
+  if(!presentation) {
     res.statusCode = 400;
     return res.end('Expected presentation property');
   }
   const context = presentation['@context'];
-  if (!context) {
+  if(!context) {
     res.statusCode = 400;
     return res.end('Expected presentation @context property');
   }
-  if (!Array.isArray(context) || context[0] !== baseContext) {
+  if(!Array.isArray(context) || context[0] !== baseContext) {
     res.statusCode = 400;
     return res.end('Expected @context ordered set with v2 base context');
   }
   let vp = {};
-  for (const key in presentation) {
-    if (key === 'proof') {
+  for(const key in presentation) {
+    if(key === 'proof') {
       continue;
     }
     vp[key] = presentation[key];
@@ -185,7 +187,7 @@ async function handleProve(req, res) {
 }
 
 async function handleVerifyVp(req, res) {
-  if (req.method !== 'POST') {
+  if(req.method !== 'POST') {
     res.statusCode = 405;
     return res.end('Expected POST');
   }
@@ -195,11 +197,11 @@ async function handleVerifyVp(req, res) {
   const obj = await receiveJson(req);
   const {verifiablePresentation: vp} = obj;
   try {
-    if (!vp) {
+    if(!vp) {
       throw 'Expected verifiablePresentation property';
     }
     const context = vp['@context'];
-    if (!context) {
+    if(!context) {
       throw 'Expected verifiablePresentation @context property';
     }
     // const proofs = Array.isArray(vp.proof) ? vp.proof : [vp.proof];

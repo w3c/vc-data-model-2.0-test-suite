@@ -14,7 +14,7 @@ import {
 import chai from 'chai';
 import assert from 'node:assert/strict';
 import {filterByTag} from 'vc-api-test-suite-implementations';
-import { createRequire } from 'module';
+import {createRequire} from 'module';
 const require = createRequire(import.meta.url);
 import http from 'http';
 import receiveJson from './receive-json.js';
@@ -66,10 +66,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
 
     async function post(endpoint, object) {
       const url = endpoint.settings.endpoint;
-      if (url.startsWith('https:')) {
+      if(url.startsWith('https:')) {
         // Use vc-api-test-suite-implementations for HTTPS requests.
         const {data, error} = await endpoint.post({json: object});
-        if (error) {
+        if(error) {
           throw error;
         }
         return data;
@@ -98,7 +98,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     async function verify(vc) {
       const verifyBody = createVerifyRequestBody({vc});
       const result = await post(verifier, verifyBody);
-      if (result.errors.length) {
+      if(result.errors.length) {
         throw result.errors[0];
       }
       return data;
@@ -119,7 +119,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         }
       };
       const result = await post(vpVerifier, body);
-      if (result.errors.length) {
+      if(result.errors.length) {
         throw result.errors[0];
       }
       return result;
@@ -128,12 +128,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     let vc;
     let vp;
     before(async function() {
-        const credential = require('./input/1-credential-ok.json');
-        // The full verifiableCredential property IRI is used in the VP to work
-        // around a FIXME in vc-api-test-suite-implementations/lib/requests.js
-        const presentation = require('./input/2-presentation-ok.json');
-        vc = await issue(credential);
-        vp = await prove(presentation);
+      const credential = require('./input/1-credential-ok.json');
+      // The full verifiableCredential property IRI is used in the VP to work
+      // around a FIXME in vc-api-test-suite-implementations/lib/requests.js
+      const presentation = require('./input/2-presentation-ok.json');
+      vc = await issue(credential);
+      vp = await prove(presentation);
     });
 
     describe(name, function() {
