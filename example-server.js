@@ -5,12 +5,14 @@ const baseContext = 'https://www.w3.org/ns/credentials/v2';
 
 export default async function doServer() {
   const {url, server} = await new Promise((resolve, reject) => {
-    createServer(handleReq).listen(0, '127.0.0.1', function () {
-      const {family, address, port} = this.address();
-      const host = family === 'IPv6' ? '[' + address + ']' : address;
-      const url = 'http://' + host + ':' + port;
+    createServer(handleReq)
+      .on('error', reject)
+      .listen(0, '127.0.0.1', onListening);
+    function onListening() {
+      const {address, port} = this.address();
+      const url = 'http://' + address + ':' + port;
       resolve({url, server: this});
-    }).on('error', reject);
+    }
   });
   const name = 'example';
   const implementation = new Implementation({
