@@ -187,7 +187,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/11-credential-context-combo5-fail.json')));
       });
-      it.skip('"All libraries or processors MUST ensure that the order of the values in the @context property is what is expected for the specific application."', async function() {
+      it2('"All libraries or processors MUST ensure that the order of the values in the @context property is what is expected for the specific application."', async function() {
+        await issue(require('./input/12-credential-context-order1-ok.json'));
+        await assert.rejects(
+          issue(require('./input/13-credential-context-order2-fail.json')));
       });
       it.skip('"The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier."', async function() {
       });

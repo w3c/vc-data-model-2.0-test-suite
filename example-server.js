@@ -110,6 +110,9 @@ function validateContextValue(value) {
   }
 }
 
+const orderSensitiveContext1 = "https://example.org/specific-application/pre";
+const orderSensitiveContext2 = "https://example.org/specific-application/post";
+
 function validateContext(context) {
   if(!Array.isArray(context) || context[0] !== baseContext) {
     throw 'Expected @context ordered set with v2 base context';
@@ -118,6 +121,16 @@ function validateContext(context) {
     context.slice(1).forEach(validateContextValue);
   } catch(e) {
     throw 'Expected context items to be URLs or context objects: ' + e;
+  }
+  // Specific application requiring order of values
+  const preI = context.indexOf(orderSensitiveContext1);
+  if(preI !== -1) {
+    const postI = context.indexOf(orderSensitiveContext2);
+    if(postI !== -1) {
+      if(postI < preI) {
+        throw 'Expected application-specific order of context values';
+      }
+    }
   }
 }
 
