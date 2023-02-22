@@ -1,7 +1,11 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import {createISOTimeStamp, createRequestBody, createVerifyRequestBody} from './mock.data.js';
+import {
+  createISOTimeStamp,
+  createRequestBody,
+  createVerifyRequestBody
+} from './mock.data.js';
 import {
   shouldBeIssuedVc,
   shouldReturnResult,
@@ -10,10 +14,11 @@ import {
 import chai from 'chai';
 import assert from 'node:assert/strict';
 import {filterByTag} from 'vc-api-test-suite-implementations';
-import { createRequire } from "module";
+import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 import http from 'http';
 import receiveJson from './receive-json.js';
+const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
 const should = chai.should();
 const vcApiTag = 'vcdm2';
@@ -64,7 +69,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       if (url.startsWith('https:')) {
         // Use vc-api-test-suite-implementations for HTTPS requests.
         const {data, error} = await endpoint.post({json: object});
-        if (error) throw error;
+        if (error) {
+          throw error;
+        }
         return data;
       }
       const postData = Buffer.from(JSON.stringify(object));
@@ -91,7 +98,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     async function verify(vc) {
       const verifyBody = createVerifyRequestBody({vc});
       const result = await post(verifier, verifyBody);
-      if (result.errors.length) throw result.errors[0];
+      if (result.errors.length) {
+        throw result.errors[0];
+      }
       return data;
     }
 
@@ -110,15 +119,18 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         }
       };
       const result = await post(vpVerifier, body);
-      if (result.errors.length) throw result.errors[0];
+      if (result.errors.length) {
+        throw result.errors[0];
+      }
       return result;
     }
 
-    let vc, vp;
+    let vc;
+    let vp;
     before(async function() {
         const credential = require('./input/1-credential-ok.json');
-        // The full verifiableCredential property IRI is used in the VP
-        // to work around a FIXME in vc-api-test-suite-implementations/lib/requests.js
+        // The full verifiableCredential property IRI is used in the VP to work
+        // around a FIXME in vc-api-test-suite-implementations/lib/requests.js
         const presentation = require('./input/2-presentation-ok.json');
         vc = await issue(credential);
         vp = await prove(presentation);
@@ -132,7 +144,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it2('"Conforming processors MUST produce errors when nonconforming documents are consumed."', async function() {
         const doc = {
-          "type": ["NonconformingDocument"]
+          'type': ['NonconformingDocument']
         };
         await assert.rejects(issue(doc));
         await assert.rejects(verify(doc));
@@ -142,18 +154,22 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       it2('"Verifiable credentials and verifiable presentations MUST include a @context property."', async function() {
         vc.should.have.property('@context');
         vp.should.have.property('@context');
-        await assert.rejects(issue(require('./input/3-credential-no-context-fail.json')));
-        await assert.rejects(prove(require('./input/4-presentation-no-context-fail.json')));
+        await assert.rejects(issue(
+          require('./input/3-credential-no-context-fail.json')));
+        await assert.rejects(prove(
+          require('./input/4-presentation-no-context-fail.json')));
       });
       it2('Verifiable credentials and verifiable presentations: "The value of the @context property MUST be an ordered set where the first item is a URL with the value https://www.w3.org/ns/credentials/v2."', async function() {
         assert(Array.isArray(vc['@context']));
-        assert.strictEqual(vc['@context'][0], 'https://www.w3.org/ns/credentials/v2');
+        assert.strictEqual(vc['@context'][0], baseContextUrl);
 
         assert(Array.isArray(vp['@context']));
-        assert.strictEqual(vp['@context'][0], 'https://www.w3.org/ns/credentials/v2');
+        assert.strictEqual(vp['@context'][0], baseContextUrl);
 
-        await assert.rejects(issue(require('./input/5-credential-missing-base-context-fail.json')));
-        await assert.rejects(prove(require('./input/6-presentation-missing-base-context-fail.json')));
+        await assert.rejects(issue(
+          require('./input/5-credential-missing-base-context-fail.json')));
+        await assert.rejects(prove(
+          require('./input/6-presentation-missing-base-context-fail.json')));
       });
       it.skip('@context: "Subsequent items in the array MUST express context information and be composed of any combination of URLs or objects."', async function() {
       });
