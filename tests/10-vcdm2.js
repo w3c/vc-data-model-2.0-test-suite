@@ -12,6 +12,8 @@ import assert from 'node:assert/strict';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
+import http from 'http';
+import receiveJson from './receive-json.js';
 
 const should = chai.should();
 const vcApiTag = 'vcdm2';
@@ -57,28 +59,47 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
     }
 
+    async function post(endpoint, object) {
+      const url = endpoint.settings.endpoint;
+      if (url.startsWith('https:')) {
+        // Use vc-api-test-suite-implementations for HTTPS requests.
+        const {data, error} = await endpoint.post({json: object});
+        if (error) throw error;
+        return data;
+      }
+      const postData = Buffer.from(JSON.stringify(object));
+      const res = await new Promise((resolve, reject) => {
+        const req = http.request(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': postData.length,
+            'Accept': 'application/json'
+          }
+        }, resolve);
+        req.on('error', reject);
+        req.end(postData);
+      });
+      return await receiveJson(res);
+    }
+
     async function issue(credential) {
       const issueBody = createRequestBody({issuer, vc: credential});
-      const {data: issuedVc, error} = await issuer.post({json: issueBody});
-      if (error) throw error;
-      return issuedVc;
+      return await post(issuer, issueBody);
     }
 
     async function verify(vc) {
       const verifyBody = createVerifyRequestBody({vc});
-      const {data, error} = await verifier.post({json: verifyBody});
-      if (error) throw error;
-      if (data.errors.length) throw data.errors[0];
+      const result = await post(verifier, verifyBody);
+      if (result.errors.length) throw result.errors[0];
       return data;
     }
 
     async function prove(presentation) {
-      const {data: vp, error} = await prover.post({json: {
+      return await post(prover, {
         presentation,
         options: {}
-      }});
-      if (error) throw error;
-      return vp;
+      });
     }
 
     async function verifyVp(vp) {
@@ -88,10 +109,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           checks: ['proof'],
         }
       };
-      const {data, error} = await vpVerifier.post({json: body});
-      if (error) throw error;
-      if (data.errors.length) throw data.errors[0];
-      return data;
+      const result = await post(vpVerifier, body);
+      if (result.errors.length) throw result.errors[0];
+      return result;
     }
 
     let vc, vp;

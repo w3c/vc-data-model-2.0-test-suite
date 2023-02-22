@@ -1,6 +1,6 @@
 import {createServer} from 'http'
-import {promisify} from 'util'
 import {Implementation} from 'vc-api-test-suite-implementations/lib/Implementation.js';
+import receiveJson from './tests/receive-json.js';
 const baseContext = 'https://www.w3.org/ns/credentials/v2';
 
 export default async function doServer() {
@@ -57,18 +57,6 @@ async function handleReq(req, res) {
     res.statusCode = 500;
     res.end(e.message);
   }
-}
-
-async function receiveJson(req) {
-  const buf = await new Promise((resolve, reject) => {
-    let bufs = [];
-    req.on('error', reject);
-    req.on('data', bufs.push.bind(bufs));
-    req.on('end', () => {
-      resolve(Buffer.concat(bufs));
-    });
-  });
-  return JSON.parse(buf);
 }
 
 function serveJson(res, obj) {
