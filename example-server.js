@@ -81,9 +81,43 @@ function concatProof(existingProof, newProof) {
   return [existingProof, newProof];
 }
 
+function validateUrl(value) {
+  if(value.startsWith('urn:')) {
+    throw 'URN is not a URL';
+  }
+  if(value.indexOf(':') === -1) {
+    throw 'Missing URL scheme';
+  }
+}
+
+function validateContextObject(object) {
+  if(!object["@protected"]) {
+    throw 'For testing purposes @protected is required for inline context';
+  }
+}
+
+function validateContextValue(value) {
+  switch(typeof value) {
+  case 'string':
+    return validateUrl(value);
+  case 'object':
+    if(value === null) {
+      throw 'unexpected null';
+    }
+    return validateContextObject(value);
+  default:
+    throw 'unexpected ' + typeof value;
+  }
+}
+
 function validateContext(context) {
   if(!Array.isArray(context) || context[0] !== baseContext) {
     throw 'Expected @context ordered set with v2 base context';
+  }
+  try {
+    context.slice(1).forEach(validateContextValue);
+  } catch(e) {
+    throw 'Expected context items to be URLs or context objects: ' + e;
   }
 }
 

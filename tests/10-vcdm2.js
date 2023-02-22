@@ -178,7 +178,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(prove(
           require('./input/6-presentation-missing-base-context-fail.json')));
       });
-      it.skip('@context: "Subsequent items in the array MUST express context information and be composed of any combination of URLs or objects."', async function() {
+      it2('@context: "Subsequent items in the array MUST express context information and be composed of any combination of URLs or objects."', async function() {
+        await issue(require('./input/7-credential-context-combo1-ok.json'));
+        await issue(require('./input/8-credential-context-combo2-ok.json'));
+        await issue(require('./input/9-credential-context-combo3-ok.json'));
+        await assert.rejects(
+          issue(require('./input/10-credential-context-combo4-fail.json')));
+        await assert.rejects(
+          issue(require('./input/11-credential-context-combo5-fail.json')));
       });
       it.skip('"All libraries or processors MUST ensure that the order of the values in the @context property is what is expected for the specific application."', async function() {
       });
