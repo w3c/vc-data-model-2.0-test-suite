@@ -192,13 +192,26 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/13-credential-context-order2-fail.json')));
       });
-      it.skip('"The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier."', async function() {
+      it2('if present: "The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier."', async function() {
+        await issue(require('./input/14-credential-id-other-ok.json'));
+        await assert.rejects(
+          issue(require('./input/15-credential-id-nonidentifier-fail.json')));
       });
-      it.skip('"The id property MUST NOT have more than one value."', async function() {
+      it2('if present: "The id property MUST NOT have more than one value."', async function() {
+        await issue(require('./input/16-credential-single-id-ok.json'));
+        await issue(require('./input/17-credential-subject-single-id-ok.json'));
+        await assert.rejects(
+          issue(require('./input/18-credential-multi-id-fail.json')));
+        await assert.rejects(
+          issue(require('./input/19-credential-subject-multi-id-fail.json')));
       });
-      it.skip('"The value of the id property MUST be a URL which MAY be dereferenced."', async function() {
+      it2('if present: "The value of the id property MUST be a URL which MAY be dereferenced."', async function() {
+        await assert.rejects(
+          issue(require('./input/20-credential-not-url-id-fail.json')));
       });
-      it.skip('"The value of the id property MUST be a single URL."', async function() {
+      it2('"The value of the id property MUST be a single URL."', async function() {
+        await assert.rejects(
+          issue(require('./input/21-credential-nonsingle-id-fail.json')));
       });
       it.skip('"Verifiable credentials and verifiable presentations MUST have a type property."', async function() {
       });

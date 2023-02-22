@@ -134,6 +134,20 @@ function validateContext(context) {
   }
 }
 
+function validateId(id) {
+  if(typeof id === 'undefined') {
+    return;
+  }
+  if(typeof id !== 'string') {
+    throw 'Expected single id value (URL)';
+  }
+  try {
+    Array.isArray(id) ? id.map(validateUrl) : validateUrl(id);
+  } catch(e) {
+    throw 'Invalid ID: ' + (e.message || e);
+  }
+}
+
 async function handleIssue(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
@@ -152,6 +166,11 @@ async function handleIssue(req, res) {
     throw 'Expected credential type VerifiableCredential';
   }
   validateContext(credential['@context']);
+  validateId(credential.id);
+  const {credentialSubject} = credential;
+  if(credentialSubject) {
+    validateId(credentialSubject.id);
+  }
   let vc = {};
   for(const key in credential) {
     if(key === 'proof') {
@@ -187,6 +206,11 @@ async function handleVerify(req, res) {
       throw 'Expected type VerifiableCredential';
     }
     validateContext(vc['@context']);
+    validateId(vc.id);
+    const {credentialSubject} = credential;
+    if(credentialSubject) {
+      validateId(credentialSubject.id);
+    }
   } catch(e) {
     errors.push(e);
   }
@@ -211,6 +235,7 @@ async function handleProve(req, res) {
     throw 'Expected presentation property';
   }
   validateContext(presentation['@context']);
+  validateId(presentation.id);
   let vp = {};
   for(const key in presentation) {
     if(key === 'proof') {
@@ -240,6 +265,7 @@ async function handleVerifyVp(req, res) {
       throw 'Expected verifiablePresentation property';
     }
     validateContext(vp['@context']);
+    validateId(vp.id);
   } catch(e) {
     errors.push(e);
   }
