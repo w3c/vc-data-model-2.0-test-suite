@@ -90,12 +90,6 @@ function validateUrl(value) {
   }
 }
 
-function validateContextObject(object) {
-  if(!object["@protected"]) {
-    throw 'For testing purposes @protected is required for inline context';
-  }
-}
-
 function validateContextValue(value) {
   switch(typeof value) {
   case 'string':
@@ -104,7 +98,7 @@ function validateContextValue(value) {
     if(value === null) {
       throw 'unexpected null';
     }
-    return validateContextObject(value);
+    return;
   default:
     throw 'unexpected ' + typeof value;
   }
@@ -156,11 +150,7 @@ function lookupInContexts(type, contexts) {
     if(thisValue === null) {
       continue;
     }
-    if(prot) {
-      throw new Error('Redefined when @protected used');
-    }
     value = thisValue;
-    prot = contexts['@protected'];
   }
   return value;
 }
