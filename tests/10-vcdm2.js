@@ -219,9 +219,19 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           prove(require('./input/23-presentation-no-type-fail.json')));
       });
-      it.skip('"The value of the type property MUST be, or map to (through interpretation of the @context property), one or more URLs."', async function() {
+      it2('"The value of the type property MUST be, or map to (through interpretation of the @context property), one or more URLs."', async function() {
+        // type is URL: OK
+        await issue(require('./input/24-credential-type-url-ok.json'));
+        // type mapping to URL: OK
+        await issue(require('./input/25-credential-type-mapped-url-ok.json'));
+        // type mapped not to URL: fail
+        await assert.rejects(
+          issue(require('./input/26-credential-type-mapped-nonurl-fail.json')));
+        // type not mapped: fail
+        await assert.rejects(
+          issue(require('./input/27-credential-type-unmapped-fail.json')));
       });
-      it.skip('type property: "If more than one URL is provided, the URLs MUST be interpreted as an unordered set. "', async function() {
+      it.skip('type property: "If more than one URL is provided, the URLs MUST be interpreted as an unordered set."', async function() {
       });
       it.skip('list: "objects that MUST have a type specified."', async function() {
       });

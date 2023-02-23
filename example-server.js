@@ -148,6 +148,36 @@ function validateId(id) {
   }
 }
 
+function lookupInContexts(type, contexts) {
+  let value = null;
+  let prot = false;
+  for(const context of contexts) {
+    const thisValue = context[type];
+    if(thisValue === null) {
+      continue;
+    }
+    if(prot) {
+      throw new Error('Redefined when @protected used');
+    }
+    value = thisValue;
+    prot = contexts['@protected'];
+  }
+  return value;
+}
+
+function validateTestTypes(types, contexts) {
+  for(const type of types) {
+    if(type === 'ExampleTestCredential') {
+      const typeUrl = lookupInContexts(type, contexts);
+      try {
+        validateUrl(typeUrl);
+      } catch(e) {
+        throw 'Expected URL mapped type ('+type+'):' + (e.message || e);
+      }
+    }
+  }
+}
+
 async function handleIssue(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
@@ -166,6 +196,7 @@ async function handleIssue(req, res) {
     throw 'Expected credential type VerifiableCredential';
   }
   validateContext(credential['@context']);
+  validateTestTypes(credential.type, credential['@context']);
   validateId(credential.id);
   const {credentialSubject} = credential;
   if(credentialSubject) {
