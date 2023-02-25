@@ -233,7 +233,37 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it.skip('type property: "If more than one URL is provided, the URLs MUST be interpreted as an unordered set."', async function() {
       });
-      it.skip('list: "objects that MUST have a type specified."', async function() {
+      it2('list: "objects that MUST have a type specified."', async function() {
+        // (Verifiable) credential requires type VerifiableCredential
+        // (Verifiable) presentation requires type VerifiablePresentation
+        // Additional (more specific) types for these are optional.
+        // Missing type property is tested separately.
+        await issue(require('./input/28-credential-optional-type-ok.json'));
+        await assert.rejects(
+          issue(require('./input/29-credential-missing-required-type-fail.json')));
+        await prove(require('./input/30-presentation-optional-type-ok.json'));
+        await assert.rejects(
+          prove(require('./input/31-presentation-missing-required-type-fail.json')));
+
+        // Other objects requiring type: proof, credentialStatus, termsOfUse,
+        // and evidence.
+        // Note: testing proof requires the issuer to allow the input
+        // credential to have an existing proof property.
+        await issue(require('./input/32-credential-proof-ok.json'));
+        await assert.rejects(
+          issue(require('./input/33-credential-proof-missing-type-fail.json')));
+
+        await issue(require('./input/34-credential-status-ok.json'));
+        await assert.rejects(
+          issue(require('./input/35-credential-status-missing-type-fail.json')));
+
+        await issue(require('./input/36-credential-termsofuse-ok.json'));
+        await assert.rejects(
+          issue(require('./input/37-credential-termsofuse-missing-type-fail.json')));
+
+        await issue(require('./input/38-credential-evidence-ok.json'));
+        await assert.rejects(
+          issue(require('./input/39-credential-evidence-missing-type-fail.json')));
       });
       it.skip('"All credentials, presentations, and encapsulated objects MUST specify, or be associated with, additional more narrow types (like UniversityDegreeCredential, for example) so software systems can process this additional information."', async function() {
       });

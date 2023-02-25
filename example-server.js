@@ -62,7 +62,8 @@ async function handleReq(req, res) {
     if(res.statusCode === 200) {
       res.statusCode = 500;
     }
-    serveJson(res, e.message || e);
+    // Note: stack includes filenames (paths)
+    serveJson(res, e.stack || e);
   }
 }
 
@@ -142,10 +143,33 @@ function validateId(id) {
   }
 }
 
+function validateProof(proof) {
+  if(Array.isArray(proof) && !proof.some(Array.isArray)) {
+    // Allow multiple proofs, but protect against recursion.
+    return proof.forEach(validateProof);
+  }
+}
+
+// Contexts and terms should be added here as needed for the tests.
+const storedContextMaps = {
+  "https://www.w3.org/ns/credentials/v2": {
+  },
+  "https://www.w3.org/ns/credentials/examples/v2": {
+    "RelationshipCredential": "https://example.org/examples#RelationshipCredential"
+  }
+};
+
 function lookupInContexts(type, contexts) {
   let value = null;
   let prot = false;
-  for(const context of contexts) {
+  for(let context of contexts) {
+    if(typeof context === 'string') {
+      const mappedContext = storedContextMaps[context];
+      if(!mappedContext) {
+        throw new Error('Unknown context: ' + context);
+      }
+      context = mappedContext;
+    }
     const thisValue = context[type];
     if(thisValue === null) {
       continue;
@@ -155,17 +179,52 @@ function lookupInContexts(type, contexts) {
   return value;
 }
 
-function validateTestTypes(types, contexts) {
-  for(const type of types) {
-    if(type === 'ExampleTestCredential') {
-      const typeUrl = lookupInContexts(type, contexts);
-      try {
-        validateUrl(typeUrl);
-      } catch(e) {
-        throw 'Expected URL mapped type ('+type+'):' + (e.message || e);
-      }
-    }
+function validateMapTypeURL(type, contexts) {
+  if(type.includes(':')) {
+    // Assume type is supposed to be a URL.
+    // Note that this doesn't correctly handle short prefixes (JSON-LD)
+    // such as "ex:" used in the examples context.
+    return validateUrl(type);
   }
+  const typeUrl = lookupInContexts(type, contexts);
+  if(!typeUrl) {
+    throw new Error('Unmapped type (' + type + ')');
+  }
+  try {
+    validateUrl(typeUrl);
+  } catch(e) {
+    throw 'Expected URL mapped type ('+type+'):' + (e.message || e);
+  }
+  return typeUrl;
+}
+
+function validateCredentialTypes(types, contexts) {
+  if(!Array.isArray(types)) {
+    throw 'Expected credential type array';
+  }
+  if(!types.includes('VerifiableCredential')) {
+    throw 'Expected credential type VerifiableCredential';
+  }
+  for(const type of types) {
+    if(type === 'VerifiableCredential') {
+      continue;
+    }
+    validateMapTypeURL(type, contexts);
+  }
+}
+
+function validateTypes(types, contexts) {
+  for(const type of types) {
+    validateMapTypeURL(type, contexts);
+  }
+  if(!types.length) {
+    throw new Error('Expected type');
+  }
+}
+
+function toArray(value) {
+  return Array.isArray(value) ? value :
+    typeof value === 'undefined' ? [] : [value];
 }
 
 async function handleIssue(req, res) {
@@ -179,18 +238,36 @@ async function handleIssue(req, res) {
   if(!credential) {
     throw 'Expected credential property';
   }
-  if(!Array.isArray(credential.type)) {
-    throw 'Expected credential type array';
-  }
-  if(credential.type[0] !== 'VerifiableCredential') {
-    throw 'Expected credential type VerifiableCredential';
-  }
-  validateContext(credential['@context']);
-  validateTestTypes(credential.type, credential['@context']);
+  const credentialContext = credential['@context'];
+  validateContext(credentialContext);
+  validateCredentialTypes(credential.type, credentialContext);
   validateId(credential.id);
-  const {credentialSubject} = credential;
+  const {
+    credentialSubject,
+    proof,
+    credentialStatus,
+    termsOfUse,
+    evidence
+  } = credential;
   if(credentialSubject) {
     validateId(credentialSubject.id);
+  }
+  if(proof) {
+    const proofContext = credentialContext.concat(proof['@context'] || []);
+    validateTypes(toArray(proof.type), proofContext);
+  }
+  if(credentialStatus) {
+    const statusContext = credentialContext.concat(
+      credentialStatus['@context'] || []);
+    validateTypes(toArray(credentialStatus.type), statusContext);
+  }
+  if(termsOfUse) {
+    const termsOfUseContext = credentialContext.concat(termsOfUse['@context'] || []);
+    validateTypes(toArray(termsOfUse.type), termsOfUseContext);
+  }
+  if(evidence) {
+    const evidenceContext = credentialContext.concat(evidence['@context'] || []);
+    validateTypes(toArray(evidence.type), evidenceContext);
   }
   let vc = {};
   for(const key in credential) {
@@ -223,7 +300,7 @@ async function handleVerify(req, res) {
     if(!Array.isArray(vc.type)) {
       throw 'Expected verifiableCredential type array';
     }
-    if(vc.type[0] !== 'VerifiableCredential') {
+    if(!vc.type.includes('VerifiableCredential')) {
       throw 'Expected type VerifiableCredential';
     }
     validateContext(vc['@context']);
@@ -257,6 +334,9 @@ async function handleProve(req, res) {
   }
   if(!Array.isArray(presentation.type)) {
     throw 'Expected presentation type array';
+  }
+  if(!presentation.type.includes('VerifiablePresentation')) {
+    throw 'Expected presentation type VerifiablePresentation';
   }
   validateContext(presentation['@context']);
   validateId(presentation.id);
