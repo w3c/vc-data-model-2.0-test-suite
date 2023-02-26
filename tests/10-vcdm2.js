@@ -312,7 +312,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it.skip('"The specific method used for an embedded proof MUST be included using the type property."', async function() {
       });
-      it.skip('"If present, the value of the credentialStatus property MUST include"', async function() {
+      it.skip('"If present, the value of the credentialStatus property MUST include" id and type', async function() {
       });
       it.skip('credentialStatus id property "MUST be a URL which MAY be dereferenced."', async function() {
       });
