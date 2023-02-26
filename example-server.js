@@ -93,11 +93,12 @@ function concatProof(existingProof, newProof) {
 
 function validateUrl(value) {
   if(value.startsWith('urn:')) {
-    throw 'URN is not a URL';
+    return 'URN is not a URL';
   }
   if(value.indexOf(':') === -1) {
-    throw 'Missing URL scheme';
+    return 'Missing URL scheme';
   }
+  return null;
 }
 
 function validateContextValue(value) {
@@ -106,11 +107,11 @@ function validateContextValue(value) {
     return validateUrl(value);
   case 'object':
     if(value === null) {
-      throw 'unexpected null';
+      return 'unexpected null';
     }
     return;
   default:
-    throw 'unexpected ' + typeof value;
+    return 'unexpected ' + typeof value;
   }
 }
 
@@ -119,12 +120,12 @@ const orderSensitiveContext2 = "https://example.org/specific-application/post";
 
 function validateContext(context) {
   if(!Array.isArray(context) || context[0] !== baseContext) {
-    throw 'Expected @context ordered set with v2 base context';
+    return 'Expected @context ordered set with v2 base context';
   }
-  try {
-    context.slice(1).forEach(validateContextValue);
-  } catch(e) {
-    throw 'Expected context items to be URLs or context objects: ' + e;
+  for(const error of context.slice(1).map(validateContextValue)) {
+    if(error) {
+      return 'Expected context items to be URLs or context objects: ' + error;
+    }
   }
   // Specific application requiring order of values
   const preI = context.indexOf(orderSensitiveContext1);
@@ -132,24 +133,21 @@ function validateContext(context) {
     const postI = context.indexOf(orderSensitiveContext2);
     if(postI !== -1) {
       if(postI < preI) {
-        throw 'Expected application-specific order of context values';
+        return 'Expected application-specific order of context values';
       }
     }
   }
+  return null;
 }
 
 function validateId(id) {
   if(typeof id === 'undefined') {
-    return;
+    return null;
   }
   if(typeof id !== 'string') {
-    throw 'Expected single id value (URL)';
+    return 'Expected single id value (URL)';
   }
-  try {
-    Array.isArray(id) ? id.map(validateUrl) : validateUrl(id);
-  } catch(e) {
-    throw 'Invalid ID: ' + (e.message || e);
-  }
+  return validateUrl(id);
 }
 
 function validateProof(proof) {
@@ -197,38 +195,45 @@ function validateMapTypeURL(type, contexts) {
   }
   const typeUrl = lookupInContexts(type, contexts);
   if(!typeUrl) {
-    throw new Error('Unmapped type (' + type + ')');
+    return 'Unmapped type (' + type + ')';
   }
-  try {
-    validateUrl(typeUrl);
-  } catch(e) {
-    throw 'Expected URL mapped type ('+type+'):' + (e.message || e);
+  const error = validateUrl(typeUrl);
+  if(error) {
+    return 'Expected URL mapped type ('+type+'):' + error;
   }
-  return typeUrl;
+  return null;
 }
 
 function validateCredentialTypes(types, contexts) {
   if(!Array.isArray(types)) {
-    throw 'Expected credential type array';
+    return 'Expected credential type array';
   }
   if(!types.includes('VerifiableCredential')) {
-    throw 'Expected credential type VerifiableCredential';
+    return 'Expected credential type VerifiableCredential';
   }
   for(const type of types) {
     if(type === 'VerifiableCredential') {
       continue;
     }
-    validateMapTypeURL(type, contexts);
+    const error = validateMapTypeURL(type, contexts);
+    if(error) {
+      return 'Invalid credential type value: ' + error;
+    }
   }
+  return null;
 }
 
 function validateTypes(types, contexts) {
   for(const type of types) {
-    validateMapTypeURL(type, contexts);
+    const error = validateMapTypeURL(type, contexts);
+    if(error) {
+      return 'Invalid type: ' + error;
+    }
   }
   if(!types.length) {
-    throw new Error('Expected type');
+    return 'Expected type';
   }
+  return null;
 }
 
 function toArray(value) {
@@ -245,13 +250,14 @@ function isEmpty(object) {
 
 function validateCredentialSubject(credentialSubject) {
   if(Array.isArray(credentialSubject) && !credentialSubject.some(Array.isArray)) {
-    return credentialSubject.forEach(validateCredentialSubject);
+    return credentialSubject.map(validateCredentialSubject)
+      .filter(Boolean).join(', ');
   }
   const id = credentialSubject.id;
   if(typeof id !== 'undefined') {
-    validateId(id);
+    return validateId(id);
   } else if(isEmpty(credentialSubject)) {
-    throw new Error('Expected credentialSubject to have claims');
+    return 'Expected credentialSubject to have claims';
   }
 }
 
@@ -260,22 +266,22 @@ function validateIssuer(issuer) {
     return validateId(issuer);
   }
   if(typeof issuer !== 'object' || issuer === null) {
-    throw new Error('Expected issuer string (id) or object (containing id)');
+    return 'Expected issuer string (id) or object (containing id)';
   }
   if(!issuer.id) {
-    throw new Error('Expected id in issuer object');
+    return 'Expected id in issuer object';
   }
   return validateId(issuer.id);
 }
 
 function validateDateTime(fromUntil) {
   if(typeof fromUntil !== 'string') {
-    throw new Error('Expected string date-time');
+    return 'Expected string date-time';
   }
   if(!RFC3339regex.test(fromUntil)) {
-    throw new Error(
-      'Expected date-time to match RFC 3339 regular expression');
+    return 'Expected date-time to match RFC 3339 regular expression';
   }
+  return null;
 }
 
 async function handleIssue(req, res) {
@@ -290,9 +296,19 @@ async function handleIssue(req, res) {
     throw 'Expected credential property';
   }
   const credentialContext = credential['@context'];
-  validateContext(credentialContext);
-  validateCredentialTypes(credential.type, credentialContext);
-  validateId(credential.id);
+  let error;
+  error = validateContext(credentialContext);
+  if(error) {
+    throw 'Invalid context: ' + error;
+  }
+  error = validateCredentialTypes(credential.type, credentialContext);
+  if(error) {
+    throw 'Invalid credential type: ' + error;
+  }
+  error = validateId(credential.id);
+  if(error) {
+    throw 'Invalid credential id: ' + error;
+  }
   const {
     issuer,
     credentialSubject,
@@ -304,33 +320,57 @@ async function handleIssue(req, res) {
     evidence
   } = credential;
   if(!credentialSubject) {
-    throw new Error('Expected credentialSubject');
+    throw 'Expected credentialSubject';
   }
   if(!issuer) {
-    throw new Error('Expected issuer property');
+    throw 'Expected credential issuer property';
   }
-  validateIssuer(issuer);
-  validateDateTime(validFrom);
+  error = validateIssuer(issuer);
+  if(error) {
+    throw 'Invalid credential issuer property: ' + error;
+  }
+  error = validateDateTime(validFrom);
+  if(error) {
+    throw 'Invalid credential validFrom property: ' + error;
+  }
   if(validUntil) {
-    validateDateTime(validUntil);
+    error = validateDateTime(validUntil);
+    if(error) {
+      throw 'Invalid credential validUntil property: ' + error;
+    }
   }
-  validateCredentialSubject(credentialSubject);
+  error = validateCredentialSubject(credentialSubject);
+  if(error) {
+    throw 'Invalid credentialSubject: ' + error;
+  }
   if(proof) {
     const proofContext = credentialContext.concat(proof['@context'] || []);
-    validateTypes(toArray(proof.type), proofContext);
+    error = validateTypes(toArray(proof.type), proofContext);
+    if(error) {
+      throw 'Invalid credential proof type: ' + error;
+    }
   }
   if(credentialStatus) {
     const statusContext = credentialContext.concat(
       credentialStatus['@context'] || []);
-    validateTypes(toArray(credentialStatus.type), statusContext);
+    error = validateTypes(toArray(credentialStatus.type), statusContext);
+    if(error) {
+      throw 'Invalid credentialStatus type: ' + error;
+    }
   }
   if(termsOfUse) {
     const termsOfUseContext = credentialContext.concat(termsOfUse['@context'] || []);
-    validateTypes(toArray(termsOfUse.type), termsOfUseContext);
+    error = validateTypes(toArray(termsOfUse.type), termsOfUseContext);
+    if(error) {
+      throw 'Invalid termsOfUse type: ' + error;
+    }
   }
   if(evidence) {
     const evidenceContext = credentialContext.concat(evidence['@context'] || []);
-    validateTypes(toArray(evidence.type), evidenceContext);
+    error = validateTypes(toArray(evidence.type), evidenceContext);
+    if(error) {
+      throw 'Invalid evidence type: ' + error;
+    }
   }
   let vc = {};
   for(const key in credential) {
@@ -366,11 +406,14 @@ async function handleVerify(req, res) {
     if(!vc.type.includes('VerifiableCredential')) {
       throw 'Expected type VerifiableCredential';
     }
-    validateContext(vc['@context']);
-    validateId(vc.id);
+    error = validateContext(vc['@context']);
+    if(error) throw 'Invalid verifiable credential context: ' + error;
+    error = validateId(vc.id);
+    if(error) throw 'Invalid verifiable credential id: ' + error;
     const {credentialSubject} = credential;
     if(credentialSubject) {
-      validateId(credentialSubject.id);
+      error = validateId(credentialSubject.id);
+      if(error) throw 'Invalid verifiable credential subject id: ' + error;
     }
   } catch(e) {
     errors.push(e);
@@ -401,8 +444,15 @@ async function handleProve(req, res) {
   if(!presentation.type.includes('VerifiablePresentation')) {
     throw 'Expected presentation type VerifiablePresentation';
   }
-  validateContext(presentation['@context']);
-  validateId(presentation.id);
+  let error;
+  error = validateContext(presentation['@context']);
+  if(error) {
+    throw 'Invalid presentation context: ' + error;
+  }
+  error = validateId(presentation.id);
+  if(error) {
+    throw 'Invalid presentation id: ' + error;
+  }
   let vp = {};
   for(const key in presentation) {
     if(key === 'proof') {
@@ -431,8 +481,15 @@ async function handleVerifyVp(req, res) {
     if(!vp) {
       throw 'Expected verifiablePresentation property';
     }
-    validateContext(vp['@context']);
-    validateId(vp.id);
+    let error;
+    error = validateContext(vp['@context']);
+    if(error) {
+      throw 'Invalid verifiable presentation context: ' + error;
+    }
+    error = validateId(vp.id);
+    if(error) {
+      throw 'Invalid verifiable presentation id: ' + error;
+    }
   } catch(e) {
     errors.push(e);
   }
