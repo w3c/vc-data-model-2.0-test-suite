@@ -135,10 +135,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     let vc;
     let vp;
     before(async function() {
-      const credential = require('./input/1-credential-ok.json');
+      const credential = require('./input/credential-ok.json');
       // The full verifiableCredential property IRI is used in the VP to work
       // around a FIXME in vc-api-test-suite-implementations/lib/requests.js
-      const presentation = require('./input/2-presentation-ok.json');
+      const presentation = require('./input/presentation-ok.json');
       vc = await issue(credential);
       vp = await prove(presentation);
     });
@@ -162,9 +162,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         vc.should.have.property('@context');
         vp.should.have.property('@context');
         await assert.rejects(issue(
-          require('./input/3-credential-no-context-fail.json')));
+          require('./input/credential-no-context-fail.json')));
         await assert.rejects(prove(
-          require('./input/4-presentation-no-context-fail.json')));
+          require('./input/presentation-no-context-fail.json')));
       });
       it2('Verifiable credentials and verifiable presentations: "The value of the @context property MUST be an ordered set where the first item is a URL with the value https://www.w3.org/ns/credentials/v2."', async function() {
         assert(Array.isArray(vc['@context']));
@@ -174,62 +174,62 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         assert.strictEqual(vp['@context'][0], baseContextUrl);
 
         await assert.rejects(issue(
-          require('./input/5-credential-missing-base-context-fail.json')));
+          require('./input/credential-missing-base-context-fail.json')));
         await assert.rejects(prove(
-          require('./input/6-presentation-missing-base-context-fail.json')));
+          require('./input/presentation-missing-base-context-fail.json')));
       });
       it2('@context: "Subsequent items in the array MUST express context information and be composed of any combination of URLs or objects."', async function() {
-        await issue(require('./input/7-credential-context-combo1-ok.json'));
-        await issue(require('./input/8-credential-context-combo2-ok.json'));
-        await issue(require('./input/9-credential-context-combo3-ok.json'));
+        await issue(require('./input/credential-context-combo1-ok.json'));
+        await issue(require('./input/credential-context-combo2-ok.json'));
+        await issue(require('./input/credential-context-combo3-ok.json'));
         await assert.rejects(
-          issue(require('./input/10-credential-context-combo4-fail.json')));
+          issue(require('./input/credential-context-combo4-fail.json')));
         await assert.rejects(
-          issue(require('./input/11-credential-context-combo5-fail.json')));
+          issue(require('./input/credential-context-combo5-fail.json')));
       });
       it2('"All libraries or processors MUST ensure that the order of the values in the @context property is what is expected for the specific application."', async function() {
-        await issue(require('./input/12-credential-context-order1-ok.json'));
+        await issue(require('./input/credential-context-order1-ok.json'));
         await assert.rejects(
-          issue(require('./input/13-credential-context-order2-fail.json')));
+          issue(require('./input/credential-context-order2-fail.json')));
       });
       it2('if present: "The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier."', async function() {
-        await issue(require('./input/14-credential-id-other-ok.json'));
+        await issue(require('./input/credential-id-other-ok.json'));
         await assert.rejects(
-          issue(require('./input/15-credential-id-nonidentifier-fail.json')));
+          issue(require('./input/credential-id-nonidentifier-fail.json')));
       });
       it2('if present: "The id property MUST NOT have more than one value."', async function() {
-        await issue(require('./input/16-credential-single-id-ok.json'));
-        await issue(require('./input/17-credential-subject-single-id-ok.json'));
+        await issue(require('./input/credential-single-id-ok.json'));
+        await issue(require('./input/credential-subject-single-id-ok.json'));
         await assert.rejects(
-          issue(require('./input/18-credential-multi-id-fail.json')));
+          issue(require('./input/credential-multi-id-fail.json')));
         await assert.rejects(
-          issue(require('./input/19-credential-subject-multi-id-fail.json')));
+          issue(require('./input/credential-subject-multi-id-fail.json')));
       });
       it2('if present: "The value of the id property MUST be a URL which MAY be dereferenced."', async function() {
         await assert.rejects(
-          issue(require('./input/20-credential-not-url-id-fail.json')));
+          issue(require('./input/credential-not-url-id-fail.json')));
       });
       it2('"The value of the id property MUST be a single URL."', async function() {
         await assert.rejects(
-          issue(require('./input/21-credential-nonsingle-id-fail.json')));
+          issue(require('./input/credential-nonsingle-id-fail.json')));
       });
       it2('"Verifiable credentials and verifiable presentations MUST have a type property."', async function() {
         await assert.rejects(
-          issue(require('./input/22-credential-no-type-fail.json')));
+          issue(require('./input/credential-no-type-fail.json')));
         await assert.rejects(
-          prove(require('./input/23-presentation-no-type-fail.json')));
+          prove(require('./input/presentation-no-type-fail.json')));
       });
       it2('"The value of the type property MUST be, or map to (through interpretation of the @context property), one or more URLs."', async function() {
         // type is URL: OK
-        await issue(require('./input/24-credential-type-url-ok.json'));
+        await issue(require('./input/credential-type-url-ok.json'));
         // type mapping to URL: OK
-        await issue(require('./input/25-credential-type-mapped-url-ok.json'));
+        await issue(require('./input/credential-type-mapped-url-ok.json'));
         // type mapped not to URL: fail
         await assert.rejects(
-          issue(require('./input/26-credential-type-mapped-nonurl-fail.json')));
+          issue(require('./input/credential-type-mapped-nonurl-fail.json')));
         // type not mapped: fail
         await assert.rejects(
-          issue(require('./input/27-credential-type-unmapped-fail.json')));
+          issue(require('./input/credential-type-unmapped-fail.json')));
       });
       it.skip('type property: "If more than one URL is provided, the URLs MUST be interpreted as an unordered set."', async function() {
       });
@@ -238,73 +238,73 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         // (Verifiable) presentation requires type VerifiablePresentation
         // Additional (more specific) types for these are optional.
         // Missing type property is tested separately.
-        await issue(require('./input/28-credential-optional-type-ok.json'));
+        await issue(require('./input/credential-optional-type-ok.json'));
         await assert.rejects(
-          issue(require('./input/29-credential-missing-required-type-fail.json')));
-        await prove(require('./input/30-presentation-optional-type-ok.json'));
+          issue(require('./input/credential-missing-required-type-fail.json')));
+        await prove(require('./input/presentation-optional-type-ok.json'));
         await assert.rejects(
-          prove(require('./input/31-presentation-missing-required-type-fail.json')));
+          prove(require('./input/presentation-missing-required-type-fail.json')));
 
         // Other objects requiring type: proof, credentialStatus, termsOfUse,
         // and evidence.
         // Note: testing proof requires the issuer to allow the input
         // credential to have an existing proof property.
-        await issue(require('./input/32-credential-proof-ok.json'));
+        await issue(require('./input/credential-proof-ok.json'));
         await assert.rejects(
-          issue(require('./input/33-credential-proof-missing-type-fail.json')));
+          issue(require('./input/credential-proof-missing-type-fail.json')));
 
-        await issue(require('./input/34-credential-status-ok.json'));
+        await issue(require('./input/credential-status-ok.json'));
         await assert.rejects(
-          issue(require('./input/35-credential-status-missing-type-fail.json')));
+          issue(require('./input/credential-status-missing-type-fail.json')));
 
-        await issue(require('./input/36-credential-termsofuse-ok.json'));
+        await issue(require('./input/credential-termsofuse-ok.json'));
         await assert.rejects(
-          issue(require('./input/37-credential-termsofuse-missing-type-fail.json')));
+          issue(require('./input/credential-termsofuse-missing-type-fail.json')));
 
-        await issue(require('./input/38-credential-evidence-ok.json'));
+        await issue(require('./input/credential-evidence-ok.json'));
         await assert.rejects(
-          issue(require('./input/39-credential-evidence-missing-type-fail.json')));
+          issue(require('./input/credential-evidence-missing-type-fail.json')));
       });
       it.skip('"All credentials, presentations, and encapsulated objects MUST specify, or be associated with, additional more narrow types (like UniversityDegreeCredential, for example) so software systems can process this additional information."', async function() {
       });
       it2('"A verifiable credential MUST have a credentialSubject property."', async function() {
         await assert.rejects(
-          issue(require('./input/40-credential-no-subject-fail.json')));
+          issue(require('./input/credential-no-subject-fail.json')));
       });
       it2('"The value of the credentialSubject property is defined as a set of objects that MUST contain one or more claims that are each related to a subject of the verifiable credential."', async function() {
         await assert.rejects(
-          issue(require('./input/41-credential-subject-no-claims-fail.json')));
-        await issue(require('./input/42-credential-subject-multiple-ok.json'));
+          issue(require('./input/credential-subject-no-claims-fail.json')));
+        await issue(require('./input/credential-subject-multiple-ok.json'));
         await assert.rejects(
-          issue(require('./input/43-credential-subject-multiple-empty-fail.json')));
+          issue(require('./input/credential-subject-multiple-empty-fail.json')));
       });
       it2('"A verifiable credential MUST have an issuer property."', async function() {
         await assert.rejects(
-          issue(require('./input/44-credential-no-issuer-fail.json')));
+          issue(require('./input/credential-no-issuer-fail.json')));
       });
       it2('"The value of the issuer property MUST be either a URL or an object containing an id property."', async function() {
         await assert.rejects(
-          issue(require('./input/45-credential-issuer-nonurl-fail.json')));
-        await issue(require('./input/46-credential-issuer-object-ok.json'));
+          issue(require('./input/credential-issuer-nonurl-fail.json')));
+        await issue(require('./input/credential-issuer-object-ok.json'));
         await assert.rejects(
-          issue(require('./input/47-credential-issuer-object-no-id-fail.json')));
+          issue(require('./input/credential-issuer-object-no-id-fail.json')));
       });
       it2('"A credential MUST have an validFrom property."', async function() {
         await assert.rejects(
-          issue(require('./input/48-credential-no-validfrom-fail.json')));
+          issue(require('./input/credential-no-validfrom-fail.json')));
       });
       it2('"The value of the validFrom property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential becomes valid, which could be a date and time in the future."', async function() {
-        await issue(require('./input/49-credential-validfrom-ms-ok.json'));
-        await issue(require('./input/50-credential-validfrom-tz-ok.json'));
+        await issue(require('./input/credential-validfrom-ms-ok.json'));
+        await issue(require('./input/credential-validfrom-tz-ok.json'));
         await assert.rejects(
-          issue(require('./input/51-credential-validfrom-invalid-fail.json')));
+          issue(require('./input/credential-validfrom-invalid-fail.json')));
       });
       it2('"If present, the value of the validUntil property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential ceases to be valid, which could be a date and time in the past."', async function() {
-        await issue(require('./input/52-credential-validuntil-ok.json'));
-        await issue(require('./input/53-credential-validuntil-ms-ok.json'));
-        await issue(require('./input/54-credential-validuntil-tz-ok.json'));
+        await issue(require('./input/credential-validuntil-ok.json'));
+        await issue(require('./input/credential-validuntil-ms-ok.json'));
+        await issue(require('./input/credential-validuntil-tz-ok.json'));
         await assert.rejects(
-          issue(require('./input/55-credential-validuntil-invalid-fail.json')));
+          issue(require('./input/credential-validuntil-invalid-fail.json')));
       });
       it.skip('"At least one proof mechanism, and the details necessary to evaluate that proof, MUST be expressed for a credential or presentation to be a verifiable credential or verifiable presentation; that is, to be verifiable."', async function() {
       });
