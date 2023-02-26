@@ -271,7 +271,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/40-credential-no-subject-fail.json')));
       });
-      it.skip('"The value of the credentialSubject property is defined as a set of objects that MUST contain one or more claims that are each related to a subject of the verifiable credential."', async function() {
+      it2('"The value of the credentialSubject property is defined as a set of objects that MUST contain one or more claims that are each related to a subject of the verifiable credential."', async function() {
+        await assert.rejects(
+          issue(require('./input/41-credential-subject-no-claims-fail.json')));
+        await issue(require('./input/42-credential-subject-multiple-ok.json'));
+        await assert.rejects(
+          issue(require('./input/43-credential-subject-multiple-empty-fail.json')));
       });
       it.skip('"A verifiable credential MUST have an issuer property."', async function() {
       });

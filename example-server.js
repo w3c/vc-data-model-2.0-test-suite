@@ -227,6 +227,25 @@ function toArray(value) {
     typeof value === 'undefined' ? [] : [value];
 }
 
+function isEmpty(object) {
+  for(const key in object) {
+    return false;
+  }
+  return true;
+}
+
+function validateCredentialSubject(credentialSubject) {
+  if(Array.isArray(credentialSubject) && !credentialSubject.some(Array.isArray)) {
+    return credentialSubject.forEach(validateCredentialSubject);
+  }
+  const id = credentialSubject.id;
+  if(typeof id !== 'undefined') {
+    validateId(id);
+  } else if(isEmpty(credentialSubject)) {
+    throw new Error('Expected credentialSubject to have claims');
+  }
+}
+
 async function handleIssue(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
@@ -252,7 +271,7 @@ async function handleIssue(req, res) {
   if(!credentialSubject) {
     throw new Error('Expected credentialSubject');
   }
-  validateId(credentialSubject.id);
+  validateCredentialSubject(credentialSubject);
   if(proof) {
     const proofContext = credentialContext.concat(proof['@context'] || []);
     validateTypes(toArray(proof.type), proofContext);
