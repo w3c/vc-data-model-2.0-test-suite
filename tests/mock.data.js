@@ -11,7 +11,7 @@ export const createRequestBody = ({issuer, vc = validVc}) => {
   const {settings: {id, options}} = issuer;
   const credential = klona(vc);
   // convert from millisecond to seconds precision
-  credential.issuanceDate = createISOTimeStamp();
+  // credential.issuanceDate = createISOTimeStamp();
   // credential.issuer = id;
   return {
     credential,
