@@ -268,12 +268,13 @@ function validateIssuer(issuer) {
   return validateId(issuer.id);
 }
 
-function validateValidFrom(validFrom) {
-  if(typeof validFrom !== 'string') {
-    throw new Error('Expected string validFrom');
+function validateDateTime(fromUntil) {
+  if(typeof fromUntil !== 'string') {
+    throw new Error('Expected string date-time');
   }
-  if(!RFC3339regex.test(validFrom)) {
-    throw new Error('Expected validFrom to match RFC 3339 regular expression');
+  if(!RFC3339regex.test(fromUntil)) {
+    throw new Error(
+      'Expected date-time to match RFC 3339 regular expression');
   }
 }
 
@@ -296,6 +297,7 @@ async function handleIssue(req, res) {
     issuer,
     credentialSubject,
     validFrom,
+    validUntil,
     proof,
     credentialStatus,
     termsOfUse,
@@ -308,7 +310,10 @@ async function handleIssue(req, res) {
     throw new Error('Expected issuer property');
   }
   validateIssuer(issuer);
-  validateValidFrom(validFrom);
+  validateDateTime(validFrom);
+  if(validUntil) {
+    validateDateTime(validUntil);
+  }
   validateCredentialSubject(credentialSubject);
   if(proof) {
     const proofContext = credentialContext.concat(proof['@context'] || []);

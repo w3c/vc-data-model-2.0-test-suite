@@ -299,7 +299,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/51-credential-validfrom-invalid-fail.json')));
       });
-      it.skip('"If present, the value of the validUntil property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential ceases to be valid, which could be a date and time in the past."', async function() {
+      it2('"If present, the value of the validUntil property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential ceases to be valid, which could be a date and time in the past."', async function() {
+        await issue(require('./input/52-credential-validuntil-ok.json'));
+        await issue(require('./input/53-credential-validuntil-ms-ok.json'));
+        await issue(require('./input/54-credential-validuntil-tz-ok.json'));
+        await assert.rejects(
+          issue(require('./input/55-credential-validuntil-invalid-fail.json')));
       });
       it.skip('"At least one proof mechanism, and the details necessary to evaluate that proof, MUST be expressed for a credential or presentation to be a verifiable credential or verifiable presentation; that is, to be verifiable."', async function() {
       });
