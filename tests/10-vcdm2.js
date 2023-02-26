@@ -267,7 +267,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it.skip('"All credentials, presentations, and encapsulated objects MUST specify, or be associated with, additional more narrow types (like UniversityDegreeCredential, for example) so software systems can process this additional information."', async function() {
       });
-      it.skip('"A verifiable credential MUST have a credentialSubject property."', async function() {
+      it2('"A verifiable credential MUST have a credentialSubject property."', async function() {
+        await assert.rejects(
+          issue(require('./input/40-credential-no-subject-fail.json')));
       });
       it.skip('"The value of the credentialSubject property is defined as a set of objects that MUST contain one or more claims that are each related to a subject of the verifiable credential."', async function() {
       });

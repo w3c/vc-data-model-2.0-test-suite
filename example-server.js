@@ -249,9 +249,10 @@ async function handleIssue(req, res) {
     termsOfUse,
     evidence
   } = credential;
-  if(credentialSubject) {
-    validateId(credentialSubject.id);
+  if(!credentialSubject) {
+    throw new Error('Expected credentialSubject');
   }
+  validateId(credentialSubject.id);
   if(proof) {
     const proofContext = credentialContext.concat(proof['@context'] || []);
     validateTypes(toArray(proof.type), proofContext);
