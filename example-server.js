@@ -246,6 +246,19 @@ function validateCredentialSubject(credentialSubject) {
   }
 }
 
+function validateIssuer(issuer) {
+  if(typeof issuer === 'string') {
+    return validateId(issuer);
+  }
+  if(typeof issuer !== 'object' || issuer === null) {
+    throw new Error('Expected issuer string (id) or object (containing id)');
+  }
+  if(!issuer.id) {
+    throw new Error('Expected id in issuer object');
+  }
+  return validateId(issuer.id);
+}
+
 async function handleIssue(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
@@ -275,6 +288,7 @@ async function handleIssue(req, res) {
   if(!issuer) {
     throw new Error('Expected issuer property');
   }
+  validateIssuer(issuer);
   validateCredentialSubject(credentialSubject);
   if(proof) {
     const proofContext = credentialContext.concat(proof['@context'] || []);

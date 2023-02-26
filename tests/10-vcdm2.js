@@ -282,7 +282,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/44-credential-no-issuer-fail.json')));
       });
-      it.skip('"The value of the issuer property MUST be either a URL or an object containing an id property."', async function() {
+      it2('"The value of the issuer property MUST be either a URL or an object containing an id property."', async function() {
+        await assert.rejects(
+          issue(require('./input/45-credential-issuer-nonurl-fail.json')));
+        await issue(require('./input/46-credential-issuer-object-ok.json'));
+        await assert.rejects(
+          issue(require('./input/47-credential-issuer-object-no-id-fail.json')));
       });
       it.skip('"A credential MUST have an validFrom property."', async function() {
       });
