@@ -5,6 +5,15 @@ import {
 import receiveJson from './tests/receive-json.js';
 const baseContext = 'https://www.w3.org/ns/credentials/v2';
 
+// RFC3339 regex
+// Z and T can be lowercase
+// from vc-test-suite (vcdm1)
+const RFC3339regex = new RegExp('^(\\d{4})-(0[1-9]|1[0-2])-' +
+  '(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):' +
+  '([0-5][0-9]):([0-5][0-9]|60)' +
+  '(\\.[0-9]+)?(Z|(\\+|-)([01][0-9]|2[0-3]):' +
+  '([0-5][0-9]))$', 'i');
+
 export default async function doServer() {
   const {url, server} = await new Promise((resolve, reject) => {
     createServer(handleReq)
@@ -259,6 +268,15 @@ function validateIssuer(issuer) {
   return validateId(issuer.id);
 }
 
+function validateValidFrom(validFrom) {
+  if(typeof validFrom !== 'string') {
+    throw new Error('Expected string validFrom');
+  }
+  if(!RFC3339regex.test(validFrom)) {
+    throw new Error('Expected validFrom to match RFC 3339 regular expression');
+  }
+}
+
 async function handleIssue(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
@@ -277,6 +295,7 @@ async function handleIssue(req, res) {
   const {
     issuer,
     credentialSubject,
+    validFrom,
     proof,
     credentialStatus,
     termsOfUse,
@@ -289,6 +308,7 @@ async function handleIssue(req, res) {
     throw new Error('Expected issuer property');
   }
   validateIssuer(issuer);
+  validateValidFrom(validFrom);
   validateCredentialSubject(credentialSubject);
   if(proof) {
     const proofContext = credentialContext.concat(proof['@context'] || []);
