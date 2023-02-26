@@ -262,6 +262,7 @@ async function handleIssue(req, res) {
   validateCredentialTypes(credential.type, credentialContext);
   validateId(credential.id);
   const {
+    issuer,
     credentialSubject,
     proof,
     credentialStatus,
@@ -270,6 +271,9 @@ async function handleIssue(req, res) {
   } = credential;
   if(!credentialSubject) {
     throw new Error('Expected credentialSubject');
+  }
+  if(!issuer) {
+    throw new Error('Expected issuer property');
   }
   validateCredentialSubject(credentialSubject);
   if(proof) {

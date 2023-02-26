@@ -278,7 +278,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/43-credential-subject-multiple-empty-fail.json')));
       });
-      it.skip('"A verifiable credential MUST have an issuer property."', async function() {
+      it2('"A verifiable credential MUST have an issuer property."', async function() {
+        await assert.rejects(
+          issue(require('./input/44-credential-no-issuer-fail.json')));
       });
       it.skip('"The value of the issuer property MUST be either a URL or an object containing an id property."', async function() {
       });
