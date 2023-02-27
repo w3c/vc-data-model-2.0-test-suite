@@ -284,30 +284,20 @@ function validateDateTime(fromUntil) {
   return null;
 }
 
-async function handleIssue(req, res) {
-  if(req.method !== 'POST') {
-    res.statusCode = 405;
-    throw 'Expected POST';
-  }
-  const obj = await receiveJson(req);
-  const {credential} = obj;
-  res.statusCode = 400;
-  if(!credential) {
-    throw 'Expected credential property';
-  }
+function validateCredential(credential) {
   const credentialContext = credential['@context'];
   let error;
   error = validateContext(credentialContext);
   if(error) {
-    throw 'Invalid context: ' + error;
+    return 'Invalid context: ' + error;
   }
   error = validateCredentialTypes(credential.type, credentialContext);
   if(error) {
-    throw 'Invalid credential type: ' + error;
+    return 'Invalid credential type: ' + error;
   }
   error = validateId(credential.id);
   if(error) {
-    throw 'Invalid credential id: ' + error;
+    return 'Invalid credential id: ' + error;
   }
   const {
     issuer,
@@ -320,64 +310,82 @@ async function handleIssue(req, res) {
     evidence
   } = credential;
   if(!credentialSubject) {
-    throw 'Expected credentialSubject';
+    return 'Expected credentialSubject';
   }
   if(!issuer) {
-    throw 'Expected credential issuer property';
+    return 'Expected credential issuer property';
   }
   error = validateIssuer(issuer);
   if(error) {
-    throw 'Invalid credential issuer property: ' + error;
+    return 'Invalid credential issuer property: ' + error;
   }
   error = validateDateTime(validFrom);
   if(error) {
-    throw 'Invalid credential validFrom property: ' + error;
+    return 'Invalid credential validFrom property: ' + error;
   }
   if(validUntil) {
     error = validateDateTime(validUntil);
     if(error) {
-      throw 'Invalid credential validUntil property: ' + error;
+      return 'Invalid credential validUntil property: ' + error;
     }
   }
   error = validateCredentialSubject(credentialSubject);
   if(error) {
-    throw 'Invalid credentialSubject: ' + error;
+    return 'Invalid credentialSubject: ' + error;
   }
   if(proof) {
     const proofContext = credentialContext.concat(proof['@context'] || []);
     error = validateTypes(toArray(proof.type), proofContext);
     if(error) {
-      throw 'Invalid credential proof type: ' + error;
+      return 'Invalid credential proof type: ' + error;
     }
   }
   if(credentialStatus) {
     if(!credentialStatus.id) {
-      throw 'Expected credentialStatus id';
+      return 'Expected credentialStatus id';
     }
     error = validateId(credentialStatus.id);
     if(error) {
-      throw 'Invalid credential status id: ' + error;
+      return 'Invalid credential status id: ' + error;
     }
     const statusContext = credentialContext.concat(
       credentialStatus['@context'] || []);
     error = validateTypes(toArray(credentialStatus.type), statusContext);
     if(error) {
-      throw 'Invalid credentialStatus type: ' + error;
+      return 'Invalid credentialStatus type: ' + error;
     }
   }
   if(termsOfUse) {
     const termsOfUseContext = credentialContext.concat(termsOfUse['@context'] || []);
     error = validateTypes(toArray(termsOfUse.type), termsOfUseContext);
     if(error) {
-      throw 'Invalid termsOfUse type: ' + error;
+      return 'Invalid termsOfUse type: ' + error;
     }
   }
   if(evidence) {
     const evidenceContext = credentialContext.concat(evidence['@context'] || []);
     error = validateTypes(toArray(evidence.type), evidenceContext);
     if(error) {
-      throw 'Invalid evidence type: ' + error;
+      return 'Invalid evidence type: ' + error;
     }
+  }
+  return null;
+}
+
+async function handleIssue(req, res) {
+  if(req.method !== 'POST') {
+    res.statusCode = 405;
+    throw 'Expected POST';
+  }
+  const obj = await receiveJson(req);
+  const {credential} = obj;
+  res.statusCode = 400;
+  if(!credential) {
+    throw 'Expected credential property';
+  }
+  const error = validateCredential(credential);
+  if(error) {
+    throw 'Invalid credential: ' + error;
   }
   let vc = {};
   for(const key in credential) {
@@ -403,33 +411,13 @@ async function handleVerify(req, res) {
   let errors = [];
   const obj = await receiveJson(req);
   const {verifiableCredential: vc} = obj;
-  try {
-    if(!vc) {
-      throw 'Expected verifiableCredential property';
-    }
-    if(!Array.isArray(vc.type)) {
-      throw 'Expected verifiableCredential type array';
-    }
-    if(!vc.type.includes('VerifiableCredential')) {
-      throw 'Expected type VerifiableCredential';
-    }
-    error = validateContext(vc['@context']);
+  if(!vc) {
+    errors.push('Expected verifiableCredential property');
+  } else {
+    const error = validateCredential(vc);
     if(error) {
-      throw 'Invalid verifiable credential context: ' + error;
+      errors.push(error);
     }
-    error = validateId(vc.id);
-    if(error) {
-      throw 'Invalid verifiable credential id: ' + error;
-    }
-    const {credentialSubject} = credential;
-    if(credentialSubject) {
-      error = validateId(credentialSubject.id);
-      if(error) {
-        throw 'Invalid verifiable credential subject id: ' + error;
-      }
-    }
-  } catch(e) {
-    errors.push(e);
   }
   const result = {
     checks,
