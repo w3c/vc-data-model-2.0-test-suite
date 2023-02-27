@@ -4,6 +4,7 @@ import {
 } from 'vc-api-test-suite-implementations/lib/Implementation.js';
 import receiveJson from './tests/receive-json.js';
 const baseContext = 'https://www.w3.org/ns/credentials/v2';
+const verifiableCredentialUri = 'https://www.w3.org/2018/credentials#verifiableCredential';
 
 // RFC3339 regex
 // Z and T can be lowercase
@@ -428,6 +429,40 @@ async function handleVerify(req, res) {
   serveJson(res, result);
 }
 
+function validateVerifiableCredentialString(vc) {
+  if(vc.startsWith('eyJhb')) {
+    // TODO: validate JWT VC
+    return null;
+  }
+  return 'Expected JWT for string verifiableCredential value';
+}
+
+function validateVpVerifiableCredentialValue(vc) {
+  switch(typeof vc) {
+    case 'object':
+      if(vc === null) {
+        return 'unexpected null';
+      }
+      return validateCredential(vc);
+    case 'string':
+      return validateVerifiableCredentialString(vc);
+    default:
+      return 'unexpected type';
+  }
+  return null;
+}
+
+function validateVpVerifiableCredentials(presentation) {
+  const vcs = toArray(presentation[verifiableCredentialUri])
+    .concat(toArray(presentation.verifiableCredential));
+  for(const vc of vcs) {
+    const error = validateVpVerifiableCredentialValue(vc);
+    if(error) {
+      return 'Invalid verifiable credential: ' + error;
+    }
+  }
+}
+
 async function handleProve(req, res) {
   if(req.method !== 'POST') {
     res.statusCode = 405;
@@ -453,6 +488,10 @@ async function handleProve(req, res) {
   error = validateId(presentation.id);
   if(error) {
     throw 'Invalid presentation id: ' + error;
+  }
+  error = validateVpVerifiableCredentials(presentation);
+  if(error) {
+    throw error;
   }
   let vp = {};
   for(const key in presentation) {
@@ -490,6 +529,10 @@ async function handleVerifyVp(req, res) {
     error = validateId(vp.id);
     if(error) {
       throw 'Invalid verifiable presentation id: ' + error;
+    }
+    error = validateVpVerifiableCredentials(vp);
+    if(error) {
+      throw error;
     }
   } catch(e) {
     errors.push(e);

@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiablePresentation"
+  ],
+  "https://www.w3.org/2018/credentials#verifiableCredential": [
+    {
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2"
+      ],
+      "type": [
+      ],
+      "validFrom": "2023-02-27T05:04:04Z",
+      "issuer": "did:example:issuer",
+      "credentialSubject": {
+        "id": "did:example:subject"
+      }
+    }
+  ]
+}
