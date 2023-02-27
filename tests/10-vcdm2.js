@@ -312,9 +312,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it.skip('"The specific method used for an embedded proof MUST be included using the type property."', async function() {
       });
-      it.skip('"If present, the value of the credentialStatus property MUST include" id and type', async function() {
+      it2('"If present, the value of the credentialStatus property MUST include" id and type', async function() {
+        // type requirement is tested elsewhere
+        await assert.rejects(
+          issue(require('./input/credential-status-missing-id-fail.json')));
       });
-      it.skip('credentialStatus id property "MUST be a URL which MAY be dereferenced."', async function() {
+      it2('credentialStatus id property "MUST be a URL which MAY be dereferenced."', async function() {
+        await assert.rejects(
+          issue(require('./input/credential-status-nonurl-id-fail.json')));
       });
       it.skip('"If present, the value of the verifiableCredential property MUST be constructed from one or more verifiable credentials, or of data derived from verifiable credentials in a cryptographically verifiable format."', async function() {
       });

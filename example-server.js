@@ -351,6 +351,13 @@ async function handleIssue(req, res) {
     }
   }
   if(credentialStatus) {
+    if(!credentialStatus.id) {
+      throw 'Expected credentialStatus id';
+    }
+    error = validateId(credentialStatus.id);
+    if(error) {
+      throw 'Invalid credential status id: ' + error;
+    }
     const statusContext = credentialContext.concat(
       credentialStatus['@context'] || []);
     error = validateTypes(toArray(credentialStatus.type), statusContext);
@@ -407,13 +414,19 @@ async function handleVerify(req, res) {
       throw 'Expected type VerifiableCredential';
     }
     error = validateContext(vc['@context']);
-    if(error) throw 'Invalid verifiable credential context: ' + error;
+    if(error) {
+      throw 'Invalid verifiable credential context: ' + error;
+    }
     error = validateId(vc.id);
-    if(error) throw 'Invalid verifiable credential id: ' + error;
+    if(error) {
+      throw 'Invalid verifiable credential id: ' + error;
+    }
     const {credentialSubject} = credential;
     if(credentialSubject) {
       error = validateId(credentialSubject.id);
-      if(error) throw 'Invalid verifiable credential subject id: ' + error;
+      if(error) {
+        throw 'Invalid verifiable credential subject id: ' + error;
+      }
     }
   } catch(e) {
     errors.push(e);
