@@ -89,6 +89,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       const result = await receiveJson(res);
       if(res.statusCode >= 400) {
+        if(result != null && result.errors) {
+          throw new Error(result.errors);
+        }
         throw new Error(result);
       }
       if(res.statusCode >= 300) {
@@ -326,7 +329,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await verifyVp(require('./input/presentation-derived-vc-ok.json'));
         await verifyVp(require('./input/presentation-multiple-vc-ok.json'));
         await assert.rejects(
-          verifyVp(require('./input/presentation-vc-fail.json')));
+          verifyVp(require('./input/presentation-vc-missing-required-type-fail.json')));
+        await assert.rejects(
+          verifyVp(require('./input/presentation-derived-vc-missing-required-type-fail.json')));
       });
 
       // Advanced

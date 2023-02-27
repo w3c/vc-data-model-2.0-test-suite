@@ -163,6 +163,7 @@ const storedContextMaps = {
   "https://www.w3.org/ns/credentials/v2": {
   },
   "https://www.w3.org/ns/credentials/examples/v2": {
+    "UniversityDegreeCredential": "https://example.org/examples#UniversityDegreeCredential",
     "RelationshipCredential": "https://example.org/examples#RelationshipCredential"
   }
 };
@@ -429,9 +430,39 @@ async function handleVerify(req, res) {
   serveJson(res, result);
 }
 
+function parseJWT(jwt) {
+  const [headerB64, payloadB64, sigB64] = jwt.split('.');
+  const header = JSON.parse(Buffer.from(headerB64, 'base64'));
+  const payload = JSON.parse(Buffer.from(payloadB64, 'base64'));
+  const signature = Buffer.from(sigB64, 'base64');
+  return {header, payload, signature};
+}
+
+function validateVCJWT(jwt) {
+  let jwtParts;
+  try {
+    jwtParts = parseJWT(jwt);
+  } catch(e) {
+    return 'Unable to parse VC JWT: ' + e.message;
+  }
+  const {header, payload, signature} = jwtParts;
+  const {typ, alg, kid} = header;
+  // VCDM2 refers to https://w3c.github.io/vc-jwt/ for use of these properties.
+  // This example implementation doesn't yet check them but only validates vc.
+  const {exp, iss, nbf, jti, sub, vc} = payload;
+  const error = validateCredential(vc);
+  if(error) {
+    return 'Unable to validate credential in JWT: ' + error;
+  }
+  return null;
+}
+
 function validateVerifiableCredentialString(vc) {
   if(vc.startsWith('eyJhb')) {
-    // TODO: validate JWT VC
+    const error = validateVCJWT(vc);
+    if(error) {
+      return 'Unable to validate VC JWT: ' + error;
+    }
     return null;
   }
   return 'Expected JWT for string verifiableCredential value';
@@ -461,6 +492,7 @@ function validateVpVerifiableCredentials(presentation) {
       return 'Invalid verifiable credential: ' + error;
     }
   }
+  return null;
 }
 
 async function handleProve(req, res) {
@@ -532,10 +564,10 @@ async function handleVerifyVp(req, res) {
     }
     error = validateVpVerifiableCredentials(vp);
     if(error) {
-      throw error;
+      throw 'Invalid verifiable credential in presentation: ' + error;
     }
   } catch(e) {
-    errors.push(e);
+    errors.push(e.message || e);
   }
   const result = {
     checks,
