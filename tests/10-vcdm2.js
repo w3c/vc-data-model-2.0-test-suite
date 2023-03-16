@@ -325,13 +325,13 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           issue(require('./input/credential-status-nonurl-id-fail.json')));
       });
       it2('"If present, the value of the verifiableCredential property MUST be constructed from one or more verifiable credentials, or of data derived from verifiable credentials in a cryptographically verifiable format."', async function() {
-        await verifyVp(require('./input/presentation-vc-ok.json'));
-        await verifyVp(require('./input/presentation-derived-vc-ok.json'));
-        await verifyVp(require('./input/presentation-multiple-vc-ok.json'));
+        await prove(require('./input/presentation-vc-ok.json'));
+        await prove(require('./input/presentation-derived-vc-ok.json'));
+        await prove(require('./input/presentation-multiple-vc-ok.json'));
         await assert.rejects(
-          verifyVp(require('./input/presentation-vc-missing-required-type-fail.json')));
+          prove(require('./input/presentation-vc-missing-required-type-fail.json')));
         await assert.rejects(
-          verifyVp(require('./input/presentation-derived-vc-missing-required-type-fail.json')));
+          prove(require('./input/presentation-derived-vc-missing-required-type-fail.json')));
       });
 
       // Advanced

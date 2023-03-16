@@ -562,6 +562,9 @@ async function handleVerifyVp(req, res) {
     if(error) {
       throw 'Invalid verifiable presentation id: ' + error;
     }
+    if(!vp.proof) {
+      throw 'Missing verifiable presentation proof';
+    }
     error = validateVpVerifiableCredentials(vp);
     if(error) {
       throw 'Invalid verifiable credential in presentation: ' + error;
