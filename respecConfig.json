@@ -1,21 +1,16 @@
 {
-  "specStatus": "unofficial",
   "shortName": "vcdm2-test-suite",
-  "subtitle": "Test Interoperability Report for Verifiable Credentials Data Model 2.0",
+  "group": "vc",
+  "specStatus": "NOTE",
+  "subtitle": "Verifiable Credentials Data Model v2.0 Interoperability Report",
   "github": "https://github.com/w3c-ccg/vcdm-test-suite",
   "edDraftURI": "https://w3c-ccg.github.io/vcdm-test-suite/#issue-credential",
   "doJsonLd": true,
   "includePermalinks": false,
   "editors": [
-    { "name": "Andrew Jones", "url": "https://github.com/aljones15",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" }
-    ,{ "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" }
+    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" }
   ],
   "authors": [
-    { "name": "Andrew Jones", "url": "https://github.com/aljones15",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" },
-    { "name": "Manu Sporny", "url": "http://manu.sporny.org/",
-      "company": "Digital Bazaar", "companyURL": "http://digitalbazaar.com/" }
-    ,{ "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" }
-    ]
+    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" }
+  ]
 }
