@@ -1,0 +1,12 @@
+{
+  "https://www.w3.org/ns/credentials/v2": {},
+  "https://www.w3.org/ns/credentials/examples/v2": {
+    "UniversityDegreeCredential": "https://example.org/examples#UniversityDegreeCredential",
+    "RelationshipCredential": "https://example.org/examples#RelationshipCredential"
+  },
+  "https://example.org/ns/test-credential-pre": {},
+  "https://example.org/ns/test-credential": {
+    "ExampleOrderTestVerifiableCredential": "https://example.org/examples#ExampleOrderTestVerifiableCredential"
+  },
+  "https://example.org/ns/test-credential-post": {}
+}
