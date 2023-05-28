@@ -344,11 +344,16 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(issue(require('./input/credential-redef-type-fail.json')));
         await assert.rejects(issue(require('./input/credential-redef-type2-fail.json')));
       });
-      it.skip('"The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."', async function() {
+      it2('"The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."', async function() {
+        await issue(require('./input/credential-schema-ok.json'));
+        await issue(require('./input/credential-schemas-ok.json'));
       });
-      it.skip('Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property"', async function() {
+      it2('Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property"', async function() {
+        await assert.rejects(issue(require('./input/credential-schema-no-type-fail.json')));
+        await assert.rejects(issue(require('./input/credential-schema-no-id-fail.json')));
       });
-      it.skip('credentialSchema id "MUST be a URL identifying the schema file."', async function() {
+      it2('credentialSchema id "MUST be a URL identifying the schema file."', async function() {
+        await assert.rejects(issue(require('./input/credential-schema-non-url-id-fail.json')));
       });
       it.skip('"The value of the refreshService property MUST be one or more refresh services that provides enough information to the recipient\'s software such that the recipient can refresh the verifiable credential."', async function() {
       });

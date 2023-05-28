@@ -34,3 +34,9 @@ Order:
 3. <https://example.org/ns/test-credential-post> (must appear last in this set)
 
 This test is intended to be passable by both JSON-based and JSON-LD-based processors.
+
+## Schemas
+
+### ExampleTestSuiteSchema
+
+IRI/URL: <https://example.org/#ExampleTestSuiteSchema>
