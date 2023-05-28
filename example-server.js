@@ -5,6 +5,8 @@ import {
 import receiveJson from './tests/receive-json.js';
 const baseContext = 'https://www.w3.org/ns/credentials/v2';
 const verifiableCredentialUri = 'https://www.w3.org/2018/credentials#verifiableCredential';
+import {createRequire} from 'module';
+const require = createRequire(import.meta.url);
 
 // RFC3339 regex
 // Z and T can be lowercase
@@ -158,9 +160,6 @@ function validateProof(proof) {
   }
 }
 
-const ExampleOrderTestVerifiableCredentialUrl =
-  "https://example.org/examples#ExampleOrderTestVerifiableCredential";
-
 function validateSpecialOrder(contexts) {
   let i1 = contexts.indexOf("https://example.org/ns/test-credential-pre");
   let i2 = contexts.indexOf("https://example.org/ns/test-credential");
@@ -183,21 +182,7 @@ function validateSpecialOrder(contexts) {
 }
 
 // Contexts and terms should be added here as needed for the tests.
-const storedContextMaps = {
-  "https://www.w3.org/ns/credentials/v2": {
-  },
-  "https://www.w3.org/ns/credentials/examples/v2": {
-    "UniversityDegreeCredential": "https://example.org/examples#UniversityDegreeCredential",
-    "RelationshipCredential": "https://example.org/examples#RelationshipCredential"
-  },
-  "https://example.org/ns/test-credential-pre": {
-  },
-  "https://example.org/ns/test-credential": {
-    "ExampleOrderTestVerifiableCredential": ExampleOrderTestVerifiableCredentialUrl
-  },
-  "https://example.org/ns/test-credential-post": {
-  }
-};
+const storedContextMaps = require("./contexts.json");
 
 function lookupInContexts(type, contexts) {
   let value = null;
@@ -234,7 +219,7 @@ function validateMapTypeURL(type, contexts) {
   if(error) {
     return 'Expected URL mapped type ('+type+'):' + error;
   }
-  if(typeUrl === ExampleOrderTestVerifiableCredentialUrl) {
+  if(typeUrl === "https://example.org/examples#ExampleOrderTestVerifiableCredential") {
     // Specific credential type requiring order of context values
     const error = validateSpecialOrder(contexts);
     if(error) {
