@@ -334,6 +334,7 @@ function validateCredential(credential) {
     validUntil,
     proof,
     credentialStatus,
+    refreshService,
     termsOfUse,
     evidence
   } = credential;
@@ -406,6 +407,15 @@ function validateCredential(credential) {
       }
     }
   }
+  if(refreshService) {
+    const services = toArray(refreshService);
+    for(const service of services) {
+      error = validateRefreshService(service, credential);
+      if(error) {
+        return 'Unable to validate credential refresh service: ' + error;
+      }
+    }
+  }
   return null;
 }
 
@@ -426,6 +436,26 @@ function validateSchema(schema, credential) {
   error = validateTypes(schemaTypes, schemaContext);
   if(error) {
     return 'Invalid schema type: ' + error;
+  }
+}
+
+function validateRefreshService(service, credential) {
+  const credentialContext = credential['@context'];
+  const serviceContext = credentialContext.concat(service['@context'] || []);
+  const serviceTypes = toArray(service.type);
+  if(serviceTypes.length === 0) {
+    return 'Missing type';
+  }
+  if(typeof service.id === 'undefined') {
+    return 'Missing id';
+  }
+  let error = validateId(service.id);
+  if(error) {
+    return 'Invalid id: ' + error;
+  }
+  error = validateTypes(serviceTypes, serviceContext);
+  if(error) {
+    return 'Invalid service type: ' + error;
   }
 }
 

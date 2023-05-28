@@ -40,3 +40,9 @@ This test is intended to be passable by both JSON-based and JSON-LD-based proces
 ### ExampleTestSuiteSchema
 
 IRI/URL: <https://example.org/#ExampleTestSuiteSchema>
+
+## Refresh Services
+
+### ExampleTestSuiteRefreshService
+
+IRI/URL: <https://example.org/#ExampleTestSuiteRefreshService>
