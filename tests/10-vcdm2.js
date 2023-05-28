@@ -335,7 +335,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
 
       // Advanced
-      it.skip('"JSON-based processors MUST process the @context key, ensuring the expected values exist in the expected order for the credential type being processed."', async function() {
+      it2('"JSON-based processors MUST process the @context key, ensuring the expected values exist in the expected order for the credential type being processed."', async function() {
+        await issue(require('./input/credential-context-order-ok.json'));
+        await assert.rejects(issue(require('./input/credential-context-order-fail.json')));
       });
       it.skip('"JSON-LD-based processors MUST produce an error when a JSON-LD context redefines any term in the active context."', async function() {
       });
