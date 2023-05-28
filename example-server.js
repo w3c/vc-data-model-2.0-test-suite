@@ -199,7 +199,11 @@ function lookupInContexts(type, contexts) {
     if(thisValue == null) {
       continue;
     }
+    if(prot) {
+      throw new Error('Redefined when @protected used');
+    }
     value = thisValue;
+    prot = context['@protected'];
   }
   return value;
 }
@@ -238,9 +242,6 @@ function validateCredentialTypes(types, contexts) {
     return 'Expected credential type VerifiableCredential';
   }
   for(const type of types) {
-    if(type === 'VerifiableCredential') {
-      continue;
-    }
     const error = validateMapTypeURL(type, contexts);
     if(error) {
       return 'Invalid credential type value: ' + error;

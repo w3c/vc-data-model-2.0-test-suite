@@ -339,7 +339,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await issue(require('./input/credential-context-order-ok.json'));
         await assert.rejects(issue(require('./input/credential-context-order-fail.json')));
       });
-      it.skip('"JSON-LD-based processors MUST produce an error when a JSON-LD context redefines any term in the active context."', async function() {
+      it2('"JSON-LD-based processors MUST produce an error when a JSON-LD context redefines any term in the active context."', async function() {
+        // This depends on "@protected" (which is used for the base context).
+        await assert.rejects(issue(require('./input/credential-redef-type-fail.json')));
+        await assert.rejects(issue(require('./input/credential-redef-type2-fail.json')));
       });
       it.skip('"The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."', async function() {
       });
