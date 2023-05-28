@@ -158,6 +158,30 @@ function validateProof(proof) {
   }
 }
 
+const ExampleOrderTestVerifiableCredentialUrl =
+  "https://example.org/examples#ExampleOrderTestVerifiableCredential";
+
+function validateSpecialOrder(contexts) {
+  let i1 = contexts.indexOf("https://example.org/ns/test-credential-pre");
+  let i2 = contexts.indexOf("https://example.org/ns/test-credential");
+  let i3 = contexts.indexOf("https://example.org/ns/test-credential-post");
+  if(i1 === -1) {
+    i1 = -Infinity;
+  }
+  if(i3 === -1) {
+    i3 = Infinity;
+  }
+  if(i1 > i2) {
+    return 'test-credential-pre should be before test-credential';
+  }
+  if(i1 > i3) {
+    return 'test-credential-pre should be before test-credential-post';
+  }
+  if(i2 > i3) {
+    return 'test-credential should be before test-credential-post';
+  }
+}
+
 // Contexts and terms should be added here as needed for the tests.
 const storedContextMaps = {
   "https://www.w3.org/ns/credentials/v2": {
@@ -165,6 +189,13 @@ const storedContextMaps = {
   "https://www.w3.org/ns/credentials/examples/v2": {
     "UniversityDegreeCredential": "https://example.org/examples#UniversityDegreeCredential",
     "RelationshipCredential": "https://example.org/examples#RelationshipCredential"
+  },
+  "https://example.org/ns/test-credential-pre": {
+  },
+  "https://example.org/ns/test-credential": {
+    "ExampleOrderTestVerifiableCredential": ExampleOrderTestVerifiableCredentialUrl
+  },
+  "https://example.org/ns/test-credential-post": {
   }
 };
 
@@ -180,7 +211,7 @@ function lookupInContexts(type, contexts) {
       context = mappedContext;
     }
     const thisValue = context[type];
-    if(thisValue === null) {
+    if(thisValue == null) {
       continue;
     }
     value = thisValue;
@@ -202,6 +233,14 @@ function validateMapTypeURL(type, contexts) {
   const error = validateUrl(typeUrl);
   if(error) {
     return 'Expected URL mapped type ('+type+'):' + error;
+  }
+  if(typeUrl === ExampleOrderTestVerifiableCredentialUrl) {
+    // Specific credential type requiring order of context values
+    const error = validateSpecialOrder(contexts);
+    if(error) {
+      return 'Expected special order of context values '
+        + 'for ExampleOrderTestVerifiableCredential: ' + error;
+    }
   }
   return null;
 }
