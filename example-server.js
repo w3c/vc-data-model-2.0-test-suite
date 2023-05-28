@@ -184,7 +184,7 @@ function validateSpecialOrder(contexts) {
 // Contexts and terms should be added here as needed for the tests.
 const storedContextMaps = require("./contexts.json");
 
-function lookupInContexts(type, contexts) {
+function lookupInContexts(term, contexts) {
   let value = null;
   let prot = false;
   for(let context of contexts) {
@@ -195,7 +195,7 @@ function lookupInContexts(type, contexts) {
       }
       context = mappedContext;
     }
-    const thisValue = context[type];
+    const thisValue = context[term];
     if(thisValue == null) {
       continue;
     }
@@ -329,6 +329,7 @@ function validateCredential(credential) {
   const {
     issuer,
     credentialSubject,
+    credentialSchema,
     validFrom,
     validUntil,
     proof,
@@ -396,7 +397,36 @@ function validateCredential(credential) {
       return 'Invalid evidence type: ' + error;
     }
   }
+  if(credentialSchema) {
+    const schemas = toArray(credentialSchema);
+    for(const schema of schemas) {
+      error = validateSchema(schema, credential);
+      if(error) {
+        return 'Unable to validate credential schema: ' + error;
+      }
+    }
+  }
   return null;
+}
+
+function validateSchema(schema, credential) {
+  const credentialContext = credential['@context'];
+  const schemaContext = credentialContext.concat(schema['@context'] || []);
+  const schemaTypes = toArray(schema.type);
+  if(schemaTypes.length === 0) {
+    return 'Missing type';
+  }
+  if(typeof schema.id === 'undefined') {
+    return 'Missing id';
+  }
+  let error = validateId(schema.id);
+  if(error) {
+    return 'Invalid id: ' + error;
+  }
+  error = validateTypes(schemaTypes, schemaContext);
+  if(error) {
+    return 'Invalid schema type: ' + error;
+  }
 }
 
 async function handleIssue(req, res) {
