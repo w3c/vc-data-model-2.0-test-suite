@@ -371,7 +371,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(issue(require('./input/credential-termsofuse-no-type-fail.json')));
         await issue(require('./input/credential-termsofuse-id-ok.json'));
       });
-      it.skip('"The value of the evidence property MUST be one or more evidence schemes providing enough information for a verifier to determine whether the evidence gathered by the issuer meets its confidence requirements for relying on the credential."', async function() {
+      it2('"The value of the evidence property MUST be one or more evidence schemes providing enough information for a verifier to determine whether the evidence gathered by the issuer meets its confidence requirements for relying on the credential."', async function() {
+        await issue(require('./input/credential-evidences-ok.json'));
       });
       it.skip('(ZKP) "The verifiable credential MUST contain a Proof, using the proof property, so that the holder can derive a verifiable presentation that reveals only the information than the holder intends to reveal."', async function() {
       });
