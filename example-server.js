@@ -395,10 +395,13 @@ function validateCredential(credential) {
     }
   }
   if(evidence) {
-    const evidenceContext = credentialContext.concat(evidence['@context'] || []);
-    error = validateTypes(toArray(evidence.type), evidenceContext);
-    if(error) {
-      return 'Invalid evidence type: ' + error;
+    const evidences = toArray(evidence);
+    for(const evidence of evidences) {
+      const evidenceContext = credentialContext.concat(evidence['@context'] || []);
+      error = validateTypes(toArray(evidence.type), evidenceContext);
+      if(error) {
+        return 'Invalid evidence type: ' + error;
+      }
     }
   }
   if(credentialSchema) {
