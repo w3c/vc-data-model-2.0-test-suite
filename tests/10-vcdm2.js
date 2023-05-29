@@ -364,9 +364,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(issue(require('./input/credential-refresh-no-id-fail.json')));
         await assert.rejects(issue(require('./input/credential-refresh-non-url-id-fail.json')));
       });
-      it.skip('"The value of the termsOfUse property MUST specify one or more terms of use policies under which the creator issued the credential or presentation."', async function() {
+      it2('"The value of the termsOfUse property MUST specify one or more terms of use policies under which the creator issued the credential or presentation."', async function() {
+        await issue(require('./input/credential-termsofuses-ok.json'));
       });
-      it.skip('"Each termsOfUse value MUST specify its type, for example, IssuerPolicy, and MAY specify its instance id."', async function() {
+      it2('"Each termsOfUse value MUST specify its type, for example, IssuerPolicy, and MAY specify its instance id."', async function() {
+        await assert.rejects(issue(require('./input/credential-termsofuse-no-type-fail.json')));
+        await issue(require('./input/credential-termsofuse-id-ok.json'));
       });
       it.skip('"The value of the evidence property MUST be one or more evidence schemes providing enough information for a verifier to determine whether the evidence gathered by the issuer meets its confidence requirements for relying on the credential."', async function() {
       });

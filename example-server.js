@@ -385,10 +385,13 @@ function validateCredential(credential) {
     }
   }
   if(termsOfUse) {
-    const termsOfUseContext = credentialContext.concat(termsOfUse['@context'] || []);
-    error = validateTypes(toArray(termsOfUse.type), termsOfUseContext);
-    if(error) {
-      return 'Invalid termsOfUse type: ' + error;
+    const policies = toArray(termsOfUse);
+    for(const policy of policies) {
+      const termsOfUseContext = credentialContext.concat(policy['@context'] || []);
+      error = validateTypes(toArray(policy.type), termsOfUseContext);
+      if(error) {
+        return 'Invalid termsOfUse type: ' + error;
+      }
     }
   }
   if(evidence) {
