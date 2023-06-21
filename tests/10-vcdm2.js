@@ -2,33 +2,27 @@
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
 import {
-  createISOTimeStamp,
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
-import {
-  shouldBeIssuedVc,
-  shouldReturnResult,
-  shouldThrowInvalidInput
-} from './assertions.js';
-import chai from 'chai';
 import assert from 'node:assert/strict';
-import {filterByTag} from 'vc-api-test-suite-implementations';
 import {createRequire} from 'module';
+import {filterByTag} from 'vc-api-test-suite-implementations';
 const require = createRequire(import.meta.url);
 import http from 'http';
 import receiveJson from './receive-json.js';
 const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
-const should = chai.should();
 const vcApiTag = 'vcdm2';
 const {match, nonMatch} = filterByTag({tags: [vcApiTag, 'vcdm2']});
 
 import doServer from '../example-server.js';
-const example = await doServer();
-match.set(example.name, example.implementation);
+const exampleServer = await doServer();
+
+match.set(exampleServer.name, exampleServer.implementation);
+
 after(async function() {
-  await example.stop();
+  await exampleServer.stop();
 });
 
 describe('Verifiable Credentials Data Model v2.0', function() {
@@ -102,7 +96,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
 
     async function issue(credential) {
       const issueBody = createRequestBody({issuer, vc: credential});
-      return await post(issuer, issueBody);
+      return post(issuer, issueBody);
     }
 
     async function verify(vc) {
@@ -111,11 +105,11 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       if(result.errors.length) {
         throw result.errors[0];
       }
-      return data;
+      return result;
     }
 
     async function prove(presentation) {
-      return await post(prover, {
+      return post(prover, {
         presentation,
         options: {}
       });
