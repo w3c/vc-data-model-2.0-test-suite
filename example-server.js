@@ -100,11 +100,14 @@ function concatProof(existingProof, newProof) {
 }
 
 function validateUrl(value) {
-  if(value.startsWith('urn:')) {
-    return 'URN is not a URL';
-  }
+console.log('validateUrl value', value);
   if(value.indexOf(':') === -1) {
     return 'Missing URL scheme';
+  }
+  try {
+    new URL(value);
+  } catch(e) {
+    return e.message;
   }
   return null;
 }
