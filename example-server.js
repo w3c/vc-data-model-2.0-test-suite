@@ -153,12 +153,14 @@ function validateId(id) {
   return validateUrl(id);
 }
 
+/*
 function validateProof(proof) {
   if(Array.isArray(proof) && !proof.some(Array.isArray)) {
     // Allow multiple proofs, but protect against recursion.
     return proof.forEach(validateProof);
   }
 }
+*/
 
 function validateSpecialOrder(contexts) {
   let i1 = contexts.indexOf('https://example.org/ns/test-credential-pre');
@@ -536,11 +538,11 @@ function validateVCJWT(jwt) {
   } catch(e) {
     return 'Unable to parse VC JWT: ' + e.message;
   }
-  const {header, payload, signature} = jwtParts;
-  const {typ, alg, kid} = header;
+  const {payload} = jwtParts;
+  //const {typ, alg, kid} = header;
   // VCDM2 refers to https://w3c.github.io/vc-jwt/ for use of these properties.
   // This example implementation doesn't yet check them but only validates vc.
-  const {exp, iss, nbf, jti, sub, vc} = payload;
+  const {vc} = payload;
   const error = validateCredential(vc);
   if(error) {
     return 'Unable to validate credential in JWT: ' + error;
