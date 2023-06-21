@@ -27,7 +27,7 @@ export const createVerifyRequestBody = ({vc}) => {
     }
   };
   return body;
-}
+};
 
 /**
  * Creates an ISO TimeStamp seconds precision.

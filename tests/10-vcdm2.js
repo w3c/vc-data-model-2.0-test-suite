@@ -22,12 +22,12 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
 const should = chai.should();
 const vcApiTag = 'vcdm2';
-let {match, nonMatch} = filterByTag({tags: [vcApiTag, 'vcdm2']});
+const {match, nonMatch} = filterByTag({tags: [vcApiTag, 'vcdm2']});
 
-import doServer from '../example-server.js'
+import doServer from '../example-server.js';
 const example = await doServer();
 match.set(example.name, example.implementation);
-after(async function () {
+after(async function() {
   await example.stop();
 });
 
@@ -81,7 +81,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           headers: {
             'Content-Type': 'application/json',
             'Content-Length': postData.length,
-            'Accept': 'application/json'
+            Accept: 'application/json'
           }
         }, resolve);
         req.on('error', reject);
@@ -154,7 +154,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it2('"Conforming processors MUST produce errors when nonconforming documents are consumed."', async function() {
         const doc = {
-          'type': ['NonconformingDocument']
+          type: ['NonconformingDocument']
         };
         await assert.rejects(issue(doc));
         await assert.rejects(verify(doc));
