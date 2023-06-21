@@ -10,6 +10,7 @@ const validVc = require('./validVc.json');
 export const createRequestBody = ({issuer, vc = validVc}) => {
   const {settings: {id, options}} = issuer;
   const credential = klona(vc);
+  credential.issuer = credential?.issuer || id;
   // convert from millisecond to seconds precision
   // credential.issuanceDate = createISOTimeStamp();
   // credential.issuer = id;
