@@ -100,7 +100,6 @@ function concatProof(existingProof, newProof) {
 }
 
 function validateUrl(value) {
-console.log('validateUrl value', value);
   if(value.indexOf(':') === -1) {
     return 'Missing URL scheme';
   }
