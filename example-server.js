@@ -1,4 +1,4 @@
-import {createServer} from 'http'
+import {createServer} from 'http';
 import {
   Implementation
 } from 'vc-api-test-suite-implementations/lib/Implementation.js';
@@ -106,20 +106,20 @@ function validateUrl(value) {
 
 function validateContextValue(value) {
   switch(typeof value) {
-  case 'string':
-    return validateUrl(value);
-  case 'object':
-    if(value === null) {
-      return 'unexpected null';
-    }
-    return;
-  default:
-    return 'unexpected ' + typeof value;
+    case 'string':
+      return validateUrl(value);
+    case 'object':
+      if(value === null) {
+        return 'unexpected null';
+      }
+      return;
+    default:
+      return 'unexpected ' + typeof value;
   }
 }
 
-const orderSensitiveContext1 = "https://example.org/specific-application/pre";
-const orderSensitiveContext2 = "https://example.org/specific-application/post";
+const orderSensitiveContext1 = 'https://example.org/specific-application/pre';
+const orderSensitiveContext2 = 'https://example.org/specific-application/post';
 
 function validateContext(context) {
   if(!Array.isArray(context) || context[0] !== baseContext) {
@@ -161,9 +161,9 @@ function validateProof(proof) {
 }
 
 function validateSpecialOrder(contexts) {
-  let i1 = contexts.indexOf("https://example.org/ns/test-credential-pre");
-  let i2 = contexts.indexOf("https://example.org/ns/test-credential");
-  let i3 = contexts.indexOf("https://example.org/ns/test-credential-post");
+  let i1 = contexts.indexOf('https://example.org/ns/test-credential-pre');
+  const i2 = contexts.indexOf('https://example.org/ns/test-credential');
+  let i3 = contexts.indexOf('https://example.org/ns/test-credential-post');
   if(i1 === -1) {
     i1 = -Infinity;
   }
@@ -182,7 +182,7 @@ function validateSpecialOrder(contexts) {
 }
 
 // Contexts and terms should be added here as needed for the tests.
-const storedContextMaps = require("./contexts.json");
+const storedContextMaps = require('./contexts.json');
 
 function lookupInContexts(term, contexts) {
   let value = null;
@@ -221,14 +221,14 @@ function validateMapTypeURL(type, contexts) {
   }
   const error = validateUrl(typeUrl);
   if(error) {
-    return 'Expected URL mapped type ('+type+'):' + error;
+    return 'Expected URL mapped type (' + type + '):' + error;
   }
-  if(typeUrl === "https://example.org/examples#ExampleOrderTestVerifiableCredential") {
+  if(typeUrl === 'https://example.org/examples#ExampleOrderTestVerifiableCredential') {
     // Specific credential type requiring order of context values
     const error = validateSpecialOrder(contexts);
     if(error) {
-      return 'Expected special order of context values '
-        + 'for ExampleOrderTestVerifiableCredential: ' + error;
+      return 'Expected special order of context values ' +
+        'for ExampleOrderTestVerifiableCredential: ' + error;
     }
   }
   return null;
@@ -480,7 +480,7 @@ async function handleIssue(req, res) {
   if(error) {
     throw 'Invalid credential: ' + error;
   }
-  let vc = {};
+  const vc = {};
   for(const key in credential) {
     if(key === 'proof') {
       continue;
@@ -499,9 +499,9 @@ async function handleVerify(req, res) {
     res.statusCode = 405;
     throw 'Expected POST';
   }
-  let checks = [];
-  let warnings = [];
-  let errors = [];
+  const checks = [];
+  const warnings = [];
+  const errors = [];
   const obj = await receiveJson(req);
   const {verifiableCredential: vc} = obj;
   if(!vc) {
@@ -616,7 +616,7 @@ async function handleProve(req, res) {
   if(error) {
     throw error;
   }
-  let vp = {};
+  const vp = {};
   for(const key in presentation) {
     if(key === 'proof') {
       continue;
@@ -635,9 +635,9 @@ async function handleVerifyVp(req, res) {
     res.statusCode = 405;
     throw 'Expected POST';
   }
-  let checks = [];
-  let warnings = [];
-  let errors = [];
+  const checks = [];
+  const warnings = [];
+  const errors = [];
   const obj = await receiveJson(req);
   const {verifiablePresentation: vp} = obj;
   try {

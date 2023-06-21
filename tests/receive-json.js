@@ -1,5 +1,5 @@
 export default async function receiveJson(stream) {
-  let bufs = [];
+  const bufs = [];
   await new Promise((resolve, reject) => {
     stream.on('error', reject);
     stream.on('data', bufs.push.bind(bufs));
