@@ -8,16 +8,17 @@ import {
 import assert from 'node:assert/strict';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-api-test-suite-implementations';
-const require = createRequire(import.meta.url);
 import http from 'http';
 import receiveJson from './receive-json.js';
+
+const require = createRequire(import.meta.url);
 const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
 const vcApiTag = 'vcdm2';
 const {match, nonMatch} = filterByTag({tags: [vcApiTag, 'vcdm2']});
 
-import doServer from '../example-server.js';
-const exampleServer = await doServer();
+import runServer from '../example-server.js';
+const exampleServer = await runServer();
 
 match.set(exampleServer.name, exampleServer.implementation);
 
