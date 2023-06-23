@@ -235,8 +235,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           prove(require('./input/presentation-no-type-fail.json')));
       });
-      it2('"The value of the type property MUST be, or map to (through ' +
-        'interpretation of the @context property), one or more URLs."',
+      it2('The value of the type property MUST be, or map to (through ' +
+        'interpretation of the @context property), one or more URLs.',
       async function() {
         // type is URL: OK
         await issue(require('./input/credential-type-url-ok.json'));
