@@ -228,8 +228,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(
             issue(require('./input/credential-nonsingle-id-fail.json')));
         });
-      it2('"Verifiable credentials and verifiable presentations MUST have ' +
-        'a type property."', async function() {
+      it2('Verifiable credentials and verifiable presentations MUST have ' +
+        'a type property.', async function() {
         await assert.rejects(
           issue(require('./input/credential-no-type-fail.json')));
         await assert.rejects(
