@@ -160,8 +160,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(prove(doc));
         await assert.rejects(verifyVp(doc));
       });
-      it2('"Verifiable credentials and verifiable presentations MUST include' +
-        ' a @context property."', async function() {
+      it2('Verifiable credentials and verifiable presentations MUST include ' +
+        'a @context property.', async function() {
         vc.should.have.property('@context');
         vp.should.have.property('@context');
         await assert.rejects(issue(
