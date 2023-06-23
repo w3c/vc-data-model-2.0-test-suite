@@ -283,10 +283,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-evidence-missing-type-fail.json')));
       });
-      it.skip('"All credentials, presentations, and encapsulated objects ' +
+      it.skip('All credentials, presentations, and encapsulated objects ' +
         'MUST specify, or be associated with, additional more narrow types ' +
-        '(like UniversityDegreeCredential, for example) so software systems' +
-        ' can process this additional information."', async function() {
+        '(like UniversityDegreeCredential, for example) so software systems ' +
+        ' can process this additional information.', async function() {
       });
       it2('"A verifiable credential MUST have a credentialSubject property."',
         async function() {
