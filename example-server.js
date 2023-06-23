@@ -1,11 +1,16 @@
+/*!
+ * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
+ */
+import {createRequire} from 'module';
 import {createServer} from 'http';
 import {
   Implementation
 } from 'vc-api-test-suite-implementations/lib/Implementation.js';
 import receiveJson from './tests/receive-json.js';
+
 const baseContext = 'https://www.w3.org/ns/credentials/v2';
-const verifiableCredentialUri = 'https://www.w3.org/2018/credentials#verifiableCredential';
-import {createRequire} from 'module';
+const verifiableCredentialUri =
+  'https://www.w3.org/2018/credentials#verifiableCredential';
 const require = createRequire(import.meta.url);
 
 // RFC3339 regex
@@ -225,7 +230,8 @@ function validateMapTypeURL(type, contexts) {
   if(error) {
     return 'Expected URL mapped type (' + type + '):' + error;
   }
-  if(typeUrl === 'https://example.org/examples#ExampleOrderTestVerifiableCredential') {
+  if(typeUrl ===
+    'https://example.org/examples#ExampleOrderTestVerifiableCredential') {
     // Specific credential type requiring order of context values
     const error = validateSpecialOrder(contexts);
     if(error) {
@@ -278,7 +284,8 @@ function isEmpty(object) {
 }
 
 function validateCredentialSubject(credentialSubject) {
-  if(Array.isArray(credentialSubject) && !credentialSubject.some(Array.isArray)) {
+  if(Array.isArray(credentialSubject) &&
+    !credentialSubject.some(Array.isArray)) {
     return credentialSubject.map(validateCredentialSubject)
       .filter(Boolean).join(', ');
   }
@@ -389,7 +396,8 @@ function validateCredential(credential) {
   if(termsOfUse) {
     const policies = toArray(termsOfUse);
     for(const policy of policies) {
-      const termsOfUseContext = credentialContext.concat(policy['@context'] || []);
+      const termsOfUseContext =
+        credentialContext.concat(policy['@context'] || []);
       error = validateTypes(toArray(policy.type), termsOfUseContext);
       if(error) {
         return 'Invalid termsOfUse type: ' + error;
@@ -399,7 +407,8 @@ function validateCredential(credential) {
   if(evidence) {
     const evidences = toArray(evidence);
     for(const evidence of evidences) {
-      const evidenceContext = credentialContext.concat(evidence['@context'] || []);
+      const evidenceContext =
+        credentialContext.concat(evidence['@context'] || []);
       error = validateTypes(toArray(evidence.type), evidenceContext);
       if(error) {
         return 'Invalid evidence type: ' + error;
