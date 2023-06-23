@@ -141,12 +141,17 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     });
 
     describe(name, function() {
-      it.skip('Conforming document (compliance): VCDM "MUST be enforced." ("all relevant normative statements in Sections 4. Basic Concepts, 5. Advanced Concepts, and 6. Syntaxes")', async function() {
+      it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
+        '("all relevant normative statements in Sections 4. Basic Concepts, ' +
+        '5. Advanced Concepts, and 6. Syntaxes")', async function() {
       });
       // Basic
-      it.skip('"A serialization format for the conforming document MUST be deterministic, bi-directional, and lossless as described in Section 6. Syntaxes."', async function() {
+      it.skip('"A serialization format for the conforming document MUST be ' +
+        'deterministic, bi-directional, and lossless as described in Section' +
+        ' 6. Syntaxes."', async function() {
       });
-      it2('"Conforming processors MUST produce errors when nonconforming documents are consumed."', async function() {
+      it2('"Conforming processors MUST produce errors when nonconforming ' +
+        'documents are consumed."', async function() {
         const doc = {
           type: ['NonconformingDocument']
         };
@@ -155,7 +160,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(prove(doc));
         await assert.rejects(verifyVp(doc));
       });
-      it2('"Verifiable credentials and verifiable presentations MUST include a @context property."', async function() {
+      it2('"Verifiable credentials and verifiable presentations MUST include' +
+        ' a @context property."', async function() {
         vc.should.have.property('@context');
         vp.should.have.property('@context');
         await assert.rejects(issue(
@@ -163,7 +169,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(prove(
           require('./input/presentation-no-context-fail.json')));
       });
-      it2('Verifiable credentials and verifiable presentations: "The value of the @context property MUST be an ordered set where the first item is a URL with the value https://www.w3.org/ns/credentials/v2."', async function() {
+      it2('Verifiable credentials and verifiable presentations: ' +
+        '"The value of the @context property MUST be an ordered set where ' +
+        'the first item is a URL with the value https://www.w3.org/ns/' +
+        'credentials/v2."', async function() {
         assert(Array.isArray(vc['@context']));
         assert.strictEqual(vc['@context'][0], baseContextUrl);
 
@@ -175,7 +184,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(prove(
           require('./input/presentation-missing-base-context-fail.json')));
       });
-      it2('@context: "Subsequent items in the array MUST express context information and be composed of any combination of URLs or objects."', async function() {
+      it2('@context: "Subsequent items in the array MUST express context ' +
+        'information and be composed of any combination of URLs or objects."',
+      async function() {
         await issue(require('./input/credential-context-combo1-ok.json'));
         await issue(require('./input/credential-context-combo2-ok.json'));
         await issue(require('./input/credential-context-combo3-ok.json'));
@@ -184,39 +195,49 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-context-combo5-fail.json')));
       });
-      it2('"All libraries or processors MUST ensure that the order of the values in the @context property is what is expected for the specific application."', async function() {
+      it2('"All libraries or processors MUST ensure that the order of the ' +
+        'values in the @context property is what is expected for the ' +
+        'specific application."', async function() {
         await issue(require('./input/credential-context-order1-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-context-order2-fail.json')));
       });
-      it2('if present: "The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier."', async function() {
+      it2('if present: "The id property MUST express an identifier that ' +
+        'others are expected to use when expressing statements about a ' +
+        'specific thing identified by that identifier."', async function() {
         await issue(require('./input/credential-id-other-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-id-nonidentifier-fail.json')));
       });
-      it2('if present: "The id property MUST NOT have more than one value."', async function() {
-        await issue(require('./input/credential-single-id-ok.json'));
-        await issue(require('./input/credential-subject-single-id-ok.json'));
-        await assert.rejects(
-          issue(require('./input/credential-multi-id-fail.json')));
-        await assert.rejects(
-          issue(require('./input/credential-subject-multi-id-fail.json')));
-      });
-      it2('if present: "The value of the id property MUST be a URL which MAY be dereferenced."', async function() {
+      it2('if present: "The id property MUST NOT have more than one value."',
+        async function() {
+          await issue(require('./input/credential-single-id-ok.json'));
+          await issue(require('./input/credential-subject-single-id-ok.json'));
+          await assert.rejects(
+            issue(require('./input/credential-multi-id-fail.json')));
+          await assert.rejects(
+            issue(require('./input/credential-subject-multi-id-fail.json')));
+        });
+      it2('if present: "The value of the id property MUST be a URL which ' +
+        'MAY be dereferenced."', async function() {
         await assert.rejects(
           issue(require('./input/credential-not-url-id-fail.json')));
       });
-      it2('"The value of the id property MUST be a single URL."', async function() {
-        await assert.rejects(
-          issue(require('./input/credential-nonsingle-id-fail.json')));
-      });
-      it2('"Verifiable credentials and verifiable presentations MUST have a type property."', async function() {
+      it2('"The value of the id property MUST be a single URL."',
+        async function() {
+          await assert.rejects(
+            issue(require('./input/credential-nonsingle-id-fail.json')));
+        });
+      it2('"Verifiable credentials and verifiable presentations MUST have ' +
+        'a type property."', async function() {
         await assert.rejects(
           issue(require('./input/credential-no-type-fail.json')));
         await assert.rejects(
           prove(require('./input/presentation-no-type-fail.json')));
       });
-      it2('"The value of the type property MUST be, or map to (through interpretation of the @context property), one or more URLs."', async function() {
+      it2('"The value of the type property MUST be, or map to (through ' +
+        'interpretation of the @context property), one or more URLs."',
+      async function() {
         // type is URL: OK
         await issue(require('./input/credential-type-url-ok.json'));
         // type mapping to URL: OK
@@ -228,7 +249,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-type-unmapped-fail.json')));
       });
-      it.skip('type property: "If more than one URL is provided, the URLs MUST be interpreted as an unordered set."', async function() {
+      it.skip('type property: "If more than one URL is provided, the URLs ' +
+        'MUST be interpreted as an unordered set."', async function() {
       });
       it2('list: "objects that MUST have a type specified."', async function() {
         // (Verifiable) credential requires type VerifiableCredential
@@ -240,7 +262,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           issue(require('./input/credential-missing-required-type-fail.json')));
         await prove(require('./input/presentation-optional-type-ok.json'));
         await assert.rejects(
-          prove(require('./input/presentation-missing-required-type-fail.json')));
+          prove(require(
+            './input/presentation-missing-required-type-fail.json')));
 
         // Other objects requiring type: proof, credentialStatus, termsOfUse,
         // and evidence.
@@ -249,37 +272,45 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await issue(require('./input/credential-proof-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-proof-missing-type-fail.json')));
-
         await issue(require('./input/credential-status-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-status-missing-type-fail.json')));
-
         await issue(require('./input/credential-termsofuse-ok.json'));
         await assert.rejects(
-          issue(require('./input/credential-termsofuse-missing-type-fail.json')));
-
+          issue(require(
+            './input/credential-termsofuse-missing-type-fail.json')));
         await issue(require('./input/credential-evidence-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-evidence-missing-type-fail.json')));
       });
-      it.skip('"All credentials, presentations, and encapsulated objects MUST specify, or be associated with, additional more narrow types (like UniversityDegreeCredential, for example) so software systems can process this additional information."', async function() {
+      it.skip('"All credentials, presentations, and encapsulated objects ' +
+        'MUST specify, or be associated with, additional more narrow types ' +
+        '(like UniversityDegreeCredential, for example) so software systems' +
+        ' can process this additional information."', async function() {
       });
-      it2('"A verifiable credential MUST have a credentialSubject property."', async function() {
-        await assert.rejects(
-          issue(require('./input/credential-no-subject-fail.json')));
-      });
-      it2('"The value of the credentialSubject property is defined as a set of objects that MUST contain one or more claims that are each related to a subject of the verifiable credential."', async function() {
+      it2('"A verifiable credential MUST have a credentialSubject property."',
+        async function() {
+          await assert.rejects(
+            issue(require('./input/credential-no-subject-fail.json')));
+        });
+      it2('"The value of the credentialSubject property is defined as a set' +
+        ' of objects that MUST contain one or more claims that are each ' +
+        'related to a subject of the verifiable credential."',
+      async function() {
         await assert.rejects(
           issue(require('./input/credential-subject-no-claims-fail.json')));
         await issue(require('./input/credential-subject-multiple-ok.json'));
         await assert.rejects(
-          issue(require('./input/credential-subject-multiple-empty-fail.json')));
+          issue(require(
+            './input/credential-subject-multiple-empty-fail.json')));
       });
-      it2('"A verifiable credential MUST have an issuer property."', async function() {
-        await assert.rejects(
-          issue(require('./input/credential-no-issuer-fail.json')));
-      });
-      it2('"The value of the issuer property MUST be either a URL or an object containing an id property."', async function() {
+      it2('"A verifiable credential MUST have an issuer property."',
+        async function() {
+          await assert.rejects(
+            issue(require('./input/credential-no-issuer-fail.json')));
+        });
+      it2('"The value of the issuer property MUST be either a URL or an' +
+        ' object containing an id property."', async function() {
         await assert.rejects(
           issue(require('./input/credential-issuer-nonurl-fail.json')));
         await issue(require('./input/credential-issuer-object-ok.json'));
@@ -290,94 +321,154 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-no-validfrom-fail.json')));
       });
-      it2('"The value of the validFrom property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential becomes valid, which could be a date and time in the future."', async function() {
+      it2('"The value of the validFrom property MUST be a string value of ' +
+        'an [XMLSCHEMA11-2] combined date-time string representing the date' +
+        ' and time the credential becomes valid, which could be a date and' +
+        ' time in the future."', async function() {
         await issue(require('./input/credential-validfrom-ms-ok.json'));
         await issue(require('./input/credential-validfrom-tz-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-validfrom-invalid-fail.json')));
       });
-      it2('"If present, the value of the validUntil property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential ceases to be valid, which could be a date and time in the past."', async function() {
+      it2('"If present, the value of the validUntil property MUST be a ' +
+        'string value of an [XMLSCHEMA11-2] combined date-time string ' +
+        'representing the date and time the credential ceases to be valid,' +
+        ' which could be a date and time in the past."', async function() {
         await issue(require('./input/credential-validuntil-ok.json'));
         await issue(require('./input/credential-validuntil-ms-ok.json'));
         await issue(require('./input/credential-validuntil-tz-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-validuntil-invalid-fail.json')));
       });
-      it.skip('"At least one proof mechanism, and the details necessary to evaluate that proof, MUST be expressed for a credential or presentation to be a verifiable credential or verifiable presentation; that is, to be verifiable."', async function() {
+      it.skip('"At least one proof mechanism, and the details necessary ' +
+        'to evaluate that proof, MUST be expressed for a credential or ' +
+        'presentation to be a verifiable credential or verifiable ' +
+        'presentation; that is, to be verifiable."', async function() {
       });
-      it.skip('"When embedding a proof, the proof property MUST be used."', async function() {
+      it.skip('"When embedding a proof, the proof property MUST be used."',
+        async function() {
+        });
+      it.skip('"The specific method used for an embedded proof MUST be ' +
+        'included using the type property."', async function() {
       });
-      it.skip('"The specific method used for an embedded proof MUST be included using the type property."', async function() {
-      });
-      it2('"If present, the value of the credentialStatus property MUST include" id and type', async function() {
+      it2('"If present, the value of the credentialStatus property ' +
+        'MUST include" id and type', async function() {
         // type requirement is tested elsewhere
         await assert.rejects(
           issue(require('./input/credential-status-missing-id-fail.json')));
       });
-      it2('credentialStatus id property "MUST be a URL which MAY be dereferenced."', async function() {
+      it2('credentialStatus id property "MUST be a URL which MAY be ' +
+        'dereferenced."', async function() {
         await assert.rejects(
           issue(require('./input/credential-status-nonurl-id-fail.json')));
       });
-      it2('"If present, the value of the verifiableCredential property MUST be constructed from one or more verifiable credentials, or of data derived from verifiable credentials in a cryptographically verifiable format."', async function() {
+      it2('"If present, the value of the verifiableCredential property ' +
+        'MUST be constructed from one or more verifiable credentials, or ' +
+        'of data derived from verifiable credentials in a cryptographically' +
+        ' verifiable format."', async function() {
         await prove(require('./input/presentation-vc-ok.json'));
         await prove(require('./input/presentation-derived-vc-ok.json'));
         await prove(require('./input/presentation-multiple-vc-ok.json'));
-        await assert.rejects(
-          prove(require('./input/presentation-vc-missing-required-type-fail.json')));
-        await assert.rejects(
-          prove(require('./input/presentation-derived-vc-missing-required-type-fail.json')));
+        await assert.rejects(prove(require(
+          './input/presentation-vc-missing-required-type-fail.json')));
+        await assert.rejects(prove(require(
+          './input/presentation-derived-vc-missing-required-type-fail.json')));
       });
 
       // Advanced
-      it2('"JSON-based processors MUST process the @context key, ensuring the expected values exist in the expected order for the credential type being processed."', async function() {
+      it2('"JSON-based processors MUST process the @context key, ensuring' +
+        ' the expected values exist in the expected order for the credential' +
+        ' type being processed."', async function() {
         await issue(require('./input/credential-context-order-ok.json'));
-        await assert.rejects(issue(require('./input/credential-context-order-fail.json')));
+        await assert.rejects(issue(require(
+          './input/credential-context-order-fail.json')));
       });
-      it2('"JSON-LD-based processors MUST produce an error when a JSON-LD context redefines any term in the active context."', async function() {
+      it2('"JSON-LD-based processors MUST produce an error when a JSON-LD' +
+        ' context redefines any term in the active context."',
+      async function() {
         // This depends on "@protected" (which is used for the base context).
-        await assert.rejects(issue(require('./input/credential-redef-type-fail.json')));
-        await assert.rejects(issue(require('./input/credential-redef-type2-fail.json')));
+        await assert.rejects(issue(require(
+          './input/credential-redef-type-fail.json')));
+        await assert.rejects(issue(require(
+          './input/credential-redef-type2-fail.json')));
       });
-      it2('"The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."', async function() {
+      it2('"The value of the credentialSchema property MUST be one or more' +
+        ' data schemas that provide verifiers with enough information to ' +
+        'determine if the provided data conforms to the provided schema."',
+      async function() {
         await issue(require('./input/credential-schema-ok.json'));
         await issue(require('./input/credential-schemas-ok.json'));
       });
-      it2('Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property"', async function() {
-        await assert.rejects(issue(require('./input/credential-schema-no-type-fail.json')));
-        await assert.rejects(issue(require('./input/credential-schema-no-id-fail.json')));
+      it2('Each credentialSchema MUST specify its type (for example,' +
+        ' JsonSchemaValidator2018), and an id property"', async function() {
+        await assert.rejects(issue(require(
+          './input/credential-schema-no-type-fail.json')));
+        await assert.rejects(issue(require(
+          './input/credential-schema-no-id-fail.json')));
       });
-      it2('credentialSchema id "MUST be a URL identifying the schema file."', async function() {
-        await assert.rejects(issue(require('./input/credential-schema-non-url-id-fail.json')));
-      });
-      it2('"The value of the refreshService property MUST be one or more refresh services that provides enough information to the recipient\'s software such that the recipient can refresh the verifiable credential."', async function() {
+      it2('credentialSchema id "MUST be a URL identifying the schema file."',
+        async function() {
+          await assert.rejects(issue(require(
+            './input/credential-schema-non-url-id-fail.json')));
+        });
+      it2('"The value of the refreshService property MUST be one or more' +
+        ' refresh services that provides enough information to the ' +
+        'recipient\'s software such that the recipient can refresh the ' +
+        'verifiable credential."', async function() {
         await issue(require('./input/credential-refresh-ok.json'));
         await issue(require('./input/credential-refreshs-ok.json'));
       });
-      it2('"Each refreshService value MUST specify its type (for example, ManualRefreshService2018) and its id, which is the URL of the service."', async function() {
-        await assert.rejects(issue(require('./input/credential-refresh-no-type-fail.json')));
-        await assert.rejects(issue(require('./input/credential-refresh-no-id-fail.json')));
-        await assert.rejects(issue(require('./input/credential-refresh-non-url-id-fail.json')));
+      it2('"Each refreshService value MUST specify its type (for example,' +
+        ' ManualRefreshService2018) and its id, which is the URL of the ' +
+        'service."', async function() {
+        await assert.rejects(issue(require(
+          './input/credential-refresh-no-type-fail.json')));
+        await assert.rejects(issue(require(
+          './input/credential-refresh-no-id-fail.json')));
+        await assert.rejects(issue(require(
+          './input/credential-refresh-non-url-id-fail.json')));
       });
-      it2('"The value of the termsOfUse property MUST specify one or more terms of use policies under which the creator issued the credential or presentation."', async function() {
+      it2('"The value of the termsOfUse property MUST specify one or more' +
+        ' terms of use policies under which the creator issued the credential' +
+        ' or presentation."', async function() {
         await issue(require('./input/credential-termsofuses-ok.json'));
       });
-      it2('"Each termsOfUse value MUST specify its type, for example, IssuerPolicy, and MAY specify its instance id."', async function() {
-        await assert.rejects(issue(require('./input/credential-termsofuse-no-type-fail.json')));
+      it2('"Each termsOfUse value MUST specify its type, for example,' +
+      ' IssuerPolicy, and MAY specify its instance id."', async function() {
+        await assert.rejects(issue(require(
+          './input/credential-termsofuse-no-type-fail.json')));
         await issue(require('./input/credential-termsofuse-id-ok.json'));
       });
-      it2('"The value of the evidence property MUST be one or more evidence schemes providing enough information for a verifier to determine whether the evidence gathered by the issuer meets its confidence requirements for relying on the credential."', async function() {
+      it2('"The value of the evidence property MUST be one or more evidence' +
+        ' schemes providing enough information for a verifier to determine' +
+        ' whether the evidence gathered by the issuer meets its confidence' +
+        ' requirements for relying on the credential."', async function() {
         await issue(require('./input/credential-evidences-ok.json'));
       });
-      it.skip('(ZKP) "The verifiable credential MUST contain a Proof, using the proof property, so that the holder can derive a verifiable presentation that reveals only the information than the holder intends to reveal."', async function() {
+      it.skip('(ZKP) "The verifiable credential MUST contain a Proof, using' +
+      ' the proof property, so that the holder can derive a verifiable' +
+      ' presentation that reveals only the information than the holder' +
+      ' intends to reveal."', async function() {
       });
-      it.skip('(ZKP) "If a credential definition is being used, the credential definition MUST be defined in the credentialSchema property, so that it can be used by all parties to perform various cryptographic operations in zero-knowledge."', async function() {
+      it.skip('(ZKP) "If a credential definition is being used, the' +
+        ' credential definition MUST be defined in the credentialSchema' +
+        ' property, so that it can be used by all parties to perform various' +
+        ' cryptographic operations in zero-knowledge."', async function() {
       });
-      it.skip('(ZKP?) "Each derived verifiable credential within a verifiable presentation MUST contain all information necessary to verify the verifiable credential, either by including it directly within the credential, or by referencing the necessary information."', async function() {
+      it.skip('(ZKP?) "Each derived verifiable credential within a' +
+        ' verifiable presentation MUST contain all information necessary' +
+        ' to verify the verifiable credential, either by including it' +
+        ' directly within the credential, or by referencing the necessary' +
+        ' information."', async function() {
       });
-      it.skip('"A verifiable presentation MUST NOT leak information that would enable the verifier to correlate the holder across multiple verifiable presentations."', async function() {
+      it.skip('"A verifiable presentation MUST NOT leak information that' +
+      ' would enable the verifier to correlate the holder across multiple' +
+      ' verifiable presentations."', async function() {
       });
       // Syntaxes
-      it.skip('Data model mapping property values to JSON types (not numeric/boolean/sequence/ordered-set/set/empty): "Other values MUST be represented as a String type."', async function() {
+      it.skip('Data model mapping property values to JSON types' +
+      ' (not numeric/boolean/sequence/ordered-set/set/empty): "Other values' +
+      ' MUST be represented as a String type."', async function() {
       });
     });
   }
