@@ -304,7 +304,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           issue(require(
             './input/credential-subject-multiple-empty-fail.json')));
       });
-      it2('"A verifiable credential MUST have an issuer property."',
+      it2('A verifiable credential MUST have an issuer property.',
         async function() {
           await assert.rejects(
             issue(require('./input/credential-no-issuer-fail.json')));
