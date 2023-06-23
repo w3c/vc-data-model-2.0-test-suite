@@ -288,7 +288,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         '(like UniversityDegreeCredential, for example) so software systems ' +
         ' can process this additional information.', async function() {
       });
-      it2('"A verifiable credential MUST have a credentialSubject property."',
+      it2('A verifiable credential MUST have a credentialSubject property.',
         async function() {
           await assert.rejects(
             issue(require('./input/credential-no-subject-fail.json')));
