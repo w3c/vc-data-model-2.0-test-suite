@@ -223,7 +223,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-not-url-id-fail.json')));
       });
-      it2('"The value of the id property MUST be a single URL."',
+      it2('The value of the id property MUST be a single URL.',
         async function() {
           await assert.rejects(
             issue(require('./input/credential-nonsingle-id-fail.json')));
