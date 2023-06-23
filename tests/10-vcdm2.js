@@ -150,8 +150,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'deterministic, bi-directional, and lossless as described in Section ' +
         '6. Syntaxes.', async function() {
       });
-      it2('"Conforming processors MUST produce errors when nonconforming ' +
-        'documents are consumed."', async function() {
+      it2('Conforming processors MUST produce errors when nonconforming ' +
+        'documents are consumed.', async function() {
         const doc = {
           type: ['NonconformingDocument']
         };
