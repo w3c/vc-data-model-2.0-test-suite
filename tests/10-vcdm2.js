@@ -170,9 +170,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           require('./input/presentation-no-context-fail.json')));
       });
       it2('Verifiable credentials and verifiable presentations: ' +
-        '"The value of the @context property MUST be an ordered set where ' +
+        'The value of the @context property MUST be an ordered set where ' +
         'the first item is a URL with the value https://www.w3.org/ns/' +
-        'credentials/v2."', async function() {
+        'credentials/v2.', async function() {
         assert(Array.isArray(vc['@context']));
         assert.strictEqual(vc['@context'][0], baseContextUrl);
 
