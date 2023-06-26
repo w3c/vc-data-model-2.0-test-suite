@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
  */
 import {createRequire} from 'module';
 import {createServer} from 'http';
