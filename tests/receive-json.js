@@ -1,3 +1,6 @@
+/*!
+ * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
+ */
 export default async function receiveJson(stream) {
   const bufs = [];
   await new Promise((resolve, reject) => {
