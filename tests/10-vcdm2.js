@@ -158,7 +158,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         };
         await assert.rejects(issue(doc));
         await assert.rejects(verify(doc));
-        await assert.rejects(prove(doc));
         await assert.rejects(verifyVp(doc));
       });
       it2('Verifiable credentials and verifiable presentations MUST include ' +
@@ -167,7 +166,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         vp.should.have.property('@context');
         await assert.rejects(issue(
           require('./input/credential-no-context-fail.json')));
-        await assert.rejects(prove(
+        await assert.rejects(verifyVp(
           require('./input/presentation-no-context-fail.json')));
       });
       it2('Verifiable credentials and verifiable presentations: ' +
@@ -182,7 +181,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
 
         await assert.rejects(issue(
           require('./input/credential-missing-base-context-fail.json')));
-        await assert.rejects(prove(
+        await assert.rejects(verifyVp(
           require('./input/presentation-missing-base-context-fail.json')));
       });
       it2('@context: "Subsequent items in the array MUST express context ' +
@@ -234,7 +233,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-no-type-fail.json')));
         await assert.rejects(
-          prove(require('./input/presentation-no-type-fail.json')));
+          verifyVp(require('./input/presentation-no-type-fail.json')));
       });
       it2('The value of the type property MUST be, or map to (through ' +
         'interpretation of the @context property), one or more URLs.',
@@ -261,9 +260,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await issue(require('./input/credential-optional-type-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-missing-required-type-fail.json')));
-        await prove(require('./input/presentation-optional-type-ok.json'));
+        await verifyVp(require('./input/presentation-optional-type-ok.json'));
         await assert.rejects(
-          prove(require(
+          verifyVp(require(
             './input/presentation-missing-required-type-fail.json')));
 
         // Other objects requiring type: proof, credentialStatus, termsOfUse,
@@ -367,12 +366,13 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'MUST be constructed from one or more verifiable credentials, or ' +
         'of data derived from verifiable credentials in a cryptographically' +
         ' verifiable format.', async function() {
-        await prove(require('./input/presentation-vc-ok.json'));
-        await prove(require('./input/presentation-derived-vc-ok.json'));
-        await prove(require('./input/presentation-multiple-vc-ok.json'));
-        await assert.rejects(prove(require(
+        //FIXME does this need an assert.doesNotReject
+        await verifyVp(require('./input/presentation-vc-ok.json'));
+        await verifyVp(require('./input/presentation-derived-vc-ok.json'));
+        await verifyVp(require('./input/presentation-multiple-vc-ok.json'));
+        await assert.rejects(verifyVp(require(
           './input/presentation-vc-missing-required-type-fail.json')));
-        await assert.rejects(prove(require(
+        await assert.rejects(verifyVp(require(
           './input/presentation-derived-vc-missing-required-type-fail.json')));
       });
 
