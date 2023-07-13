@@ -9,6 +9,7 @@ import assert from 'node:assert/strict';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import http from 'http';
+import {proveVP} from './data-generator.js';
 import receiveJson from './receive-json.js';
 
 const require = createRequire(import.meta.url);
@@ -45,8 +46,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       issuer => issuer.tags.has(vcApiTag));
     const verifier = implementation.verifiers.find(
       verifier => verifier.tags.has(vcApiTag));
-    const prover = implementation.provers.find(
-      prover => prover.tags.has(vcApiTag));
     const vpVerifier = implementation.vpVerifiers.find(
       vpVerifier => vpVerifier.tags.has(vcApiTag));
     function it2(title, fn) {
@@ -109,13 +108,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       return result;
     }
 
-    async function prove(presentation) {
-      return post(prover, {
-        presentation,
-        options: {}
-      });
-    }
-
     async function verifyVp(vp) {
       const body = {
         verifiablePresentation: vp,
@@ -138,7 +130,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       // around a FIXME in vc-api-test-suite-implementations/lib/requests.js
       const presentation = require('./input/presentation-ok.json');
       vc = await issue(credential);
-      vp = await prove(presentation);
+      const options = {challenge: 'test-challenge'};
+      vp = await proveVP({presentation, options});
     });
 
     describe(name, function() {
