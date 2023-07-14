@@ -38,22 +38,22 @@ export default async function doServer() {
     issuers: [{
       id: 'did:example:issuer',
       endpoint: url + '/credentials/issue',
-      tags: ['vc-api', 'vcdm2'],
+      tags: ['vc-api', 'vc2.0'],
     }],
     verifiers: [{
       id: '',
       endpoint: url + '/credentials/verify',
-      tags: ['vc-api', 'vcdm2'],
+      tags: ['vc-api', 'vc2.0'],
     }],
     provers: [{
       id: 'did:example:prover',
       endpoint: url + '/presentations/prove',
-      tags: ['vc-api', 'vcdm2'],
+      tags: ['vc-api', 'vc2.0'],
     }],
     vpVerifiers: [{
       id: '',
       endpoint: url + '/presentations/verify',
-      tags: ['vc-api', 'vcdm2'],
+      tags: ['vc-api', 'vc2.0'],
     }]
   });
   return {name, implementation, stop: server.close.bind(server)};
