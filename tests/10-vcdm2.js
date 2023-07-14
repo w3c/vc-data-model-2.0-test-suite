@@ -15,8 +15,8 @@ import receiveJson from './receive-json.js';
 const require = createRequire(import.meta.url);
 const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
-const vcApiTag = 'vcdm2';
-const {match, nonMatch} = filterByTag({tags: [vcApiTag, 'vcdm2']});
+const vcApiTag = 'vc2.0';
+const {match, nonMatch} = filterByTag({tags: [vcApiTag]});
 
 import runServer from '../example-server.js';
 const exampleServer = await runServer();

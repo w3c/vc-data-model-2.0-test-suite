@@ -1,10 +1,10 @@
 {
-  "shortName": "vcdm2-test-suite",
+  "shortName": "vc2.0-test-suite",
   "group": "vc",
   "specStatus": "NOTE",
   "subtitle": "Verifiable Credentials Data Model v2.0 Interoperability Report",
-  "github": "https://github.com/w3c-ccg/vcdm-test-suite",
-  "edDraftURI": "https://w3c-ccg.github.io/vcdm-test-suite/#issue-credential",
+  "github": "https://github.com/w3c-ccg/vc2.0-test-suite",
+  "edDraftURI": "https://w3c-ccg.github.io/vc2.0-test-suite/#issue-credential",
   "doJsonLd": true,
   "includePermalinks": false,
   "editors": [
