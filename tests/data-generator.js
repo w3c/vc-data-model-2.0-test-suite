@@ -3,11 +3,23 @@
  */
 import * as ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import * as vc from '@digitalbazaar/vc';
+import {CONTEXT, CONTEXT_URL} from '@digitalbazaar/data-integrity-context';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {decodeSecretKeySeed} from 'bnid';
 import {
-  cryptosuite as ed255119Cryptosuite
+  cryptosuite as eddsa2022Cryptosuite
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
+
+const _documentLoader = url => {
+  if(url === CONTEXT_URL) {
+    return {
+      contextUrl: null,
+      documentUrl: url,
+      document: CONTEXT
+    };
+  }
+  return vc.defaultDocumentLoader(url);
+};
 
 const _getSeed = (seed = process.env.TEST_KEY_SEED) =>
   decodeSecretKeySeed({
@@ -30,8 +42,9 @@ export async function proveVP({presentation, options = {}}) {
     const keyPair = await ed25519Multikey.generate({seed});
     options.suite = new DataIntegrityProof({
       signer: keyPair.signer(),
-      cryptosuite: ed255119Cryptosuite
+      cryptosuite: eddsa2022Cryptosuite
     });
   }
+  options.documentLoader = options.documentLoader || _documentLoader;
   return vc.signPresentation({presentation, ...options});
 }
