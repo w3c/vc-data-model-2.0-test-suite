@@ -18,15 +18,6 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 const vcApiTag = 'vc2.0';
 const {match, nonMatch} = filterByTag({tags: [vcApiTag]});
 
-import runServer from '../example-server.js';
-const exampleServer = await runServer();
-
-match.set(exampleServer.name, exampleServer.implementation);
-
-after(async function() {
-  await exampleServer.stop();
-});
-
 describe('Verifiable Credentials Data Model v2.0', function() {
   const summaries = new Set();
   this.summary = summaries;
