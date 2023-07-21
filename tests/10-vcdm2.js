@@ -16,7 +16,7 @@ const require = createRequire(import.meta.url);
 const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
 const vcApiTag = 'vc2.0';
-const {match, nonMatch} = filterByTag({tags: [vcApiTag]});
+const {match} = filterByTag({tags: [vcApiTag]});
 
 import runServer from '../example-server.js';
 const exampleServer = await runServer();
@@ -36,7 +36,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
   this.matrix = true;
   this.report = true;
   this.implemented = [...match.keys()];
-  this.notImplemented = [...nonMatch.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Issuer';
   // the reportData will be displayed under the test title
