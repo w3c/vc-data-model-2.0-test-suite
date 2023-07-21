@@ -12,12 +12,12 @@
         <script type="text/javascript" class="remove">
           // set this in the config section
           var respecConfig = {
-      "shortName": "vcdm2-test-suite",
+      "shortName": "vc2.0-test-suite",
       "group": "vc",
       "specStatus": "NOTE",
       "subtitle": "Verifiable Credentials Data Model v2.0 Interoperability Report",
-      "github": "https://github.com/w3c-ccg/vcdm-test-suite",
-      "edDraftURI": "https://w3c-ccg.github.io/vcdm-test-suite/#issue-credential",
+      "github": "https://github.com/w3c-ccg/vc2.0-test-suite",
+      "edDraftURI": "https://w3c-ccg.github.io/vc2.0-test-suite/#issue-credential",
       "doJsonLd": true,
       "includePermalinks": false,
       "editors": [
@@ -71,19 +71,19 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 32/32 100%
+      Tests passed 46/64 71%
       </p>
       <p>
-      Tests failed 0/32 0%
+      Tests failed 18/64 29%
       </p>
       <p>
-      Tests skipped 12
+      Tests skipped 24
       </p>
       <p>
-      Total tests 44
+      Total tests 88
       </p>
       <p>
-        These tests were run on <time>16 July 2023 at 5:05 am UTC</time>
+        These tests were run on <time>21 July 2023 at 2:58 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -169,8 +169,8 @@
                   <span>&#8659;</span><span>Test Name</span>
                   </div>
                 </th>
+                    <th class="no-wrap small-font">apicatalog.com</th>
                     <th class="no-wrap small-font">example</th>
-                    <th class="no-wrap small-font">API Catalog</th>
                     <th class="no-wrap small-font">Danube Tech</th>
                     <th class="no-wrap small-font">Digital Bazaar</th>
                     <th class="no-wrap small-font">EWF</th>
@@ -220,8 +220,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -641,8 +641,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1062,8 +1062,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1451,8 +1451,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">@context: &quot;Subsequent items in the array MUST express context information and be composed of any combination of URLs or objects.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1481,10 +1481,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]",
+                      "stack": "HTTPError: JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:65:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:184:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1872,8 +1879,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">All libraries or processors MUST ensure that the order of the values in the @context property is what is expected for the specific application.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1902,10 +1909,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]",
+                      "stack": "HTTPError: JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:65:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:194:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2293,8 +2307,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">if present: &quot;The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2323,10 +2337,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]",
+                      "stack": "HTTPError: JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:65:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:201:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2746,8 +2767,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -3135,8 +3156,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">if present: &quot;The value of the id property MUST be a URL which MAY be dereferenced.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -3165,10 +3186,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:216:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -3588,8 +3616,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4009,8 +4037,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4398,8 +4426,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">The value of the type property MUST be, or map to (through interpretation of the @context property), one or more URLs.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4428,10 +4456,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:242:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4819,8 +4854,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">list: &quot;objects that MUST have a type specified.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4849,10 +4884,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:65:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:118:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:256:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -4881,6 +4923,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "Error",
+                      "message": "Missing verifiable presentation proof",
+                      "stack": "Error: Missing verifiable presentation proof\n    at post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:87:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:118:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:256:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="notImplemented not-optional highlight-on-hover">
@@ -5272,8 +5321,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -5661,8 +5710,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">The value of the credentialSubject property is defined as a set of objects that MUST contain one or more claims that are each related to a subject of the verifiable credential.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -5691,10 +5740,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:293:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -6082,8 +6138,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">A verifiable credential MUST have an issuer property.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -6112,10 +6168,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:302:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -6535,8 +6598,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -6924,8 +6987,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">A credential MUST have an validFrom property.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -6954,10 +7017,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:314:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -7377,8 +7447,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -7766,8 +7836,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">If present, the value of the validUntil property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential ceases to be valid, which could be a date and time in the past.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -7796,10 +7866,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Expired",
+                      "stack": "HTTPError: Expired\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:65:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:330:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -8219,8 +8296,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -8640,8 +8717,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -9029,8 +9106,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">If present, the value of the verifiableCredential property MUST be constructed from one or more verifiable credentials, or of data derived from verifiable credentials in a cryptographically verifiable format.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -9059,10 +9136,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:65:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:118:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:363:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -9091,6 +9175,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "Error",
+                      "message": "Missing verifiable presentation proof",
+                      "stack": "Error: Missing verifiable presentation proof\n    at post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:87:17)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:118:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:363:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="notImplemented not-optional highlight-on-hover">
@@ -9450,8 +9541,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">JSON-based processors MUST process the @context key, ensuring the expected values exist in the expected order for the credential type being processed.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -9480,10 +9571,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]",
+                      "stack": "HTTPError: JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:65:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:376:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -9903,8 +10001,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -10324,8 +10422,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -10713,8 +10811,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -10743,10 +10841,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:398:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -11134,8 +11239,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">credentialSchema id MUST be a URL identifying the schema file.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -11164,10 +11269,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:405:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -11587,8 +11699,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -11976,8 +12088,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">Each refreshService value MUST specify its type (for example, ManualRefreshService2018) and its id, which is the URL of the service.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -12006,10 +12118,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:418:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -12429,8 +12548,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -12818,8 +12937,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">Each termsOfUse value MUST specify its type, for example, IssuerPolicy, and MAY specify its instance id.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -12848,10 +12967,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "AssertionError",
+                      "message": "Missing expected rejection.",
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:432:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:57:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -13271,8 +13397,8 @@
                       </style>
                     </div>
                   </td>
-                  <td class="notImplemented not-optional highlight-on-hover">
-                    <div class= "highlight-on-hover">—</div>
+                  <td class="passed not-optional highlight-on-hover">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
