@@ -3,10 +3,6 @@
     "@protected": true,
     "VerifiableCredential": "https://www.w3.org/2018/credentials#VerifiableCredential"
   },
-  "https://www.w3.org/ns/credentials/examples/v2": {
-    "UniversityDegreeCredential": "https://example.org/examples#UniversityDegreeCredential",
-    "RelationshipCredential": "https://example.org/examples#RelationshipCredential"
-  },
   "https://example.org/cool.json": {},
   "https://example.org/specific-application/pre": {},
   "https://example.org/specific-application/post": {},
