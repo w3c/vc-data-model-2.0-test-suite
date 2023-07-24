@@ -121,7 +121,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'deterministic, bi-directional, and lossless as described in Section ' +
         '6. Syntaxes.', async function() {
       });
-      it2('Conforming processors MUST produce errors when nonconforming ' +
+      it2('Conforming processors MUST produce errors when non-conforming ' +
         'documents are consumed.', async function() {
         const doc = {
           type: ['NonconformingDocument']
@@ -167,6 +167,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         assert(Array.isArray(vp['@context']));
         assert.strictEqual(vp['@context'][0], baseContextUrl);
         */
+        //FIXME this should be a verifier test
+        //as the tests above used an existing issued VC
         await assert.rejects(issue(
           require('./input/credential-missing-base-context-fail.json')));
         await assert.rejects(verifyVp(
@@ -229,9 +231,17 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-type-unmapped-fail.json')));
       });
+      //FIXME how to test this?
       it.skip('type property: "If more than one URL is provided, the URLs ' +
         'MUST be interpreted as an unordered set."', async function() {
       });
+      // FIXME this needs to be expanded into at least 6 different tests
+      // Verifiable Credential MUST have a type specified
+      // Verifiable Presentaiton MUST have a type specified
+      // Proof MUST have a type specified.
+      // credentialStatus MUST have a type specified.
+      // termsOfUse MUST have a type specified.
+      // evidence MUST have a type specified.
       it2('list: "objects that MUST have a type specified."', async function() {
         // (Verifiable) credential requires type VerifiableCredential
         // (Verifiable) presentation requires type VerifiablePresentation
@@ -297,10 +307,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-issuer-object-no-id-fail.json')));
       });
-      it2('If present, the value of the validFrom property MUST be an' +
-          ' [XMLSCHEMA11-2] dateTimeStamp string value representing the' +
-          ' date and time the credential becomes valid, which could be a' +
-          ' date and time in the future.', async function() {
+      it2('If present, the value of the validFrom property MUST be an ' +
+        '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
+        'and time the credential becomes valid, which could be a date and ' +
+        'time in the future.', async function() {
         await issue(require('./input/credential-validfrom-ms-ok.json'));
         await issue(require('./input/credential-validfrom-tz-ok.json'));
         await assert.rejects(
@@ -316,14 +326,17 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-validuntil-invalid-fail.json')));
       });
+      // FIXME remove as this doesn't seem to be in the spec
       it.skip('At least one proof mechanism, and the details necessary ' +
         'to evaluate that proof, MUST be expressed for a credential or ' +
         'presentation to be a verifiable credential or verifiable ' +
         'presentation; that is, to be verifiable.', async function() {
       });
+      // FIXME remove as this doesn't seem to be in the spec
       it.skip('When embedding a proof, the proof property MUST be used.',
         async function() {
         });
+      // FIXME implement this test by asserting on proof.type
       it.skip('The specific method used for an embedded proof MUST be ' +
         'included using the type property.', async function() {
       });
@@ -338,10 +351,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-status-nonurl-id-fail.json')));
       });
-      it2('If present, the value of the verifiableCredential property ' +
-        'MUST be constructed from one or more verifiable credentials, or ' +
-        'of data derived from verifiable credentials in a cryptographically' +
-        ' verifiable format.', async function() {
+      it2('The verifiableCredential property MAY be present. The value MUST ' +
+      'be an array of one or more verifiable credentials, or of data derived ' +
+      'from verifiable credentials in a cryptographically verifiable format.',
+      async function() {
         //FIXME does this need an assert.doesNotReject
         await verifyVp(require('./input/presentation-vc-ok.json'));
         await verifyVp(require('./input/presentation-derived-vc-ok.json'));
@@ -425,7 +438,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         ' property, so that it can be used by all parties to perform various' +
         ' cryptographic operations in zero-knowledge.', async function() {
       });
-      it.skip('(ZKP?) Each derived verifiable credential within a' +
+      it.skip('(ZKP) Each derived verifiable credential within a' +
         ' verifiable presentation MUST contain all information necessary' +
         ' to verify the verifiable credential, either by including it' +
         ' directly within the credential, or by referencing the necessary' +
@@ -436,6 +449,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       ' verifiable presentations.', async function() {
       });
       // Syntaxes
+      // FIXME this is a good statement, but not in the spec
       it.skip('Data model mapping property values to JSON types' +
       ' (not numeric/boolean/sequence/ordered-set/set/empty): "Other values' +
       ' MUST be represented as a String type."', async function() {
