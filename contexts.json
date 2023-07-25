@@ -7,7 +7,6 @@
     "UniversityDegreeCredential": "https://example.org/examples#UniversityDegreeCredential",
     "RelationshipCredential": "https://example.org/examples#RelationshipCredential"
   },
-  "https://example.org/cool.json": {},
   "https://example.org/specific-application/pre": {},
   "https://example.org/specific-application/post": {},
   "https://example.org/ns/test-credential-pre": {},
