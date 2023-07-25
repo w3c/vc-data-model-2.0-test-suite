@@ -292,14 +292,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-issuer-object-no-id-fail.json')));
       });
-      it2('A credential MUST have an validFrom property.', async function() {
-        await assert.rejects(
-          issue(require('./input/credential-no-validfrom-fail.json')));
-      });
-      it2('The value of the validFrom property MUST be a string value of ' +
-        'an [XMLSCHEMA11-2] combined date-time string representing the date' +
-        ' and time the credential becomes valid, which could be a date and' +
-        ' time in the future.', async function() {
+      it2('If present, The value of the validFrom property MUST be a string' +
+        ' value of an [XMLSCHEMA11-2] combined date-time string representing' +
+        ' the date and time the credential becomes valid, which could be a' +
+        ' date and time in the future.', async function() {
         await issue(require('./input/credential-validfrom-ms-ok.json'));
         await issue(require('./input/credential-validfrom-tz-ok.json'));
         await assert.rejects(
