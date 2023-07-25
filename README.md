@@ -41,8 +41,8 @@ To add your implementation to this test suite You will need to add 3 endpoints t
 - A credentials issuer endpoint (/credentials/issue) in the `issuers` property.
 - A credentials verifier endpoint (/credentials/verify) in the `verifiers` property.
 - A presentations verifier (presentations/verify) in a new property `vpVerifiers`.
-All endpoints will need the tag `vc.2.0`.
 
+All endpoints will need the tag `vc.2.0`.
 A simplified manifest would look like this:
 
 ```js
