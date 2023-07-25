@@ -5,19 +5,26 @@ Test Suite for Verifiable Credentials Data Model (VCDM) 2.0
 
 - [Background](#background)
 - [Install](#install)
+- [Setup](#setup)
 - [Usage](#usage)
 - [Implementation](#implementation)
 
 
 ## Background
 
-Provides interoperability tests for verifable credential processors (issuers/verifiers) that support [vc-data-model-2.0](https://www.w3.org/TR/vc-data-model-2.0/).
+Provides interoperability tests for verifiable credential processors (issuers/verifiers) that support [vc-data-model-2.0](https://www.w3.org/TR/vc-data-model-2.0/).
 
 ## Install
 
 ```js
 npm i
 ```
+
+## Setup
+
+You will need a VC API compatible issuer and verifier that can handle both VCs and VPs.
+The documentLoader of both issuer and verifier will need to be able to resolve the VC 2.0 context
+and the examples context.
 
 ## Usage
 
@@ -30,8 +37,14 @@ npm test
 
 ### VC-API
 To add your implementation to this test suite see the [README here](https://github.com/w3c-ccg/vc-api-test-suite-implementations).
-Add the tag `vc-api` to the issuers and verifiers you want tested. To run the tests, some implementations require client secrets
+Add the tag `vc2.0` to the issuers and verifiers you want tested. To run the tests, some implementations require client secrets
 that can be passed as env variables to the test script. To see which ones require client secrets, you can check the [vc-api-test-suite-implementations](https://github.com/w3c-ccg/vc-api-test-suite-implementations) library.
+
+You will need to add 3 endpoints to your implementation manifest.
+You will need
+- A VC issuer (/credentials/issue) in the `issuers` property.
+- A VC verifier (/credentials/verify) in the `verifiers` property.
+- A VP verifier (presentations/verify) in a new property `vpVerifiers`.
 
 ### Non-VC-API
 TODO
