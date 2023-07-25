@@ -178,13 +178,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-context-combo5-fail.json')));
       });
-      it.skip('All libraries or processors MUST ensure that the order of the ' +
-        'values in the @context property is what is expected for the ' +
-        'specific application.', async function() {
-        await issue(require('./input/credential-context-order1-ok.json'));
-        await assert.rejects(
-          issue(require('./input/credential-context-order2-fail.json')));
-      });
       it2('if present: "The id property MUST express an identifier that ' +
         'others are expected to use when expressing statements about a ' +
         'specific thing identified by that identifier."', async function() {
@@ -360,13 +353,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
 
       // Advanced
-      it.skip('JSON-based processors MUST process the @context key, ensuring' +
-        ' the expected values exist in the expected order for the credential' +
-        ' type being processed.', async function() {
-        await issue(require('./input/credential-context-order-ok.json'));
-        await assert.rejects(issue(require(
-          './input/credential-context-order-fail.json')));
-      });
       it2('JSON-LD-based processors MUST produce an error when a JSON-LD' +
         ' context redefines any term in the active context.',
       async function() {
