@@ -22,9 +22,10 @@ npm i
 
 ## Setup
 
-You will need a VC API compatible issuer and verifier that can handle both VCs and VPs.
-The documentLoader of both issuer and verifier will need to be able to resolve the VC 2.0 context
-and the examples context.
+You will need a [VC API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that can handle both VCs and VPs.
+The documentLoaders of issuers and verifiers will need to be able to resolve these contexts:
+- [VC 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
+- [VC Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
 
 ## Usage
 
