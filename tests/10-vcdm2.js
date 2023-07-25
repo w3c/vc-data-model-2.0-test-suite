@@ -171,11 +171,11 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'information and be composed of any combination of URLs or objects."',
       async function() {
         await issue(require('./input/credential-context-combo1-ok.json'));
-        await issue(require('./input/credential-context-combo3-ok.json'));
+        await issue(require('./input/credential-context-combo2-ok.json'));
+        await assert.rejects(
+          issue(require('./input/credential-context-combo3-fail.json')));
         await assert.rejects(
           issue(require('./input/credential-context-combo4-fail.json')));
-        await assert.rejects(
-          issue(require('./input/credential-context-combo5-fail.json')));
       });
       it2('All libraries or processors MUST ensure that the order of the ' +
         'values in the @context property is what is expected for the ' +
