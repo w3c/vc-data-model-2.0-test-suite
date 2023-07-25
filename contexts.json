@@ -10,7 +10,6 @@
   "https://example.org/cool.json": {},
   "https://example.org/specific-application/pre": {},
   "https://example.org/specific-application/post": {},
-  "https://example.com/contexts/mycontext.jsonld": {},
   "https://example.org/ns/test-credential-pre": {},
   "https://example.org/ns/test-credential": {
     "ExampleOrderTestVerifiableCredential": "https://example.org/examples#ExampleOrderTestVerifiableCredential"
