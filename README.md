@@ -37,15 +37,44 @@ npm test
 ## Implementation
 
 ### VC-API
-To add your implementation to this test suite see the [README here](https://github.com/w3c-ccg/vc-api-test-suite-implementations).
-Add the tag `vc2.0` to the issuers and verifiers you want tested. To run the tests, some implementations require client secrets
+To add your implementation to this test suite You will need to add 3 endpoints to your implementation manifest.
+- A credentials issuer endpoint (/credentials/issue) in the `issuers` property.
+- A credentials verifier endpoint (/credentials/verify) in the `verifiers` property.
+- A presentations verifier (presentations/verify) in a new property `vpVerifiers`.
+All endpoints will need the tag `vc.2.0`.
+
+A simplified manifest would look like this:
+
+```js
+{
+  "name": "My Company",
+  "implementation": "My implementation",
+  "issuers": [{
+    "id": "",
+    "endpoint": "https://issuer.mycompany.com/credentials/issue",
+    "method": "POST",
+    "tags": ["vc2.0"]
+  }],
+  "verifiers": [{
+    "id": "",
+    "endpoint": "https://verifier.mycompany.com/credentials/verify",
+    "method": "POST",
+    "tags": ["vc2.0"]
+  }],
+  "vpVerifiers": [{
+    "id": "",
+    "endpoint": "https://verifier.mycompany.com/presentations/verify",
+    "method": "POST",
+    "tags": ["vc2.0"]
+  }]
+}
+```
+
+This example above is an unauthenticated endpoint. You may add zcap or oauth authentication to your endpoints.
+See the [README here](https://github.com/w3c-ccg/vc-api-test-suite-implementations).
+To run the tests, some implementations require client secrets
 that can be passed as env variables to the test script. To see which ones require client secrets, you can check the [vc-api-test-suite-implementations](https://github.com/w3c-ccg/vc-api-test-suite-implementations) library.
 
-You will need to add 3 endpoints to your implementation manifest.
-You will need
-- A VC issuer (/credentials/issue) in the `issuers` property.
-- A VC verifier (/credentials/verify) in the `verifiers` property.
-- A VP verifier (presentations/verify) in a new property `vpVerifiers`.
 
 ### Non-VC-API
 TODO
