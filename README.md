@@ -23,6 +23,133 @@ npm i
 ## Setup
 
 You will need a [VC API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that can handle both VCs and VPs.
+
+The issuer endpoint will need to follow the [VC API's issuer documentation](https://w3c-ccg.github.io/vc-api/#issue-credential).
+
+A request to an issuer endpoint will look like this:
+
+```js
+{
+  "credential": {
+    "@context": ["https://www.w3.org/ns/credentials/v2"],
+    "id": "did:test:vc1",
+    "type": ["VerifiableCredential"],
+    "issuer": "did:key:issuer",
+    "credentialSubject": {
+      "description": "Test VC"
+    }
+  },
+  "options": {
+    "credentialStatus": {
+      "type": "StatusList2021"
+    }
+  }
+}
+```
+
+An issuer response will look like this:
+
+```js
+{
+  "verifiableCredential": {
+    "@context": ["https://www.w3.org/ns/credentials/v2"],
+    "id": "did:test:vc1",
+    "type": ["VerifiableCredential"],
+    "issuer": "did:key:issuer",
+    "credentialSubject": {
+      "description": "Test VC"
+    },
+    "proof": {
+       "type": "DataIntegrityProof"
+    },
+    "credentialStatus": {
+      "type": "StatusList2021"
+    }
+  }
+}
+```
+
+The credential verifier endpoint will also need to follow the [VC API verifier documentation](https://w3c-ccg.github.io/vc-api/#verify-credential).
+
+A request to the verifier endpoint for a credential will look like this:
+```js
+{
+  "verifiableCredential": {
+    "@context": ["https://www.w3.org/ns/credentials/v2"],
+    "id": "did:test:vc1",
+    "type": ["VerifiableCredential"],
+    "issuer": "did:key:issuer",
+    "credentialSubject": {
+      "description": "Test VC"
+    },
+    "proof": {
+       "type": "DataIntegrityProof"
+    },
+    "credentialStatus": {
+      "type": "StatusList2021"
+    }
+  },
+  "options": {
+    "challenge": "secret",
+    "domain": "example.com"
+  }
+}
+
+```
+
+A response from the verifier endpoint for a credential will look like this:
+```js
+{
+  "checks": ["proof"],
+  "warnings": ["invalid-uri"],
+  "errors": ["invalid proof"]
+}
+```
+The presentation verifier endpoint will also need to follow the [VC API verifier documentation](https://w3c-ccg.github.io/vc-api/#verify-presentation).
+
+A request to the verifier endpoint for a presentation will like this:
+```js
+{
+  "verifiablePresentation": {
+    "@context": ["https://www.w3.org/ns/credentials/v2"],
+    "id": "did:vp:test1",
+    "type": ["VerifiablePresentation"],
+    "holder": "did:key:holder",
+    "verifiableCredential": [{
+      "@context": ["https://www.w3.org/ns/credentials/v2"],
+      "id": "did:test:vc1",
+      "type": ["VerifiableCredential"],
+      "issuer": "did:key:issuer",
+      "credentialSubject": {
+        "description": "Test VC"
+      },
+      "proof": {
+         "type": "DataIntegrityProof"
+      },
+      "credentialStatus": {
+        "type": "StatusList2021"
+      }
+    }],
+    "proof": {
+       "type": "DataIntegrityProof"
+    }
+  },
+  "options": {
+    "challenge": "secret",
+    "domain": "example.com"
+  }
+}
+```
+
+A response from the verifier endpoint for a presentation will look like this:
+```js
+{
+  "checks": ["proof"],
+  "warnings": ["invalid-uri"],
+  "errors": ["invalid proof"]
+}
+```
+
 The documentLoaders of issuers and verifiers will need to be able to resolve these contexts:
 - [VC 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
 - [VC Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
