@@ -31,19 +31,23 @@ A request to an issuer endpoint will look like this:
 ```js
 {
   "credential": {
-    "@context": ["https://www.w3.org/ns/credentials/v2"],
-    "id": "did:test:vc1",
-    "type": ["VerifiableCredential"],
-    "issuer": "did:key:issuer",
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2", 
+      "https://www.w3.org/ns/credentials/examples/v2"
+    ],
+    "id": "http://university.example/credentials/1872",
+    "type": ["VerifiableCredential", "ExampleAlumniCredential"],
+    "issuer": "https://university.example/issuers/565049",
+    "validFrom": "2023-07-01T19:23:24Z",
     "credentialSubject": {
-      "description": "Test VC"
-    }
+      "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+      "alumniOf": {
+        "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
+        "name": "Example University"
+      }
+    },
   },
-  "options": {
-    "credentialStatus": {
-      "type": "StatusList2021"
-    }
-  }
+  "options": {}
 }
 ```
 
@@ -52,18 +56,28 @@ An issuer response will look like this:
 ```js
 {
   "verifiableCredential": {
-    "@context": ["https://www.w3.org/ns/credentials/v2"],
-    "id": "did:test:vc1",
-    "type": ["VerifiableCredential"],
-    "issuer": "did:key:issuer",
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2", 
+      "https://www.w3.org/ns/credentials/examples/v2"
+    ],
+    "id": "http://university.example/credentials/1872",
+    "type": ["VerifiableCredential", "ExampleAlumniCredential"],
+    "issuer": "https://university.example/issuers/565049",
+    "validFrom": "2023-07-01T19:23:24Z",
     "credentialSubject": {
-      "description": "Test VC"
+      "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+      "alumniOf": {
+        "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
+        "name": "Example University"
+      }
     },
     "proof": {
-       "type": "DataIntegrityProof"
-    },
-    "credentialStatus": {
-      "type": "StatusList2021"
+      "type": "DataIntegrityProof",
+      "cryptosuite": "eddsa-2022",
+      "created": "2023-06-18T21:19:10Z",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "https://university.example/issuers/565049#key-1",
+      "proofValue": "zQeVbY4oey...V6doDwLWx"
     }
   }
 }
@@ -75,29 +89,36 @@ A request to the verifier endpoint for a credential will look like this:
 ```js
 {
   "verifiableCredential": {
-    "@context": ["https://www.w3.org/ns/credentials/v2"],
-    "id": "did:test:vc1",
-    "type": ["VerifiableCredential"],
-    "issuer": "did:key:issuer",
+    "@context": [
+      "https://www.w3.org/ns/credentials/v2", 
+      "https://www.w3.org/ns/credentials/examples/v2"
+    ],
+    "id": "http://university.example/credentials/1872",
+    "type": ["VerifiableCredential", "ExampleAlumniCredential"],
+    "issuer": "https://university.example/issuers/565049",
+    "validFrom": "2023-07-01T19:23:24Z",
     "credentialSubject": {
-      "description": "Test VC"
+      "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+      "alumniOf": {
+        "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
+        "name": "Example University"
+      }
     },
     "proof": {
-       "type": "DataIntegrityProof"
-    },
-    "credentialStatus": {
-      "type": "StatusList2021"
+      "type": "DataIntegrityProof",
+      "cryptosuite": "eddsa-2022",
+      "created": "2023-06-18T21:19:10Z",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "https://university.example/issuers/565049#key-1",
+      "proofValue": "zQeVbY4oey...V6doDwLWx"
     }
   },
-  "options": {
-    "challenge": "secret",
-    "domain": "example.com"
-  }
+  "options": {}
 }
 
 ```
 
-A response from the verifier endpoint for a credential will look like this:
+A response from the verifier endpoint for a credential might look like this (only HTTP response codes are checked for now):
 ```js
 {
   "checks": ["proof"],
@@ -105,6 +126,7 @@ A response from the verifier endpoint for a credential will look like this:
   "errors": ["invalid proof"]
 }
 ```
+
 The presentation verifier endpoint will also need to follow the [VC API verifier documentation](https://w3c-ccg.github.io/vc-api/#verify-presentation).
 
 A request to the verifier endpoint for a presentation will like this:
@@ -112,26 +134,42 @@ A request to the verifier endpoint for a presentation will like this:
 {
   "verifiablePresentation": {
     "@context": ["https://www.w3.org/ns/credentials/v2"],
-    "id": "did:vp:test1",
     "type": ["VerifiablePresentation"],
-    "holder": "did:key:holder",
+    "holder": "did:example:holder123456789",
     "verifiableCredential": [{
-      "@context": ["https://www.w3.org/ns/credentials/v2"],
-      "id": "did:test:vc1",
-      "type": ["VerifiableCredential"],
-      "issuer": "did:key:issuer",
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2", 
+        "https://www.w3.org/ns/credentials/examples/v2"
+      ],
+      "id": "http://university.example/credentials/1872",
+      "type": ["VerifiableCredential", "ExampleAlumniCredential"],
+      "issuer": "https://university.example/issuers/565049",
+      "validFrom": "2023-07-01T19:23:24Z",
       "credentialSubject": {
-        "description": "Test VC"
+        "id": "did:example:ebfeb1f712ebc6f1c276e12ec21",
+        "alumniOf": {
+          "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
+          "name": "Example University"
+        }
       },
       "proof": {
-         "type": "DataIntegrityProof"
-      },
-      "credentialStatus": {
-        "type": "StatusList2021"
+        "type": "DataIntegrityProof",
+        "cryptosuite": "eddsa-2022",
+        "created": "2023-06-18T21:19:10Z",
+        "proofPurpose": "assertionMethod",
+        "verificationMethod": "https://university.example/issuers/565049#key-1",
+        "proofValue": "zQeVbY4oey...V6doDwLWx"
       }
     }],
     "proof": {
-       "type": "DataIntegrityProof"
+      "type": "DataIntegrityProof",
+      "cryptosuite": "eddsa-2022",
+      "challenge": "08cf4ce0-2bd0-11ee-8622-83054936f200",
+      "domain": "example.com",
+      "created": "2023-06-18T21:19:10Z",
+      "proofPurpose": "assertionMethod",
+      "verificationMethod": "did:example:holder123456789#key-1",
+      "proofValue": "zQeVbY4y...oDwLWxV6d"
     }
   },
   "options": {
@@ -150,7 +188,7 @@ A response from the verifier endpoint for a presentation will look like this:
 }
 ```
 
-The documentLoaders of issuers and verifiers will need to be able to resolve these contexts:
+Issuers and verifiers will need to not error when these contexts are used:
 - [VC 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
 - [VC Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
 
@@ -167,7 +205,7 @@ npm test
 To add your implementation to this test suite You will need to add 3 endpoints to your implementation manifest.
 - A credentials issuer endpoint (/credentials/issue) in the `issuers` property.
 - A credentials verifier endpoint (/credentials/verify) in the `verifiers` property.
-- A presentations verifier (presentations/verify) in a new property `vpVerifiers`.
+- A presentations verifier (presentations/verify) in the `vpVerifiers` property.
 
 All endpoints will need the tag `vc.2.0`.
 A simplified manifest would look like this:
@@ -198,14 +236,15 @@ A simplified manifest would look like this:
 ```
 
 This example above is an unauthenticated endpoint. You may add zcap or oauth authentication to your endpoints.
+
 See the [README here](https://github.com/w3c-ccg/vc-api-test-suite-implementations).
-To run the tests, some implementations require client secrets
-that can be passed as env variables to the test script. To see which ones require client secrets, you can check the [vc-api-test-suite-implementations](https://github.com/w3c-ccg/vc-api-test-suite-implementations) library.
+
+To run the tests, some implementations require client secrets that can be passed as env variables to the test script. To see which ones require client secrets, you can check the [vc-api-test-suite-implementations](https://github.com/w3c-ccg/vc-api-test-suite-implementations) library.
 
 
 ### Docker (TODO)
 
-We are currently adding a feature that would allow Docker images (using the VC API above) to be used instead of live endpoints. 
+We are currently adding a feature that would allow Docker images (using the VC API above) to be used instead of live endpoints. The docker image that you provide will be started when the test suite is run. The image is expected to expose the API provided above, which will be utilized in the same way that live HTTP endpoints are used above.
 
 ## License
 
