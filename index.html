@@ -72,22 +72,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 34/60 56%
+      Tests passed 36/58 62%
       </p>
       <p>
-      Tests failed 26/60 44%
+      Tests failed 22/58 38%
       </p>
       <p>
-      Failures 26
+      Failures 22
       </p>
       <p>
       Tests skipped 24
       </p>
       <p>
-      Total tests 84
+      Total tests 82
       </p>
       <p>
-        These tests were run on <time>25 July 2023 at 9:53 pm UTC</time>
+        These tests were run on <time>26 July 2023 at 10:28 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -454,8 +454,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">if present: &quot;The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -484,17 +484,10 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "HTTPError",
-                      "message": "JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]",
-                      "stack": "HTTPError: JsonLdError[code=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED]., message=There was a problem encountered loading a remote context [code=LOADING_REMOTE_CONTEXT_FAILED].]\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:183:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -523,13 +516,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "HTTPError",
-                      "message": "An unspecified error occurred.",
-                      "stack": "HTTPError: An unspecified error occurred.\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:183:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
               </tr>
@@ -1295,90 +1281,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">A credential MUST have an validFrom property.</td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:296:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
-                    }</pre>
-                      </span>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:296:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
-                    }</pre>
-                      </span>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">The value of the validFrom property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential becomes valid, which could be a date and time in the future.</td>
+                <td class="subtest">If present, the value of the validFrom property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential becomes valid, which could be a date and time in the future.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -1446,7 +1349,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:305:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:301:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1490,7 +1393,7 @@
                         <pre>{
                       "name": "HTTPError",
                       "message": "Expired",
-                      "stack": "HTTPError: Expired\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:312:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "HTTPError: Expired\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:308:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1529,7 +1432,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:315:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:311:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1711,7 +1614,7 @@
                         <pre>{
                       "name": "HTTPError",
                       "message": "Request failed with status code 400 Bad Request",
-                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:108:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:345:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:108:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:341:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1750,7 +1653,7 @@
                         <pre>{
                       "name": "HTTPError",
                       "message": "Authorization error.",
-                      "stack": "HTTPError: Authorization error.\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:108:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:345:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "HTTPError: Authorization error.\n    at fn (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:55:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:108:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:341:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1932,7 +1835,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:373:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:369:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1971,7 +1874,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:373:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:369:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2015,7 +1918,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:380:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:376:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2160,7 +2063,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:393:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:389:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2199,7 +2102,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:393:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:389:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2312,7 +2215,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:407:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:403:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2351,7 +2254,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:407:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:403:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2-test-suite/vc-data-model-2-test-suite/tests/10-vcdm2.js:47:9)"
                     }</pre>
                       </span>
                     </div>
