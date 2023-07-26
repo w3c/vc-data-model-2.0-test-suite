@@ -129,7 +129,7 @@ A response from the verifier endpoint for a credential might look like this (onl
 
 The presentation verifier endpoint will also need to follow the [VC API verifier documentation](https://w3c-ccg.github.io/vc-api/#verify-presentation).
 
-A request to the verifier endpoint for a presentation will like this:
+A request to the verifier endpoint for a presentation will look like this:
 ```js
 {
   "verifiablePresentation": {
