@@ -76,8 +76,9 @@ To run the tests, some implementations require client secrets
 that can be passed as env variables to the test script. To see which ones require client secrets, you can check the [vc-api-test-suite-implementations](https://github.com/w3c-ccg/vc-api-test-suite-implementations) library.
 
 
-### Non-VC-API
-TODO
+### Docker (TODO)
+
+We are currently adding a feature that would allow Docker images (using the VC API above) to be used instead of live endpoints. 
 
 ## License
 
