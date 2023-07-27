@@ -5,7 +5,6 @@ import * as ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import * as vc from '@digitalbazaar/vc';
 import {CONTEXT, CONTEXT_URL} from '@digitalbazaar/data-integrity-context';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
-import {decodeSecretKeySeed} from 'bnid';
 import {
   cryptosuite as eddsa2022Cryptosuite
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
@@ -33,11 +32,6 @@ const _documentLoader = url => {
   return vc.defaultDocumentLoader(url);
 };
 
-const _getSeed = (seed = process.env.TEST_KEY_SEED) =>
-  decodeSecretKeySeed({
-    secretKeySeed: seed || 'z1AZVaiqEq3kXaf4DJD5qXUfdJBFbW1JNe4FF58HwMgVE6u'
-  });
-
 /**
  * An extremely basic VP prover. This is not final
  * and will probably change.
@@ -50,13 +44,22 @@ const _getSeed = (seed = process.env.TEST_KEY_SEED) =>
  */
 export async function proveVP({presentation, options = {}}) {
   if(!options.suite) {
-    const seed = await _getSeed();
-    const keyPair = await ed25519Multikey.generate({seed});
+    const verificationKeyPair = await ed25519Multikey.from({
+      id: 'did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
+      controller: 'did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
+      publicKeyMultibase: 'z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
+      secretKeyMultibase: 'zrv1a6V2qqSGkBz7QPw4yJedKc8X9dEdug7c3MEzNUDVEmkyV' +
+        'cXtTWNLQLArgKXzN7LbGMTVjqE2CbdrqpnxqtxmY1M',
+    });
     options.suite = new DataIntegrityProof({
-      signer: keyPair.signer(),
+      signer: verificationKeyPair.signer(),
       cryptosuite: eddsa2022Cryptosuite
     });
   }
   options.documentLoader = options.documentLoader || _documentLoader;
+  // sign those vcs
+  if(presentation?.verifiableCredentials) {
+
+  }
   return vc.signPresentation({presentation: klona(presentation), ...options});
 }

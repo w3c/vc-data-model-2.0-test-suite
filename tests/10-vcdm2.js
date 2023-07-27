@@ -97,12 +97,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       return result;
     }
 
-    async function verifyVp(vp) {
+    async function verifyVp(vp, options = {checks: []}) {
       const body = {
         verifiablePresentation: vp,
-        options: {
-          checks: ['proof'],
-        }
+        options
       };
       const result = await post(vpVerifier, body);
       if(result?.errors?.length) {
@@ -110,6 +108,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       }
       return result;
     }
+
+    const proveOptions = {challenge: 'test-challenge'};
 
     describe(name, function() {
       it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
