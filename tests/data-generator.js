@@ -9,6 +9,7 @@ import {decodeSecretKeySeed} from 'bnid';
 import {
   cryptosuite as eddsa2022Cryptosuite
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
+import {klona} from 'klona';
 
 const _documentLoader = url => {
   if(url === CONTEXT_URL) {
@@ -57,5 +58,5 @@ export async function proveVP({presentation, options = {}}) {
     });
   }
   options.documentLoader = options.documentLoader || _documentLoader;
-  return vc.signPresentation({presentation, ...options});
+  return vc.signPresentation({presentation: klona(presentation), ...options});
 }
