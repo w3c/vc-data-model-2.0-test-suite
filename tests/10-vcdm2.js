@@ -116,8 +116,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     let vp;
     before(async function() {
       const credential = require('./input/credential-ok.json');
-      // The full verifiableCredential property IRI is used in the VP to work
-      // around a FIXME in vc-api-test-suite-implementations/lib/requests.js
       const presentation = require('./input/presentation-ok.json');
       vc = await issue(credential);
       const options = {challenge: 'test-challenge'};

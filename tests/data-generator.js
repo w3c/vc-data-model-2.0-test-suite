@@ -18,6 +18,17 @@ const _documentLoader = url => {
       document: CONTEXT
     };
   }
+  if(url === 'https://www.w3.org/ns/credentials/examples/v2') {
+    return {
+      contextUrl: null,
+      documentUrl: url,
+      document: {
+        '@context': {
+          '@vocab': 'https://www.w3.org/ns/credentials/examples#'
+        }
+      }
+    };
+  }
   return vc.defaultDocumentLoader(url);
 };
 
