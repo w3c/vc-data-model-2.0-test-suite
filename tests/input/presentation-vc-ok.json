@@ -5,7 +5,7 @@
   "type": [
     "VerifiablePresentation"
   ],
-  "https://www.w3.org/2018/credentials#verifiableCredential": [
+  "verifiableCredential": [
     {
       "@context": [
         "https://www.w3.org/ns/credentials/v2"
