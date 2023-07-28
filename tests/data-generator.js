@@ -11,6 +11,7 @@ import {
 import {klona} from 'klona';
 
 const _documentLoader = url => {
+  // adds support for the data integrity context
   if(url === CONTEXT_URL) {
     return {
       contextUrl: null,
@@ -18,6 +19,7 @@ const _documentLoader = url => {
       document: CONTEXT
     };
   }
+  // adds support for the examples context
   if(url === 'https://www.w3.org/ns/credentials/examples/v2') {
     return {
       contextUrl: null,
@@ -58,8 +60,19 @@ export async function proveVP({presentation, options = {}}) {
   }
   options.documentLoader = options.documentLoader || _documentLoader;
   // sign those vcs
-  if(presentation?.verifiableCredentials) {
-
+  if(presentation?.verifiableCredential) {
+    presentation.verifiableCredential = await Promise.all(
+      presentation.verifiableCredential.map(credential => {
+        // if there is already a proof don't add it
+        if(credential.proof) {
+          return credential;
+        }
+        return vc.issue({credential: klona(credential), ...options});
+      }));
   }
-  return vc.signPresentation({presentation: klona(presentation), ...options});
+  const vp = await vc.signPresentation({
+    presentation: klona(presentation),
+    ...options
+  });
+  return vp;
 }
