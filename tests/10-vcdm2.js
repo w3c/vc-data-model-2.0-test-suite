@@ -270,7 +270,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         // credential to have an existing proof property.
         await issue(require('./input/credential-proof-ok.json'));
         await assert.rejects(
-          issue(require('./input/credential-proof-missing-type-fail.json')));
+          verify(require('./input/credential-proof-missing-type-fail.json')));
         await issue(require('./input/credential-status-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-status-missing-type-fail.json')));
