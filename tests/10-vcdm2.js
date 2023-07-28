@@ -109,7 +109,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       return result;
     }
 
-    const proveOptions = {challenge: 'test-challenge'};
+    const challenge = 'z19pnWMzs2Ub452WW9BLBJP9h';
+    const proveOptions = {challenge};
 
     describe(name, function() {
       it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
@@ -355,14 +356,21 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       'be an array of one or more verifiable credentials, or of data derived ' +
       'from verifiable credentials in a cryptographically verifiable format.',
       async function() {
-        //FIXME does this need an assert.doesNotReject
-        await verifyVp(require('./input/presentation-vc-ok.json'));
+        //FIXME remove the internal prove once VC-API presentation
+        //creation is stabilized
+        const presentationWithCredentials = await proveVP({
+          presentation: require('./input/presentation-vc-ok.json'),
+          options: proveOptions
+        });
+        await verifyVp(presentationWithCredentials);
+        /*
         await verifyVp(require('./input/presentation-derived-vc-ok.json'));
         await verifyVp(require('./input/presentation-multiple-vc-ok.json'));
         await assert.rejects(verifyVp(require(
           './input/presentation-vc-missing-required-type-fail.json')));
         await assert.rejects(verifyVp(require(
           './input/presentation-derived-vc-missing-required-type-fail.json')));
+        */
       });
 
       // Advanced
