@@ -34,17 +34,7 @@ const _documentLoader = url => {
   return vc.defaultDocumentLoader(url);
 };
 
-/**
- * An extremely basic VP prover. This is not final
- * and will probably change.
- *
- * @param {object} options - Options to use.
- * @param {object} options.presentation - An unsigned VP.
- * @param {object} options.options - Options for the VP.
- *
- * @returns {Promise<object>} Resolves to a signed Vp.
- */
-export async function proveVP({presentation, options = {}}) {
+async function getKeys() {
   const publicKeyMultibase = 'z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNC' +
     'Uqcj';
   const id = `did:key:${publicKeyMultibase}`;
@@ -57,6 +47,21 @@ export async function proveVP({presentation, options = {}}) {
   });
   const signer = verificationKeyPair.signer();
   signer.id = `did:key:${publicKeyMultibase}#${publicKeyMultibase}`;
+  return {signer, keyPair: verificationKeyPair};
+}
+
+/**
+ * An extremely basic VP prover. This is not final
+ * and will probably change.
+ *
+ * @param {object} options - Options to use.
+ * @param {object} options.presentation - An unsigned VP.
+ * @param {object} options.options - Options for the VP.
+ *
+ * @returns {Promise<object>} Resolves to a signed Vp.
+ */
+export async function proveVP({presentation, options = {}}) {
+  const {signer, keyPair} = await getKeys({options});
   options.suite = new DataIntegrityProof({
     signer,
     cryptosuite: eddsa2022Cryptosuite
@@ -70,7 +75,7 @@ export async function proveVP({presentation, options = {}}) {
         if(credential.proof) {
           return credential;
         }
-        credential.issuer = id;
+        credential.issuer = keyPair.id;
         return vc.issue({credential: klona(credential), ...options});
       }));
   }
