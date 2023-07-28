@@ -9,6 +9,7 @@ import assert from 'node:assert/strict';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import http from 'http';
+import {proveVP} from './data-generator.js';
 import receiveJson from './receive-json.js';
 
 const require = createRequire(import.meta.url);
