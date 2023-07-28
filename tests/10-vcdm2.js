@@ -140,13 +140,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'a @context property.', async function() {
         const vc = await issue(require('./input/credential-ok.json'));
         vc.should.have.property('@context');
-        //FIXME reimplement this once VP creation via VC-API
-        //has stabilized
+        //FIXME reimplement this once signed VP creation via VC-API
+        //has been finalized
         /*
-        const options = {challenge: 'test-challenge'};
         const vp = await proveVP({
           presentation: require('./input/presentation-ok.json'),
-          options
+          options: proveOptions
         });
         vp.should.have.property('@context');
         */
@@ -162,13 +161,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         const vc = await issue(require('./input/credential-ok.json'));
         assert(Array.isArray(vc['@context']));
         assert.strictEqual(vc['@context'][0], baseContextUrl);
-        //FIXME reimplement this once VP creation via VC-API
-        //has stabilized
+        //FIXME reimplement this once signed VP creation via VC-API
+        //has been finalized
         /*
-        const options = {challenge: 'test-challenge'};
         const vp = await proveVP({
           presentation: require('./input/presentation-ok.json'),
-          options
+          options: proveOptions
         });
         assert(Array.isArray(vp['@context']));
         assert.strictEqual(vp['@context'][0], baseContextUrl);
