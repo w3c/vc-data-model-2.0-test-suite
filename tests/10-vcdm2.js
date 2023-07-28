@@ -9,7 +9,6 @@ import assert from 'node:assert/strict';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import http from 'http';
-import {proveVP} from './data-generator.js';
 import receiveJson from './receive-json.js';
 
 const require = createRequire(import.meta.url);
@@ -112,16 +111,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       return result;
     }
 
-    let vc;
-    let vp;
-    before(async function() {
-      const credential = require('./input/credential-ok.json');
-      const presentation = require('./input/presentation-ok.json');
-      vc = await issue(credential);
-      const options = {challenge: 'test-challenge'};
-      vp = await proveVP({presentation, options});
-    });
-
     describe(name, function() {
       it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
         '("all relevant normative statements in Sections 4. Basic Concepts, ' +
@@ -143,8 +132,18 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it2('Verifiable credentials and verifiable presentations MUST include ' +
         'a @context property.', async function() {
+        const vc = await issue(require('./input/credential-ok.json'));
         vc.should.have.property('@context');
+        //FIXME reimplement this once VP creation via VC-API
+        //has stabilized
+        /*
+        const options = {challenge: 'test-challenge'};
+        const vp = await proveVP({
+          presentation: require('./input/presentation-ok.json'),
+          options
+        });
         vp.should.have.property('@context');
+        */
         await assert.rejects(issue(
           require('./input/credential-no-context-fail.json')));
         await assert.rejects(verifyVp(
@@ -154,12 +153,20 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'The value of the @context property MUST be an ordered set where ' +
         'the first item is a URL with the value https://www.w3.org/ns/' +
         'credentials/v2.', async function() {
+        const vc = await issue(require('./input/credential-ok.json'));
         assert(Array.isArray(vc['@context']));
         assert.strictEqual(vc['@context'][0], baseContextUrl);
-
+        //FIXME reimplement this once VP creation via VC-API
+        //has stabilized
+        /*
+        const options = {challenge: 'test-challenge'};
+        const vp = await proveVP({
+          presentation: require('./input/presentation-ok.json'),
+          options
+        });
         assert(Array.isArray(vp['@context']));
         assert.strictEqual(vp['@context'][0], baseContextUrl);
-
+        */
         await assert.rejects(issue(
           require('./input/credential-missing-base-context-fail.json')));
         await assert.rejects(verifyVp(
