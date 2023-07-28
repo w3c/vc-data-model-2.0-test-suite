@@ -8,6 +8,5 @@
   "type": [
     "VerifiablePresentation",
     "CredentialManagerPresentation"
-  ],
-  "verifiableCredential": []
+  ]
 }
