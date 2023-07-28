@@ -45,19 +45,22 @@ const _documentLoader = url => {
  * @returns {Promise<object>} Resolves to a signed Vp.
  */
 export async function proveVP({presentation, options = {}}) {
-  if(!options.suite) {
-    const verificationKeyPair = await ed25519Multikey.from({
-      id: 'did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
-      controller: 'did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
-      publicKeyMultibase: 'z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
-      secretKeyMultibase: 'zrv1a6V2qqSGkBz7QPw4yJedKc8X9dEdug7c3MEzNUDVEmkyV' +
-        'cXtTWNLQLArgKXzN7LbGMTVjqE2CbdrqpnxqtxmY1M',
-    });
-    options.suite = new DataIntegrityProof({
-      signer: verificationKeyPair.signer(),
-      cryptosuite: eddsa2022Cryptosuite
-    });
-  }
+  const publicKeyMultibase = 'z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNC' +
+    'Uqcj';
+  const id = `did:key:${publicKeyMultibase}`;
+  const verificationKeyPair = await ed25519Multikey.from({
+    id,
+    controller: 'did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
+    publicKeyMultibase,
+    secretKeyMultibase: 'zrv1a6V2qqSGkBz7QPw4yJedKc8X9dEdug7c3MEzNUDVEmkyV' +
+      'cXtTWNLQLArgKXzN7LbGMTVjqE2CbdrqpnxqtxmY1M',
+  });
+  const signer = verificationKeyPair.signer();
+  signer.id = `did:key:${publicKeyMultibase}#${publicKeyMultibase}`;
+  options.suite = new DataIntegrityProof({
+    signer,
+    cryptosuite: eddsa2022Cryptosuite
+  });
   options.documentLoader = options.documentLoader || _documentLoader;
   // sign those vcs
   if(presentation?.verifiableCredential) {
@@ -67,12 +70,12 @@ export async function proveVP({presentation, options = {}}) {
         if(credential.proof) {
           return credential;
         }
+        credential.issuer = id;
         return vc.issue({credential: klona(credential), ...options});
       }));
   }
-  const vp = await vc.signPresentation({
+  return vc.signPresentation({
     presentation: klona(presentation),
     ...options
   });
-  return vp;
 }
