@@ -111,6 +111,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
 
     const challenge = 'z19pnWMzs2Ub452WW9BLBJP9h';
     const proveOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
 
     describe(name, function() {
       it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
@@ -251,7 +255,11 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await issue(require('./input/credential-optional-type-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-missing-required-type-fail.json')));
-        await verifyVp(require('./input/presentation-optional-type-ok.json'));
+        const presentationOptionalType = await proveVP({
+          presentation: require('./input/presentation-optional-type-ok.json'),
+          options: proveOptions
+        });
+        await verifyVp(presentationOptionalType, verifyPresentationOptions);
         await assert.rejects(
           verifyVp(require(
             './input/presentation-missing-required-type-fail.json')));
@@ -358,19 +366,26 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       async function() {
         //FIXME remove the internal prove once VC-API presentation
         //creation is stabilized
-        const presentationWithCredentials = await proveVP({
+        const presentationWithCredential = await proveVP({
           presentation: require('./input/presentation-vc-ok.json'),
           options: proveOptions
         });
-        await verifyVp(presentationWithCredentials);
-        /*
-        await verifyVp(require('./input/presentation-derived-vc-ok.json'));
-        await verifyVp(require('./input/presentation-multiple-vc-ok.json'));
+        await verifyVp(presentationWithCredential, verifyPresentationOptions);
+        // FIXME support for derived VCs is not standard yet
+        // and probably will be its own test suite
+        //await verifyVp(require('./input/presentation-derived-vc-ok.json'));
+
+        // FIXME remove internal prove once VC-API presentation
+        // creation is finalized
+        const presentationWithCredentials = await proveVP({
+          presentation: require('./input/presentation-multiple-vc-ok.json'),
+          options: proveOptions
+        });
+        await verifyVp(presentationWithCredentials, verifyPresentationOptions);
         await assert.rejects(verifyVp(require(
           './input/presentation-vc-missing-required-type-fail.json')));
         await assert.rejects(verifyVp(require(
           './input/presentation-derived-vc-missing-required-type-fail.json')));
-        */
       });
 
       // Advanced
