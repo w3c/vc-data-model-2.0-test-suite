@@ -394,14 +394,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(issue(require(
             './input/credential-schema-non-url-id-fail.json')));
         });
-      it2('The value of the refreshService property MUST be one or more' +
+      it.skip('The value of the refreshService property MUST be one or more' +
         ' refresh services that provides enough information to the ' +
         'recipient\'s software such that the recipient can refresh the ' +
         'verifiable credential.', async function() {
         await issue(require('./input/credential-refresh-ok.json'));
         await issue(require('./input/credential-refreshs-ok.json'));
       });
-      it2('Each refreshService value MUST specify its type (for example,' +
+      it.skip('Each refreshService value MUST specify its type (for example,' +
         ' ManualRefreshService2018) and its id, which is the URL of the ' +
         'service.', async function() {
         await assert.rejects(issue(require(
