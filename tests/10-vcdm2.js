@@ -109,8 +109,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       }
       return result;
     }
-
-    const challenge = 'z19pnWMzs2Ub452WW9BLBJP9h';
+    // use timestamp as a challenge to avoid hard coded challenges
+    const challenge = String(Date.now());
     const proveOptions = {challenge};
     const verifyPresentationOptions = {
       checks: ['proof'],
