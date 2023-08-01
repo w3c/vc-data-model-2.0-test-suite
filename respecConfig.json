@@ -3,14 +3,16 @@
   "group": "vc",
   "specStatus": "NOTE",
   "subtitle": "Verifiable Credentials Data Model v2.0 Interoperability Report",
-  "github": "https://github.com/w3c-ccg/vc2.0-test-suite",
-  "edDraftURI": "https://w3c-ccg.github.io/vc2.0-test-suite/#issue-credential",
+  "github": "https://github.com/digitalbazaar/vc-data-model-2-test-suite",
+  "edDraftURI": "https://www.w3.org/TR/vc-data-model-2.0/",
   "doJsonLd": true,
   "includePermalinks": false,
   "editors": [
-    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" }
+    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" },
+    { "name": "Andrew Jones", "url": "https://github.com/aljones15" }
   ],
   "authors": [
-    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" }
+    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" },
+    { "name": "Andrew Jones", "url": "https://github.com/aljones15" }
   ]
 }
