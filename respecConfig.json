@@ -7,6 +7,13 @@
   "edDraftURI": "https://digitalbazaar.github.io/vc-data-model-2-test-suite/",
   "doJsonLd": true,
   "includePermalinks": false,
+  "otherLinks": [{
+    "key": "Related Specifications",
+    "data": [{
+      "value": "The Verifiable Credentials Data Model v2.0",
+      "href": "https://www.w3.org/TR/vc-data-model-2.0/"
+    }]
+  }],
   "editors": [
     { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" },
     { "name": "Andrew Jones", "url": "https://github.com/aljones15" }
