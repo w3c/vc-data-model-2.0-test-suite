@@ -109,8 +109,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       }
       return result;
     }
-    // use timestamp as a challenge to avoid hard coded challenges
-    const challenge = String(Date.now());
+    // use base64 encoded 128 byte number as the challenge
+    const challenge = Buffer.from(new Uint8Array(128).map(
+      () => Math.random() * 255)).toString('base64');
     const proveOptions = {challenge};
     const verifyPresentationOptions = {
       checks: ['proof'],
