@@ -4,7 +4,7 @@
   "specStatus": "NOTE",
   "subtitle": "Verifiable Credentials Data Model v2.0 Interoperability Report",
   "github": "https://github.com/digitalbazaar/vc-data-model-2-test-suite",
-  "edDraftURI": "https://www.w3.org/TR/vc-data-model-2.0/",
+  "edDraftURI": "https://digitalbazaar.github.io/vc-data-model-2-test-suite/",
   "doJsonLd": true,
   "includePermalinks": false,
   "editors": [
