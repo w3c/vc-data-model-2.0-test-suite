@@ -91,7 +91,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     async function verify(vc) {
       const verifyBody = createVerifyRequestBody({vc});
       const result = await post(verifier, verifyBody);
-      if(result.errors.length) {
+      if(result?.errors?.length) {
         throw result.errors[0];
       }
       return result;
@@ -105,7 +105,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         }
       };
       const result = await post(vpVerifier, body);
-      if(result.errors.length) {
+      if(result?.errors?.length) {
         throw result.errors[0];
       }
       return result;
