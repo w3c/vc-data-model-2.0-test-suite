@@ -16,10 +16,12 @@
   }],
   "editors": [
     { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" },
-    { "name": "Andrew Jones", "url": "https://github.com/aljones15" }
+    { "name": "Andrew Jones", "url": "https://github.com/aljones15", 
+      "company": "Digital Bazaar", "companyURL": "https://digitalbazaar.com/"}
   ],
   "authors": [
     { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" },
-    { "name": "Andrew Jones", "url": "https://github.com/aljones15" }
+    { "name": "Andrew Jones", "url": "https://github.com/aljones15",
+      "company": "Digital Bazaar", "companyURL": "https://digitalbazaar.com/"}
   ]
 }
