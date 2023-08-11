@@ -1,18 +1,27 @@
-# vcdm2-test-suite
-Test Suite for Verifiable Credentials Data Model (VCDM) 2.0
+# Verifiable Credentials v2.0 Test Suite
+
+This is the test suite for the W3C Verifiable Credentials Data Model (VCDM) v2.0
+specification.
 
 ## Table of Contents
 
-- [Background](#background)
-- [Install](#install)
-- [Setup](#setup)
-- [Usage](#usage)
-- [Implementation](#implementation)
-
+- [Verifiable Credentials v2.0 Test Suite](#verifiable-credentials-v20-test-suite)
+  - [Table of Contents](#table-of-contents)
+  - [Background](#background)
+  - [Install](#install)
+  - [Setup](#setup)
+  - [Usage](#usage)
+  - [Implementation](#implementation)
+    - [VC-API](#vc-api)
+    - [Docker (TODO)](#docker-todo)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## Background
 
-Provides interoperability tests for verifiable credential processors (issuers/verifiers) that support [vc-data-model-2.0](https://www.w3.org/TR/vc-data-model-2.0/).
+This test suite provides interoperability tests for verifiable credential
+processors (issuers/verifiers) that support the
+[W3C Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0/).
 
 ## Install
 
@@ -22,17 +31,21 @@ npm i
 
 ## Setup
 
-You will need a [VC API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that can handle both VCs and VPs.
+In order to integrate with this test suite, you will need to use a
+[VC API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that
+is capable of issuing and verifying verifiable credentials and verifiable
+presentations.
 
-The issuer endpoint will need to follow the [VC API's issuer documentation](https://w3c-ccg.github.io/vc-api/#issue-credential).
+The issuer endpoint will need to conform to the
+[VC Issuer API](https://w3c-ccg.github.io/vc-api/#issue-credential).
 
-A request to an issuer endpoint will look like this:
+A request to issue a credential (`/credentials/issue`) will look like this:
 
-```js
+```json
 {
   "credential": {
     "@context": [
-      "https://www.w3.org/ns/credentials/v2", 
+      "https://www.w3.org/ns/credentials/v2",
       "https://www.w3.org/ns/credentials/examples/v2"
     ],
     "id": "http://university.example/credentials/1872",
@@ -51,13 +64,14 @@ A request to an issuer endpoint will look like this:
 }
 ```
 
-An issuer response will look like this:
+The response from a call to issue a credential (`/credentials/issue`) will
+look like this:
 
-```js
+```json
 {
   "verifiableCredential": {
     "@context": [
-      "https://www.w3.org/ns/credentials/v2", 
+      "https://www.w3.org/ns/credentials/v2",
       "https://www.w3.org/ns/credentials/examples/v2"
     ],
     "id": "http://university.example/credentials/1872",
@@ -83,14 +97,17 @@ An issuer response will look like this:
 }
 ```
 
-The credential verifier endpoint will also need to follow the [VC API verifier documentation](https://w3c-ccg.github.io/vc-api/#verify-credential).
+The credential verifier endpoint will need to conform to the
+[VC Verifier API](https://w3c-ccg.github.io/vc-api/#verify-credential).
 
-A request to the verifier endpoint for a credential will look like this:
-```js
+A request to the verifier endpoint (`/credentials/verify`) for a credential
+will look like this:
+
+```json
 {
   "verifiableCredential": {
     "@context": [
-      "https://www.w3.org/ns/credentials/v2", 
+      "https://www.w3.org/ns/credentials/v2",
       "https://www.w3.org/ns/credentials/examples/v2"
     ],
     "id": "http://university.example/credentials/1872",
@@ -118,8 +135,11 @@ A request to the verifier endpoint for a credential will look like this:
 
 ```
 
-A response from the verifier endpoint for a credential might look like this (only HTTP response codes are checked for now):
-```js
+A response from the verifier endpoint (`/credentials/verify`) for a
+verifiable credential might look like this (only HTTP response codes are
+checked):
+
+```json
 {
   "checks": ["proof"],
   "warnings": ["invalid-uri"],
@@ -127,10 +147,13 @@ A response from the verifier endpoint for a credential might look like this (onl
 }
 ```
 
-The presentation verifier endpoint will also need to follow the [VC API verifier documentation](https://w3c-ccg.github.io/vc-api/#verify-presentation).
+The presentation verifier endpoint will need to conform to the
+[VC Verifier API](https://w3c-ccg.github.io/vc-api/#verify-presentation).
 
-A request to the verifier endpoint for a presentation will look like this:
-```js
+A request to the verifier endpoint for a presentation (`/presentations/verify`)
+will look like this:
+
+```json
 {
   "verifiablePresentation": {
     "@context": ["https://www.w3.org/ns/credentials/v2"],
@@ -138,7 +161,7 @@ A request to the verifier endpoint for a presentation will look like this:
     "holder": "did:example:holder123456789",
     "verifiableCredential": [{
       "@context": [
-        "https://www.w3.org/ns/credentials/v2", 
+        "https://www.w3.org/ns/credentials/v2",
         "https://www.w3.org/ns/credentials/examples/v2"
       ],
       "id": "http://university.example/credentials/1872",
@@ -179,8 +202,11 @@ A request to the verifier endpoint for a presentation will look like this:
 }
 ```
 
-A response from the verifier endpoint for a presentation will look like this:
-```js
+A response from the verifier endpoint (`/credentials/verify`) for a
+verifiable presentation might look like this (only HTTP response codes are
+checked):
+
+```json
 {
   "checks": ["proof"],
   "warnings": ["invalid-uri"],
@@ -188,7 +214,9 @@ A response from the verifier endpoint for a presentation will look like this:
 }
 ```
 
-Issuers and verifiers will need to not error when these contexts are used:
+Implementations are expected to not error when any of the following context
+files are used in a verifiable credential or a verifiable presentation:
+
 - [VC 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
 - [VC Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
 
@@ -198,17 +226,16 @@ Issuers and verifiers will need to not error when these contexts are used:
 npm test
 ```
 
-
 ## Implementation
 
 ### VC-API
 To add your implementation to this test suite You will need to add 3 endpoints to your implementation manifest.
-- A credentials issuer endpoint (/credentials/issue) in the `issuers` property.
-- A credentials verifier endpoint (/credentials/verify) in the `verifiers` property.
-- A presentations verifier (presentations/verify) in the `vpVerifiers` property.
+- A credentials issuer endpoint (`/credentials/issue`) in the `issuers` property.
+- A credentials verifier endpoint (`/credentials/verify`) in the `verifiers` property.
+- A presentations verifier endpoint (`presentations/verify`) in the `vpVerifiers` property.
 
-All endpoints will need the tag `vc.2.0`.
-A simplified manifest would look like this:
+All endpoints will need the tag `vc2.0`. A simplified manifest will roughly
+look like the following:
 
 ```js
 {
@@ -235,23 +262,31 @@ A simplified manifest would look like this:
 }
 ```
 
-This example above is an unauthenticated endpoint. You may add zcap or oauth authentication to your endpoints.
+This example above is for a set of unauthenticated endpoints. You may add zcap
+or oauth2 authentication to your endpoints.
 
-See the [vc-api-test-suite-implementations README here](https://github.com/w3c-ccg/vc-api-test-suite-implementations).
+See the [vc-test-suite-implementations README here](https://github.com/w3c/vc-test-suite-implementations).
 
-To run the tests, some implementations require client secrets that can be passed as env variables to the test script. To see which ones require client secrets, you can check the [vc-api-test-suite-implementations](https://github.com/w3c-ccg/vc-api-test-suite-implementations) library.
-
+To run the tests, some implementations require client secrets that can be passed
+as env variables to the test script. To see which ones require client secrets,
+you can check the
+[vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
+library.
 
 ### Docker (TODO)
 
-We are currently adding a feature that would allow Docker images (using the VC API above) to be used instead of live endpoints. The docker image that you provide will be started when the test suite is run. The image is expected to expose the API provided above, which will be utilized in the same way that live HTTP endpoints are used above.
+We are currently adding a feature that would allow Docker images (using the VC
+API above) to be used instead of live endpoints. The docker image that you
+provide will be started when the test suite is run. The image is expected to
+expose the API provided above, which will be utilized in the same way that live
+HTTP endpoints are used above.
+
+## Contribute
+
+See [the CONTRIBUTING.md file](CONTRIBUTING.md).
+
+Pull Requests are welcome!
 
 ## License
 
-Copyright © 2023 [World Wide Web Consortium](http://www.w3.org/), ([MIT](http://www.csail.mit.edu/), [ERCIM](http://www.ercim.org/), [Keio](http://www.keio.ac.jp/), [Beihang](http://ev.buaa.edu.cn/)) and others. All Rights Reserved. <http://www.w3.org/Consortium/Legal/2008/04-testsuite-copyright.html>
-
-Distributed under both the [W3C Test Suite License](https://www.w3.org/Consortium/Legal/2008/04-testsuite-license) (SPDX: [LicenseRef-scancode-w3c-test-suite](https://scancode-licensedb.aboutcode.org/w3c-test-suite.html)) and the [W3C 3-clause BSD License](https://www.w3.org/Consortium/Legal/2008/03-bsd-license). To contribute to a W3C Test Suite, see the [policies and contribution forms](https://www.w3.org/2004/10/27-testcases).
-
-UNDER BOTH MUTUALLY EXCLUSIVE LICENSES, THIS DOCUMENT AND ALL DOCUMENTS, TESTS AND SOFTWARE THAT LINK THIS STATEMENT ARE PROVIDED "AS IS," AND COPYRIGHT HOLDERS MAKE NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR TITLE; THAT THE CONTENTS OF THE DOCUMENT ARE SUITABLE FOR ANY PURPOSE; NOR THAT THE IMPLEMENTATION OF SUCH CONTENTS WILL NOT INFRINGE ANY THIRD PARTY PATENTS, COPYRIGHTS, TRADEMARKS OR OTHER RIGHTS.
-
-COPYRIGHT HOLDERS WILL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF ANY USE OF THE DOCUMENT OR THE PERFORMANCE OR IMPLEMENTATION OF THE CONTENTS THEREOF.
+See [the LICENSE.md file](LICENSE.md)
