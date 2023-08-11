@@ -10,6 +10,7 @@ import {createRequire} from 'module';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import http from 'http';
 import {proveVP} from './data-generator.js';
+import {randomFillSync} from 'node:crypto';
 import receiveJson from './receive-json.js';
 
 const require = createRequire(import.meta.url);
@@ -109,9 +110,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       }
       return result;
     }
-    // use base64 encoded 128 byte number as the challenge
-    const challenge = 'u' + Buffer.from(new Uint8Array(128).map(
-      () => Math.random() * 255)).toString('base64');
+    // use base64 encoded 128 bit number as the challenge
+    const buf = Buffer.alloc(16); // 128 bits
+    const challenge = 'u' + randomFillSync(buf).toString('base64url');
     const proveOptions = {challenge};
     const verifyPresentationOptions = {
       checks: ['proof'],
