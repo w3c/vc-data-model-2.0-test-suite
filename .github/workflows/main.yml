@@ -1,4 +1,4 @@
-name: Generate Interop Report
+name: Generate W3C Interoperability Report
 
 on:
   workflow_dispatch:
@@ -43,7 +43,6 @@ jobs:
         run: npm install --legacy-peer-deps
       - name: Run test with Node.js ${{ matrix.node-version }}
         env:
-          CLIENT_SECRET_DB: ${{ secrets.CLIENT_SECRET_DB }}
           KEY_SEED_DB: ${{ secrets.KEY_SEED_DB }}
         run: npm run test
         continue-on-error: true
