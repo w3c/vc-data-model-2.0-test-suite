@@ -95,13 +95,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 42/54 77%
+      Tests passed 22/54 41%
       </p>
       <p>
-      Tests failed 12/54 23%
+      Tests failed 32/54 59%
       </p>
       <p>
-      Failures 12
+      Failures 32
       </p>
       <p>
       Tests skipped 28
@@ -110,7 +110,7 @@
       Total tests 82
       </p>
       <p>
-        These tests were run on <time>15 October 2023 at 5:06 am UTC</time>
+        These tests were run on <time>22 October 2023 at 5:05 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -270,8 +270,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">Verifiable credentials and verifiable presentations MUST include a @context property.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -300,10 +300,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:143:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -332,6 +339,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:143:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -339,8 +353,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">Verifiable credentials and verifiable presentations: The value of the @context property MUST be an ordered set where the first item is a URL with the value https://www.w3.org/ns/credentials/v2.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -369,10 +383,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:163:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -401,6 +422,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:163:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -408,8 +436,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">@context: &quot;Subsequent items in the array MUST express context information and be composed of any combination of URLs or objects.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -438,10 +466,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:186:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -470,6 +505,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:186:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -477,8 +519,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">if present: &quot;The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -507,10 +549,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:196:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -539,6 +588,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:196:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -546,8 +602,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">if present: &quot;The id property MUST NOT have more than one value.&quot;</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -576,10 +632,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:202:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -608,6 +671,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:202:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -854,15 +924,15 @@
                       </style>
                       <span class="err hide no-space-around">
                         <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:237:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:230:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -891,6 +961,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:230:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -931,14 +1008,14 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "HTTPError",
-                      "message": "Request failed with status code 400 Bad Request",
-                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:275:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:256:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -967,6 +1044,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:256:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -1075,50 +1159,13 @@
                       </style>
                       <span class="err hide no-space-around">
                         <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:300:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:302:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">A verifiable credential MUST have an issuer property.</td>
-                <!--These contain if the test passed, failed, or was skipped-->
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
@@ -1151,11 +1198,48 @@
                       </style>
                       <span class="err hide no-space-around">
                         <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:309:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:302:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">A verifiable credential MUST have an issuer property.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1195,8 +1279,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">The value of the issuer property MUST be either a URL or an object containing an id property.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1225,6 +1309,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:316:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -1259,9 +1350,9 @@
                       </style>
                       <span class="err hide no-space-around">
                         <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:314:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:316:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1271,8 +1362,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">If present, the value of the validFrom property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential becomes valid, which could be a date and time in the future.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1301,6 +1392,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:324:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -1335,9 +1433,9 @@
                       </style>
                       <span class="err hide no-space-around">
                         <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:326:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:324:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1380,8 +1478,8 @@
                       <span class="err hide no-space-around">
                         <pre>{
                       "name": "HTTPError",
-                      "message": "Expired",
-                      "stack": "HTTPError: Expired\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:333:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:333:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1418,9 +1516,9 @@
                       </style>
                       <span class="err hide no-space-around">
                         <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:336:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:333:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1568,8 +1666,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">The verifiableCredential property MAY be present. The value MUST be an array of one or more verifiable credentials, or of data derived from verifiable credentials in a cryptographically verifiable format.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1598,10 +1696,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:107:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:374:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1630,6 +1735,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:107:22)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:374:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -1706,8 +1818,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1736,10 +1848,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:406:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1768,6 +1887,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:406:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -1775,8 +1901,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1805,17 +1931,10 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:411:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1844,13 +1963,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:411:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
               </tr>
@@ -1858,8 +1970,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">credentialSchema id MUST be a URL identifying the schema file.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1888,13 +2000,6 @@
                          margin-left: 1rem;
                        }
                       </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:418:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
-                    }</pre>
-                      </span>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1934,8 +2039,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">The value of the termsOfUse property MUST specify one or more terms of use policies under which the creator issued the credential or presentation.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1964,10 +2069,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:441:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -1996,6 +2108,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:441:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -2035,15 +2154,15 @@
                       </style>
                       <span class="err hide no-space-around">
                         <pre>{
-                      "name": "AssertionError",
-                      "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:445:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:447:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
                     }</pre>
                       </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2072,6 +2191,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:447:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
@@ -2079,8 +2205,8 @@
                 <!--This is the name of the test-->
                 <td class="subtest">The value of the evidence property MUST be one or more evidence schemes providing enough information for a verifier to determine whether the evidence gathered by the issuer meets its confidence requirements for relying on the credential.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2109,10 +2235,17 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 415 Unsupported Media Type",
+                      "stack": "HTTPError: Request failed with status code 415 Unsupported Media Type\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:46:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:453:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <style>
                        .hide {
@@ -2141,6 +2274,13 @@
                          margin-left: 1rem;
                        }
                       </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "Request failed with status code 400 Bad Request",
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-api-test-suite-implementations/lib/requests.js:80:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:56:31)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:453:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:48:9)"
+                    }</pre>
+                      </span>
                     </div>
                   </td>
               </tr>
