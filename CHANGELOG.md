@@ -1,6 +1,6 @@
 # w3c/vc-data-model-2.0-test-suite ChangeLog
 
-## 1.0.0 - 2023-11-09
+## 1.0.0 - 2023-11-10
 
 ### Added
 - Add a new reporter option that generates the JSON used to create the report.
