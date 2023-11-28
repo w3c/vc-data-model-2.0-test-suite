@@ -28,7 +28,7 @@
   },
   "license": "(BSD-3-Clause OR LicenseRef-scancode-w3c-test-suite)",
   "engines": {
-    "node": ">=18.0"
+    "node": ">=18"
   },
   "bugs": {
     "url": "https://github.com/w3c/vc-data-model-2.0-test-suite/issues"
