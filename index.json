@@ -21,7 +21,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -37,7 +37,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -54,9 +54,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:52203ca6-0f0e-44d0-917c-ae3c1099cb36",
+              "_testId": "urn:uuid:55f9450b-f5c8-4ae1-9d37-f902156f8d57",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -67,12 +67,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 333,
+                "_idleStart": 368,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 422,
+              "duration": 285,
               "state": "passed",
               "speed": "slow"
             },
@@ -89,9 +89,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:ebba5c19-7f8d-4cb8-9d02-a9e20eb40de8",
+              "_testId": "urn:uuid:77f8aa2f-10ed-46f6-99d1-6646da1ad754",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -102,12 +102,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 755,
+                "_idleStart": 654,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 323,
+              "duration": 268,
               "state": "passed",
               "speed": "slow"
             },
@@ -124,9 +124,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:4bb0b7d2-4e99-4944-903f-01e69b213972",
+              "_testId": "urn:uuid:c7eb2420-67e4-4703-8a72-6f97069f945b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -137,12 +137,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 1078,
+                "_idleStart": 922,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 4274,
+              "duration": 1400,
               "state": "passed",
               "speed": "slow"
             },
@@ -159,9 +159,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:61f75a9f-c27f-48c2-b6f0-42ab4265dcee",
+              "_testId": "urn:uuid:97140ea3-dc37-404a-a912-e13b41a3074d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -172,12 +172,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 5354,
+                "_idleStart": 2322,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 721,
+              "duration": 713,
               "state": "passed",
               "speed": "slow"
             },
@@ -194,9 +194,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:d0934987-69fe-49b2-a889-74b978f477e5",
+              "_testId": "urn:uuid:806a6592-68f1-4bdb-8806-56f891af41a5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -207,12 +207,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6076,
+                "_idleStart": 3036,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 391,
+              "duration": 190,
               "state": "passed",
               "speed": "slow"
             },
@@ -229,9 +229,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:ad8e5465-a926-47bd-9d2f-2a47dd54f681",
+              "_testId": "urn:uuid:25acf452-8f12-4188-b9e5-8443b9953663",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -242,12 +242,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6471,
+                "_idleStart": 3226,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 820,
+              "duration": 702,
               "state": "passed",
               "speed": "slow"
             },
@@ -264,9 +264,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:46dad5c2-76f5-480d-8186-3e6f2c871f1e",
+              "_testId": "urn:uuid:fa7d0569-ff91-478e-aa00-cfa8a925ee1e",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -277,12 +277,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7291,
+                "_idleStart": 3929,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 480,
+              "duration": 291,
               "state": "passed",
               "speed": "slow"
             },
@@ -299,9 +299,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:39942da0-0552-40ae-bd65-9eb99e71f38d",
+              "_testId": "urn:uuid:c7049a1e-2486-43f5-b8fb-ca77ee3bb4f5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -312,12 +312,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7771,
+                "_idleStart": 4221,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 102,
+              "duration": 101,
               "state": "passed",
               "speed": "slow"
             },
@@ -334,9 +334,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:2d4c013b-0674-4a57-ac9c-8e163ecd0ebd",
+              "_testId": "urn:uuid:3a0ee16a-50b7-439d-904a-1f1b409d5743",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -347,12 +347,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7875,
+                "_idleStart": 4322,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 200,
+              "duration": 197,
               "state": "passed",
               "speed": "slow"
             },
@@ -369,9 +369,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:27a993a5-405a-4dc6-ace5-3ebe3fcabf42",
+              "_testId": "urn:uuid:f7682edc-e22c-4e1e-a3a8-956aeb033fdd",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -382,12 +382,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 8075,
+                "_idleStart": 4520,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 998,
+              "duration": 605,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -407,7 +407,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -424,9 +424,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:5bdbe82d-42db-4e15-8899-fd6c0e9209f1",
+              "_testId": "urn:uuid:15e8e3ae-3c82-4efe-925d-b6522d1f47f6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -437,12 +437,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9075,
+                "_idleStart": 5130,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1347,
+              "duration": 1195,
               "state": "failed",
               "err": {
                 "response": {},
@@ -564,7 +564,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -581,9 +581,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:2d33df1b-6fcf-463b-b47d-f45c9848dcdc",
+              "_testId": "urn:uuid:1f4d9aff-476a-438a-8340-860ea8781b2f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -594,14 +594,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10425,
+                "_idleStart": 6327,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 51,
+              "duration": 95,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -616,9 +616,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:a1526543-7381-4298-9808-398c1b250e8b",
+              "_testId": "urn:uuid:a3abd06b-c6f8-4128-9cea-93fc5966acfb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -629,12 +629,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10476,
+                "_idleStart": 6422,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 105,
+              "duration": 103,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -655,9 +655,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:25030a3f-a970-4aac-8cd5-e5cf3bb788e1",
+              "_testId": "urn:uuid:92bf73bc-3dde-4e9d-888b-df3b48e087f2",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -668,12 +668,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10581,
+                "_idleStart": 6525,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 197,
+              "duration": 193,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -694,9 +694,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:d81098ba-3bde-4518-a3f7-fb4f95189b1d",
+              "_testId": "urn:uuid:c24aeb1a-c51c-41a5-bc01-a6870af18f9b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -707,12 +707,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10778,
+                "_idleStart": 6719,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 490,
+              "duration": 411,
               "state": "passed",
               "speed": "slow"
             },
@@ -729,9 +729,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:5f3319ab-27b3-46ab-a024-f0bf2467f52e",
+              "_testId": "urn:uuid:cdb907b6-750c-4508-a35f-f550f522fed1",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -742,12 +742,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11268,
+                "_idleStart": 7130,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 803,
+              "duration": 402,
               "state": "passed",
               "speed": "slow"
             },
@@ -764,9 +764,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:0c385399-5cba-4c73-9dfd-e6526ef1344e",
+              "_testId": "urn:uuid:f3a9c84c-df78-4260-b69a-0156e9d389cd",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -777,12 +777,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12071,
+                "_idleStart": 7532,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 202,
+              "duration": 31,
               "state": "failed",
               "err": {
                 "response": {},
@@ -897,7 +897,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -913,7 +913,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -929,7 +929,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -946,9 +946,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:95999518-2672-4801-8354-46836e95da5f",
+              "_testId": "urn:uuid:03b16117-7c58-44f1-b86c-ab35a4877f22",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -959,12 +959,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12274,
+                "_idleStart": 7564,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 161,
               "state": "passed",
               "speed": "slow"
             },
@@ -981,9 +981,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:6bb290f6-82f7-4671-a1f7-444e121310c4",
+              "_testId": "urn:uuid:43b19b88-af70-4dd2-bc20-b60bb287e1b5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -994,7 +994,7 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12376,
+                "_idleStart": 7725,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -1016,9 +1016,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:6d851d3f-8510-4634-8665-8475868d1ef1",
+              "_testId": "urn:uuid:73edc390-1669-4003-ad81-2766642933f6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1029,12 +1029,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12475,
+                "_idleStart": 7823,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 902,
+              "duration": 622,
               "state": "passed",
               "speed": "slow"
             },
@@ -1051,9 +1051,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:646e0b52-622a-4ab6-bf1f-86c9ccdbc31e",
+              "_testId": "urn:uuid:77340675-c606-487e-a583-c439cd440a32",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1064,12 +1064,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13377,
+                "_idleStart": 8445,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 199,
+              "duration": 104,
               "state": "passed",
               "speed": "slow"
             },
@@ -1086,9 +1086,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:70d23756-44ab-42b0-877c-fa6420345e0b",
+              "_testId": "urn:uuid:3965dd86-7c1f-47a6-90c3-fcef9fe99e86",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1099,12 +1099,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13576,
+                "_idleStart": 8549,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 206,
+              "duration": 274,
               "state": "passed",
               "speed": "slow"
             },
@@ -1121,9 +1121,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:89e42ddc-818c-4048-a7ca-46370115a263",
+              "_testId": "urn:uuid:c9c438ac-eba7-4a4e-9e39-cd6bb0853baf",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1134,12 +1134,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13782,
+                "_idleStart": 8823,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 193,
+              "duration": 195,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -1160,9 +1160,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:94a5ba7b-f1a9-490f-887f-3cebd3fe0b97",
+              "_testId": "urn:uuid:f174fabc-745c-4be8-93b6-fec718d3915a",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1173,12 +1173,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13975,
+                "_idleStart": 9019,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 295,
+              "duration": 109,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -1198,7 +1198,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -1214,7 +1214,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -1231,9 +1231,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:2ff661ed-b7b6-426d-b686-609562c9e417",
+              "_testId": "urn:uuid:28110663-ee94-48f1-a52a-38533165d7c9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1244,12 +1244,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14270,
+                "_idleStart": 9128,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 204,
+              "duration": 195,
               "state": "passed",
               "speed": "slow"
             },
@@ -1266,9 +1266,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:23bbd7ee-182c-4a47-92bb-e9865496f43d",
+              "_testId": "urn:uuid:e7a02836-8261-4845-afb2-07420ccf5d85",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1279,12 +1279,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14474,
+                "_idleStart": 9324,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 196,
+              "duration": 104,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -1305,9 +1305,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:de5bf05b-cf39-4948-b830-914ac7b607c3",
+              "_testId": "urn:uuid:63e00e3b-06b3-4336-8706-15b9b035ef00",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1318,12 +1318,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14670,
+                "_idleStart": 9428,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 202,
+              "duration": 193,
               "state": "passed",
               "speed": "slow"
             },
@@ -1339,7 +1339,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -1355,7 +1355,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -1371,7 +1371,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -1387,7 +1387,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             },
@@ -1403,7 +1403,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
               "state": "pending"
             }
@@ -1421,9 +1421,9 @@
           "_onlyTests": [],
           "_onlySuites": [],
           "delayed": false,
-          "parent": "FYJeVPQQ2fE2aXBItDjav",
+          "parent": "SLB880Fxwkrdb-CaZ1J3u",
           "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-          "_testId": "urn:uuid:c7657459-cfc7-48e1-ae61-035ee9747901"
+          "_testId": "urn:uuid:656a5891-ea7c-46c2-87c3-4884e383b00e"
         },
         {
           "title": "Digital Bazaar",
@@ -1442,7 +1442,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -1458,7 +1458,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -1475,9 +1475,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:d31bf705-345c-4400-9fea-5f54a96e8fa9",
+              "_testId": "urn:uuid:8b18489a-c73a-465f-998a-1859bc183839",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1488,12 +1488,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14874,
+                "_idleStart": 9622,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 476,
+              "duration": 510,
               "state": "passed",
               "speed": "slow"
             },
@@ -1510,9 +1510,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:2cdfe1b6-fd1d-4c68-a1ec-6664ac6dd465",
+              "_testId": "urn:uuid:b52739ad-7418-41df-a7ab-9fbc86bfab33",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1523,12 +1523,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 15349,
+                "_idleStart": 10132,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 944,
+              "duration": 854,
               "state": "passed",
               "speed": "slow"
             },
@@ -1545,9 +1545,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:1851ef7e-1bd1-44bf-a88b-18d3712c1386",
+              "_testId": "urn:uuid:2e45c0eb-a98e-4abc-b6e3-73beb7bce245",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1558,12 +1558,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16293,
+                "_idleStart": 10987,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1401,
+              "duration": 1477,
               "state": "passed",
               "speed": "slow"
             },
@@ -1580,9 +1580,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:b7adb81e-1a65-457e-a468-6c4cf8e84d8c",
+              "_testId": "urn:uuid:27caa3bd-c9ac-4801-aad2-e9e8b61f31e5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1593,12 +1593,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17695,
+                "_idleStart": 12465,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 776,
+              "duration": 841,
               "state": "passed",
               "speed": "slow"
             },
@@ -1615,9 +1615,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:9723debf-db81-44ce-9ab4-428164fdb329",
+              "_testId": "urn:uuid:dc1f4c14-63e7-46cf-863c-4ddc1ceeb546",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1628,12 +1628,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18471,
+                "_idleStart": 13306,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 141,
+              "duration": 188,
               "state": "passed",
               "speed": "slow"
             },
@@ -1650,9 +1650,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:f710beb4-13a7-47a6-9670-ae44f93d2453",
+              "_testId": "urn:uuid:e969c628-cd4d-4720-8ab5-410486685138",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1663,12 +1663,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18613,
+                "_idleStart": 13493,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 598,
+              "duration": 313,
               "state": "passed",
               "speed": "slow"
             },
@@ -1685,9 +1685,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:98ac1d5d-af51-47d5-8127-2a90eaa46909",
+              "_testId": "urn:uuid:db7d7404-7bb6-4e3a-b1e8-299c63d54c2c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1698,14 +1698,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19212,
+                "_idleStart": 13807,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 44,
+              "duration": 157,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -1720,9 +1720,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:3038137b-595c-406a-8b97-6d004eb911a0",
+              "_testId": "urn:uuid:d15fe7e3-a81c-420f-8458-91e13a639b3c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1733,12 +1733,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19257,
+                "_idleStart": 13964,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 53,
+              "duration": 59,
               "state": "passed",
               "speed": "medium"
             },
@@ -1755,9 +1755,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:b1c27213-fc5d-43e7-97ef-510181e8bbc3",
+              "_testId": "urn:uuid:9100bda4-9b1b-40d4-82e7-320cdfcaff30",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1768,12 +1768,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19310,
+                "_idleStart": 14024,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 624,
+              "duration": 111,
               "state": "passed",
               "speed": "slow"
             },
@@ -1790,9 +1790,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:2fdf027d-458d-46a2-9728-26d1a0a3ed6c",
+              "_testId": "urn:uuid:a8c9299c-def8-4b71-bd03-6af538b5ac8d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1803,12 +1803,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19935,
+                "_idleStart": 14135,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 241,
+              "duration": 320,
               "state": "passed",
               "speed": "slow"
             },
@@ -1824,7 +1824,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -1841,9 +1841,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:3c24241d-a970-4fab-9135-5dc4b8b71d14",
+              "_testId": "urn:uuid:0f8e6849-2f86-4d1b-8dc5-6c5042d5937c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1854,12 +1854,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20176,
+                "_idleStart": 14456,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 670,
+              "duration": 1352,
               "state": "passed",
               "speed": "slow"
             },
@@ -1875,7 +1875,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -1892,9 +1892,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:61d80cc1-82bf-4e77-950f-629f5866eac4",
+              "_testId": "urn:uuid:0a9d32b5-723c-4e56-bf41-6a0644303b02",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1905,12 +1905,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20846,
+                "_idleStart": 15807,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 41,
+              "duration": 48,
               "state": "passed",
               "speed": "medium"
             },
@@ -1927,9 +1927,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:5aba5098-8195-4147-b3d2-cbe1f2cbd92b",
+              "_testId": "urn:uuid:7a2b6aa8-a631-49ce-a427-903351bf7328",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1940,12 +1940,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20887,
+                "_idleStart": 15856,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 152,
+              "duration": 195,
               "state": "passed",
               "speed": "slow"
             },
@@ -1962,9 +1962,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:081dc03d-8336-4e55-94f9-8fb3fd6e1061",
+              "_testId": "urn:uuid:5c243db7-0bdd-491d-9c1b-b8612573a617",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1975,12 +1975,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21039,
+                "_idleStart": 16051,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 38,
+              "duration": 51,
               "state": "passed",
               "speed": "medium"
             },
@@ -1997,9 +1997,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:fcf59f6a-4e39-43d9-b01f-c215b2fcd299",
+              "_testId": "urn:uuid:d122ff19-c1bc-4d8d-9a8e-b827b1b2d397",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2010,12 +2010,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21077,
+                "_idleStart": 16102,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 73,
+              "duration": 101,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -2036,9 +2036,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:f34e4308-4300-48a7-80a2-fd4d3c13f3e0",
+              "_testId": "urn:uuid:c6f6b444-9c25-4f72-b6bf-77124906e835",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2049,12 +2049,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21151,
+                "_idleStart": 16203,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 226,
+              "duration": 249,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -2075,9 +2075,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:ee415e9c-a687-4ec1-9318-8c8cea3a4037",
+              "_testId": "urn:uuid:03fb8383-c436-4b48-bee1-4cbb9e0cf399",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2088,12 +2088,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21377,
+                "_idleStart": 16452,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 287,
+              "duration": 341,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -2113,7 +2113,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2129,7 +2129,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2145,7 +2145,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2162,9 +2162,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:44bbc8f1-6bf8-48dc-b2f7-4798e8743a79",
+              "_testId": "urn:uuid:779091d1-8eaf-4bef-be5d-57aa09873628",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2175,14 +2175,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21665,
+                "_idleStart": 16794,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 36,
+              "duration": 46,
               "state": "passed",
-              "speed": "fast"
+              "speed": "medium"
             },
             {
               "type": "test",
@@ -2197,9 +2197,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:28568f61-9936-4efb-a502-33fe8a433370",
+              "_testId": "urn:uuid:a25042dc-ac4b-4c48-ba2d-101cdd6f1932",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2210,12 +2210,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21701,
+                "_idleStart": 16841,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 42,
+              "duration": 56,
               "state": "passed",
               "speed": "medium"
             },
@@ -2232,9 +2232,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:d34e57f4-d9b0-42ec-b1f8-6d57eede7c46",
+              "_testId": "urn:uuid:b2f1c56c-7e7c-4f04-99c2-fb3f29e72dfa",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2245,12 +2245,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21743,
+                "_idleStart": 16897,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 239,
+              "duration": 276,
               "state": "passed",
               "speed": "slow"
             },
@@ -2267,9 +2267,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:c5433c92-60c4-483c-a137-b48ab56e37f3",
+              "_testId": "urn:uuid:ffdb738a-0a84-4002-8599-3c0fbfc064b9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2280,12 +2280,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21982,
+                "_idleStart": 17172,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 99,
+              "duration": 101,
               "state": "passed",
               "speed": "slow"
             },
@@ -2302,9 +2302,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:9e8765fa-99a2-4f5d-837a-efc91f04f85e",
+              "_testId": "urn:uuid:f3c2a789-d226-4811-8133-3f918c62841a",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2315,12 +2315,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22081,
+                "_idleStart": 17274,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 138,
+              "duration": 186,
               "state": "passed",
               "speed": "slow"
             },
@@ -2337,9 +2337,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:8cb3df45-209d-44dd-bcfe-63293e8e62ac",
+              "_testId": "urn:uuid:09f04d82-2d2f-4b25-a163-0a9af6eb6516",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2350,12 +2350,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22219,
+                "_idleStart": 17460,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 62,
+              "duration": 135,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -2376,9 +2376,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:370c7371-cc88-4463-9f23-5c0326e37a06",
+              "_testId": "urn:uuid:930db934-f6de-453c-a8ff-22e8c5371e1e",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2389,12 +2389,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22282,
+                "_idleStart": 17595,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 39,
+              "duration": 52,
               "state": "passed",
               "speed": "medium"
             },
@@ -2410,7 +2410,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2426,7 +2426,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2443,9 +2443,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:f9792984-bf07-4371-aa0c-ef30e2a8c346",
+              "_testId": "urn:uuid:129ea307-eab4-4253-a034-c2d5cece7fbf",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2456,14 +2456,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22321,
+                "_idleStart": 17648,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 62,
+              "duration": 89,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -2478,9 +2478,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:fd48a0ac-e148-47c5-bc1f-244e38d8bac0",
+              "_testId": "urn:uuid:06402bec-a0c1-4255-a9ab-970d6829a2cf",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2491,12 +2491,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22382,
+                "_idleStart": 17736,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 170,
+              "duration": 136,
               "state": "passed",
               "speed": "slow"
             },
@@ -2513,9 +2513,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:a86d473b-24df-4a4e-ba28-2877eb291c69",
+              "_testId": "urn:uuid:9668e5c9-66da-4100-99be-bf86547af496",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2526,14 +2526,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22553,
+                "_idleStart": 17872,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 67,
+              "duration": 105,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -2547,7 +2547,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2563,7 +2563,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2579,7 +2579,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2595,7 +2595,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             },
@@ -2611,7 +2611,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
               "state": "pending"
             }
@@ -2629,9 +2629,9 @@
           "_onlyTests": [],
           "_onlySuites": [],
           "delayed": false,
-          "parent": "FYJeVPQQ2fE2aXBItDjav",
+          "parent": "SLB880Fxwkrdb-CaZ1J3u",
           "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-          "_testId": "urn:uuid:ff1b0f47-bee2-4be9-a130-514cbc8f61aa"
+          "_testId": "urn:uuid:f2a03b14-31de-4b78-87a6-54aa3a00d986"
         }
       ],
       "root": false,
@@ -2647,7 +2647,7 @@
       "_onlyTests": [],
       "_onlySuites": [],
       "delayed": false,
-      "parent": "SGxBGf40K4kwxOnn6lUbv",
+      "parent": "tqMLhIsqbcOsKa4MpQZEL",
       "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
       "summary": {},
       "matrix": true,
@@ -2655,7 +2655,7 @@
       "rowLabel": "Test Name",
       "columnLabel": "Issuer",
       "reportData": [],
-      "_testId": "urn:uuid:f859229f-4b5f-46ff-b6a6-cb6eb91d4ce0",
+      "_testId": "urn:uuid:a82196d9-aef4-4c8c-9fb3-4740aa5d0471",
       "columns": [
         "apicatalog.com",
         "Digital Bazaar"
@@ -2677,9 +2677,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:52203ca6-0f0e-44d0-917c-ae3c1099cb36",
+              "_testId": "urn:uuid:55f9450b-f5c8-4ae1-9d37-f902156f8d57",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2690,12 +2690,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 333,
+                "_idleStart": 368,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 422,
+              "duration": 285,
               "state": "passed",
               "speed": "slow"
             },
@@ -2712,9 +2712,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:d31bf705-345c-4400-9fea-5f54a96e8fa9",
+              "_testId": "urn:uuid:8b18489a-c73a-465f-998a-1859bc183839",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2725,12 +2725,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14874,
+                "_idleStart": 9622,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 476,
+              "duration": 510,
               "state": "passed",
               "speed": "slow"
             }
@@ -2752,9 +2752,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:ebba5c19-7f8d-4cb8-9d02-a9e20eb40de8",
+              "_testId": "urn:uuid:77f8aa2f-10ed-46f6-99d1-6646da1ad754",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2765,12 +2765,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 755,
+                "_idleStart": 654,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 323,
+              "duration": 268,
               "state": "passed",
               "speed": "slow"
             },
@@ -2787,9 +2787,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:2cdfe1b6-fd1d-4c68-a1ec-6664ac6dd465",
+              "_testId": "urn:uuid:b52739ad-7418-41df-a7ab-9fbc86bfab33",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2800,12 +2800,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 15349,
+                "_idleStart": 10132,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 944,
+              "duration": 854,
               "state": "passed",
               "speed": "slow"
             }
@@ -2827,9 +2827,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:4bb0b7d2-4e99-4944-903f-01e69b213972",
+              "_testId": "urn:uuid:c7eb2420-67e4-4703-8a72-6f97069f945b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2840,12 +2840,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 1078,
+                "_idleStart": 922,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 4274,
+              "duration": 1400,
               "state": "passed",
               "speed": "slow"
             },
@@ -2862,9 +2862,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:1851ef7e-1bd1-44bf-a88b-18d3712c1386",
+              "_testId": "urn:uuid:2e45c0eb-a98e-4abc-b6e3-73beb7bce245",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2875,12 +2875,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16293,
+                "_idleStart": 10987,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1401,
+              "duration": 1477,
               "state": "passed",
               "speed": "slow"
             }
@@ -2902,9 +2902,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:61f75a9f-c27f-48c2-b6f0-42ab4265dcee",
+              "_testId": "urn:uuid:97140ea3-dc37-404a-a912-e13b41a3074d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2915,12 +2915,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 5354,
+                "_idleStart": 2322,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 721,
+              "duration": 713,
               "state": "passed",
               "speed": "slow"
             },
@@ -2937,9 +2937,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:b7adb81e-1a65-457e-a468-6c4cf8e84d8c",
+              "_testId": "urn:uuid:27caa3bd-c9ac-4801-aad2-e9e8b61f31e5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2950,12 +2950,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17695,
+                "_idleStart": 12465,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 776,
+              "duration": 841,
               "state": "passed",
               "speed": "slow"
             }
@@ -2977,9 +2977,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:d0934987-69fe-49b2-a889-74b978f477e5",
+              "_testId": "urn:uuid:806a6592-68f1-4bdb-8806-56f891af41a5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2990,12 +2990,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6076,
+                "_idleStart": 3036,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 391,
+              "duration": 190,
               "state": "passed",
               "speed": "slow"
             },
@@ -3012,9 +3012,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:9723debf-db81-44ce-9ab4-428164fdb329",
+              "_testId": "urn:uuid:dc1f4c14-63e7-46cf-863c-4ddc1ceeb546",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3025,12 +3025,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18471,
+                "_idleStart": 13306,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 141,
+              "duration": 188,
               "state": "passed",
               "speed": "slow"
             }
@@ -3052,9 +3052,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:ad8e5465-a926-47bd-9d2f-2a47dd54f681",
+              "_testId": "urn:uuid:25acf452-8f12-4188-b9e5-8443b9953663",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3065,12 +3065,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6471,
+                "_idleStart": 3226,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 820,
+              "duration": 702,
               "state": "passed",
               "speed": "slow"
             },
@@ -3087,9 +3087,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:f710beb4-13a7-47a6-9670-ae44f93d2453",
+              "_testId": "urn:uuid:e969c628-cd4d-4720-8ab5-410486685138",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3100,12 +3100,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18613,
+                "_idleStart": 13493,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 598,
+              "duration": 313,
               "state": "passed",
               "speed": "slow"
             }
@@ -3127,9 +3127,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:46dad5c2-76f5-480d-8186-3e6f2c871f1e",
+              "_testId": "urn:uuid:fa7d0569-ff91-478e-aa00-cfa8a925ee1e",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3140,12 +3140,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7291,
+                "_idleStart": 3929,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 480,
+              "duration": 291,
               "state": "passed",
               "speed": "slow"
             },
@@ -3162,9 +3162,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:98ac1d5d-af51-47d5-8127-2a90eaa46909",
+              "_testId": "urn:uuid:db7d7404-7bb6-4e3a-b1e8-299c63d54c2c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3175,14 +3175,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19212,
+                "_idleStart": 13807,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 44,
+              "duration": 157,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             }
           ]
         },
@@ -3202,9 +3202,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:39942da0-0552-40ae-bd65-9eb99e71f38d",
+              "_testId": "urn:uuid:c7049a1e-2486-43f5-b8fb-ca77ee3bb4f5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3215,12 +3215,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7771,
+                "_idleStart": 4221,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 102,
+              "duration": 101,
               "state": "passed",
               "speed": "slow"
             },
@@ -3237,9 +3237,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:3038137b-595c-406a-8b97-6d004eb911a0",
+              "_testId": "urn:uuid:d15fe7e3-a81c-420f-8458-91e13a639b3c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3250,12 +3250,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19257,
+                "_idleStart": 13964,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 53,
+              "duration": 59,
               "state": "passed",
               "speed": "medium"
             }
@@ -3277,9 +3277,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:2d4c013b-0674-4a57-ac9c-8e163ecd0ebd",
+              "_testId": "urn:uuid:3a0ee16a-50b7-439d-904a-1f1b409d5743",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3290,12 +3290,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7875,
+                "_idleStart": 4322,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 200,
+              "duration": 197,
               "state": "passed",
               "speed": "slow"
             },
@@ -3312,9 +3312,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:b1c27213-fc5d-43e7-97ef-510181e8bbc3",
+              "_testId": "urn:uuid:9100bda4-9b1b-40d4-82e7-320cdfcaff30",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3325,12 +3325,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19310,
+                "_idleStart": 14024,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 624,
+              "duration": 111,
               "state": "passed",
               "speed": "slow"
             }
@@ -3352,9 +3352,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:27a993a5-405a-4dc6-ace5-3ebe3fcabf42",
+              "_testId": "urn:uuid:f7682edc-e22c-4e1e-a3a8-956aeb033fdd",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3365,12 +3365,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 8075,
+                "_idleStart": 4520,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 998,
+              "duration": 605,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -3391,9 +3391,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:2fdf027d-458d-46a2-9728-26d1a0a3ed6c",
+              "_testId": "urn:uuid:a8c9299c-def8-4b71-bd03-6af538b5ac8d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3404,12 +3404,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19935,
+                "_idleStart": 14135,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 241,
+              "duration": 320,
               "state": "passed",
               "speed": "slow"
             }
@@ -3431,9 +3431,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:5bdbe82d-42db-4e15-8899-fd6c0e9209f1",
+              "_testId": "urn:uuid:15e8e3ae-3c82-4efe-925d-b6522d1f47f6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3444,12 +3444,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9075,
+                "_idleStart": 5130,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1347,
+              "duration": 1195,
               "state": "failed",
               "err": {
                 "response": {},
@@ -3572,9 +3572,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:3c24241d-a970-4fab-9135-5dc4b8b71d14",
+              "_testId": "urn:uuid:0f8e6849-2f86-4d1b-8dc5-6c5042d5937c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3585,12 +3585,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20176,
+                "_idleStart": 14456,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 670,
+              "duration": 1352,
               "state": "passed",
               "speed": "slow"
             }
@@ -3612,9 +3612,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:2d33df1b-6fcf-463b-b47d-f45c9848dcdc",
+              "_testId": "urn:uuid:1f4d9aff-476a-438a-8340-860ea8781b2f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3625,14 +3625,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10425,
+                "_idleStart": 6327,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 51,
+              "duration": 95,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -3647,9 +3647,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:61d80cc1-82bf-4e77-950f-629f5866eac4",
+              "_testId": "urn:uuid:0a9d32b5-723c-4e56-bf41-6a0644303b02",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3660,12 +3660,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20846,
+                "_idleStart": 15807,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 41,
+              "duration": 48,
               "state": "passed",
               "speed": "medium"
             }
@@ -3687,9 +3687,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:a1526543-7381-4298-9808-398c1b250e8b",
+              "_testId": "urn:uuid:a3abd06b-c6f8-4128-9cea-93fc5966acfb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3700,12 +3700,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10476,
+                "_idleStart": 6422,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 105,
+              "duration": 103,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -3726,9 +3726,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:5aba5098-8195-4147-b3d2-cbe1f2cbd92b",
+              "_testId": "urn:uuid:7a2b6aa8-a631-49ce-a427-903351bf7328",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3739,12 +3739,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20887,
+                "_idleStart": 15856,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 152,
+              "duration": 195,
               "state": "passed",
               "speed": "slow"
             }
@@ -3766,9 +3766,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:25030a3f-a970-4aac-8cd5-e5cf3bb788e1",
+              "_testId": "urn:uuid:92bf73bc-3dde-4e9d-888b-df3b48e087f2",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3779,12 +3779,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10581,
+                "_idleStart": 6525,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 197,
+              "duration": 193,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -3805,9 +3805,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:081dc03d-8336-4e55-94f9-8fb3fd6e1061",
+              "_testId": "urn:uuid:5c243db7-0bdd-491d-9c1b-b8612573a617",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3818,12 +3818,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21039,
+                "_idleStart": 16051,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 38,
+              "duration": 51,
               "state": "passed",
               "speed": "medium"
             }
@@ -3845,9 +3845,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:d81098ba-3bde-4518-a3f7-fb4f95189b1d",
+              "_testId": "urn:uuid:c24aeb1a-c51c-41a5-bc01-a6870af18f9b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3858,12 +3858,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10778,
+                "_idleStart": 6719,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 490,
+              "duration": 411,
               "state": "passed",
               "speed": "slow"
             },
@@ -3880,9 +3880,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:fcf59f6a-4e39-43d9-b01f-c215b2fcd299",
+              "_testId": "urn:uuid:d122ff19-c1bc-4d8d-9a8e-b827b1b2d397",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3893,12 +3893,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21077,
+                "_idleStart": 16102,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 73,
+              "duration": 101,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -3924,9 +3924,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:5f3319ab-27b3-46ab-a024-f0bf2467f52e",
+              "_testId": "urn:uuid:cdb907b6-750c-4508-a35f-f550f522fed1",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3937,12 +3937,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11268,
+                "_idleStart": 7130,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 803,
+              "duration": 402,
               "state": "passed",
               "speed": "slow"
             },
@@ -3959,9 +3959,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:f34e4308-4300-48a7-80a2-fd4d3c13f3e0",
+              "_testId": "urn:uuid:c6f6b444-9c25-4f72-b6bf-77124906e835",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3972,12 +3972,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21151,
+                "_idleStart": 16203,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 226,
+              "duration": 249,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4003,9 +4003,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:0c385399-5cba-4c73-9dfd-e6526ef1344e",
+              "_testId": "urn:uuid:f3a9c84c-df78-4260-b69a-0156e9d389cd",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4016,12 +4016,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12071,
+                "_idleStart": 7532,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 202,
+              "duration": 31,
               "state": "failed",
               "err": {
                 "response": {},
@@ -4137,9 +4137,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:ee415e9c-a687-4ec1-9318-8c8cea3a4037",
+              "_testId": "urn:uuid:03fb8383-c436-4b48-bee1-4cbb9e0cf399",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4150,12 +4150,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21377,
+                "_idleStart": 16452,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 287,
+              "duration": 341,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4181,9 +4181,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:95999518-2672-4801-8354-46836e95da5f",
+              "_testId": "urn:uuid:03b16117-7c58-44f1-b86c-ab35a4877f22",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4194,12 +4194,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12274,
+                "_idleStart": 7564,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 161,
               "state": "passed",
               "speed": "slow"
             },
@@ -4216,9 +4216,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:44bbc8f1-6bf8-48dc-b2f7-4798e8743a79",
+              "_testId": "urn:uuid:779091d1-8eaf-4bef-be5d-57aa09873628",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4229,14 +4229,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21665,
+                "_idleStart": 16794,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 36,
+              "duration": 46,
               "state": "passed",
-              "speed": "fast"
+              "speed": "medium"
             }
           ]
         },
@@ -4256,9 +4256,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:6bb290f6-82f7-4671-a1f7-444e121310c4",
+              "_testId": "urn:uuid:43b19b88-af70-4dd2-bc20-b60bb287e1b5",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4269,7 +4269,7 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12376,
+                "_idleStart": 7725,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
@@ -4291,9 +4291,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:28568f61-9936-4efb-a502-33fe8a433370",
+              "_testId": "urn:uuid:a25042dc-ac4b-4c48-ba2d-101cdd6f1932",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4304,12 +4304,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21701,
+                "_idleStart": 16841,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 42,
+              "duration": 56,
               "state": "passed",
               "speed": "medium"
             }
@@ -4331,9 +4331,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:6d851d3f-8510-4634-8665-8475868d1ef1",
+              "_testId": "urn:uuid:73edc390-1669-4003-ad81-2766642933f6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4344,12 +4344,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12475,
+                "_idleStart": 7823,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 902,
+              "duration": 622,
               "state": "passed",
               "speed": "slow"
             },
@@ -4366,9 +4366,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:d34e57f4-d9b0-42ec-b1f8-6d57eede7c46",
+              "_testId": "urn:uuid:b2f1c56c-7e7c-4f04-99c2-fb3f29e72dfa",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4379,12 +4379,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21743,
+                "_idleStart": 16897,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 239,
+              "duration": 276,
               "state": "passed",
               "speed": "slow"
             }
@@ -4406,9 +4406,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:646e0b52-622a-4ab6-bf1f-86c9ccdbc31e",
+              "_testId": "urn:uuid:77340675-c606-487e-a583-c439cd440a32",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4419,12 +4419,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13377,
+                "_idleStart": 8445,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 199,
+              "duration": 104,
               "state": "passed",
               "speed": "slow"
             },
@@ -4441,9 +4441,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:c5433c92-60c4-483c-a137-b48ab56e37f3",
+              "_testId": "urn:uuid:ffdb738a-0a84-4002-8599-3c0fbfc064b9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4454,12 +4454,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 21982,
+                "_idleStart": 17172,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 99,
+              "duration": 101,
               "state": "passed",
               "speed": "slow"
             }
@@ -4481,9 +4481,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:70d23756-44ab-42b0-877c-fa6420345e0b",
+              "_testId": "urn:uuid:3965dd86-7c1f-47a6-90c3-fcef9fe99e86",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4494,12 +4494,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13576,
+                "_idleStart": 8549,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 206,
+              "duration": 274,
               "state": "passed",
               "speed": "slow"
             },
@@ -4516,9 +4516,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:9e8765fa-99a2-4f5d-837a-efc91f04f85e",
+              "_testId": "urn:uuid:f3c2a789-d226-4811-8133-3f918c62841a",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4529,12 +4529,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22081,
+                "_idleStart": 17274,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 138,
+              "duration": 186,
               "state": "passed",
               "speed": "slow"
             }
@@ -4556,9 +4556,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:89e42ddc-818c-4048-a7ca-46370115a263",
+              "_testId": "urn:uuid:c9c438ac-eba7-4a4e-9e39-cd6bb0853baf",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4569,12 +4569,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13782,
+                "_idleStart": 8823,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 193,
+              "duration": 195,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4595,9 +4595,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:8cb3df45-209d-44dd-bcfe-63293e8e62ac",
+              "_testId": "urn:uuid:09f04d82-2d2f-4b25-a163-0a9af6eb6516",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4608,12 +4608,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22219,
+                "_idleStart": 17460,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 62,
+              "duration": 135,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4639,9 +4639,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:94a5ba7b-f1a9-490f-887f-3cebd3fe0b97",
+              "_testId": "urn:uuid:f174fabc-745c-4be8-93b6-fec718d3915a",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4652,12 +4652,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13975,
+                "_idleStart": 9019,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 295,
+              "duration": 109,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4678,9 +4678,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:370c7371-cc88-4463-9f23-5c0326e37a06",
+              "_testId": "urn:uuid:930db934-f6de-453c-a8ff-22e8c5371e1e",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4691,12 +4691,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22282,
+                "_idleStart": 17595,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 39,
+              "duration": 52,
               "state": "passed",
               "speed": "medium"
             }
@@ -4718,9 +4718,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:2ff661ed-b7b6-426d-b686-609562c9e417",
+              "_testId": "urn:uuid:28110663-ee94-48f1-a52a-38533165d7c9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4731,12 +4731,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14270,
+                "_idleStart": 9128,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 204,
+              "duration": 195,
               "state": "passed",
               "speed": "slow"
             },
@@ -4753,9 +4753,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:f9792984-bf07-4371-aa0c-ef30e2a8c346",
+              "_testId": "urn:uuid:129ea307-eab4-4253-a034-c2d5cece7fbf",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4766,14 +4766,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22321,
+                "_idleStart": 17648,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 62,
+              "duration": 89,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             }
           ]
         },
@@ -4793,9 +4793,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:23bbd7ee-182c-4a47-92bb-e9865496f43d",
+              "_testId": "urn:uuid:e7a02836-8261-4845-afb2-07420ccf5d85",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4806,12 +4806,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14474,
+                "_idleStart": 9324,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 196,
+              "duration": 104,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4832,9 +4832,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:fd48a0ac-e148-47c5-bc1f-244e38d8bac0",
+              "_testId": "urn:uuid:06402bec-a0c1-4255-a9ab-970d6829a2cf",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4845,12 +4845,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22382,
+                "_idleStart": 17736,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 170,
+              "duration": 136,
               "state": "passed",
               "speed": "slow"
             }
@@ -4872,9 +4872,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TQy32CushC6lFCaq2JeJG",
+              "parent": "ULaMHaeX8pKNYnd0shiJt",
               "ctx": null,
-              "_testId": "urn:uuid:de5bf05b-cf39-4948-b830-914ac7b607c3",
+              "_testId": "urn:uuid:63e00e3b-06b3-4336-8706-15b9b035ef00",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4885,12 +4885,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14670,
+                "_idleStart": 9428,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 202,
+              "duration": 193,
               "state": "passed",
               "speed": "slow"
             },
@@ -4907,9 +4907,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "TI6RL-BkWh9W_duZU9IqH",
+              "parent": "ycTveyeUpuFqlMXN7okIV",
               "ctx": null,
-              "_testId": "urn:uuid:a86d473b-24df-4a4e-ba28-2877eb291c69",
+              "_testId": "urn:uuid:9668e5c9-66da-4100-99be-bf86547af496",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4920,14 +4920,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 22553,
+                "_idleStart": 17872,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 67,
+              "duration": 105,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             }
           ]
         }
