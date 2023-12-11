@@ -143,15 +143,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           // positive @context test
           const vc = await issue(require('./input/credential-ok.json'));
           vc.should.have.property('@context');
-          //FIXME reimplement this once signed VP creation via VC-API
-          //has been finalized
-          /*
-          const vp = await proveVP({
-            presentation: require('./input/presentation-ok.json'),
-            options: proveOptions
-          });
-          vp.should.have.property('@context');
-          */
           // negative @context test
           await assert.rejects(issue(
             require('./input/credential-no-context-fail.json')));
