@@ -160,13 +160,20 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(verifyVp(
             require('./input/presentation-no-context-fail.json')));
         });
-      it2('Verifiable credentials and verifiable presentations: ' +
-        'The value of the @context property MUST be an ordered set where ' +
-        'the first item is a URL with the value https://www.w3.org/ns/' +
-        'credentials/v2.', async function() {
+      it2('Verifiable credentials: The value of the @context property MUST' +
+        'be an ordered set where the first item is a URL with the value' +
+        'https://www.w3.org/ns/credentials/v2.', async function() {
+        //positive issue test
         const vc = await issue(require('./input/credential-ok.json'));
         assert(Array.isArray(vc['@context']));
         assert.strictEqual(vc['@context'][0], baseContextUrl);
+        // negative issue test
+        await assert.rejects(issue(
+          require('./input/credential-missing-base-context-fail.json')));
+      });
+      it2('Verifiable presentations: The value of the @context property MUST' +
+      ' be an ordered set where the first item is a URL with the value ' +
+      'https://www.w3.org/ns/credentials/v2.', async function() {
         //FIXME reimplement this once signed VP creation via VC-API
         //has been finalized
         /*
@@ -177,10 +184,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         assert(Array.isArray(vp['@context']));
         assert.strictEqual(vp['@context'][0], baseContextUrl);
         */
-        //FIXME this should be a verifier test
-        //as the tests above used an existing issued VC
-        await assert.rejects(issue(
-          require('./input/credential-missing-base-context-fail.json')));
         await assert.rejects(verifyVp(
           require('./input/presentation-missing-base-context-fail.json')));
       });
