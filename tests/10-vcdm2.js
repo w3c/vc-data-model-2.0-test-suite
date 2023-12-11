@@ -247,7 +247,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-type-unmapped-fail.json')));
       });
-      it('type property: "If more than one URL is provided, the URLs ' +
+      it2('type property: "If more than one URL is provided, the URLs ' +
         'MUST be interpreted as an unordered set."', async function() {
         //issue VC with multiple urls in type property
         await issue(require('./input/credential-type-urls-order-1-ok.json'));
