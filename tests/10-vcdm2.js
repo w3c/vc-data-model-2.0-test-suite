@@ -137,24 +137,38 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(verify(doc));
         await assert.rejects(verifyVp(doc));
       });
-      it2('Verifiable credentials and verifiable presentations MUST include ' +
-        'a @context property.', async function() {
-        const vc = await issue(require('./input/credential-ok.json'));
-        vc.should.have.property('@context');
-        //FIXME reimplement this once signed VP creation via VC-API
-        //has been finalized
-        /*
-        const vp = await proveVP({
-          presentation: require('./input/presentation-ok.json'),
-          options: proveOptions
+      it2('Verifiable credentials MUST include a @context property.',
+        async function() {
+          // positive @context test
+          const vc = await issue(require('./input/credential-ok.json'));
+          vc.should.have.property('@context');
+          //FIXME reimplement this once signed VP creation via VC-API
+          //has been finalized
+          /*
+          const vp = await proveVP({
+            presentation: require('./input/presentation-ok.json'),
+            options: proveOptions
+          });
+          vp.should.have.property('@context');
+          */
+          // negative @context test
+          await assert.rejects(issue(
+            require('./input/credential-no-context-fail.json')));
         });
-        vp.should.have.property('@context');
-        */
-        await assert.rejects(issue(
-          require('./input/credential-no-context-fail.json')));
-        await assert.rejects(verifyVp(
-          require('./input/presentation-no-context-fail.json')));
-      });
+      it2('Verifiable presentations MUST include a @context property.',
+        async function() {
+          //FIXME reimplement this once signed VP creation via VC-API
+          //has been finalized
+          /*
+          const vp = await proveVP({
+            presentation: require('./input/presentation-ok.json'),
+            options: proveOptions
+          });
+          vp.should.have.property('@context');
+          */
+          await assert.rejects(verifyVp(
+            require('./input/presentation-no-context-fail.json')));
+        });
       it2('Verifiable credentials and verifiable presentations: ' +
         'The value of the @context property MUST be an ordered set where ' +
         'the first item is a URL with the value https://www.w3.org/ns/' +
