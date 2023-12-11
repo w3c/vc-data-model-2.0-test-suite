@@ -223,13 +223,16 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(
             issue(require('./input/credential-nonsingle-id-fail.json')));
         });
-      it2('Verifiable credentials and verifiable presentations MUST have ' +
-        'a type property.', async function() {
-        await assert.rejects(
-          issue(require('./input/credential-no-type-fail.json')));
-        await assert.rejects(
-          verifyVp(require('./input/presentation-no-type-fail.json')));
-      });
+      it2('Verifiable credentials MUST have a type property.',
+        async function() {
+          await assert.rejects(
+            issue(require('./input/credential-no-type-fail.json')));
+        });
+      it2('Verifiable presentations MUST have a type property.',
+        async function() {
+          await assert.rejects(
+            verifyVp(require('./input/presentation-no-type-fail.json')));
+        });
       it2('The value of the type property MUST be, or map to (through ' +
         'interpretation of the @context property), one or more URLs.',
       async function() {
