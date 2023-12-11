@@ -247,9 +247,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-type-unmapped-fail.json')));
       });
-      //FIXME how to test this?
-      it.skip('type property: "If more than one URL is provided, the URLs ' +
+      it('type property: "If more than one URL is provided, the URLs ' +
         'MUST be interpreted as an unordered set."', async function() {
+        //issue VC with multiple urls in type property
+        await issue(require('./input/credential-type-urls-order-1-ok.json'));
+        //issue another VC with same urls in a different order
+        await issue(require('./input/credential-type-urls-order-2-ok.json'));
       });
       // FIXME this needs to be expanded into at least 6 different tests
       // Verifiable Credential MUST have a type specified
