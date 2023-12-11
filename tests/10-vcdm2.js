@@ -187,9 +187,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(verifyVp(
           require('./input/presentation-missing-base-context-fail.json')));
       });
-      it2('@context: "Subsequent items in the array MUST express context ' +
-        'information and be composed of any combination of URLs or objects."',
-      async function() {
+      it2('Verifiable credential @context: "Subsequent items in the array ' +
+      'MUST be composed of any combination of URLs and/or objects where each' +
+      ' is processable as a JSON-LD Context."', async function() {
         await issue(require('./input/credential-context-combo1-ok.json'));
         await issue(require('./input/credential-context-combo2-ok.json'));
         await assert.rejects(
