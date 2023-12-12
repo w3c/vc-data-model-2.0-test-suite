@@ -305,9 +305,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
             issue(require('./input/credential-no-subject-fail.json')));
         });
       it2('The value of the credentialSubject property is defined as a set ' +
-        'of objects that MUST contain one or more claims that are each ' +
-        'related to a subject of the verifiable credential.',
-      async function() {
+      'of objects where each object MUST be the subject of one or more ' +
+      'claims, which MUST be serialized inside the credentialSubject ' +
+      'property.', async function() {
         await assert.rejects(
           issue(require('./input/credential-subject-no-claims-fail.json')));
         await issue(require('./input/credential-subject-multiple-ok.json'));
