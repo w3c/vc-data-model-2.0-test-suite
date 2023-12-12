@@ -323,13 +323,17 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(
             issue(require('./input/credential-no-issuer-fail.json')));
         });
-      it2('The value of the issuer property MUST be either a URL or an ' +
-        'object containing an id property.', async function() {
+      it2('The value of the issuer property MUST be either a URL, or an ' +
+      'object containing an id property whose value is a URL.',
+      async function() {
+        await issue(require('./input/credential-issuer-object-ok.json'));
+        await issue(require('./input/credential-issuer-url-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-issuer-nonurl-fail.json')));
-        await issue(require('./input/credential-issuer-object-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-issuer-object-no-id-fail.json')));
+        await assert.rejects(issue(require(
+          './input/credential-issuer-object-id-not-url-fail.json')));
       });
       it2('If present, the value of the "issuer.name" property MUST be a ' +
       'string or a language value object as described in 10.1 Language and ' +
