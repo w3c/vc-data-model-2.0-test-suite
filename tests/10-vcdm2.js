@@ -296,7 +296,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       it.skip('All credentials, presentations, and encapsulated objects ' +
         'SHOULD specify, or be associated with, additional more narrow types ' +
         '(like ExampleDegreeCredential, for example) so software systems ' +
-        ' can more easily detect and process this additional information.', async function() {
+        ' can more easily detect and process this additional information.',
+      async function() {
       });
       it2('A verifiable credential MUST have a credentialSubject property.',
         async function() {
