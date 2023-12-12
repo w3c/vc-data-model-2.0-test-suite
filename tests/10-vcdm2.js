@@ -371,9 +371,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(
           issue(require('./input/credential-status-nonurl-id-fail.json')));
       });
-      it2('The verifiableCredential property MAY be present. The value MUST ' +
-      'be an array of one or more verifiable credentials, or of data derived ' +
-      'from verifiable credentials in a cryptographically verifiable format.',
+      it2('In Verifiable Presentations, the verifiableCredential property ' +
+        'MAY be present. The value MUST be an array of one or more verifiable' +
+        ' credential graphs in a cryptographically verifiable format.',
       async function() {
         //FIXME remove the internal prove once VC-API presentation
         //creation is stabilized
