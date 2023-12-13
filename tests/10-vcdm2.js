@@ -334,6 +334,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await issue(require('./input/credential-issuer-name-ok.json'));
         await issue(require(
           './input/credential-issuer-name-language-en-ok.json'));
+        await issue(require(
+          './input/credential-issuer-name-language-direction-en-ok.json'));
+        await issue(require(
+          './input/credential-issuer-multi-language-name-ok.json'));
+        await assert.rejects(issue(require(
+          './input/credential-issuer-name-extra-prop-en-fail.json')));
       });
       it2('If present, the value of the validFrom property MUST be an ' +
         '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
