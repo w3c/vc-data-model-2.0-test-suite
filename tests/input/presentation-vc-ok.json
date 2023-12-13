@@ -13,7 +13,6 @@
       "type": [
         "VerifiableCredential"
       ],
-      "validFrom": "2023-02-27T05:03:28Z",
       "issuer": "did:example:issuer",
       "credentialSubject": {
         "id": "did:example:subject"
