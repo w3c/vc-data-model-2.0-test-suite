@@ -329,8 +329,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           issue(require('./input/credential-issuer-object-no-id-fail.json')));
       });
       it2('If present, the value of the "issuer.name" property MUST be a ' +
-      'string or a language value object as described in 10.1 Language and' +
-      ' Base Direction.', async function() {
+      'string or a language value object as described in 10.1 Language and ' +
+      'Base Direction.', async function() {
         await issue(require('./input/credential-issuer-name-ok.json'));
         await issue(require(
           './input/credential-issuer-name-language-en-ok.json'));
