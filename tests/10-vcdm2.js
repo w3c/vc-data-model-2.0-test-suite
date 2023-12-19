@@ -336,6 +336,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       'Base Direction.', async function() {
         await issue(require('./input/credential-issuer-name-ok.json'));
         await issue(require(
+          './input/credential-issuer-name-optional-ok.json'));
+        await issue(require(
           './input/credential-issuer-name-language-en-ok.json'));
         await issue(require(
           './input/credential-issuer-name-language-direction-en-ok.json'));
