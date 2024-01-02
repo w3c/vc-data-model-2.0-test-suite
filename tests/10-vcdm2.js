@@ -5,11 +5,11 @@ import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
+import {createTimeStamp, proveVP} from './data-generator.js';
 import assert from 'node:assert/strict';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import http from 'http';
-import {proveVP} from './data-generator.js';
 import {randomFillSync} from 'node:crypto';
 import receiveJson from './receive-json.js';
 
@@ -383,6 +383,20 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await issue(require('./input/credential-validuntil-tz-ok.json'));
         await assert.rejects(
           issue(require('./input/credential-validuntil-invalid-fail.json')));
+      });
+      it2('If a validUntil value also exists, the validFrom value MUST ' +
+        'express a datetime that is temporally the same or earlier than the ' +
+        'datetime expressed by the validUntil value.', async function() {
+        const positiveTest = require(
+          './input-credential-validUntil-validFrom-ok.json');
+        positiveTest.validFrom = createTimeStamp({skew: -2});
+        positiveTest.validUntil = createTimeStamp({skew: 2});
+        await issue(positiveTest);
+        const negativeTest = require(
+          './input-credential-validUntil-validFrom-fail.json');
+        negativeTest.validFrom = createTimeStamp({skew: 2});
+        negativeTest.validUntil = createTimeStamp({skew: -2});
+        assert.rejects(issue(negativeTest));
       });
       // FIXME remove as this doesn't seem to be in the spec
       it.skip('At least one proof mechanism, and the details necessary ' +
