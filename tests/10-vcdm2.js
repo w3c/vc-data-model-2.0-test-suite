@@ -398,6 +398,20 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         negativeTest.validUntil = createTimeStamp({skew: -2});
         assert.rejects(issue(negativeTest));
       });
+      it2('If a validFrom value also exists, the validUntil value MUST ' +
+        'express a datetime that is temporally the same or later than the ' +
+        'datetime expressed by the validFrom value.', async function() {
+        const positiveTest = require(
+          './input/credential-validUntil-validFrom-ok.json');
+        positiveTest.validFrom = createTimeStamp({skew: -2});
+        positiveTest.validUntil = createTimeStamp({skew: 2});
+        await issue(positiveTest);
+        const negativeTest = require(
+          './input/credential-validUntil-validFrom-fail.json');
+        negativeTest.validFrom = createTimeStamp({skew: 2});
+        negativeTest.validUntil = createTimeStamp({skew: -2});
+        assert.rejects(issue(negativeTest));
+      });
       // FIXME remove as this doesn't seem to be in the spec
       it.skip('At least one proof mechanism, and the details necessary ' +
         'to evaluate that proof, MUST be expressed for a credential or ' +
