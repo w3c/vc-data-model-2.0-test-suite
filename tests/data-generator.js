@@ -84,3 +84,9 @@ export async function proveVP({presentation, options = {}}) {
     ...options
   });
 }
+
+export function createTimeStamp({date = new Date(), skew = 0}) {
+  date.setFullYear(date.getFullYear() + skew);
+  const isoString = date.toISOString();
+  return `${isoString.substring(0, isoString.length - 5)}Z`;
+}
