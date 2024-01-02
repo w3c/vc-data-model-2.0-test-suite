@@ -388,12 +388,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'express a datetime that is temporally the same or earlier than the ' +
         'datetime expressed by the validUntil value.', async function() {
         const positiveTest = require(
-          './input-credential-validUntil-validFrom-ok.json');
+          './input/credential-validUntil-validFrom-ok.json');
         positiveTest.validFrom = createTimeStamp({skew: -2});
         positiveTest.validUntil = createTimeStamp({skew: 2});
         await issue(positiveTest);
         const negativeTest = require(
-          './input-credential-validUntil-validFrom-fail.json');
+          './input/credential-validUntil-validFrom-fail.json');
         negativeTest.validFrom = createTimeStamp({skew: 2});
         negativeTest.validUntil = createTimeStamp({skew: -2});
         assert.rejects(issue(negativeTest));
