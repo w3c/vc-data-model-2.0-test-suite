@@ -12,6 +12,8 @@ config.json
 node_modules/
 package-lock.json
 *.vswp
+.vscode
+.localImplementationsConfig.cjs
 config.json
 reports/**
 !.gitkeep
