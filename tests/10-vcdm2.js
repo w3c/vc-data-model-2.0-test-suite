@@ -129,8 +129,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'deterministic, bi-directional, and lossless as described in Section ' +
         '6. Syntaxes.', async function() {
       });
-      it2('verifiers MUST produce errors when non-conforming documents are' +
-        ' detected.', async function() {
+      it2('verifiers MUST produce errors when non-conforming documents are ' +
+        'detected.', async function() {
         const doc = {
           type: ['NonconformingDocument']
         };
@@ -160,8 +160,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(verifyVp(
             require('./input/presentation-no-context-fail.json')));
         });
-      it2('Verifiable credentials: The value of the @context property MUST' +
-        ' be an ordered set where the first item is a URL with the value ' +
+      it2('Verifiable credentials: The value of the @context property MUST ' +
+        'be an ordered set where the first item is a URL with the value ' +
         'https://www.w3.org/ns/credentials/v2.', async function() {
         //positive issue test
         const vc = await issue(require('./input/credential-ok.json'));
@@ -171,9 +171,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(issue(
           require('./input/credential-missing-base-context-fail.json')));
       });
-      it2('Verifiable presentations: The value of the @context property MUST' +
-      ' be an ordered set where the first item is a URL with the value ' +
-      'https://www.w3.org/ns/credentials/v2.', async function() {
+      it2('Verifiable presentations: The value of the @context property MUST ' +
+        'be an ordered set where the first item is a URL with the value ' +
+        'https://www.w3.org/ns/credentials/v2.', async function() {
         //FIXME reimplement this once signed VP creation via VC-API
         //has been finalized
         /*
@@ -188,8 +188,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           require('./input/presentation-missing-base-context-fail.json')));
       });
       it2('Verifiable credential @context: "Subsequent items in the array ' +
-      'MUST be composed of any combination of URLs and/or objects where each' +
-      ' is processable as a JSON-LD Context."', async function() {
+        'MUST be composed of any combination of URLs and/or objects where ' +
+        'each is processable as a JSON-LD Context."', async function() {
         await issue(require('./input/credential-context-combo1-ok.json'));
         await issue(require('./input/credential-context-combo2-ok.json'));
         await assert.rejects(
@@ -299,7 +299,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       it.skip('All credentials, presentations, and encapsulated objects ' +
         'SHOULD specify, or be associated with, additional more narrow types ' +
         '(like ExampleDegreeCredential, for example) so software systems ' +
-        ' can more easily detect and process this additional information.',
+        'can more easily detect and process this additional information.',
       async function() {
       });
       it2('A verifiable credential MUST have a credentialSubject property.',
@@ -308,9 +308,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
             issue(require('./input/credential-no-subject-fail.json')));
         });
       it2('The value of the credentialSubject property is defined as a set ' +
-      'of objects where each object MUST be the subject of one or more ' +
-      'claims, which MUST be serialized inside the credentialSubject ' +
-      'property.', async function() {
+        'of objects where each object MUST be the subject of one or more ' +
+        'claims, which MUST be serialized inside the credentialSubject ' +
+        'property.', async function() {
         await assert.rejects(
           issue(require('./input/credential-subject-no-claims-fail.json')));
         await issue(require('./input/credential-subject-multiple-ok.json'));
@@ -324,7 +324,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
             issue(require('./input/credential-no-issuer-fail.json')));
         });
       it2('The value of the issuer property MUST be either a URL, or an ' +
-      'object containing an id property whose value is a URL.',
+        'object containing an id property whose value is a URL.',
       async function() {
         await issue(require('./input/credential-issuer-object-ok.json'));
         await issue(require('./input/credential-issuer-url-ok.json'));
@@ -336,8 +336,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           './input/credential-issuer-object-id-not-url-fail.json')));
       });
       it2('If present, the value of the "issuer.name" property MUST be a ' +
-      'string or a language value object as described in 10.1 Language and ' +
-      'Base Direction.', async function() {
+        'string or a language value object as described in 10.1 Language and ' +
+        'Base Direction.', async function() {
         await issue(require('./input/credential-issuer-name-ok.json'));
         await issue(require(
           './input/credential-issuer-name-optional-ok.json'));
@@ -351,8 +351,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           './input/credential-issuer-name-extra-prop-en-fail.json')));
       });
       it2('If present, the value of the "issuer.description" property ' +
-      'MUST be a string or a language value object as described in 10.1 ' +
-      'Language and Base Direction.', async function() {
+        'MUST be a string or a language value object as described in 10.1 ' +
+        'Language and Base Direction.', async function() {
         await issue(require('./input/credential-issuer-description-ok.json'));
         await issue(require(
           './input/credential-issuer-description-optional-ok.json'));
@@ -376,8 +376,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it2('If present, the value of the validUntil property MUST be a ' +
         'string value of an [XMLSCHEMA11-2] combined date-time string ' +
-        'representing the date and time the credential ceases to be valid,' +
-        ' which could be a date and time in the past.', async function() {
+        'representing the date and time the credential ceases to be valid, ' +
+        'which could be a date and time in the past.', async function() {
         await issue(require('./input/credential-validuntil-ok.json'));
         await issue(require('./input/credential-validuntil-ms-ok.json'));
         await issue(require('./input/credential-validuntil-tz-ok.json'));
@@ -410,9 +410,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           issue(require('./input/credential-status-nonurl-id-fail.json')));
       });
       it2('In Verifiable Presentations, the verifiableCredential property ' +
-        'MAY be present. The value MUST be an array of one or more verifiable' +
-        ' credential graphs in a cryptographically verifiable format.',
-      async function() {
+        'MAY be present. The value MUST be an array of one or more ' +
+        'verifiable credential graphs in a cryptographically verifiable ' +
+        'format.', async function() {
         //FIXME remove the internal prove once VC-API presentation
         //creation is stabilized
         const presentationWithCredential = await proveVP({
@@ -438,24 +438,23 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
 
       // Advanced
-      it2('JSON-LD-based processors MUST produce an error when a JSON-LD' +
-        ' context redefines any term in the active context.',
-      async function() {
+      it2('JSON-LD-based processors MUST produce an error when a JSON-LD ' +
+        'context redefines any term in the active context.', async function() {
         // This depends on "@protected" (which is used for the base context).
         await assert.rejects(issue(require(
           './input/credential-redef-type-fail.json')));
         await assert.rejects(issue(require(
           './input/credential-redef-type2-fail.json')));
       });
-      it2('The value of the credentialSchema property MUST be one or more' +
-        ' data schemas that provide verifiers with enough information to ' +
+      it2('The value of the credentialSchema property MUST be one or more ' +
+        'data schemas that provide verifiers with enough information to ' +
         'determine if the provided data conforms to the provided schema.',
       async function() {
         await issue(require('./input/credential-schema-ok.json'));
         await issue(require('./input/credential-schemas-ok.json'));
       });
-      it2('Each credentialSchema MUST specify its type (for example,' +
-        ' JsonSchemaValidator2018), and an id property', async function() {
+      it2('Each credentialSchema MUST specify its type (for example, ' +
+        'JsonSchemaValidator2018), and an id property', async function() {
         await assert.rejects(issue(require(
           './input/credential-schema-no-type-fail.json')));
         await assert.rejects(issue(require(
@@ -466,15 +465,15 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(issue(require(
             './input/credential-schema-non-url-id-fail.json')));
         });
-      it.skip('The value of the refreshService property MUST be one or more' +
-        ' refresh services that provides enough information to the ' +
+      it.skip('The value of the refreshService property MUST be one or more ' +
+        'refresh services that provides enough information to the ' +
         'recipient\'s software such that the recipient can refresh the ' +
         'verifiable credential.', async function() {
         await issue(require('./input/credential-refresh-ok.json'));
         await issue(require('./input/credential-refreshs-ok.json'));
       });
-      it.skip('Each refreshService value MUST specify its type (for example,' +
-        ' ManualRefreshService2018) and its id, which is the URL of the ' +
+      it.skip('Each refreshService value MUST specify its type (for example, ' +
+        'ManualRefreshService2018) and its id, which is the URL of the ' +
         'service.', async function() {
         await assert.rejects(issue(require(
           './input/credential-refresh-no-type-fail.json')));
@@ -483,48 +482,48 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(issue(require(
           './input/credential-refresh-non-url-id-fail.json')));
       });
-      it2('The value of the termsOfUse property MUST specify one or more' +
-        ' terms of use policies under which the creator issued the credential' +
-        ' or presentation.', async function() {
+      it2('The value of the termsOfUse property MUST specify one or more ' +
+        'terms of use policies under which the creator issued the credential ' +
+        'or presentation.', async function() {
         await issue(require('./input/credential-termsofuses-ok.json'));
       });
-      it2('Each termsOfUse value MUST specify its type, for example,' +
-      ' IssuerPolicy, and MAY specify its instance id.', async function() {
+      it2('Each termsOfUse value MUST specify its type, for example, ' +
+        'IssuerPolicy, and MAY specify its instance id.', async function() {
         await assert.rejects(issue(require(
           './input/credential-termsofuse-no-type-fail.json')));
         await issue(require('./input/credential-termsofuse-id-ok.json'));
       });
-      it2('The value of the evidence property MUST be one or more evidence' +
-        ' schemes providing enough information for a verifier to determine' +
-        ' whether the evidence gathered by the issuer meets its confidence' +
-        ' requirements for relying on the credential.', async function() {
+      it2('The value of the evidence property MUST be one or more evidence ' +
+        'schemes providing enough information for a verifier to determine ' +
+        'whether the evidence gathered by the issuer meets its confidence ' +
+        'requirements for relying on the credential.', async function() {
         await issue(require('./input/credential-evidences-ok.json'));
       });
-      it.skip('(ZKP) The verifiable credential MUST contain a Proof, using' +
-      ' the proof property, so that the holder can derive a verifiable' +
-      ' presentation that reveals only the information than the holder' +
-      ' intends to reveal.', async function() {
+      it.skip('(ZKP) The verifiable credential MUST contain a Proof, using ' +
+        'the proof property, so that the holder can derive a verifiable ' +
+        'presentation that reveals only the information than the holder ' +
+        'intends to reveal.', async function() {
       });
-      it.skip('(ZKP) If a credential definition is being used, the' +
-        ' credential definition MUST be defined in the credentialSchema' +
-        ' property, so that it can be used by all parties to perform various' +
-        ' cryptographic operations in zero-knowledge.', async function() {
+      it.skip('(ZKP) If a credential definition is being used, the ' +
+        'credential definition MUST be defined in the credentialSchema ' +
+        'property, so that it can be used by all parties to perform various ' +
+        'cryptographic operations in zero-knowledge.', async function() {
       });
-      it.skip('(ZKP) Each derived verifiable credential within a' +
-        ' verifiable presentation MUST contain all information necessary' +
-        ' to verify the verifiable credential, either by including it' +
-        ' directly within the credential, or by referencing the necessary' +
-        ' information.', async function() {
+      it.skip('(ZKP) Each derived verifiable credential within a ' +
+        'verifiable presentation MUST contain all information necessary ' +
+        'to verify the verifiable credential, either by including it ' +
+        'directly within the credential, or by referencing the necessary ' +
+        'information.', async function() {
       });
-      it.skip('A verifiable presentation MUST NOT leak information that' +
-      ' would enable the verifier to correlate the holder across multiple' +
-      ' verifiable presentations.', async function() {
+      it.skip('A verifiable presentation MUST NOT leak information that ' +
+        'would enable the verifier to correlate the holder across multiple ' +
+        'verifiable presentations.', async function() {
       });
       // Syntaxes
       // FIXME this is a good statement, but not in the spec
-      it.skip('Data model mapping property values to JSON types' +
-      ' (not numeric/boolean/sequence/ordered-set/set/empty): "Other values' +
-      ' MUST be represented as a String type."', async function() {
+      it.skip('Data model mapping property values to JSON types ' +
+        '(not numeric/boolean/sequence/ordered-set/set/empty): "Other values ' +
+        'MUST be represented as a String type."', async function() {
       });
     });
   }
