@@ -8,6 +8,10 @@
 - Add new tests for `issuer.description` including Internationalization settings.
 - Add new tests for `issuer.id` as a url and not a url.
 
+### Fixed
+- Update statement for credentialStatus id & type test.
+- Update statement for credentialSchemas test.
+
 ## 1.0.0 - 2023-11-10
 
 ### Added

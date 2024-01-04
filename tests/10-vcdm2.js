@@ -399,7 +399,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'included using the type property.', async function() {
       });
       it2('If present, the value of the credentialStatus property ' +
-        'MUST include id and type', async function() {
+        'MUST include id and type.', async function() {
         // type requirement is tested elsewhere
         await assert.rejects(
           issue(require('./input/credential-status-missing-id-fail.json')));
@@ -448,8 +448,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it2('The value of the credentialSchema property MUST be one or more ' +
         'data schemas that provide verifiers with enough information to ' +
-        'determine if the provided data conforms to the provided schema.',
-      async function() {
+        'determine whether the provided data conforms to the provided ' +
+        'schema(s).', async function() {
         await issue(require('./input/credential-schema-ok.json'));
         await issue(require('./input/credential-schemas-ok.json'));
       });
