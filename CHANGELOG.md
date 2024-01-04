@@ -7,6 +7,7 @@
 - Add a new test to ensure type URLs are treated as an unordered set.
 - Add new tests for `issuer.description` including Internationalization settings.
 - Add new tests for `issuer.id` as a url and not a url.
+- Add tests for interactions between `validFrom ` and `validUntil`.
 
 ### Fixed
 - Update statement for credentialStatus id & type test.
