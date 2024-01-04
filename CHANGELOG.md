@@ -6,6 +6,7 @@
 - Add new tests for `issuer.name` including Internationalization settings.
 - Add a new test to ensure type URLs are treated as an unordered set.
 - Add new tests for `issuer.description` including Internationalization settings.
+- Add new tests for `issuer.id` as a url and not a url.
 
 ## 1.0.0 - 2023-11-10
 
