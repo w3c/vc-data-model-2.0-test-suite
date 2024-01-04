@@ -454,7 +454,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await issue(require('./input/credential-schemas-ok.json'));
       });
       it2('Each credentialSchema MUST specify its type (for example, ' +
-        'JsonSchemaValidator2018), and an id property', async function() {
+        'JsonSchemaValidator2018), and an id property.', async function() {
         await assert.rejects(issue(require(
           './input/credential-schema-no-type-fail.json')));
         await assert.rejects(issue(require(
