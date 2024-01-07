@@ -21,7 +21,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -37,7 +37,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -54,9 +54,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:53bec8be-c301-4f07-bb11-8a1e60b40faf",
+              "_testId": "urn:uuid:793f1d66-a503-4c69-8cdb-612abe69c6b4",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -67,12 +67,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 339,
+                "_idleStart": 341,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 334,
+              "duration": 316,
               "state": "passed",
               "speed": "slow"
             },
@@ -89,9 +89,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:c4285a7b-1408-40d3-ae03-d0c483c31f89",
+              "_testId": "urn:uuid:7e0d1134-24e0-4680-ba17-c25b025f5177",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -102,12 +102,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 673,
+                "_idleStart": 658,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 139,
+              "duration": 170,
               "state": "passed",
               "speed": "slow"
             },
@@ -124,9 +124,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ed788fbd-d5db-4a82-b3bd-30ac1579f884",
+              "_testId": "urn:uuid:48b06c7b-d6d8-478b-adf3-792ab9a496ac",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -137,14 +137,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 813,
+                "_idleStart": 828,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 25,
+              "duration": 93,
               "state": "passed",
-              "speed": "fast"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -159,9 +159,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:fd1ef010-bb81-404f-92b4-c247ab19ac3d",
+              "_testId": "urn:uuid:f46e3819-c627-4bf5-bbf7-da7cf313ed14",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -172,12 +172,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 838,
+                "_idleStart": 922,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 3871,
+              "duration": 735,
               "state": "passed",
               "speed": "slow"
             },
@@ -194,9 +194,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:027119c6-ceda-40b2-9ac6-21f83a4fe1b8",
+              "_testId": "urn:uuid:8bb7f912-aa0a-47e1-885a-8844e00b6a28",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -207,12 +207,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 4709,
+                "_idleStart": 1657,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 167,
+              "duration": 271,
               "state": "passed",
               "speed": "slow"
             },
@@ -229,9 +229,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:315f702d-d97e-4036-bad3-b8353379ac26",
+              "_testId": "urn:uuid:3381e4b8-5b16-430d-8b08-03fae9c7f8eb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -242,12 +242,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 4877,
+                "_idleStart": 1929,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 543,
+              "duration": 492,
               "state": "passed",
               "speed": "slow"
             },
@@ -264,9 +264,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:442c05e5-6e4a-41bc-aa4a-eb66bf72f754",
+              "_testId": "urn:uuid:5f487411-133a-403f-8f0f-ac55d068e25f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -277,12 +277,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 5420,
+                "_idleStart": 2421,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 200,
+              "duration": 203,
               "state": "passed",
               "speed": "slow"
             },
@@ -299,9 +299,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:2c5b9070-3a65-45ad-b6fd-daa8f9c1b163",
+              "_testId": "urn:uuid:eefde0da-7b67-4c3e-bb21-a48f97acac81",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -312,12 +312,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 5620,
+                "_idleStart": 2625,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 491,
+              "duration": 499,
               "state": "passed",
               "speed": "slow"
             },
@@ -334,9 +334,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:d41ddfd4-a4eb-4321-98ce-b9166298bdd4",
+              "_testId": "urn:uuid:374ec960-d84b-47a2-8dd2-d9e43d916ed6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -347,12 +347,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6112,
+                "_idleStart": 3128,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 201,
+              "duration": 224,
               "state": "passed",
               "speed": "slow"
             },
@@ -369,9 +369,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:578f4e2a-5fed-4837-a4f5-4ef0cdb755a0",
+              "_testId": "urn:uuid:a15d3623-6f1c-4e59-bcff-f36f5d6c8233",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -382,14 +382,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6314,
+                "_idleStart": 3353,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 24,
               "state": "passed",
-              "speed": "slow"
+              "speed": "fast"
             },
             {
               "type": "test",
@@ -404,9 +404,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ec3a16c4-5c5c-470b-8c54-54fba26dce7a",
+              "_testId": "urn:uuid:7931ba54-966b-42dc-84e5-07ed25b379a3",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -417,14 +417,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6415,
+                "_idleStart": 3377,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 96,
+              "duration": 44,
               "state": "passed",
-              "speed": "slow"
+              "speed": "medium"
             },
             {
               "type": "test",
@@ -439,9 +439,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:707adc87-c04e-4a1f-84d6-fcf4712c4139",
+              "_testId": "urn:uuid:a4e0aa48-070e-481c-b886-bc7ad595a3fc",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -452,14 +452,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6511,
+                "_idleStart": 3422,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 99,
+              "duration": 22,
               "state": "passed",
-              "speed": "slow"
+              "speed": "fast"
             },
             {
               "type": "test",
@@ -474,9 +474,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:47fa165f-03d7-48f0-86fb-cf7805bdb5aa",
+              "_testId": "urn:uuid:2b4fdc33-9c70-432b-8b11-32a37b89d9ee",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -487,12 +487,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6610,
+                "_idleStart": 3444,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 602,
+              "duration": 385,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -513,9 +513,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:d6be96bf-a846-4b14-aee0-41cec86a5c53",
+              "_testId": "urn:uuid:ae770bbf-1371-40a1-bb97-c1a763ed4d7b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -526,12 +526,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7215,
+                "_idleStart": 3832,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 304,
+              "duration": 289,
               "state": "passed",
               "speed": "slow"
             },
@@ -548,9 +548,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:0a72248f-ef03-4b90-a3c1-4296eb86b660",
+              "_testId": "urn:uuid:d373c6e9-c986-420c-9020-b6fea112640c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -561,12 +561,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7520,
+                "_idleStart": 4121,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1193,
+              "duration": 900,
               "state": "failed",
               "err": {
                 "response": {},
@@ -677,7 +677,7 @@
             },
             {
               "type": "test",
-              "title": "All credentials, presentations, and encapsulated objects SHOULD specify, or be associated with, additional more narrow types (like ExampleDegreeCredential, for example) so software systems  can more easily detect and process this additional information.",
+              "title": "All credentials, presentations, and encapsulated objects SHOULD specify, or be associated with, additional more narrow types (like ExampleDegreeCredential, for example) so software systems can more easily detect and process this additional information.",
               "body": "",
               "sync": true,
               "_timeout": 15000,
@@ -687,7 +687,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -704,9 +704,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:6c781575-7137-4d05-bbd3-79ea0b6285b5",
+              "_testId": "urn:uuid:e378680e-35bf-4878-b90e-a33d0a2bf1c7",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -717,14 +717,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 8716,
+                "_idleStart": 5023,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 99,
+              "duration": 26,
               "state": "passed",
-              "speed": "slow"
+              "speed": "fast"
             },
             {
               "type": "test",
@@ -739,9 +739,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:3f40154c-9a6e-4f89-93f7-958d32fba215",
+              "_testId": "urn:uuid:393bae8b-2831-414c-955b-3c7592485302",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -752,12 +752,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 8816,
+                "_idleStart": 5049,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 198,
+              "duration": 88,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -778,9 +778,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:5d57395b-a2de-43b8-94fd-29e3e87a95e8",
+              "_testId": "urn:uuid:55c504da-08b8-4085-ab44-dc4f8c099f4c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -791,12 +791,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9015,
+                "_idleStart": 5137,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 193,
+              "duration": 98,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -806,7 +806,7 @@
             },
             {
               "type": "test",
-              "title": "The value of the issuer property MUST be either a URL or an object containing an id property.",
+              "title": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -817,25 +817,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:74418ddd-8354-459e-8ff9-299f7cdb28c6",
+              "_testId": "urn:uuid:c79720e3-7611-4839-981a-82fadc59ff6c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "The value of the issuer property MUST be either a URL or an object containing an id property."
+                "rowId": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9208,
+                "_idleStart": 5235,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 304,
+              "duration": 415,
               "state": "passed",
               "speed": "slow"
             },
@@ -852,9 +852,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:46a10aa8-2b71-43f0-bd7b-e0b048b71f1c",
+              "_testId": "urn:uuid:86c8993b-be68-461b-811c-53954095bee9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -865,12 +865,47 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9512,
+                "_idleStart": 5650,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 602,
+              "duration": 582,
+              "state": "passed",
+              "speed": "slow"
+            },
+            {
+              "type": "test",
+              "title": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
+              "ctx": null,
+              "_testId": "urn:uuid:9e59366b-8f93-4356-9fb6-70dd9575071a",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "apicatalog.com",
+                "rowId": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 6232,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 594,
               "state": "passed",
               "speed": "slow"
             },
@@ -887,9 +922,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:f4aa43f6-26e5-4050-a3fa-75ed9eaaf4f5",
+              "_testId": "urn:uuid:0103881b-c823-490c-a2e8-7b246d2da6e9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -900,12 +935,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10114,
+                "_idleStart": 6826,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 397,
+              "duration": 396,
               "state": "passed",
               "speed": "slow"
             },
@@ -922,9 +957,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:13691494-5d50-4b60-ab49-01a475f85d4e",
+              "_testId": "urn:uuid:27de80a8-fc90-448a-9b63-bcf396d3451c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -935,12 +970,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10511,
+                "_idleStart": 7222,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 100,
+              "duration": 31,
               "state": "failed",
               "err": {
                 "response": {},
@@ -1045,6 +1080,76 @@
             },
             {
               "type": "test",
+              "title": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
+              "ctx": null,
+              "_testId": "urn:uuid:0c259771-3dc0-4e19-a151-fc5a22eeacb0",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "apicatalog.com",
+                "rowId": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 7254,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 86,
+              "state": "passed",
+              "speed": "slow"
+            },
+            {
+              "type": "test",
+              "title": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
+              "ctx": null,
+              "_testId": "urn:uuid:06999835-6868-4c67-91a7-8a153a21e6aa",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "apicatalog.com",
+                "rowId": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 7341,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 217,
+              "state": "passed",
+              "speed": "slow"
+            },
+            {
+              "type": "test",
               "title": "At least one proof mechanism, and the details necessary to evaluate that proof, MUST be expressed for a credential or presentation to be a verifiable credential or verifiable presentation; that is, to be verifiable.",
               "body": "",
               "sync": true,
@@ -1055,7 +1160,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1071,7 +1176,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1087,13 +1192,13 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
             {
               "type": "test",
-              "title": "If present, the value of the credentialStatus property MUST include id and type",
+              "title": "If present, the value of the credentialStatus property MUST include id and type.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -1104,27 +1209,27 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ebe20d37-e8c5-4de1-8f63-e7b68edf1072",
+              "_testId": "urn:uuid:224c2bad-6498-4cf4-94d4-358e2168aef3",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "If present, the value of the credentialStatus property MUST include id and type"
+                "rowId": "If present, the value of the credentialStatus property MUST include id and type."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10612,
+                "_idleStart": 7558,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 96,
+              "duration": 25,
               "state": "passed",
-              "speed": "slow"
+              "speed": "fast"
             },
             {
               "type": "test",
@@ -1139,9 +1244,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ec166268-7cd0-43e7-9a7f-9f739a5d2a45",
+              "_testId": "urn:uuid:41fbef9f-ce9a-455d-bf6a-ef2e99656a54",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1152,14 +1257,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10709,
+                "_idleStart": 7583,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 100,
+              "duration": 61,
               "state": "passed",
-              "speed": "slow"
+              "speed": "medium"
             },
             {
               "type": "test",
@@ -1174,9 +1279,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ed93041f-a8a3-4fba-9d52-508b5aa5b94c",
+              "_testId": "urn:uuid:ccbb7a47-8d8f-4c32-8d46-10f649ac1e6d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1187,12 +1292,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10809,
+                "_idleStart": 7644,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 500,
+              "duration": 482,
               "state": "passed",
               "speed": "slow"
             },
@@ -1209,9 +1314,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:6fa631aa-4e1a-4e81-8db2-470734ce007a",
+              "_testId": "urn:uuid:f5bb52b7-b40d-4b4d-9541-c8a7417e9c58",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1222,18 +1327,18 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11309,
+                "_idleStart": 8127,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 124,
+              "duration": 198,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema.",
+              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s).",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -1244,31 +1349,31 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:2580a65f-74f9-4739-8a50-55cb760e743e",
+              "_testId": "urn:uuid:4ee4a3ca-3a23-4ca4-af06-1b655e46b29f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."
+                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s)."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11433,
+                "_idleStart": 8325,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 183,
+              "duration": 208,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property",
+              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -1279,25 +1384,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:48a120bc-12e3-4859-a760-beb5a1522bba",
+              "_testId": "urn:uuid:92ecd9f8-d47d-49d0-910d-41fb739e7015",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property"
+                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11615,
+                "_idleStart": 8533,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 98,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -1318,9 +1423,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:c9ce9a42-f95f-4f52-93ed-3fad9dc0b827",
+              "_testId": "urn:uuid:6c184d4a-5707-4750-b587-b95d3b339986",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1331,12 +1436,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11717,
+                "_idleStart": 8632,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 192,
+              "duration": 99,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -1356,7 +1461,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1372,7 +1477,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1389,9 +1494,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:1d3e6752-0aa7-41c2-a4a8-63b84aecdb71",
+              "_testId": "urn:uuid:94c7ef70-9a14-4ee8-b6a1-d0ae2dc0e669",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1402,12 +1507,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11909,
+                "_idleStart": 8732,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 202,
+              "duration": 207,
               "state": "passed",
               "speed": "slow"
             },
@@ -1424,9 +1529,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:2b7ec3ae-6ea3-4a2e-8df1-6903c1689da0",
+              "_testId": "urn:uuid:f1f19b2c-c598-40b2-a2cd-3ef5f4466fe6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1437,12 +1542,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12112,
+                "_idleStart": 8940,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 87,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -1463,9 +1568,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:181145f4-f660-4be4-95ca-32f5e4b1a96c",
+              "_testId": "urn:uuid:d0af4f70-7207-40aa-b32a-4fb295b31849",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1476,12 +1581,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12213,
+                "_idleStart": 9028,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 104,
+              "duration": 103,
               "state": "passed",
               "speed": "slow"
             },
@@ -1497,7 +1602,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1513,7 +1618,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1529,7 +1634,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1545,7 +1650,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             },
@@ -1561,7 +1666,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
               "state": "pending"
             }
@@ -1579,9 +1684,9 @@
           "_onlyTests": [],
           "_onlySuites": [],
           "delayed": false,
-          "parent": "N-w0I4mgfF5Me1vz5jP3n",
+          "parent": "zkQDFc9xitt8MOrFo3e0S",
           "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-          "_testId": "urn:uuid:8563d232-bee0-4edf-aa6a-db0f5be9a549"
+          "_testId": "urn:uuid:2daac7a3-62d9-4abd-9649-9ece92175da8"
         },
         {
           "title": "Digital Bazaar",
@@ -1600,7 +1705,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -1616,7 +1721,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -1633,9 +1738,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:7961068a-79eb-44e4-ba10-7232f50c46be",
+              "_testId": "urn:uuid:186e8b7b-83ed-4448-b43b-5b53028389fb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1646,12 +1751,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12319,
+                "_idleStart": 9131,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 282,
+              "duration": 270,
               "state": "passed",
               "speed": "slow"
             },
@@ -1668,9 +1773,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:becd8e30-4c83-483b-b8f0-fc5d3cb8d7e1",
+              "_testId": "urn:uuid:7dd53e61-c9fb-42b9-a813-52412b47e77f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1681,12 +1786,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12601,
+                "_idleStart": 9401,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 964,
+              "duration": 992,
               "state": "passed",
               "speed": "slow"
             },
@@ -1703,9 +1808,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:e8d47fb6-eb0f-4c93-8d59-2e4a5f9597f8",
+              "_testId": "urn:uuid:f317124f-14ea-456e-83a7-b8064da2685c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1716,14 +1821,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13565,
+                "_idleStart": 10394,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 47,
+              "duration": 79,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -1738,9 +1843,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:a68da5c8-6bd5-4b31-8f0b-c2963652f06d",
+              "_testId": "urn:uuid:f45b07c7-0e3c-4cf1-b4d8-aad43daf3366",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1751,12 +1856,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13612,
+                "_idleStart": 10473,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 890,
+              "duration": 821,
               "state": "passed",
               "speed": "slow"
             },
@@ -1773,9 +1878,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:546cc361-6aee-4364-90e5-42922e125a77",
+              "_testId": "urn:uuid:831df85b-aa8b-4d72-a7ae-7ac7a0a49350",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1786,12 +1891,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14502,
+                "_idleStart": 11294,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 612,
+              "duration": 635,
               "state": "passed",
               "speed": "slow"
             },
@@ -1808,9 +1913,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:d2486f39-967c-4ac0-b73a-cbc0b7b70b0f",
+              "_testId": "urn:uuid:92fd087e-c875-4569-b5e1-6729af1355cc",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1821,12 +1926,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 15114,
+                "_idleStart": 11929,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 816,
+              "duration": 733,
               "state": "passed",
               "speed": "slow"
             },
@@ -1843,9 +1948,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:f2aac9f0-39c7-4dd0-b03b-1910006b4aa3",
+              "_testId": "urn:uuid:412cf560-8f31-4cbe-bf80-6441438fa460",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1856,12 +1961,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 15931,
+                "_idleStart": 12662,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 146,
+              "duration": 153,
               "state": "passed",
               "speed": "slow"
             },
@@ -1878,9 +1983,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:9ff21ec5-49e8-4e32-976a-10b255172fa6",
+              "_testId": "urn:uuid:4cd4b6d5-741c-45b4-856c-995120c9bc0f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1891,12 +1996,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16077,
+                "_idleStart": 12816,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 306,
+              "duration": 304,
               "state": "passed",
               "speed": "slow"
             },
@@ -1913,9 +2018,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:a40faa6d-10a0-4b07-a2a2-792eb66726d3",
+              "_testId": "urn:uuid:e1444cdc-1fe4-4c33-8f79-7ff6212663fe",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1926,14 +2031,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16383,
+                "_idleStart": 13120,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 59,
+              "duration": 331,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -1948,9 +2053,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:eaa20432-4a11-4f4e-b3eb-5f01bea98b9f",
+              "_testId": "urn:uuid:435a9052-4e05-413d-8731-337164b2fe60",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1961,12 +2066,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16442,
+                "_idleStart": 13451,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 58,
+              "duration": 53,
               "state": "passed",
               "speed": "medium"
             },
@@ -1983,9 +2088,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:c1c42634-df46-46fb-82bb-d224c9740351",
+              "_testId": "urn:uuid:7f332cf4-9b48-40a7-9cf2-1f8b0ca4901d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -1996,12 +2101,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16500,
+                "_idleStart": 13505,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 59,
+              "duration": 58,
               "state": "passed",
               "speed": "medium"
             },
@@ -2018,9 +2123,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:69fc99b3-0c29-462f-8173-fd2951280593",
+              "_testId": "urn:uuid:23fdc251-10d0-4e49-96b9-a7d3c9b013a0",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2031,12 +2136,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16560,
+                "_idleStart": 13565,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 534,
+              "duration": 542,
               "state": "passed",
               "speed": "slow"
             },
@@ -2053,9 +2158,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:899d8560-4ffb-4468-a5a0-acb31e55b4d8",
+              "_testId": "urn:uuid:5a750dc9-77c6-41b3-a469-41ecfd99337b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2066,12 +2171,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17094,
+                "_idleStart": 14107,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 301,
+              "duration": 288,
               "state": "passed",
               "speed": "slow"
             },
@@ -2088,9 +2193,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:46e1b504-44ae-4259-9577-9563f8b61866",
+              "_testId": "urn:uuid:8d697221-d51f-46c4-86a3-6b3a5361accb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2101,12 +2206,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17394,
+                "_idleStart": 14395,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 173,
+              "duration": 187,
               "state": "passed",
               "speed": "slow"
             },
@@ -2123,9 +2228,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:812d5ba5-bc95-41ca-8e7a-d5caca9abcbd",
+              "_testId": "urn:uuid:439aa37c-8526-4736-9778-f13547916377",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2136,18 +2241,18 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17568,
+                "_idleStart": 14582,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1002,
+              "duration": 886,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "All credentials, presentations, and encapsulated objects SHOULD specify, or be associated with, additional more narrow types (like ExampleDegreeCredential, for example) so software systems  can more easily detect and process this additional information.",
+              "title": "All credentials, presentations, and encapsulated objects SHOULD specify, or be associated with, additional more narrow types (like ExampleDegreeCredential, for example) so software systems can more easily detect and process this additional information.",
               "body": "",
               "sync": true,
               "_timeout": 15000,
@@ -2157,7 +2262,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -2174,9 +2279,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:418bdf63-e6d4-41cc-9f82-8f5f0f3f84d9",
+              "_testId": "urn:uuid:766c2b9c-96dc-4570-a5f9-c04e01afb47f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2187,12 +2292,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18569,
+                "_idleStart": 15468,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 51,
+              "duration": 56,
               "state": "passed",
               "speed": "medium"
             },
@@ -2209,9 +2314,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:6cad02d3-8a5c-4048-bddb-18f0375e3a18",
+              "_testId": "urn:uuid:1bdebc12-9085-4328-bdce-c03dcc8946fb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2222,12 +2327,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18621,
+                "_idleStart": 15525,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 186,
+              "duration": 205,
               "state": "passed",
               "speed": "slow"
             },
@@ -2244,9 +2349,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:4bc235fc-f549-4631-ab14-453b4b68a489",
+              "_testId": "urn:uuid:36c7fc96-d524-49e2-ad8b-8b27a524fd3f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2257,18 +2362,18 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18808,
+                "_idleStart": 15731,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 52,
+              "duration": 50,
               "state": "passed",
               "speed": "medium"
             },
             {
               "type": "test",
-              "title": "The value of the issuer property MUST be either a URL or an object containing an id property.",
+              "title": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -2279,25 +2384,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:42777f80-72b8-427d-9ffd-8596315bdf6f",
+              "_testId": "urn:uuid:d2bd48e4-3dc8-41b2-aae4-5d8c90c41593",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "The value of the issuer property MUST be either a URL or an object containing an id property."
+                "rowId": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18859,
+                "_idleStart": 15781,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 80,
+              "duration": 259,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -2318,9 +2423,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:b1f9abcf-be3d-4516-b5fb-50ee8092df68",
+              "_testId": "urn:uuid:eb6a5eb2-586a-48ce-9e3c-4215f8c3cdc3",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2331,12 +2436,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18940,
+                "_idleStart": 16041,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 61,
+              "duration": 51,
               "state": "failed",
               "err": {
                 "response": {},
@@ -2440,6 +2545,139 @@
             },
             {
               "type": "test",
+              "title": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
+              "ctx": null,
+              "_testId": "urn:uuid:6ef14dde-37e0-4a35-a846-f0707c2b6c21",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "Digital Bazaar",
+                "rowId": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 16093,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 54,
+              "state": "failed",
+              "err": {
+                "response": {},
+                "request": {},
+                "options": {
+                  "credentials": "same-origin",
+                  "headers": {},
+                  "method": "POST",
+                  "json": {
+                    "credential": {
+                      "@context": [
+                        "https://www.w3.org/ns/credentials/v2"
+                      ],
+                      "type": [
+                        "VerifiableCredential"
+                      ],
+                      "issuer": {
+                        "id": "did:example:issuer",
+                        "description": "An Example Issuer"
+                      },
+                      "credentialSubject": {
+                        "id": "did:example:subject"
+                      }
+                    }
+                  },
+                  "agent": {
+                    "_events": {},
+                    "_eventsCount": 2,
+                    "defaultPort": 443,
+                    "protocol": "https:",
+                    "options": {
+                      "rejectUnauthorized": false,
+                      "noDelay": true,
+                      "path": null
+                    },
+                    "requests": {},
+                    "sockets": {},
+                    "freeSockets": {},
+                    "keepAliveMsecs": 1000,
+                    "keepAlive": false,
+                    "maxSockets": null,
+                    "maxFreeSockets": 256,
+                    "scheduling": "lifo",
+                    "maxTotalSockets": null,
+                    "totalSocketCount": 0,
+                    "maxCachedSessions": 100,
+                    "_sessionCache": {
+                      "map": {},
+                      "list": []
+                    }
+                  },
+                  "hooks": {
+                    "beforeRequest": [],
+                    "beforeRetry": [],
+                    "beforeError": [],
+                    "afterResponse": []
+                  },
+                  "prefixUrl": "",
+                  "retry": {
+                    "limit": 2,
+                    "methods": [
+                      "get",
+                      "put",
+                      "head",
+                      "delete",
+                      "options",
+                      "trace"
+                    ],
+                    "statusCodes": [
+                      408,
+                      413,
+                      429,
+                      500,
+                      502,
+                      503,
+                      504
+                    ],
+                    "afterStatusCodes": [
+                      413,
+                      429,
+                      503
+                    ],
+                    "maxRetryAfter": null,
+                    "backoffLimit": null
+                  },
+                  "throwHttpErrors": true,
+                  "timeout": 10000,
+                  "signal": {},
+                  "duplex": "half",
+                  "body": "{\"credential\":{\"@context\":[\"https://www.w3.org/ns/credentials/v2\"],\"type\":[\"VerifiableCredential\"],\"issuer\":{\"id\":\"did:example:issuer\",\"description\":\"An Example Issuer\"},\"credentialSubject\":{\"id\":\"did:example:subject\"}}}"
+                },
+                "name": "HTTPError",
+                "requestUrl": "https://vc2.veresissuer.dev/issuers/z1A2ELCrwCJaA8AZKpr3YREye/credentials/issue",
+                "status": 500,
+                "data": {
+                  "message": "An unspecified error occurred.",
+                  "name": "OperationError",
+                  "type": "OperationError"
+                }
+              }
+            },
+            {
+              "type": "test",
               "title": "If present, the value of the validFrom property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential becomes valid, which could be a date and time in the future.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
@@ -2451,9 +2689,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:b959aee9-d958-4250-b723-3a0f41000f86",
+              "_testId": "urn:uuid:96ed61fa-016b-408c-968a-3316f5be4489",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2464,12 +2702,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19002,
+                "_idleStart": 16148,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 262,
+              "duration": 266,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -2490,9 +2728,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:2ca37cd5-0375-4e3f-8eb4-4a1a45a8f288",
+              "_testId": "urn:uuid:0dfa2a8c-bed8-453a-af26-4dd52bbb0f27",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2503,18 +2741,88 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19264,
+                "_idleStart": 16414,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 379,
+              "duration": 464,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
                 "code": "ERR_ASSERTION",
                 "operator": "rejects"
               }
+            },
+            {
+              "type": "test",
+              "title": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
+              "ctx": null,
+              "_testId": "urn:uuid:5e766b6a-94d8-4aa1-b6f9-f9dd25f197b0",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "Digital Bazaar",
+                "rowId": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 16879,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 194,
+              "state": "passed",
+              "speed": "slow"
+            },
+            {
+              "type": "test",
+              "title": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
+              "ctx": null,
+              "_testId": "urn:uuid:5ea19362-d76e-4f2d-af39-3c5e010f0728",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "Digital Bazaar",
+                "rowId": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 17076,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 179,
+              "state": "passed",
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -2528,7 +2836,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -2544,7 +2852,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -2560,13 +2868,13 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
             {
               "type": "test",
-              "title": "If present, the value of the credentialStatus property MUST include id and type",
+              "title": "If present, the value of the credentialStatus property MUST include id and type.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -2577,25 +2885,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:70a74d45-787d-4124-b3a7-66db6c9d9a8c",
+              "_testId": "urn:uuid:811d3e5c-e698-4518-b61f-0f276c6c29c0",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "If present, the value of the credentialStatus property MUST include id and type"
+                "rowId": "If present, the value of the credentialStatus property MUST include id and type."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19642,
+                "_idleStart": 17258,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 51,
+              "duration": 50,
               "state": "passed",
               "speed": "medium"
             },
@@ -2612,9 +2920,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:a462d847-f332-43e5-8ae1-eaf2ce4bd8d7",
+              "_testId": "urn:uuid:36a28e6d-22e4-440c-8a14-5b4f52b51b47",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2625,12 +2933,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19694,
+                "_idleStart": 17308,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 56,
+              "duration": 55,
               "state": "passed",
               "speed": "medium"
             },
@@ -2647,9 +2955,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:ad6cc8dd-982b-48a3-8e10-f1083bde037c",
+              "_testId": "urn:uuid:95edc774-2f80-4b2c-a0ab-c891862c1ee3",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2660,12 +2968,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19751,
+                "_idleStart": 17363,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 318,
+              "duration": 284,
               "state": "passed",
               "speed": "slow"
             },
@@ -2682,9 +2990,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:d941ba53-02da-4e44-b447-2ae3af20e0b1",
+              "_testId": "urn:uuid:694ce3da-5d5a-4632-b4f9-2108c1828712",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2695,18 +3003,18 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20068,
+                "_idleStart": 17650,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 112,
+              "duration": 105,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema.",
+              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s).",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -2717,31 +3025,31 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:622532a3-cf92-424d-a3df-674e29bfbbfb",
+              "_testId": "urn:uuid:d976aea3-a19f-4fcc-8672-3dc02bb5b520",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."
+                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s)."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20181,
+                "_idleStart": 17755,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 240,
+              "duration": 169,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property",
+              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -2752,25 +3060,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:362f6c95-5e2a-47b0-aed1-abbe6e66ebf1",
+              "_testId": "urn:uuid:c1f6180a-bbe6-4d46-9b65-4a0594a70aef",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property"
+                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20422,
+                "_idleStart": 17924,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 88,
+              "duration": 89,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -2791,9 +3099,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:5d899011-ad3b-418e-ae83-360b74c1cbd4",
+              "_testId": "urn:uuid:f463bb69-8353-4a6c-8619-c5ad6b9bb434",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2804,12 +3112,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20510,
+                "_idleStart": 18013,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 52,
+              "duration": 51,
               "state": "passed",
               "speed": "medium"
             },
@@ -2825,7 +3133,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -2841,7 +3149,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -2858,9 +3166,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:809e585c-b0e4-4cfb-835c-b72460d4b431",
+              "_testId": "urn:uuid:818eac2b-49fc-43cb-9417-274f1c040e79",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2871,12 +3179,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20563,
+                "_idleStart": 18065,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 102,
+              "duration": 84,
               "state": "passed",
               "speed": "slow"
             },
@@ -2893,9 +3201,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:4e6ead6f-e423-4b4c-86e9-8befaa4b92a9",
+              "_testId": "urn:uuid:8332e510-24b9-4965-a090-7800cd39f704",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2906,12 +3214,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20668,
+                "_idleStart": 18149,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 208,
+              "duration": 138,
               "state": "passed",
               "speed": "slow"
             },
@@ -2928,9 +3236,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:6ded8798-b22b-4e74-9f52-49cd5cf41593",
+              "_testId": "urn:uuid:23215e6f-ed59-47e3-af6a-39c6f4394749",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -2941,12 +3249,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20876,
+                "_idleStart": 18287,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 86,
+              "duration": 79,
               "state": "passed",
               "speed": "slow"
             },
@@ -2962,7 +3270,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -2978,7 +3286,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -2994,7 +3302,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -3010,7 +3318,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             },
@@ -3026,7 +3334,7 @@
               "_currentRetry": 0,
               "pending": true,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
               "state": "pending"
             }
@@ -3044,9 +3352,9 @@
           "_onlyTests": [],
           "_onlySuites": [],
           "delayed": false,
-          "parent": "N-w0I4mgfF5Me1vz5jP3n",
+          "parent": "zkQDFc9xitt8MOrFo3e0S",
           "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-          "_testId": "urn:uuid:4438bc1f-c199-40f2-bb37-e92c9460e232"
+          "_testId": "urn:uuid:21b8d2c3-135f-45c6-9d7c-921769c83da5"
         }
       ],
       "root": false,
@@ -3062,7 +3370,7 @@
       "_onlyTests": [],
       "_onlySuites": [],
       "delayed": false,
-      "parent": "SbLoxY2Gl5zLbDCTS7s7F",
+      "parent": "60CGq8Qm6dzrodPP5vo77",
       "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
       "summary": {},
       "matrix": true,
@@ -3070,7 +3378,7 @@
       "rowLabel": "Test Name",
       "columnLabel": "Issuer",
       "reportData": [],
-      "_testId": "urn:uuid:61417b2b-58dc-464f-8074-32487062a035",
+      "_testId": "urn:uuid:fc078311-b2f5-4a18-82f4-5ff36abe2a9c",
       "columns": [
         "apicatalog.com",
         "Digital Bazaar"
@@ -3092,9 +3400,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:53bec8be-c301-4f07-bb11-8a1e60b40faf",
+              "_testId": "urn:uuid:793f1d66-a503-4c69-8cdb-612abe69c6b4",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3105,12 +3413,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 339,
+                "_idleStart": 341,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 334,
+              "duration": 316,
               "state": "passed",
               "speed": "slow"
             },
@@ -3127,9 +3435,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:7961068a-79eb-44e4-ba10-7232f50c46be",
+              "_testId": "urn:uuid:186e8b7b-83ed-4448-b43b-5b53028389fb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3140,12 +3448,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12319,
+                "_idleStart": 9131,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 282,
+              "duration": 270,
               "state": "passed",
               "speed": "slow"
             }
@@ -3167,9 +3475,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:c4285a7b-1408-40d3-ae03-d0c483c31f89",
+              "_testId": "urn:uuid:7e0d1134-24e0-4680-ba17-c25b025f5177",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3180,12 +3488,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 673,
+                "_idleStart": 658,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 139,
+              "duration": 170,
               "state": "passed",
               "speed": "slow"
             },
@@ -3202,9 +3510,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:becd8e30-4c83-483b-b8f0-fc5d3cb8d7e1",
+              "_testId": "urn:uuid:7dd53e61-c9fb-42b9-a813-52412b47e77f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3215,12 +3523,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12601,
+                "_idleStart": 9401,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 964,
+              "duration": 992,
               "state": "passed",
               "speed": "slow"
             }
@@ -3242,9 +3550,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ed788fbd-d5db-4a82-b3bd-30ac1579f884",
+              "_testId": "urn:uuid:48b06c7b-d6d8-478b-adf3-792ab9a496ac",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3255,14 +3563,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 813,
+                "_idleStart": 828,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 25,
+              "duration": 93,
               "state": "passed",
-              "speed": "fast"
+              "speed": "slow"
             },
             {
               "type": "test",
@@ -3277,9 +3585,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:e8d47fb6-eb0f-4c93-8d59-2e4a5f9597f8",
+              "_testId": "urn:uuid:f317124f-14ea-456e-83a7-b8064da2685c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3290,14 +3598,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13565,
+                "_idleStart": 10394,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 47,
+              "duration": 79,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             }
           ]
         },
@@ -3317,9 +3625,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:fd1ef010-bb81-404f-92b4-c247ab19ac3d",
+              "_testId": "urn:uuid:f46e3819-c627-4bf5-bbf7-da7cf313ed14",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3330,12 +3638,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 838,
+                "_idleStart": 922,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 3871,
+              "duration": 735,
               "state": "passed",
               "speed": "slow"
             },
@@ -3352,9 +3660,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:a68da5c8-6bd5-4b31-8f0b-c2963652f06d",
+              "_testId": "urn:uuid:f45b07c7-0e3c-4cf1-b4d8-aad43daf3366",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3365,12 +3673,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 13612,
+                "_idleStart": 10473,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 890,
+              "duration": 821,
               "state": "passed",
               "speed": "slow"
             }
@@ -3392,9 +3700,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:027119c6-ceda-40b2-9ac6-21f83a4fe1b8",
+              "_testId": "urn:uuid:8bb7f912-aa0a-47e1-885a-8844e00b6a28",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3405,12 +3713,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 4709,
+                "_idleStart": 1657,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 167,
+              "duration": 271,
               "state": "passed",
               "speed": "slow"
             },
@@ -3427,9 +3735,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:546cc361-6aee-4364-90e5-42922e125a77",
+              "_testId": "urn:uuid:831df85b-aa8b-4d72-a7ae-7ac7a0a49350",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3440,12 +3748,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 14502,
+                "_idleStart": 11294,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 612,
+              "duration": 635,
               "state": "passed",
               "speed": "slow"
             }
@@ -3467,9 +3775,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:315f702d-d97e-4036-bad3-b8353379ac26",
+              "_testId": "urn:uuid:3381e4b8-5b16-430d-8b08-03fae9c7f8eb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3480,12 +3788,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 4877,
+                "_idleStart": 1929,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 543,
+              "duration": 492,
               "state": "passed",
               "speed": "slow"
             },
@@ -3502,9 +3810,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:d2486f39-967c-4ac0-b73a-cbc0b7b70b0f",
+              "_testId": "urn:uuid:92fd087e-c875-4569-b5e1-6729af1355cc",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3515,12 +3823,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 15114,
+                "_idleStart": 11929,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 816,
+              "duration": 733,
               "state": "passed",
               "speed": "slow"
             }
@@ -3542,9 +3850,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:442c05e5-6e4a-41bc-aa4a-eb66bf72f754",
+              "_testId": "urn:uuid:5f487411-133a-403f-8f0f-ac55d068e25f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3555,12 +3863,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 5420,
+                "_idleStart": 2421,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 200,
+              "duration": 203,
               "state": "passed",
               "speed": "slow"
             },
@@ -3577,9 +3885,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:f2aac9f0-39c7-4dd0-b03b-1910006b4aa3",
+              "_testId": "urn:uuid:412cf560-8f31-4cbe-bf80-6441438fa460",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3590,12 +3898,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 15931,
+                "_idleStart": 12662,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 146,
+              "duration": 153,
               "state": "passed",
               "speed": "slow"
             }
@@ -3617,9 +3925,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:2c5b9070-3a65-45ad-b6fd-daa8f9c1b163",
+              "_testId": "urn:uuid:eefde0da-7b67-4c3e-bb21-a48f97acac81",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3630,12 +3938,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 5620,
+                "_idleStart": 2625,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 491,
+              "duration": 499,
               "state": "passed",
               "speed": "slow"
             },
@@ -3652,9 +3960,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:9ff21ec5-49e8-4e32-976a-10b255172fa6",
+              "_testId": "urn:uuid:4cd4b6d5-741c-45b4-856c-995120c9bc0f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3665,12 +3973,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16077,
+                "_idleStart": 12816,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 306,
+              "duration": 304,
               "state": "passed",
               "speed": "slow"
             }
@@ -3692,9 +4000,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:d41ddfd4-a4eb-4321-98ce-b9166298bdd4",
+              "_testId": "urn:uuid:374ec960-d84b-47a2-8dd2-d9e43d916ed6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3705,12 +4013,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6112,
+                "_idleStart": 3128,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 201,
+              "duration": 224,
               "state": "passed",
               "speed": "slow"
             },
@@ -3727,9 +4035,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:a40faa6d-10a0-4b07-a2a2-792eb66726d3",
+              "_testId": "urn:uuid:e1444cdc-1fe4-4c33-8f79-7ff6212663fe",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3740,14 +4048,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16383,
+                "_idleStart": 13120,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 59,
+              "duration": 331,
               "state": "passed",
-              "speed": "medium"
+              "speed": "slow"
             }
           ]
         },
@@ -3767,9 +4075,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:578f4e2a-5fed-4837-a4f5-4ef0cdb755a0",
+              "_testId": "urn:uuid:a15d3623-6f1c-4e59-bcff-f36f5d6c8233",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3780,14 +4088,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6314,
+                "_idleStart": 3353,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 24,
               "state": "passed",
-              "speed": "slow"
+              "speed": "fast"
             },
             {
               "type": "test",
@@ -3802,9 +4110,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:eaa20432-4a11-4f4e-b3eb-5f01bea98b9f",
+              "_testId": "urn:uuid:435a9052-4e05-413d-8731-337164b2fe60",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3815,12 +4123,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16442,
+                "_idleStart": 13451,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 58,
+              "duration": 53,
               "state": "passed",
               "speed": "medium"
             }
@@ -3842,9 +4150,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ec3a16c4-5c5c-470b-8c54-54fba26dce7a",
+              "_testId": "urn:uuid:7931ba54-966b-42dc-84e5-07ed25b379a3",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3855,14 +4163,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6415,
+                "_idleStart": 3377,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 96,
+              "duration": 44,
               "state": "passed",
-              "speed": "slow"
+              "speed": "medium"
             },
             {
               "type": "test",
@@ -3877,9 +4185,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:c1c42634-df46-46fb-82bb-d224c9740351",
+              "_testId": "urn:uuid:7f332cf4-9b48-40a7-9cf2-1f8b0ca4901d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3890,12 +4198,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16500,
+                "_idleStart": 13505,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 59,
+              "duration": 58,
               "state": "passed",
               "speed": "medium"
             }
@@ -3917,9 +4225,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:707adc87-c04e-4a1f-84d6-fcf4712c4139",
+              "_testId": "urn:uuid:a4e0aa48-070e-481c-b886-bc7ad595a3fc",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3930,14 +4238,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6511,
+                "_idleStart": 3422,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 99,
+              "duration": 22,
               "state": "passed",
-              "speed": "slow"
+              "speed": "fast"
             },
             {
               "type": "test",
@@ -3952,9 +4260,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:69fc99b3-0c29-462f-8173-fd2951280593",
+              "_testId": "urn:uuid:23fdc251-10d0-4e49-96b9-a7d3c9b013a0",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -3965,12 +4273,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 16560,
+                "_idleStart": 13565,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 534,
+              "duration": 542,
               "state": "passed",
               "speed": "slow"
             }
@@ -3992,9 +4300,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:47fa165f-03d7-48f0-86fb-cf7805bdb5aa",
+              "_testId": "urn:uuid:2b4fdc33-9c70-432b-8b11-32a37b89d9ee",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4005,12 +4313,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 6610,
+                "_idleStart": 3444,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 602,
+              "duration": 385,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4031,9 +4339,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:899d8560-4ffb-4468-a5a0-acb31e55b4d8",
+              "_testId": "urn:uuid:5a750dc9-77c6-41b3-a469-41ecfd99337b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4044,12 +4352,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17094,
+                "_idleStart": 14107,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 301,
+              "duration": 288,
               "state": "passed",
               "speed": "slow"
             }
@@ -4071,9 +4379,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:d6be96bf-a846-4b14-aee0-41cec86a5c53",
+              "_testId": "urn:uuid:ae770bbf-1371-40a1-bb97-c1a763ed4d7b",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4084,12 +4392,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7215,
+                "_idleStart": 3832,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 304,
+              "duration": 289,
               "state": "passed",
               "speed": "slow"
             },
@@ -4106,9 +4414,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:46e1b504-44ae-4259-9577-9563f8b61866",
+              "_testId": "urn:uuid:8d697221-d51f-46c4-86a3-6b3a5361accb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4119,12 +4427,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17394,
+                "_idleStart": 14395,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 173,
+              "duration": 187,
               "state": "passed",
               "speed": "slow"
             }
@@ -4146,9 +4454,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:0a72248f-ef03-4b90-a3c1-4296eb86b660",
+              "_testId": "urn:uuid:d373c6e9-c986-420c-9020-b6fea112640c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4159,12 +4467,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 7520,
+                "_idleStart": 4121,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1193,
+              "duration": 900,
               "state": "failed",
               "err": {
                 "response": {},
@@ -4286,9 +4594,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:812d5ba5-bc95-41ca-8e7a-d5caca9abcbd",
+              "_testId": "urn:uuid:439aa37c-8526-4736-9778-f13547916377",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4299,12 +4607,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 17568,
+                "_idleStart": 14582,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 1002,
+              "duration": 886,
               "state": "passed",
               "speed": "slow"
             }
@@ -4326,9 +4634,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:6c781575-7137-4d05-bbd3-79ea0b6285b5",
+              "_testId": "urn:uuid:e378680e-35bf-4878-b90e-a33d0a2bf1c7",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4339,14 +4647,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 8716,
+                "_idleStart": 5023,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 99,
+              "duration": 26,
               "state": "passed",
-              "speed": "slow"
+              "speed": "fast"
             },
             {
               "type": "test",
@@ -4361,9 +4669,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:418bdf63-e6d4-41cc-9f82-8f5f0f3f84d9",
+              "_testId": "urn:uuid:766c2b9c-96dc-4570-a5f9-c04e01afb47f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4374,12 +4682,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18569,
+                "_idleStart": 15468,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 51,
+              "duration": 56,
               "state": "passed",
               "speed": "medium"
             }
@@ -4401,9 +4709,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:3f40154c-9a6e-4f89-93f7-958d32fba215",
+              "_testId": "urn:uuid:393bae8b-2831-414c-955b-3c7592485302",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4414,12 +4722,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 8816,
+                "_idleStart": 5049,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 198,
+              "duration": 88,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4440,9 +4748,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:6cad02d3-8a5c-4048-bddb-18f0375e3a18",
+              "_testId": "urn:uuid:1bdebc12-9085-4328-bdce-c03dcc8946fb",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4453,12 +4761,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18621,
+                "_idleStart": 15525,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 186,
+              "duration": 205,
               "state": "passed",
               "speed": "slow"
             }
@@ -4480,9 +4788,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:5d57395b-a2de-43b8-94fd-29e3e87a95e8",
+              "_testId": "urn:uuid:55c504da-08b8-4085-ab44-dc4f8c099f4c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4493,12 +4801,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9015,
+                "_idleStart": 5137,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 193,
+              "duration": 98,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4519,9 +4827,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:4bc235fc-f549-4631-ab14-453b4b68a489",
+              "_testId": "urn:uuid:36c7fc96-d524-49e2-ad8b-8b27a524fd3f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4532,23 +4840,23 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18808,
+                "_idleStart": 15731,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 52,
+              "duration": 50,
               "state": "passed",
               "speed": "medium"
             }
           ]
         },
         {
-          "id": "The value of the issuer property MUST be either a URL or an object containing an id property.",
+          "id": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL.",
           "cells": [
             {
               "type": "test",
-              "title": "The value of the issuer property MUST be either a URL or an object containing an id property.",
+              "title": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -4559,31 +4867,31 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:74418ddd-8354-459e-8ff9-299f7cdb28c6",
+              "_testId": "urn:uuid:c79720e3-7611-4839-981a-82fadc59ff6c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "The value of the issuer property MUST be either a URL or an object containing an id property."
+                "rowId": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9208,
+                "_idleStart": 5235,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 304,
+              "duration": 415,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "The value of the issuer property MUST be either a URL or an object containing an id property.",
+              "title": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -4594,25 +4902,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:42777f80-72b8-427d-9ffd-8596315bdf6f",
+              "_testId": "urn:uuid:d2bd48e4-3dc8-41b2-aae4-5d8c90c41593",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "The value of the issuer property MUST be either a URL or an object containing an id property."
+                "rowId": "The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18859,
+                "_idleStart": 15781,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 80,
+              "duration": 259,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4638,9 +4946,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:46a10aa8-2b71-43f0-bd7b-e0b048b71f1c",
+              "_testId": "urn:uuid:86c8993b-be68-461b-811c-53954095bee9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4651,12 +4959,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 9512,
+                "_idleStart": 5650,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 602,
+              "duration": 582,
               "state": "passed",
               "speed": "slow"
             },
@@ -4673,9 +4981,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:b1f9abcf-be3d-4516-b5fb-50ee8092df68",
+              "_testId": "urn:uuid:eb6a5eb2-586a-48ce-9e3c-4215f8c3cdc3",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4686,12 +4994,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 18940,
+                "_idleStart": 16041,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 61,
+              "duration": 51,
               "state": "failed",
               "err": {
                 "response": {},
@@ -4782,6 +5090,179 @@
                   "signal": {},
                   "duplex": "half",
                   "body": "{\"credential\":{\"@context\":[\"https://www.w3.org/ns/credentials/v2\"],\"type\":[\"VerifiableCredential\"],\"issuer\":{\"id\":\"did:example:issuer\",\"name\":\"ExampleIssuer\"},\"credentialSubject\":{\"id\":\"did:example:subject\"}}}"
+                },
+                "name": "HTTPError",
+                "requestUrl": "https://vc2.veresissuer.dev/issuers/z1A2ELCrwCJaA8AZKpr3YREye/credentials/issue",
+                "status": 500,
+                "data": {
+                  "message": "An unspecified error occurred.",
+                  "name": "OperationError",
+                  "type": "OperationError"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction.",
+          "cells": [
+            {
+              "type": "test",
+              "title": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
+              "ctx": null,
+              "_testId": "urn:uuid:9e59366b-8f93-4356-9fb6-70dd9575071a",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "apicatalog.com",
+                "rowId": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 6232,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 594,
+              "state": "passed",
+              "speed": "slow"
+            },
+            {
+              "type": "test",
+              "title": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
+              "ctx": null,
+              "_testId": "urn:uuid:6ef14dde-37e0-4a35-a846-f0707c2b6c21",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "Digital Bazaar",
+                "rowId": "If present, the value of the \"issuer.description\" property MUST be a string or a language value object as described in 10.1 Language and Base Direction."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 16093,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 54,
+              "state": "failed",
+              "err": {
+                "response": {},
+                "request": {},
+                "options": {
+                  "credentials": "same-origin",
+                  "headers": {},
+                  "method": "POST",
+                  "json": {
+                    "credential": {
+                      "@context": [
+                        "https://www.w3.org/ns/credentials/v2"
+                      ],
+                      "type": [
+                        "VerifiableCredential"
+                      ],
+                      "issuer": {
+                        "id": "did:example:issuer",
+                        "description": "An Example Issuer"
+                      },
+                      "credentialSubject": {
+                        "id": "did:example:subject"
+                      }
+                    }
+                  },
+                  "agent": {
+                    "_events": {},
+                    "_eventsCount": 2,
+                    "defaultPort": 443,
+                    "protocol": "https:",
+                    "options": {
+                      "rejectUnauthorized": false,
+                      "noDelay": true,
+                      "path": null
+                    },
+                    "requests": {},
+                    "sockets": {},
+                    "freeSockets": {},
+                    "keepAliveMsecs": 1000,
+                    "keepAlive": false,
+                    "maxSockets": null,
+                    "maxFreeSockets": 256,
+                    "scheduling": "lifo",
+                    "maxTotalSockets": null,
+                    "totalSocketCount": 0,
+                    "maxCachedSessions": 100,
+                    "_sessionCache": {
+                      "map": {},
+                      "list": []
+                    }
+                  },
+                  "hooks": {
+                    "beforeRequest": [],
+                    "beforeRetry": [],
+                    "beforeError": [],
+                    "afterResponse": []
+                  },
+                  "prefixUrl": "",
+                  "retry": {
+                    "limit": 2,
+                    "methods": [
+                      "get",
+                      "put",
+                      "head",
+                      "delete",
+                      "options",
+                      "trace"
+                    ],
+                    "statusCodes": [
+                      408,
+                      413,
+                      429,
+                      500,
+                      502,
+                      503,
+                      504
+                    ],
+                    "afterStatusCodes": [
+                      413,
+                      429,
+                      503
+                    ],
+                    "maxRetryAfter": null,
+                    "backoffLimit": null
+                  },
+                  "throwHttpErrors": true,
+                  "timeout": 10000,
+                  "signal": {},
+                  "duplex": "half",
+                  "body": "{\"credential\":{\"@context\":[\"https://www.w3.org/ns/credentials/v2\"],\"type\":[\"VerifiableCredential\"],\"issuer\":{\"id\":\"did:example:issuer\",\"description\":\"An Example Issuer\"},\"credentialSubject\":{\"id\":\"did:example:subject\"}}}"
                 },
                 "name": "HTTPError",
                 "requestUrl": "https://vc2.veresissuer.dev/issuers/z1A2ELCrwCJaA8AZKpr3YREye/credentials/issue",
@@ -4811,9 +5292,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:f4aa43f6-26e5-4050-a3fa-75ed9eaaf4f5",
+              "_testId": "urn:uuid:0103881b-c823-490c-a2e8-7b246d2da6e9",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4824,12 +5305,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10114,
+                "_idleStart": 6826,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 397,
+              "duration": 396,
               "state": "passed",
               "speed": "slow"
             },
@@ -4846,9 +5327,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:b959aee9-d958-4250-b723-3a0f41000f86",
+              "_testId": "urn:uuid:96ed61fa-016b-408c-968a-3316f5be4489",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4859,12 +5340,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19002,
+                "_idleStart": 16148,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 262,
+              "duration": 266,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -4890,9 +5371,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:13691494-5d50-4b60-ab49-01a475f85d4e",
+              "_testId": "urn:uuid:27de80a8-fc90-448a-9b63-bcf396d3451c",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -4903,12 +5384,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10511,
+                "_idleStart": 7222,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 100,
+              "duration": 31,
               "state": "failed",
               "err": {
                 "response": {},
@@ -5024,9 +5505,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:2ca37cd5-0375-4e3f-8eb4-4a1a45a8f288",
+              "_testId": "urn:uuid:0dfa2a8c-bed8-453a-af26-4dd52bbb0f27",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5037,12 +5518,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19264,
+                "_idleStart": 16414,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 379,
+              "duration": 464,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -5053,11 +5534,11 @@
           ]
         },
         {
-          "id": "If present, the value of the credentialStatus property MUST include id and type",
+          "id": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value.",
           "cells": [
             {
               "type": "test",
-              "title": "If present, the value of the credentialStatus property MUST include id and type",
+              "title": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -5068,31 +5549,31 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ebe20d37-e8c5-4de1-8f63-e7b68edf1072",
+              "_testId": "urn:uuid:0c259771-3dc0-4e19-a151-fc5a22eeacb0",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "If present, the value of the credentialStatus property MUST include id and type"
+                "rowId": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10612,
+                "_idleStart": 7254,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 96,
+              "duration": 86,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "If present, the value of the credentialStatus property MUST include id and type",
+              "title": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -5103,25 +5584,175 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:70a74d45-787d-4124-b3a7-66db6c9d9a8c",
+              "_testId": "urn:uuid:5e766b6a-94d8-4aa1-b6f9-f9dd25f197b0",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "If present, the value of the credentialStatus property MUST include id and type"
+                "rowId": "If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19642,
+                "_idleStart": 16879,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 51,
+              "duration": 194,
+              "state": "passed",
+              "speed": "slow"
+            }
+          ]
+        },
+        {
+          "id": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value.",
+          "cells": [
+            {
+              "type": "test",
+              "title": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
+              "ctx": null,
+              "_testId": "urn:uuid:06999835-6868-4c67-91a7-8a153a21e6aa",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "apicatalog.com",
+                "rowId": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 7341,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 217,
+              "state": "passed",
+              "speed": "slow"
+            },
+            {
+              "type": "test",
+              "title": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
+              "ctx": null,
+              "_testId": "urn:uuid:5ea19362-d76e-4f2d-af39-3c5e010f0728",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "Digital Bazaar",
+                "rowId": "If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 17076,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 179,
+              "state": "passed",
+              "speed": "slow"
+            }
+          ]
+        },
+        {
+          "id": "If present, the value of the credentialStatus property MUST include id and type.",
+          "cells": [
+            {
+              "type": "test",
+              "title": "If present, the value of the credentialStatus property MUST include id and type.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
+              "ctx": null,
+              "_testId": "urn:uuid:224c2bad-6498-4cf4-94d4-358e2168aef3",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "apicatalog.com",
+                "rowId": "If present, the value of the credentialStatus property MUST include id and type."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 7558,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 25,
+              "state": "passed",
+              "speed": "fast"
+            },
+            {
+              "type": "test",
+              "title": "If present, the value of the credentialStatus property MUST include id and type.",
+              "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
+              "async": 0,
+              "sync": true,
+              "_timeout": 15000,
+              "_slow": 75,
+              "_retries": -1,
+              "timedOut": false,
+              "_currentRetry": 0,
+              "pending": false,
+              "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
+              "ctx": null,
+              "_testId": "urn:uuid:811d3e5c-e698-4518-b61f-0f276c6c29c0",
+              "_events": {},
+              "_eventsCount": 1,
+              "cell": {
+                "columnId": "Digital Bazaar",
+                "rowId": "If present, the value of the credentialStatus property MUST include id and type."
+              },
+              "timer": {
+                "_idleTimeout": -1,
+                "_idlePrev": null,
+                "_idleNext": null,
+                "_idleStart": 17258,
+                "_onTimeout": null,
+                "_repeat": null,
+                "_destroyed": true
+              },
+              "duration": 50,
               "state": "passed",
               "speed": "medium"
             }
@@ -5143,9 +5774,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ec166268-7cd0-43e7-9a7f-9f739a5d2a45",
+              "_testId": "urn:uuid:41fbef9f-ce9a-455d-bf6a-ef2e99656a54",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5156,14 +5787,14 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10709,
+                "_idleStart": 7583,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 100,
+              "duration": 61,
               "state": "passed",
-              "speed": "slow"
+              "speed": "medium"
             },
             {
               "type": "test",
@@ -5178,9 +5809,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:a462d847-f332-43e5-8ae1-eaf2ce4bd8d7",
+              "_testId": "urn:uuid:36a28e6d-22e4-440c-8a14-5b4f52b51b47",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5191,12 +5822,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19694,
+                "_idleStart": 17308,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 56,
+              "duration": 55,
               "state": "passed",
               "speed": "medium"
             }
@@ -5218,9 +5849,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:ed93041f-a8a3-4fba-9d52-508b5aa5b94c",
+              "_testId": "urn:uuid:ccbb7a47-8d8f-4c32-8d46-10f649ac1e6d",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5231,12 +5862,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 10809,
+                "_idleStart": 7644,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 500,
+              "duration": 482,
               "state": "passed",
               "speed": "slow"
             },
@@ -5253,9 +5884,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:ad6cc8dd-982b-48a3-8e10-f1083bde037c",
+              "_testId": "urn:uuid:95edc774-2f80-4b2c-a0ab-c891862c1ee3",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5266,12 +5897,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 19751,
+                "_idleStart": 17363,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 318,
+              "duration": 284,
               "state": "passed",
               "speed": "slow"
             }
@@ -5293,9 +5924,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:6fa631aa-4e1a-4e81-8db2-470734ce007a",
+              "_testId": "urn:uuid:f5bb52b7-b40d-4b4d-9541-c8a7417e9c58",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5306,12 +5937,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11309,
+                "_idleStart": 8127,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 124,
+              "duration": 198,
               "state": "passed",
               "speed": "slow"
             },
@@ -5328,9 +5959,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:d941ba53-02da-4e44-b447-2ae3af20e0b1",
+              "_testId": "urn:uuid:694ce3da-5d5a-4632-b4f9-2108c1828712",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5341,23 +5972,23 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20068,
+                "_idleStart": 17650,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 112,
+              "duration": 105,
               "state": "passed",
               "speed": "slow"
             }
           ]
         },
         {
-          "id": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema.",
+          "id": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s).",
           "cells": [
             {
               "type": "test",
-              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema.",
+              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s).",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -5368,31 +5999,31 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:2580a65f-74f9-4739-8a50-55cb760e743e",
+              "_testId": "urn:uuid:4ee4a3ca-3a23-4ca4-af06-1b655e46b29f",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."
+                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s)."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11433,
+                "_idleStart": 8325,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 183,
+              "duration": 208,
               "state": "passed",
               "speed": "slow"
             },
             {
               "type": "test",
-              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema.",
+              "title": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s).",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -5403,36 +6034,36 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:622532a3-cf92-424d-a3df-674e29bfbbfb",
+              "_testId": "urn:uuid:d976aea3-a19f-4fcc-8672-3dc02bb5b520",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine if the provided data conforms to the provided schema."
+                "rowId": "The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s)."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20181,
+                "_idleStart": 17755,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 240,
+              "duration": 169,
               "state": "passed",
               "speed": "slow"
             }
           ]
         },
         {
-          "id": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property",
+          "id": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property.",
           "cells": [
             {
               "type": "test",
-              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property",
+              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -5443,25 +6074,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:48a120bc-12e3-4859-a760-beb5a1522bba",
+              "_testId": "urn:uuid:92ecd9f8-d47d-49d0-910d-41fb739e7015",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "apicatalog.com",
-                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property"
+                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11615,
+                "_idleStart": 8533,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 98,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -5471,7 +6102,7 @@
             },
             {
               "type": "test",
-              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property",
+              "title": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property.",
               "body": "async function() {\n        this.test.cell = {\n          columnId: name,\n          rowId: this.test.title\n        };\n        await fn.apply(this, arguments);\n      }",
               "async": 0,
               "sync": true,
@@ -5482,25 +6113,25 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:362f6c95-5e2a-47b0-aed1-abbe6e66ebf1",
+              "_testId": "urn:uuid:c1f6180a-bbe6-4d46-9b65-4a0594a70aef",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
                 "columnId": "Digital Bazaar",
-                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property"
+                "rowId": "Each credentialSchema MUST specify its type (for example, JsonSchemaValidator2018), and an id property."
               },
               "timer": {
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20422,
+                "_idleStart": 17924,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 88,
+              "duration": 89,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -5526,9 +6157,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:c9ce9a42-f95f-4f52-93ed-3fad9dc0b827",
+              "_testId": "urn:uuid:6c184d4a-5707-4750-b587-b95d3b339986",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5539,12 +6170,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11717,
+                "_idleStart": 8632,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 192,
+              "duration": 99,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -5565,9 +6196,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:5d899011-ad3b-418e-ae83-360b74c1cbd4",
+              "_testId": "urn:uuid:f463bb69-8353-4a6c-8619-c5ad6b9bb434",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5578,12 +6209,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20510,
+                "_idleStart": 18013,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 52,
+              "duration": 51,
               "state": "passed",
               "speed": "medium"
             }
@@ -5605,9 +6236,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:1d3e6752-0aa7-41c2-a4a8-63b84aecdb71",
+              "_testId": "urn:uuid:94c7ef70-9a14-4ee8-b6a1-d0ae2dc0e669",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5618,12 +6249,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 11909,
+                "_idleStart": 8732,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 202,
+              "duration": 207,
               "state": "passed",
               "speed": "slow"
             },
@@ -5640,9 +6271,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:809e585c-b0e4-4cfb-835c-b72460d4b431",
+              "_testId": "urn:uuid:818eac2b-49fc-43cb-9417-274f1c040e79",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5653,12 +6284,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20563,
+                "_idleStart": 18065,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 102,
+              "duration": 84,
               "state": "passed",
               "speed": "slow"
             }
@@ -5680,9 +6311,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:2b7ec3ae-6ea3-4a2e-8df1-6903c1689da0",
+              "_testId": "urn:uuid:f1f19b2c-c598-40b2-a2cd-3ef5f4466fe6",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5693,12 +6324,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12112,
+                "_idleStart": 8940,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 101,
+              "duration": 87,
               "state": "failed",
               "err": {
                 "generatedMessage": false,
@@ -5719,9 +6350,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:4e6ead6f-e423-4b4c-86e9-8befaa4b92a9",
+              "_testId": "urn:uuid:8332e510-24b9-4965-a090-7800cd39f704",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5732,12 +6363,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20668,
+                "_idleStart": 18149,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 208,
+              "duration": 138,
               "state": "passed",
               "speed": "slow"
             }
@@ -5759,9 +6390,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "cUKET4__---3rE8m8M1lN",
+              "parent": "NXTA6ahHJlRfOG_aycj_S",
               "ctx": null,
-              "_testId": "urn:uuid:181145f4-f660-4be4-95ca-32f5e4b1a96c",
+              "_testId": "urn:uuid:d0af4f70-7207-40aa-b32a-4fb295b31849",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5772,12 +6403,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 12213,
+                "_idleStart": 9028,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 104,
+              "duration": 103,
               "state": "passed",
               "speed": "slow"
             },
@@ -5794,9 +6425,9 @@
               "_currentRetry": 0,
               "pending": false,
               "file": "/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
-              "parent": "d5f4JUOwtqZLLV7oZbKiV",
+              "parent": "3PaYUFWOHCfDhjP_oVC8H",
               "ctx": null,
-              "_testId": "urn:uuid:6ded8798-b22b-4e74-9f52-49cd5cf41593",
+              "_testId": "urn:uuid:23215e6f-ed59-47e3-af6a-39c6f4394749",
               "_events": {},
               "_eventsCount": 1,
               "cell": {
@@ -5807,12 +6438,12 @@
                 "_idleTimeout": -1,
                 "_idlePrev": null,
                 "_idleNext": null,
-                "_idleStart": 20876,
+                "_idleStart": 18287,
                 "_onTimeout": null,
                 "_repeat": null,
                 "_destroyed": true
               },
-              "duration": 86,
+              "duration": 79,
               "state": "passed",
               "speed": "slow"
             }
@@ -5870,10 +6501,10 @@
   },
   "title": "VC v2.0 Interoperability Report",
   "stats": [
-    "Tests passed 51/64 79%",
-    "Tests failed 13/64 21%",
-    "Failures 13",
+    "Tests passed 56/70 80%",
+    "Tests failed 14/70 20%",
+    "Failures 14",
     "Tests skipped 26",
-    "Total tests 90"
+    "Total tests 96"
   ]
 }
