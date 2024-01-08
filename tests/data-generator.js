@@ -9,6 +9,11 @@ import {
   cryptosuite as eddsa2022Cryptosuite
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
 import {klona} from 'klona';
+import {randomFillSync} from 'node:crypto';
+
+// use base64 encoded 128 bit number as the challenge
+const buf = Buffer.alloc(16); // 128 bits
+export const challenge = 'u' + randomFillSync(buf).toString('base64url');
 
 const _documentLoader = url => {
   // adds support for the data integrity context

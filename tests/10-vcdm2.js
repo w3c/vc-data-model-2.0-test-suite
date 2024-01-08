@@ -1,11 +1,10 @@
 /*!
  * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
  */
+import {challenge, createTimeStamp} from './data-generator.js';
 import assert from 'node:assert/strict';
 import {createRequire} from 'module';
-import {createTimeStamp} from './data-generator.js';
 import {filterByTag} from 'vc-api-test-suite-implementations';
-import {randomFillSync} from 'node:crypto';
 import {TestEndpoints} from './TestEndpoints.js';
 
 const require = createRequire(import.meta.url);
@@ -38,9 +37,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await fn.apply(this, arguments);
       });
     }
-    // use base64 encoded 128 bit number as the challenge
-    const buf = Buffer.alloc(16); // 128 bits
-    const challenge = 'u' + randomFillSync(buf).toString('base64url');
     const proveOptions = {challenge};
     const verifyPresentationOptions = {
       checks: ['proof'],
