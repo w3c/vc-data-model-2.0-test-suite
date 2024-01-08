@@ -5,8 +5,8 @@ import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
+import {createVp} from './data-generator.js';
 import http from 'http';
-import {proveVP} from './data-generator.js';
 import receiveJson from './receive-json.js';
 
 export class TestEndpoints {
@@ -25,8 +25,8 @@ export class TestEndpoints {
     const issueBody = createRequestBody({issuer, vc: credential});
     return post(issuer, issueBody);
   }
-  async proveVP({presentation, options = {}}) {
-    return proveVP({presentation, options});
+  async createVp({presentation, options = {}}) {
+    return createVp({presentation, options});
   }
   async verify(vc) {
     const verifyBody = createVerifyRequestBody({vc});
