@@ -73,7 +73,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         });
       it2('Verifiable presentations MUST include a @context property.',
         async function() {
-          //FIXME reimplement this once signed Vp creation via VC-API
+          //FIXME reimplement this once signed VP creation via VC-API
           //has been finalized
           /*
           const vp = await endpoints.createVp({
@@ -99,7 +99,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       it2('Verifiable presentations: The value of the @context property MUST ' +
         'be an ordered set where the first item is a URL with the value ' +
         'https://www.w3.org/ns/credentials/v2.', async function() {
-        //FIXME reimplement this once signed Vp creation via VC-API
+        //FIXME reimplement this once signed VP creation via VC-API
         //has been finalized
         /*
         const vp = await endpoints.createVp({
@@ -180,10 +180,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it2('type property: "If more than one URL is provided, the URLs ' +
         'MUST be interpreted as an unordered set."', async function() {
-        //issue Vc with multiple urls in type property
+        //issue VC with multiple urls in type property
         await endpoints.issue(require(
           './input/credential-type-urls-order-1-ok.json'));
-        //issue another Vc with same urls in a different order
+        //issue another VC with same urls in a different order
         await endpoints.issue(require(
           './input/credential-type-urls-order-2-ok.json'));
       });
@@ -416,7 +416,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           presentationWithCredential,
           verifyPresentationOptions
         );
-        // FIXME support for derived Vcs is not standard yet
+        // FIXME support for derived VCs is not standard yet
         // and probably will be its own test suite
         //await endpoints.verifyVp(require(
         //  './input/presentation-derived-vc-ok.json'));

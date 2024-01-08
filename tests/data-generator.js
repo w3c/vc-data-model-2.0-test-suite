@@ -56,14 +56,14 @@ async function getKeys() {
 }
 
 /**
- * An extremely basic Vp creator. This is not final
+ * An extremely basic VP creator. This is not final
  * and will probably change.
  *
  * @param {object} options - Options to use.
- * @param {object} options.presentation - An unsigned Vp.
- * @param {object} options.options - Options for the Vp.
+ * @param {object} options.presentation - An unsigned VP.
+ * @param {object} options.options - Options for the VP.
  *
- * @returns {Promise<object>} Resolves to a signed Vp.
+ * @returns {Promise<object>} Resolves to a signed VP.
  */
 export async function createVp({presentation, options = {}}) {
   const {signer, keyPair} = await getKeys({options});
