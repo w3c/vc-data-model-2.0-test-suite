@@ -217,8 +217,8 @@ checked):
 Implementations are expected to not error when any of the following context
 files are used in a verifiable credential or a verifiable presentation:
 
-- [VC 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
-- [VC Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
+- [Vc 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
+- [Vc Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
 
 ## Usage
 
