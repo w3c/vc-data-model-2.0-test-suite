@@ -37,7 +37,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await fn.apply(this, arguments);
       });
     }
-    const proveOptions = {challenge};
+    const createOptions = {challenge};
     const verifyPresentationOptions = {
       checks: ['proof'],
       challenge
@@ -73,12 +73,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         });
       it2('Verifiable presentations MUST include a @context property.',
         async function() {
-          //FIXME reimplement this once signed VP creation via VC-API
+          //FIXME reimplement this once signed Vp creation via VC-API
           //has been finalized
           /*
-          const vp = await endpoints.proveVP({
+          const vp = await endpoints.createVp({
             presentation: require('./input/presentation-ok.json'),
-            options: proveOptions
+            options: createOptions
           });
           vp.should.have.property('@context');
           */
@@ -99,12 +99,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       it2('Verifiable presentations: The value of the @context property MUST ' +
         'be an ordered set where the first item is a URL with the value ' +
         'https://www.w3.org/ns/credentials/v2.', async function() {
-        //FIXME reimplement this once signed VP creation via VC-API
+        //FIXME reimplement this once signed Vp creation via VC-API
         //has been finalized
         /*
-        const vp = await endpoints.proveVP({
+        const vp = await endpoints.createVp({
           presentation: require('./input/presentation-ok.json'),
-          options: proveOptions
+          options: createOptions
         });
         assert(Array.isArray(vp['@context']));
         assert.strictEqual(vp['@context'][0], baseContextUrl);
@@ -203,9 +203,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           './input/credential-optional-type-ok.json'));
         await assert.rejects(endpoints.issue(require(
           './input/credential-missing-required-type-fail.json')));
-        const presentationOptionalType = await endpoints.proveVP({
+        const presentationOptionalType = await endpoints.createVp({
           presentation: require('./input/presentation-optional-type-ok.json'),
-          options: proveOptions
+          options: createOptions
         });
         await endpoints.verifyVp(
           presentationOptionalType,
@@ -408,9 +408,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'format.', async function() {
         //FIXME remove the internal prove once VC-API presentation
         //creation is stabilized
-        const presentationWithCredential = await endpoints.proveVP({
+        const presentationWithCredential = await endpoints.createVp({
           presentation: require('./input/presentation-vc-ok.json'),
-          options: proveOptions
+          options: createOptions
         });
         await endpoints.verifyVp(
           presentationWithCredential,
@@ -423,9 +423,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
 
         // FIXME remove internal prove once VC-API presentation
         // creation is finalized
-        const presentationWithCredentials = await endpoints.proveVP({
+        const presentationWithCredentials = await endpoints.createVp({
           presentation: require('./input/presentation-multiple-vc-ok.json'),
-          options: proveOptions
+          options: createOptions
         });
         await endpoints.verifyVp(
           presentationWithCredentials,
