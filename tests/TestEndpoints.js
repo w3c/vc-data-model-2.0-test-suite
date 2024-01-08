@@ -15,7 +15,7 @@ export class TestEndpoints {
     this.tag = tag;
     this.verifier = implementation.verifiers.find(
       verifier => verifier.tags.has(tag));
-    this. issuer = implementation.issuers.find(
+    this.issuer = implementation.issuers.find(
       issuer => issuer.tags.has(tag));
     this.vpVerifier = implementation.vpVerifiers.find(
       vpVerifier => vpVerifier.tags.has(tag));
