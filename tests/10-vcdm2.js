@@ -180,10 +180,10 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
       it2('type property: "If more than one URL is provided, the URLs ' +
         'MUST be interpreted as an unordered set."', async function() {
-        //issue VC with multiple urls in type property
+        //issue Vc with multiple urls in type property
         await endpoints.issue(require(
           './input/credential-type-urls-order-1-ok.json'));
-        //issue another VC with same urls in a different order
+        //issue another Vc with same urls in a different order
         await endpoints.issue(require(
           './input/credential-type-urls-order-2-ok.json'));
       });
@@ -416,7 +416,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           presentationWithCredential,
           verifyPresentationOptions
         );
-        // FIXME support for derived VCs is not standard yet
+        // FIXME support for derived Vcs is not standard yet
         // and probably will be its own test suite
         //await endpoints.verifyVp(require(
         //  './input/presentation-derived-vc-ok.json'));
