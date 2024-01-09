@@ -30,10 +30,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     const endpoints = new TestEndpoints({implementation, tag: vcApiTag});
     function it2(title, fn) {
       it(title, async function() {
+        // append test meta data to the it/test this.
         this.test.cell = {
           columnId: name,
           rowId: this.test.title
         };
+        // apply the test's this to the function that runs the test
         await fn.apply(this, arguments);
       });
     }
