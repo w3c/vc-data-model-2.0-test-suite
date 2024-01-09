@@ -3,9 +3,12 @@
  */
 import {challenge, createTimeStamp} from './data-generator.js';
 import assert from 'node:assert/strict';
+import chai from 'chai';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-api-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
+
+const should = chai.should();
 
 const require = createRequire(import.meta.url);
 const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
@@ -46,6 +49,18 @@ describe('Verifiable Credentials Data Model v2.0', function() {
     };
 
     describe(name, function() {
+      let issuedVc;
+      before(async function() {
+        try {
+          issuedVc = await endpoints.issue(require(
+            './input/credential-ok.json'));
+        } catch(e) {
+          console.error(
+            `Issuer: ${name} failed to issue "credential-ok.json".`,
+            e
+          );
+        }
+      });
       it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
         '("all relevant normative statements in Sections 4. Basic Concepts, ' +
         '5. Advanced Concepts, and 6. Syntaxes")', async function() {
@@ -379,20 +394,32 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         }
         assert.rejects(endpoints.verify(result));
       });
-      // FIXME remove as this doesn't seem to be in the spec
-      it.skip('At least one proof mechanism, and the details necessary ' +
-        'to evaluate that proof, MUST be expressed for a credential or ' +
-        'presentation to be a verifiable credential or verifiable ' +
-        'presentation; that is, to be verifiable.', async function() {
+      // start of the securing mechanism block
+      // as of VC 2.0 this means a proof must be attached to an issued VC
+      // at least one proof must be on an issued VC
+      it2('A conforming document MUST be secured by at least one securing ' +
+        'mechanism as described in Section 4.9 Securing Mechanisms.',
+      async function() {
+        should.exist(issuedVc, `Expected ${name} to issue a VC.`);
+        should.exist(issuedVc.proof, 'Expected VC to have a proof.');
       });
-      // FIXME remove as this doesn't seem to be in the spec
-      it.skip('When embedding a proof, the proof property MUST be used.',
-        async function() {
-        });
-      // FIXME implement this test by asserting on proof.type
-      it.skip('The specific method used for an embedded proof MUST be ' +
-        'included using the type property.', async function() {
+      it2('A conforming issuer implementation produces conforming documents, ' +
+        'MUST include all required properties in the conforming documents ' +
+        'that it produces, and MUST secure the conforming documents it ' +
+        'produces using a securing mechanism as described in Section 4.9 ' +
+        'Securing Mechanisms.', async function() {
+        should.exist(issuedVc, `Expected ${name} to issue a VC.`);
+        should.exist(issuedVc.proof, 'Expected VC to have a proof.');
       });
+      it2('A conforming verifier implementation consumes conforming ' +
+      'documents, MUST perform verification on a conforming document as ' +
+      'described in Section 4.9 Securing Mechanisms, MUST check that each ' +
+      'required property satisfies the normative requirements for that ' +
+      'property, and MUST produce errors when non-conforming documents are ' +
+      'detected.', async function() {
+
+      });
+      // end securing mechanism block
       it2('If present, the value of the credentialStatus property ' +
         'MUST include id and type.', async function() {
         // type requirement is tested elsewhere
