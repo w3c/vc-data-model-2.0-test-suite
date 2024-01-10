@@ -426,7 +426,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       'required property satisfies the normative requirements for that ' +
       'property, and MUST produce errors when non-conforming documents are ' +
       'detected.', async function() {
-
+        endpoints.verify(issuedVc);
+        // should reject a VC without a proof
+        assert.rejects(endpoints.verify(require('./input/credential-ok.json')));
       });
       // end securing mechanism block
       it2('If present, the value of the credentialStatus property ' +
