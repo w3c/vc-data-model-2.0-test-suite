@@ -402,6 +402,15 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       async function() {
         should.exist(issuedVc, `Expected ${name} to issue a VC.`);
         should.exist(issuedVc.proof, 'Expected VC to have a proof.');
+        if(Array.isArray(issuedVc.proof)) {
+          issuedVc.proof.length.should.be.gt(0, 'Expected at least one proof.');
+          issuedVc.proof.every(p => typeof p === 'object').should.be.true;
+        } else {
+          issuedVc.proof.should.be.an(
+            'object',
+            'expected proof to be an object.'
+          );
+        }
       });
       it2('A conforming issuer implementation produces conforming documents, ' +
         'MUST include all required properties in the conforming documents ' +
