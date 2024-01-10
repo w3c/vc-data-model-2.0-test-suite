@@ -31,7 +31,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
   this.reportData = reportData;
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag: vcApiTag});
-    function it2(title, fn) {
+    function reportRow(title, fn) {
       it(title, async function() {
         // append test meta data to the it/test this.
         this.test.cell = {
@@ -70,15 +70,15 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'deterministic, bi-directional, and lossless as described in Section ' +
         '6. Syntaxes.', async function() {
       });
-      it2('verifiers MUST produce errors when non-conforming documents are ' +
-        'detected.', async function() {
+      reportRow('verifiers MUST produce errors when non-conforming documents ' +
+        'are detected.', async function() {
         const doc = {
           type: ['NonconformingDocument']
         };
         await assert.rejects(endpoints.verify(doc));
         await assert.rejects(endpoints.verifyVp(doc));
       });
-      it2('Verifiable credentials MUST include a @context property.',
+      reportRow('Verifiable credentials MUST include a @context property.',
         async function() {
           // positive @context test
           const vc = await endpoints.issue(require(
@@ -88,7 +88,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(endpoints.issue(
             require('./input/credential-no-context-fail.json')));
         });
-      it2('Verifiable presentations MUST include a @context property.',
+      reportRow('Verifiable presentations MUST include a @context property.',
         async function() {
           //FIXME reimplement this once signed VP creation via VC-API
           //has been finalized
@@ -102,8 +102,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(endpoints.verifyVp(
             require('./input/presentation-no-context-fail.json')));
         });
-      it2('Verifiable credentials: The value of the @context property MUST ' +
-        'be an ordered set where the first item is a URL with the value ' +
+      reportRow('Verifiable credentials: The value of the @context property ' +
+        'MUST be an ordered set where the first item is a URL with the value ' +
         'https://www.w3.org/ns/credentials/v2.', async function() {
         //positive issue test
         const vc = await endpoints.issue(require('./input/credential-ok.json'));
@@ -113,9 +113,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(
           require('./input/credential-missing-base-context-fail.json')));
       });
-      it2('Verifiable presentations: The value of the @context property MUST ' +
-        'be an ordered set where the first item is a URL with the value ' +
-        'https://www.w3.org/ns/credentials/v2.', async function() {
+      reportRow('Verifiable presentations: The value of the @context ' +
+        'property MUST be an ordered set where the first item is a URL with ' +
+        'the value https://www.w3.org/ns/credentials/v2.', async function() {
         //FIXME reimplement this once signed VP creation via VC-API
         //has been finalized
         /*
@@ -129,9 +129,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.verifyVp(
           require('./input/presentation-missing-base-context-fail.json')));
       });
-      it2('Verifiable credential @context: "Subsequent items in the array ' +
-        'MUST be composed of any combination of URLs and/or objects where ' +
-        'each is processable as a JSON-LD Context."', async function() {
+      reportRow('Verifiable credential @context: "Subsequent items in the ' +
+        'array MUST be composed of any combination of URLs and/or objects ' +
+        'where each is processable as a JSON-LD Context."', async function() {
         await endpoints.issue(require(
           './input/credential-context-combo1-ok.json'));
         await endpoints.issue(require(
@@ -141,46 +141,46 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo4-fail.json')));
       });
-      it2('if present: "The id property MUST express an identifier that ' +
-        'others are expected to use when expressing statements about a ' +
+      reportRow('if present: "The id property MUST express an identifier ' +
+        'that others are expected to use when expressing statements about a ' +
         'specific thing identified by that identifier."', async function() {
         await endpoints.issue(require('./input/credential-id-other-ok.json'));
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-id-nonidentifier-fail.json')));
       });
-      it2('if present: "The id property MUST NOT have more than one value."',
-        async function() {
-          await endpoints.issue(require(
-            './input/credential-single-id-ok.json'));
-          await endpoints.issue(require(
-            './input/credential-subject-single-id-ok.json'));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-multi-id-fail.json')));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-subject-multi-id-fail.json')));
-        });
-      it2('if present: "The value of the id property MUST be a URL which ' +
-        'MAY be dereferenced."', async function() {
+      reportRow('if present: "The id property MUST NOT have more than one ' +
+        'value."', async function() {
+        await endpoints.issue(require(
+          './input/credential-single-id-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-subject-single-id-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-multi-id-fail.json')));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-subject-multi-id-fail.json')));
+      });
+      reportRow('if present: "The value of the id property MUST be a URL ' +
+        'which MAY be dereferenced."', async function() {
         await assert.rejects(
           endpoints.issue(require('./input/credential-not-url-id-fail.json')));
       });
-      it2('The value of the id property MUST be a single URL.',
+      reportRow('The value of the id property MUST be a single URL.',
         async function() {
           await assert.rejects(endpoints.issue(require(
             './input/credential-nonsingle-id-fail.json')));
         });
-      it2('Verifiable credentials MUST have a type property.',
+      reportRow('Verifiable credentials MUST have a type property.',
         async function() {
           await assert.rejects(
             endpoints.issue(require('./input/credential-no-type-fail.json')));
         });
-      it2('Verifiable presentations MUST have a type property.',
+      reportRow('Verifiable presentations MUST have a type property.',
         async function() {
           await assert.rejects(endpoints.verifyVp(require(
             './input/presentation-no-type-fail.json')));
         });
-      it2('The value of the type property MUST be, or map to (through ' +
+      reportRow('The value of the type property MUST be, or map to (through ' +
         'interpretation of the @context property), one or more URLs.',
       async function() {
         // type is URL: OK
@@ -195,7 +195,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-unmapped-fail.json')));
       });
-      it2('type property: "If more than one URL is provided, the URLs ' +
+      reportRow('type property: "If more than one URL is provided, the URLs ' +
         'MUST be interpreted as an unordered set."', async function() {
         //issue VC with multiple urls in type property
         await endpoints.issue(require(
@@ -211,57 +211,58 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       // credentialStatus MUST have a type specified.
       // termsOfUse MUST have a type specified.
       // evidence MUST have a type specified.
-      it2('list: "objects that MUST have a type specified."', async function() {
+      reportRow('list: "objects that MUST have a type specified."',
+        async function() {
         // (Verifiable) credential requires type VerifiableCredential
         // (Verifiable) presentation requires type VerifiablePresentation
         // Additional (more specific) types for these are optional.
         // Missing type property is tested separately.
-        await endpoints.issue(require(
-          './input/credential-optional-type-ok.json'));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-missing-required-type-fail.json')));
-        const presentationOptionalType = await endpoints.createVp({
-          presentation: require('./input/presentation-optional-type-ok.json'),
-          options: createOptions
+          await endpoints.issue(require(
+            './input/credential-optional-type-ok.json'));
+          await assert.rejects(endpoints.issue(require(
+            './input/credential-missing-required-type-fail.json')));
+          const presentationOptionalType = await endpoints.createVp({
+            presentation: require('./input/presentation-optional-type-ok.json'),
+            options: createOptions
+          });
+          await endpoints.verifyVp(
+            presentationOptionalType,
+            verifyPresentationOptions
+          );
+          await assert.rejects(
+            endpoints.verifyVp(require(
+              './input/presentation-missing-required-type-fail.json')));
+          // Other objects requiring type: proof, credentialStatus, termsOfUse,
+          // and evidence.
+          // Note: testing proof requires the issuer to allow the input
+          // credential to have an existing proof property.
+          await endpoints.issue(require('./input/credential-proof-ok.json'));
+          await assert.rejects(endpoints.verify(require(
+            './input/credential-proof-missing-type-fail.json')));
+          await endpoints.issue(require('./input/credential-status-ok.json'));
+          await assert.rejects(endpoints.issue(require(
+            './input/credential-status-missing-type-fail.json')));
+          await endpoints.issue(require(
+            './input/credential-termsofuse-ok.json'));
+          await assert.rejects(endpoints.issue(require(
+            './input/credential-termsofuse-missing-type-fail.json')));
+          await endpoints.issue(require('./input/credential-evidence-ok.json'));
+          await assert.rejects(endpoints.issue(require(
+            './input/credential-evidence-missing-type-fail.json')));
         });
-        await endpoints.verifyVp(
-          presentationOptionalType,
-          verifyPresentationOptions
-        );
-        await assert.rejects(
-          endpoints.verifyVp(require(
-            './input/presentation-missing-required-type-fail.json')));
-
-        // Other objects requiring type: proof, credentialStatus, termsOfUse,
-        // and evidence.
-        // Note: testing proof requires the issuer to allow the input
-        // credential to have an existing proof property.
-        await endpoints.issue(require('./input/credential-proof-ok.json'));
-        await assert.rejects(endpoints.verify(require(
-          './input/credential-proof-missing-type-fail.json')));
-        await endpoints.issue(require('./input/credential-status-ok.json'));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-status-missing-type-fail.json')));
-        await endpoints.issue(require('./input/credential-termsofuse-ok.json'));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-termsofuse-missing-type-fail.json')));
-        await endpoints.issue(require('./input/credential-evidence-ok.json'));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-evidence-missing-type-fail.json')));
-      });
       it.skip('All credentials, presentations, and encapsulated objects ' +
         'SHOULD specify, or be associated with, additional more narrow types ' +
         '(like ExampleDegreeCredential, for example) so software systems ' +
         'can more easily detect and process this additional information.',
       async function() {
       });
-      it2('A verifiable credential MUST have a credentialSubject property.',
-        async function() {
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-no-subject-fail.json')));
-        });
-      it2('The value of the credentialSubject property is defined as a set ' +
-        'of objects where each object MUST be the subject of one or more ' +
+      reportRow('A verifiable credential MUST have a credentialSubject ' +
+        'property.', async function() {
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-no-subject-fail.json')));
+      });
+      reportRow('The value of the credentialSubject property is defined as a ' +
+      'set of objects where each object MUST be the subject of one or more ' +
         'claims, which MUST be serialized inside the credentialSubject ' +
         'property.', async function() {
         await assert.rejects(endpoints.issue(require(
@@ -272,13 +273,13 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           endpoints.issue(require(
             './input/credential-subject-multiple-empty-fail.json')));
       });
-      it2('A verifiable credential MUST have an issuer property.',
+      reportRow('A verifiable credential MUST have an issuer property.',
         async function() {
           await assert.rejects(
             endpoints.issue(require('./input/credential-no-issuer-fail.json')));
         });
-      it2('The value of the issuer property MUST be either a URL, or an ' +
-        'object containing an id property whose value is a URL.',
+      reportRow('The value of the issuer property MUST be either a URL, or ' +
+      'an object containing an id property whose value is a URL.',
       async function() {
         await endpoints.issue(require(
           './input/credential-issuer-object-ok.json'));
@@ -290,8 +291,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-not-url-fail.json')));
       });
-      it2('If present, the value of the "issuer.name" property MUST be a ' +
-        'string or a language value object as described in 10.1 Language and ' +
+      reportRow('If present, the value of the "issuer.name" property MUST be ' +
+      'a string or a language value object as described in 10.1 Language and ' +
         'Base Direction.', async function() {
         await endpoints.issue(require(
           './input/credential-issuer-name-ok.json'));
@@ -306,7 +307,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-name-extra-prop-en-fail.json')));
       });
-      it2('If present, the value of the "issuer.description" property ' +
+      reportRow('If present, the value of the "issuer.description" property ' +
         'MUST be a string or a language value object as described in 10.1 ' +
         'Language and Base Direction.', async function() {
         await endpoints.issue(require(
@@ -323,7 +324,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-description-extra-prop-en-fail.json')));
       });
-      it2('If present, the value of the validFrom property MUST be an ' +
+      reportRow('If present, the value of the validFrom property MUST be an ' +
         '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
         'and time the credential becomes valid, which could be a date and ' +
         'time in the future.', async function() {
@@ -334,7 +335,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-validfrom-invalid-fail.json')));
       });
-      it2('If present, the value of the validUntil property MUST be a ' +
+      reportRow('If present, the value of the validUntil property MUST be a ' +
         'string value of an [XMLSCHEMA11-2] combined date-time string ' +
         'representing the date and time the credential ceases to be valid, ' +
         'which could be a date and time in the past.', async function() {
@@ -346,7 +347,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-validuntil-invalid-fail.json')));
       });
-      it2('If a validUntil value also exists, the validFrom value MUST ' +
+      reportRow('If a validUntil value also exists, the validFrom value MUST ' +
         'express a datetime that is temporally the same or earlier than the ' +
         'datetime expressed by the validUntil value.', async function() {
         const positiveTest = require(
@@ -370,7 +371,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         }
         assert.rejects(endpoints.verify(result));
       });
-      it2('If a validFrom value also exists, the validUntil value MUST ' +
+      reportRow('If a validFrom value also exists, the validUntil value MUST ' +
         'express a datetime that is temporally the same or later than the ' +
         'datetime expressed by the validFrom value.', async function() {
         const positiveTest = require(
@@ -397,8 +398,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       // start of the securing mechanism block
       // as of VC 2.0 this means a proof must be attached to an issued VC
       // at least one proof must be on an issued VC
-      it2('A conforming document MUST be secured by at least one securing ' +
-        'mechanism as described in Section 4.9 Securing Mechanisms.',
+      reportRow('A conforming document MUST be secured by at least one ' +
+        'securing mechanism as described in Section 4.9 Securing Mechanisms.',
       async function() {
         should.exist(issuedVc, `Expected ${name} to issue a VC.`);
         should.exist(issuedVc.proof, 'Expected VC to have a proof.');
@@ -412,15 +413,15 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           );
         }
       });
-      it2('A conforming issuer implementation produces conforming documents, ' +
-        'MUST include all required properties in the conforming documents ' +
-        'that it produces, and MUST secure the conforming documents it ' +
-        'produces using a securing mechanism as described in Section 4.9 ' +
-        'Securing Mechanisms.', async function() {
+      reportRow('A conforming issuer implementation produces conforming ' +
+        'documents, MUST include all required properties in the conforming ' +
+        'documents that it produces, and MUST secure the conforming ' +
+        'documents it produces using a securing mechanism as described in ' +
+        'Section 4.9 Securing Mechanisms.', async function() {
         should.exist(issuedVc, `Expected ${name} to issue a VC.`);
         should.exist(issuedVc.proof, 'Expected VC to have a proof.');
       });
-      it2('A conforming verifier implementation consumes conforming ' +
+      reportRow('A conforming verifier implementation consumes conforming ' +
       'documents, MUST perform verification on a conforming document as ' +
       'described in Section 4.9 Securing Mechanisms, MUST check that each ' +
       'required property satisfies the normative requirements for that ' +
@@ -431,19 +432,19 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         assert.rejects(endpoints.verify(require('./input/credential-ok.json')));
       });
       // end securing mechanism block
-      it2('If present, the value of the credentialStatus property ' +
+      reportRow('If present, the value of the credentialStatus property ' +
         'MUST include id and type.', async function() {
         // type requirement is tested elsewhere
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-missing-id-fail.json')));
       });
-      it2('credentialStatus id property MUST be a URL which MAY be ' +
+      reportRow('credentialStatus id property MUST be a URL which MAY be ' +
         'dereferenced.', async function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-nonurl-id-fail.json')));
       });
-      it2('In Verifiable Presentations, the verifiableCredential property ' +
-        'MAY be present. The value MUST be an array of one or more ' +
+      reportRow('In Verifiable Presentations, the verifiableCredential ' +
+        'property MAY be present. The value MUST be an array of one or more ' +
         'verifiable credential graphs in a cryptographically verifiable ' +
         'format.', async function() {
         //FIXME remove the internal prove once VC-API presentation
@@ -478,33 +479,34 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       });
 
       // Advanced
-      it2('JSON-LD-based processors MUST produce an error when a JSON-LD ' +
-        'context redefines any term in the active context.', async function() {
+      reportRow('JSON-LD-based processors MUST produce an error when a ' +
+        'JSON-LD context redefines any term in the active context.',
+      async function() {
         // This depends on "@protected" (which is used for the base context).
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type-fail.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type2-fail.json')));
       });
-      it2('The value of the credentialSchema property MUST be one or more ' +
-        'data schemas that provide verifiers with enough information to ' +
+      reportRow('The value of the credentialSchema property MUST be one or ' +
+        'more data schemas that provide verifiers with enough information to ' +
         'determine whether the provided data conforms to the provided ' +
         'schema(s).', async function() {
         await endpoints.issue(require('./input/credential-schema-ok.json'));
         await endpoints.issue(require('./input/credential-schemas-ok.json'));
       });
-      it2('Each credentialSchema MUST specify its type (for example, ' +
+      reportRow('Each credentialSchema MUST specify its type (for example, ' +
         'JsonSchemaValidator2018), and an id property.', async function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-schema-no-type-fail.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-schema-no-id-fail.json')));
       });
-      it2('credentialSchema id MUST be a URL identifying the schema file.',
-        async function() {
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-schema-non-url-id-fail.json')));
-        });
+      reportRow('credentialSchema id MUST be a URL identifying the schema ' +
+        'file.', async function() {
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-schema-non-url-id-fail.json')));
+      });
       it.skip('The value of the refreshService property MUST be one or more ' +
         'refresh services that provides enough information to the ' +
         'recipient\'s software such that the recipient can refresh the ' +
@@ -522,23 +524,24 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-refresh-non-url-id-fail.json')));
       });
-      it2('The value of the termsOfUse property MUST specify one or more ' +
-        'terms of use policies under which the creator issued the credential ' +
-        'or presentation.', async function() {
+      reportRow('The value of the termsOfUse property MUST specify one or ' +
+        'more terms of use policies under which the creator issued the ' +
+        'credential or presentation.', async function() {
         await endpoints.issue(require(
           './input/credential-termsofuses-ok.json'));
       });
-      it2('Each termsOfUse value MUST specify its type, for example, ' +
+      reportRow('Each termsOfUse value MUST specify its type, for example, ' +
         'IssuerPolicy, and MAY specify its instance id.', async function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-termsofuse-no-type-fail.json')));
         await endpoints.issue(require(
           './input/credential-termsofuse-id-ok.json'));
       });
-      it2('The value of the evidence property MUST be one or more evidence ' +
-        'schemes providing enough information for a verifier to determine ' +
-        'whether the evidence gathered by the issuer meets its confidence ' +
-        'requirements for relying on the credential.', async function() {
+      reportRow('The value of the evidence property MUST be one or more ' +
+        'evidence schemes providing enough information for a verifier to ' +
+        'determine whether the evidence gathered by the issuer meets its ' +
+        'confidence requirements for relying on the credential.',
+      async function() {
         await endpoints.issue(require('./input/credential-evidences-ok.json'));
       });
       it.skip('(ZKP) The verifiable credential MUST contain a Proof, using ' +
