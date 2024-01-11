@@ -432,14 +432,16 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         assert.rejects(endpoints.verify(require('./input/credential-ok.json')));
       });
       // end securing mechanism block
-      reportRow('If present, the value of the credentialStatus property ' +
-        'MUST include id and type.', async function() {
+      reportRow('(If a credentialStatus property is present), The type ' +
+        'property is REQUIRED. It is used to express the type of status ' +
+        'information expressed by the object. The related normative ' +
+        'guidance in Section 4.4 Types MUST be followed.', async function() {
         // type requirement is tested elsewhere
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-missing-id-fail.json')));
       });
-      reportRow('credentialStatus id property MUST be a URL which MAY be ' +
-        'dereferenced.', async function() {
+      reportRow('If present (credentialStatus id), the normative guidance ' +
+        'in Section 4.3 Identifiers MUST be followed.', async function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-nonurl-id-fail.json')));
       });
