@@ -1,6 +1,6 @@
 # w3c/vc-data-model-2.0-test-suite ChangeLog
 
-## 1.1.0 -
+## 1.1.0 - 01/11/2024
 
 ### Added
 - Add new tests for `issuer.name` including Internationalization settings.
@@ -8,10 +8,12 @@
 - Add new tests for `issuer.description` including Internationalization settings.
 - Add new tests for `issuer.id` as a url and not a url.
 - Add tests for interactions between `validFrom ` and `validUntil`.
+- Expand tests for `credentialStatus.{id, type}`.
 
 ### Fixed
 - Update statement for credentialStatus id & type test.
 - Update statement for credentialSchemas test.
+- Credential status id is now optional.
 
 ## 1.0.0 - 2023-11-10
 
