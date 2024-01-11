@@ -436,12 +436,18 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'property is REQUIRED. It is used to express the type of status ' +
         'information expressed by the object. The related normative ' +
         'guidance in Section 4.4 Types MUST be followed.', async function() {
-        // type requirement is tested elsewhere
         await assert.rejects(endpoints.issue(require(
-          './input/credential-status-missing-id-fail.json')));
+          './input/credential-status-missing-type-fail.json')));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-status-type-nonurl-fail.json')));
+        await endpoints.issue(require(
+          './input/credential-status-ok.json'));
       });
       reportRow('If present (credentialStatus id), the normative guidance ' +
         'in Section 4.3 Identifiers MUST be followed.', async function() {
+        // id is optional
+        await endpoints.issue(require(
+          './input/credential-status-missing-id-ok.json'));
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-nonurl-id-fail.json')));
       });
