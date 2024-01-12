@@ -1,6 +1,6 @@
 # w3c/vc-data-model-2.0-test-suite ChangeLog
 
-## 1.1.0 - 01/11/2024
+## 1.1.0 - 2024-01-xx
 
 ### Added
 - Add new tests for `issuer.name` including Internationalization settings.
