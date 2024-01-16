@@ -11,9 +11,9 @@
 - Expand tests for `credentialStatus.{id, type}`.
 
 ### Fixed
-- Update statement for credentialStatus id & type test.
-- Update statement for credentialSchemas test.
-- Credential status id is now optional.
+- Update statement for `credentialStatus.id` and `type` test.
+- Update statement for `credentialSchemas` test.
+- `credentialStatus.id` is now optional.
 
 ## 1.0.0 - 2023-11-10
 
