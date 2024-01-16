@@ -443,7 +443,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await endpoints.issue(require(
           './input/credential-status-ok.json'));
       });
-      reportRow('If present (credentialStatus id), the normative guidance ' +
+      reportRow('If present (credentialStatus.id), the normative guidance ' +
         'in Section 4.3 Identifiers MUST be followed.', async function() {
         // id is optional
         await endpoints.issue(require(
