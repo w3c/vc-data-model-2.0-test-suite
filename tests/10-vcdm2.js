@@ -449,10 +449,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await endpoints.issue(require(
           './input/credential-status-missing-id-ok.json'));
         await assert.rejects(endpoints.issue(require(
-          './input/credential-status-nonurl-id-fail.json')));
+          './input/credential-status-multiple-id-fail.json')));
         await assert.rejects(endpoints.issue(require(
-          './input/credential-status-multiple-id-fail.json'
-        )));
+          './input/credential-status-nonurl-id-fail.json')));
       });
       reportRow('In Verifiable Presentations, the verifiableCredential ' +
         'property MAY be present. The value MUST be an array of one or more ' +
