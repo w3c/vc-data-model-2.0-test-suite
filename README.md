@@ -271,7 +271,7 @@ library.
 
 ## Contribute
 
-See [the CONTRIBUTING.md file](CONTRIBUTING.md).
+See [the CONTRIBUTING.md file in the `w3c/vc-test-suite-implementations` repo](https://github.com/w3c/vc-test-suite-implementations/blob/main/CONTRIBUTING.md).
 
 Pull Requests are welcome!
 
