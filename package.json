@@ -26,7 +26,7 @@
     "email": "public-vc-wg@w3.org",
     "url": "https://www.w3.org/groups/wg/vc/"
   },
-  "license": "(BSD-3-Clause OR LicenseRef-scancode-w3c-test-suite)",
+  "license": "(LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023)",
   "engines": {
     "node": ">=18"
   },
