@@ -1,6 +1,9 @@
-/*!
- * Copyright (c) 2023 Digital Bazaar, Inc.
+/*
+ * Copyright 2023 - 2024 Digital Bazaar, Inc.
+ *
+ * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
+
 import * as ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import * as vc from '@digitalbazaar/vc';
 import {CONTEXT, CONTEXT_URL} from '@digitalbazaar/data-integrity-context';

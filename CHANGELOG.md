@@ -1,3 +1,9 @@
+<!--
+Copyright 2024 Digital Bazaar, Inc.
+
+SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
+-->
+
 # w3c/vc-data-model-2.0-test-suite ChangeLog
 
 ## 1.1.0 - 2024-01-xx
