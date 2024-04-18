@@ -1,4 +1,4 @@
-All documents in this Repository are licensed by contributors
-under the 
-[W3C Software and Document License](https://www.w3.org/Consortium/Legal/copyright-software).
-
+Distributed under both the
+[W3C test suite license](https://www.w3.org/copyright/test-suite-license-2023/)
+and the
+[W3C 3-clause BSD license](https://www.w3.org/copyright/3-clause-bsd-license-2008/).
