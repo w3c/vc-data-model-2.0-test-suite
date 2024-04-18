@@ -29,9 +29,11 @@ npm i
 ## Setup
 
 In order to integrate with this test suite, you will need to use a
-[VC API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that
+[VC-API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that
 is capable of issuing and verifying verifiable credentials and verifiable
-presentations.
+presentations. If your implementation is not VC-API compatible, it is possible
+to "wrap" the implementation in a minimal VC-API implementation. Example code
+for which is available at https://github.com/Wind4Greg/Server-for-VCs
 
 The issuer endpoint will need to conform to the
 [VC Issuer API](https://w3c-ccg.github.io/vc-api/#issue-credential).
@@ -219,7 +221,7 @@ files are used in a verifiable credential or a verifiable presentation:
 
 ## Usage
 
-```
+```sh
 npm test
 ```
 
@@ -241,19 +243,16 @@ look like the following:
   "issuers": [{
     "id": "",
     "endpoint": "https://issuer.mycompany.com/credentials/issue",
-    "method": "POST",
     "tags": ["vc2.0"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://verifier.mycompany.com/credentials/verify",
-    "method": "POST",
     "tags": ["vc2.0"]
   }],
   "vpVerifiers": [{
     "id": "",
     "endpoint": "https://verifier.mycompany.com/presentations/verify",
-    "method": "POST",
     "tags": ["vc2.0"]
   }]
 }
