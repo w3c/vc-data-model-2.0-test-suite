@@ -1,3 +1,9 @@
+<!--
+Copyright 2024 Digital Bazaar, Inc.
+
+SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
+-->
+
 # Verifiable Credentials v2.0 Test Suite
 
 This is the test suite for the W3C Verifiable Credentials Data Model (VCDM) v2.0

@@ -1,0 +1,6 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Contact: Digital Bazaar, Inc. <support@digitalbazaar.com>
+
+Files: .gitignore .npmrc .github/* *.json
+Copyright: 2022-2024 W3C, Inc., 2022-2024 Digital Bazaar, Inc.
+LICENSE: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
