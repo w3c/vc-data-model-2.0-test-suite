@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2022-2023 Digital Bazaar, Inc.
  */
 import {challenge, createTimeStamp} from './data-generator.js';
 import assert from 'node:assert/strict';

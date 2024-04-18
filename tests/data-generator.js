@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2023 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2023 Digital Bazaar, Inc.
  */
 import * as ed25519Multikey from '@digitalbazaar/ed25519-multikey';
 import * as vc from '@digitalbazaar/vc';

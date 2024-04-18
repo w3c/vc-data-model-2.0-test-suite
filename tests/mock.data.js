@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2022-2023 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2022-2023 Digital Bazaar, Inc.
  */
 import {createRequire} from 'node:module';
 import {klona} from 'klona';
