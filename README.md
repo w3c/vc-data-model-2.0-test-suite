@@ -11,17 +11,14 @@ specification.
 
 ## Table of Contents
 
-- [Verifiable Credentials v2.0 Test Suite](#verifiable-credentials-v20-test-suite)
-  - [Table of Contents](#table-of-contents)
-  - [Background](#background)
-  - [Install](#install)
-  - [Setup](#setup)
-  - [Usage](#usage)
-  - [Implementation](#implementation)
-    - [VC-API](#vc-api)
-    - [Docker (TODO)](#docker-todo)
-  - [Contribute](#contribute)
-  - [License](#license)
+- [Background](#background)
+- [Install](#install)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Implementation](#implementation)
+  - [VC-API](#vc-api)
+- [Contribute](#contribute)
+- [License](#license)
 
 ## Background
 
