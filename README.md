@@ -273,14 +273,6 @@ you can check the
 [vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
 library.
 
-### Docker (TODO)
-
-We are currently adding a feature that would allow Docker images (using the VC
-API above) to be used instead of live endpoints. The docker image that you
-provide will be started when the test suite is run. The image is expected to
-expose the API provided above, which will be utilized in the same way that live
-HTTP endpoints are used above.
-
 ## Contribute
 
 See [the CONTRIBUTING.md file](CONTRIBUTING.md).
