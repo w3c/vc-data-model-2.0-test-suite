@@ -18,6 +18,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    'jsdoc/check-examples': 0
+    'jsdoc/check-examples': 0,
+    'max-len': ['error', {ignoreComments: true}]
   }
 };
