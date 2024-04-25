@@ -55,7 +55,7 @@ export class TestEndpoints {
 export async function post(endpoint, object) {
   const url = endpoint.settings.endpoint;
   if(url.startsWith('https:')) {
-    // Use vc-api-test-suite-implementations for HTTPS requests.
+    // Use vc-test-suite-implementations for HTTPS requests.
     const {data, error} = await endpoint.post({json: object});
     if(error) {
       throw error;

@@ -8,7 +8,7 @@ import {challenge, createTimeStamp} from './data-generator.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
-import {filterByTag} from 'vc-api-test-suite-implementations';
+import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
 
 const should = chai.should();
