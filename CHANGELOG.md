@@ -20,6 +20,7 @@ SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-
 - Update statement for `credentialStatus.id` and `type` test.
 - Update statement for `credentialSchemas` test.
 - `credentialStatus.id` is now optional.
+- Update `vc-api-test-suite-implementations` to `vc-test-suite-implementations`.
 
 ## 1.0.0 - 2023-11-10
 
