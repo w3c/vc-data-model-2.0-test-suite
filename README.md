@@ -16,7 +16,8 @@ specification.
 - [Setup](#setup)
 - [Usage](#usage)
 - [Implementation](#implementation)
-  - [VC-API](#vc-api)
+  - [Adding a new implementation](#adding-a-new-implementation)
+  - [Testing locally](#testing-locally)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -232,48 +233,85 @@ npm test
 ```
 
 ## Implementation
+:::note
+If no implementation configuration file is provided, the test suite will not fail and will use an internal default configuration instead.
+:::
 
-### VC-API
+### Adding a new implementation
+Please create a new folder in the root directory of the test suite, name it `implementations`. After that, inside the `./implementations` folder, you can add new implementation configuration files. 
+
 To add your implementation to this test suite You will need to add 3 endpoints to your implementation manifest.
 - A credentials issuer endpoint (`/credentials/issue`) in the `issuers` property.
 - A credentials verifier endpoint (`/credentials/verify`) in the `verifiers` property.
-- A presentations verifier endpoint (`presentations/verify`) in the `vpVerifiers` property.
+- A presentations verifier endpoint (`/presentations/verify`) in the `vpVerifiers` property.
+
+:::note
+These endpoints above are using example path, your endpoints can be different.
+:::
 
 All endpoints will need the tag `vc2.0`. A simplified manifest will roughly
 look like the following:
 
-```js
+```json
 {
   "name": "My Company",
   "implementation": "My implementation",
   "issuers": [{
     "id": "",
     "endpoint": "https://issuer.mycompany.com/credentials/issue",
+    "method": "POST",
     "tags": ["vc2.0"]
   }],
   "verifiers": [{
     "id": "",
     "endpoint": "https://verifier.mycompany.com/credentials/verify",
+    "method": "POST",
     "tags": ["vc2.0"]
   }],
   "vpVerifiers": [{
     "id": "",
     "endpoint": "https://verifier.mycompany.com/presentations/verify",
+    "method": "POST",
     "tags": ["vc2.0"]
   }]
 }
 ```
-
 This example above is for a set of unauthenticated endpoints. You may add zcap
 or oauth2 authentication to your endpoints.
 
-See the [vc-test-suite-implementations README here](https://github.com/w3c/vc-test-suite-implementations).
+### Testing locally
+To test implementations with endpoints running locally, create a configuration file named `localConfig.cjs` in the root directory of the test suite. `localConfig.cjs` should export a json object. Add the property implementations to the exported object. implementations should be an array of objects such as the one below:
 
-To run the tests, some implementations require client secrets that can be passed
-as env variables to the test script. To see which ones require client secrets,
-you can check the
-[vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
-library.
+```js
+// localConfig.cjs defining local implementations
+module.exports = {
+  "implementations": [
+    {
+      "name": "My Company",
+      "implementation": "My implementation",
+      "issuers": [{
+        "id": "",
+        "endpoint": "http://localhost:3332/credentials/issue",
+        "method": "POST",
+        "tags": ["vc2.0"]
+      }],
+      "verifiers": [{
+        "id": "",
+        "endpoint": "http://localhost:3332/credentials/verify",
+        "method": "POST",
+        "tags": ["vc2.0"]
+      }],
+      "vpVerifiers": [{
+        "id": "",
+        "endpoint": "http://localhost:3332/presentations/verify",
+        "method": "POST",
+        "tags": ["vc2.0"]
+      }]
+    }
+  ];
+};
+```
+After adding the config file, only implementations in localConfig.cjs will run.
 
 ## Contribute
 
