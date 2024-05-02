@@ -90,15 +90,11 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         });
       reportRow('Verifiable presentations MUST include a @context property.',
         async function() {
-          //FIXME reimplement this once signed VP creation via VC-API
-          //has been finalized
-          /*
           const vp = await endpoints.createVp({
             presentation: require('./input/presentation-ok.json'),
             options: createOptions
           });
           vp.should.have.property('@context');
-          */
           await assert.rejects(endpoints.verifyVp(
             require('./input/presentation-no-context-fail.json')));
         });
@@ -116,16 +112,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       reportRow('Verifiable presentations: The value of the @context ' +
         'property MUST be an ordered set where the first item is a URL with ' +
         'the value https://www.w3.org/ns/credentials/v2.', async function() {
-        //FIXME reimplement this once signed VP creation via VC-API
-        //has been finalized
-        /*
         const vp = await endpoints.createVp({
           presentation: require('./input/presentation-ok.json'),
           options: createOptions
         });
         assert(Array.isArray(vp['@context']));
         assert.strictEqual(vp['@context'][0], baseContextUrl);
-        */
         await assert.rejects(endpoints.verifyVp(
           require('./input/presentation-missing-base-context-fail.json')));
       });
