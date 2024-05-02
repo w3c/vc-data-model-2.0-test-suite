@@ -181,16 +181,20 @@ describe('Verifiable Credentials Data Model v2.0', function() {
             './input/credential-nonsingle-id-fail.json')));
         });
 
+      // 4.4 Types https://w3c.github.io/vc-data-model/#types
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20have%20a%20type%20property.
       reportRow('Verifiable credentials MUST have a type property.',
         async function() {
           await assert.rejects(
             endpoints.issue(require('./input/credential-no-type-fail.json')));
         });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20have%20a%20type%20property.
       reportRow('Verifiable presentations MUST have a type property.',
         async function() {
           await assert.rejects(endpoints.verifyVp(require(
             './input/presentation-no-type-fail.json')));
         });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20type%20property%20MUST%20be%2C%20or%20map%20to%20(through%20interpretation%20of%20the%20%40context%20property)%2C%20one%20or%20more%20URLs.
       reportRow('The value of the type property MUST be, or map to (through ' +
         'interpretation of the @context property), one or more URLs.',
       async function() {
@@ -206,6 +210,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-unmapped-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=If%20more%20than%20one%20URL%20is%20provided%2C%20the%20URLs%20MUST%20be%20interpreted%20as%20an%20unordered%20set.
       reportRow('type property: "If more than one URL is provided, the URLs ' +
         'MUST be interpreted as an unordered set."', async function() {
         //issue VC with multiple urls in type property
@@ -215,6 +220,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await endpoints.issue(require(
           './input/credential-type-urls-order-2-ok.json'));
       });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.
       // FIXME this needs to be expanded into at least 6 different tests
       // Verifiable Credential MUST have a type specified
       // Verifiable Presentation MUST have a type specified
@@ -261,12 +267,15 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(endpoints.issue(require(
             './input/credential-evidence-missing-type-fail.json')));
         });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=All%20credentials%2C%20presentations%2C%20and%20encapsulated%20objects%20SHOULD%20specify%2C%20or%20be%20associated%20with%2C%20additional%20more%20narrow%20types%20(like%20ExampleDegreeCredential%2C%20for%20example)%20so%20software%20systems%20can%20more%20easily%20detect%20and%20process%20this%20additional%20information.
       it.skip('All credentials, presentations, and encapsulated objects ' +
         'SHOULD specify, or be associated with, additional more narrow types ' +
         '(like ExampleDegreeCredential, for example) so software systems ' +
         'can more easily detect and process this additional information.',
       async function() {
+        // skipping because SHOULD (not MUST)
       });
+
       reportRow('A verifiable credential MUST have a credentialSubject ' +
         'property.', async function() {
         await assert.rejects(endpoints.issue(require(
