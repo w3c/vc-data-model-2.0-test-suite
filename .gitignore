@@ -13,7 +13,7 @@ node_modules/
 package-lock.json
 *.vswp
 .vscode
-.localImplementationsConfig.cjs
+localConfig.cjs
 config.json
 reports/**
 !.gitkeep

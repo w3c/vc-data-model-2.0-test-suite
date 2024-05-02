@@ -15,6 +15,7 @@ specification.
 - [Install](#install)
 - [Setup](#setup)
 - [Usage](#usage)
+  - [Testing Locally](#testing-locally)
 - [Implementation](#implementation)
   - [VC-API](#vc-api)
 - [Contribute](#contribute)
@@ -229,6 +230,50 @@ files are used in a verifiable credential or a verifiable presentation:
 
 ```sh
 npm test
+```
+
+### Testing Locally
+
+To test a single implementation or endpoint running locally, you can
+copy `localConfig.example.cjs` to `localConfig.cjs`
+in the root directory of the test suite.
+
+```bash
+cp localConfig.example.cjs localConfig.cjs
+```
+
+This file must be a CommonJS module that exports an object containing a
+`settings` object (for configuring the test suite code itself) and an
+`implementations` array (for configuring the implementation(s) to test against).
+
+The format of the object contained in the `implementations` array is
+identical to the one defined in
+[VC Test Suite Implementations](https://github.com/w3c/vc-test-suite-implementations?tab=readme-ov-file#usage)).
+The `implementations` array may contain more than one implementation object, to
+test multiple implementations in one run.
+
+```js
+// localConfig.cjs defining local implementations
+// you can specify a BASE_URL before running the tests such as:
+// BASE_URL=http://localhost:40443/zDdfsdfs npm test
+const baseUrl = process.env.BASE_URL || 'https://localhost:40443/id';
+module.exports = {
+  settings: {
+    enableInteropTests: false, // default
+    testAllImplementations: false // default
+  },
+  implementations: [{
+    name: 'My Company',
+    implementation: 'My Implementation Name',
+    issuers: [{
+      id: 'did:myMethod:implementation:issuer:id',
+      endpoint: `${baseUrl}/credentials/issue`
+    }],
+    verifiers: [{
+      id: 'did:myMethod:implementation:verifier:id',
+      endpoint: `${baseUrl}/credentials/verify`
+    }]
+  }];
 ```
 
 ## Implementation
