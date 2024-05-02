@@ -70,10 +70,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         // not specifically testable; handled by other section tests.
       });
       // Basic
-      it.skip('A serialization format for the conforming document MUST be ' +
-        'deterministic, bi-directional, and lossless as described in Section ' +
-        '6. Syntaxes.', async function() {
-      });
       reportRow('verifiers MUST produce errors when non-conforming documents ' +
         'are detected.', async function() {
         const doc = {
