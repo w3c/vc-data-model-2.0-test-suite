@@ -279,11 +279,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       // 4.5 Names and Descriptions https://w3c.github.io/vc-data-model/#names-and-descriptions
       // skipping tests for name and descrpition which are OPTIONAL properties
 
+      // 4.6 Credential Subject https://w3c.github.io/vc-data-model/#credential-subject
+      // @link https://w3c.github.io/vc-data-model/#credential-subject:~:text=A%20verifiable%20credential%20MUST%20have%20a%20credentialSubject%20property.
       reportRow('A verifiable credential MUST have a credentialSubject ' +
         'property.', async function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-no-subject-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#credential-subject:~:text=The%20value%20of%20the%20credentialSubject%20property%20is%20defined%20as%20a%20set%20of%20objects%20where%20each%20object%20MUST%20be%20the%20subject%20of%20one%20or%20more%20claims%2C%20which%20MUST%20be%20serialized%20inside%20the%20credentialSubject%20property.
       reportRow('The value of the credentialSubject property is defined as a ' +
       'set of objects where each object MUST be the subject of one or more ' +
         'claims, which MUST be serialized inside the credentialSubject ' +
@@ -296,6 +299,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           endpoints.issue(require(
             './input/credential-subject-multiple-empty-fail.json')));
       });
+
       reportRow('A verifiable credential MUST have an issuer property.',
         async function() {
           await assert.rejects(
