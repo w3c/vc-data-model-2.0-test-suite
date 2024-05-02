@@ -67,6 +67,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
         '("all relevant normative statements in Sections 4. Basic Concepts, ' +
         '5. Advanced Concepts, and 6. Syntaxes")', async function() {
+        // not specifically testable; handled by other section tests.
       });
       // Basic
       it.skip('A serialization format for the conforming document MUST be ' +
