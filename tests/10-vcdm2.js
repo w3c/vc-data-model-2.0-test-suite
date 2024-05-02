@@ -64,12 +64,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           );
         }
       });
+      // 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
+      // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=of%20this%20document-,MUST%20be%20enforced.,-A%20conforming%20document
       it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
         '("all relevant normative statements in Sections 4. Basic Concepts, ' +
         '5. Advanced Concepts, and 6. Syntaxes")', async function() {
         // not specifically testable; handled by other section tests.
       });
-      // Basic
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=MUST%20produce%20errors%20when%20non%2Dconforming%20documents%20are%20detected.
       reportRow('verifiers MUST produce errors when non-conforming documents ' +
         'are detected.', async function() {
         const doc = {
@@ -78,6 +80,11 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.verify(doc));
         await assert.rejects(endpoints.verifyVp(doc));
       });
+      // TODO re-review whether all broad MUST statements in this intro section
+      // are adequately covered by other tests, or if they need unique tests.
+
+      // 4.2 Contexts https://w3c.github.io/vc-data-model/#contexts
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.
       reportRow('Verifiable credentials MUST include a @context property.',
         async function() {
           // positive @context test
@@ -88,6 +95,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(endpoints.issue(
             require('./input/credential-no-context-fail.json')));
         });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.
       reportRow('Verifiable presentations MUST include a @context property.',
         async function() {
           const vp = await endpoints.createVp({
@@ -98,6 +106,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           await assert.rejects(endpoints.verifyVp(
             require('./input/presentation-no-context-fail.json')));
         });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.
       reportRow('Verifiable credentials: The value of the @context property ' +
         'MUST be an ordered set where the first item is a URL with the value ' +
         'https://www.w3.org/ns/credentials/v2.', async function() {
@@ -109,6 +118,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(
           require('./input/credential-missing-base-context-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.
       reportRow('Verifiable presentations: The value of the @context ' +
         'property MUST be an ordered set where the first item is a URL with ' +
         'the value https://www.w3.org/ns/credentials/v2.', async function() {
@@ -121,6 +131,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.verifyVp(
           require('./input/presentation-missing-base-context-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20array%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.
+      // TODO: Missing VP variation
       reportRow('Verifiable credential @context: "Subsequent items in the ' +
         'array MUST be composed of any combination of URLs and/or objects ' +
         'where each is processable as a JSON-LD Context."', async function() {

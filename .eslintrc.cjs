@@ -19,6 +19,7 @@ module.exports = {
   },
   rules: {
     'jsdoc/check-examples': 0,
-    'max-len': ['error', {ignorePattern: '\\* SPDX-License-Identifier: '}]
+    'max-len': ['error', {ignorePattern: '\\* SPDX-License-Identifier: ',
+      ignoreUrls: true}]
   }
 };
