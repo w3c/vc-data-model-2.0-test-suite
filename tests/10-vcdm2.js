@@ -145,6 +145,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo4-fail.json')));
       });
+
+      // 4.3 Identifiers https://w3c.github.io/vc-data-model/#identifiers
+      // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20id%20property%20MUST%20express%20an%20identifier%20that%20others%20are%20expected%20to%20use%20when%20expressing%20statements%20about%20a%20specific%20thing%20identified%20by%20that%20identifier.
       reportRow('if present: "The id property MUST express an identifier ' +
         'that others are expected to use when expressing statements about a ' +
         'specific thing identified by that identifier."', async function() {
@@ -153,6 +156,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           endpoints.issue(require(
             './input/credential-id-nonidentifier-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20id%20property%20MUST%20NOT%20have%20more%20than%20one%20value.
       reportRow('if present: "The id property MUST NOT have more than one ' +
         'value."', async function() {
         await endpoints.issue(require(
@@ -164,16 +168,19 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-subject-multi-id-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20value%20of%20the%20id%20property%20MUST%20be%20a%20URL%20which%20MAY%20be%20dereferenced.
       reportRow('if present: "The value of the id property MUST be a URL ' +
         'which MAY be dereferenced."', async function() {
         await assert.rejects(
           endpoints.issue(require('./input/credential-not-url-id-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL.
       reportRow('The value of the id property MUST be a single URL.',
         async function() {
           await assert.rejects(endpoints.issue(require(
             './input/credential-nonsingle-id-fail.json')));
         });
+
       reportRow('Verifiable credentials MUST have a type property.',
         async function() {
           await assert.rejects(
