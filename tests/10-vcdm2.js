@@ -276,6 +276,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         // skipping because SHOULD (not MUST)
       });
 
+      // 4.5 Names and Descriptions https://w3c.github.io/vc-data-model/#names-and-descriptions
+      // skipping tests for name and descrpition which are OPTIONAL properties
+
       reportRow('A verifiable credential MUST have a credentialSubject ' +
         'property.', async function() {
         await assert.rejects(endpoints.issue(require(
