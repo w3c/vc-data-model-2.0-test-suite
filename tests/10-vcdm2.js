@@ -300,11 +300,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
             './input/credential-subject-multiple-empty-fail.json')));
       });
 
+      // 4.7 Issuer https://w3c.github.io/vc-data-model/#issuer
+      // @link https://w3c.github.io/vc-data-model/#issuer:~:text=A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.
       reportRow('A verifiable credential MUST have an issuer property.',
         async function() {
           await assert.rejects(
             endpoints.issue(require('./input/credential-no-issuer-fail.json')));
         });
+      // @link https://w3c.github.io/vc-data-model/#issuer:~:text=The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL
       reportRow('The value of the issuer property MUST be either a URL, or ' +
       'an object containing an id property whose value is a URL.',
       async function() {
@@ -318,6 +321,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-not-url-fail.json')));
       });
+      // TODO: remove. no longer present.
       reportRow('If present, the value of the "issuer.name" property MUST be ' +
       'a string or a language value object as described in 10.1 Language and ' +
         'Base Direction.', async function() {
@@ -334,6 +338,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-name-extra-prop-en-fail.json')));
       });
+      // TODO: remove. no longer present.
       reportRow('If present, the value of the "issuer.description" property ' +
         'MUST be a string or a language value object as described in 10.1 ' +
         'Language and Base Direction.', async function() {
@@ -351,6 +356,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-description-extra-prop-en-fail.json')));
       });
+
       reportRow('If present, the value of the validFrom property MUST be an ' +
         '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
         'and time the credential becomes valid, which could be a date and ' +
