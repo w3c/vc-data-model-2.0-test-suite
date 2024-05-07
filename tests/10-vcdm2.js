@@ -357,21 +357,25 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           './input/credential-issuer-description-extra-prop-en-fail.json')));
       });
 
+      // 4.8 Validity Period https://w3c.github.io/vc-data-model/#validity-period
+      // @link https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validFrom%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20becomes%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20future%20or%20in%20the%20past.
       reportRow('If present, the value of the validFrom property MUST be an ' +
         '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
         'and time the credential becomes valid, which could be a date and ' +
-        'time in the future.', async function() {
+        'time in the future or in the past.', async function() {
         await endpoints.issue(require(
           './input/credential-validfrom-ms-ok.json'));
         await endpoints.issue(require(
           './input/credential-validfrom-tz-ok.json'));
         await assert.rejects(endpoints.issue(require(
           './input/credential-validfrom-invalid-fail.json')));
+        // TODO: add validFrom in the future test vector.
       });
-      reportRow('If present, the value of the validUntil property MUST be a ' +
-        'string value of an [XMLSCHEMA11-2] combined date-time string ' +
-        'representing the date and time the credential ceases to be valid, ' +
-        'which could be a date and time in the past.', async function() {
+      // @link https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validUntil%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20ceases%20to%20be%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20past%20or%20in%20the%20future
+      reportRow('If present, the value of the validUntil property MUST be an ' +
+        '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
+        'and time the credential ceases to be valid, which could be a date ' +
+        'and time in the past or in the future.', async function() {
         await endpoints.issue(require('./input/credential-validuntil-ok.json'));
         await endpoints.issue(require(
           './input/credential-validuntil-ms-ok.json'));
@@ -380,6 +384,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-validuntil-invalid-fail.json')));
       });
+      // @link https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validUntil%20value%20also%20exists%2C%20the%20validFrom%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20earlier%20than%20the%20datetime%20expressed%20by%20the%20validUntil%20value.
       reportRow('If a validUntil value also exists, the validFrom value MUST ' +
         'express a datetime that is temporally the same or earlier than the ' +
         'datetime expressed by the validUntil value.', async function() {
@@ -404,6 +409,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         }
         assert.rejects(endpoints.verify(result));
       });
+      // @link https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validFrom%20value%20also%20exists%2C%20the%20validUntil%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20later%20than%20the%20datetime%20expressed%20by%20the%20validFrom%20value.
       reportRow('If a validFrom value also exists, the validUntil value MUST ' +
         'express a datetime that is temporally the same or later than the ' +
         'datetime expressed by the validFrom value.', async function() {
@@ -428,6 +434,16 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         }
         assert.rejects(endpoints.verify(result));
       });
+      // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
+      // @link https://w3c.github.io/vc-data-model/#validity-period:~:text=Time%20values%20that%20are%20incorrectly%20serialized%20without%20an%20offset%20MUST%20be%20interpreted%20as%20UTC.
+      it.skip('Time values that are incorrectly serialized without an offset ' +
+        'MUST be interpreted as UTC.', async function() {
+        // TODO: add test using regular expression from spec.
+        // https://w3c.github.io/vc-data-model/#example-regular-expression-to-detect-a-valid-xml-schema-1-1-part-2-datetimestamp
+        // eslint-disable-next-line max-len
+        const regexp = /-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))/
+      });
+
       // start of the securing mechanism block
       // as of VC 2.0 this means a proof must be attached to an issued VC
       // at least one proof must be on an issued VC
