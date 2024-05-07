@@ -444,12 +444,14 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         const regexp = /-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))/
       });
 
-      // start of the securing mechanism block
+      // 4.9 Securing Mechanisms https://w3c.github.io/vc-data-model/#securing-mechanisms
       // as of VC 2.0 this means a proof must be attached to an issued VC
       // at least one proof must be on an issued VC
+      // @link https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.9%20Securing%20Mechanisms.
       reportRow('A conforming document MUST be secured by at least one ' +
         'securing mechanism as described in Section 4.9 Securing Mechanisms.',
       async function() {
+        // embedded proof test
         should.exist(issuedVc, `Expected ${name} to issue a VC.`);
         should.exist(issuedVc.proof, 'Expected VC to have a proof.');
         if(Array.isArray(issuedVc.proof)) {
@@ -461,7 +463,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
             'expected proof to be an object.'
           );
         }
+        // TODO: add enveloped proof test
       });
+      // @link https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20issuer%20implementation%20produces%20conforming%20documents%2C%20MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20that%20it%20produces%2C%20and%20MUST%20secure%20the%20conforming%20documents%20it%20produces%20using%20a%20securing%20mechanism%20as%20described%20in%20Section%204.9%20Securing%20Mechanisms.
       reportRow('A conforming issuer implementation produces conforming ' +
         'documents, MUST include all required properties in the conforming ' +
         'documents that it produces, and MUST secure the conforming ' +
@@ -469,7 +473,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'Section 4.9 Securing Mechanisms.', async function() {
         should.exist(issuedVc, `Expected ${name} to issue a VC.`);
         should.exist(issuedVc.proof, 'Expected VC to have a proof.');
+        // TODO: add enveloped proof test
       });
+      // @link https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20verifier,documents%20are%20detected.
       reportRow('A conforming verifier implementation consumes conforming ' +
       'documents, MUST perform verification on a conforming document as ' +
       'described in Section 4.9 Securing Mechanisms, MUST check that each ' +
@@ -479,8 +485,9 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         endpoints.verify(issuedVc);
         // should reject a VC without a proof
         assert.rejects(endpoints.verify(require('./input/credential-ok.json')));
+        // TODO: add enveloped proof test
       });
-      // end securing mechanism block
+
       reportRow('(If a credentialStatus property is present), The type ' +
         'property is REQUIRED. It is used to express the type of status ' +
         'information expressed by the object. The related normative ' +
