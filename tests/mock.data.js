@@ -11,9 +11,11 @@ const validVc = require('./validVc.json');
 
 // copies a validVc
 export const createRequestBody = ({issuer, vc = validVc}) => {
-  const {settings: {id, options}} = issuer;
+  const {
+    settings: {options},
+  } = issuer;
   const credential = klona(vc);
-  credential.issuer = credential?.issuer || id;
+  credential.issuer = handleIssuerReceive(issuer, credential);
   // convert from millisecond to seconds precision
   // credential.issuanceDate = createISOTimeStamp();
   // credential.issuer = id;
@@ -42,4 +44,22 @@ export const createVerifyRequestBody = ({vc}) => {
  */
 export function createISOTimeStamp(timeMs = Date.now()) {
   return new Date(timeMs).toISOString().replace(/\.\d+Z$/, 'Z');
+}
+
+export function handleIssuerReceive(issuer, credential) {
+  if(typeof credential.issuer === 'string' && credential.issuer !== '') {
+    return issuer.settings.id;
+  }
+
+  if(typeof credential.issuer === 'object' && credential.issuer.id) {
+    if(credential.issuer.id.includes('did:example:') ||
+     credential.issuer.id.includes('did:issuer:')) {
+      return {
+        ...credential.issuer,
+        id: issuer.settings.id,
+      };
+    }
+  }
+
+  return credential?.issuer?.id ?? credential?.issuer;
 }
