@@ -248,13 +248,13 @@ This file must be a CommonJS module that exports an object containing a
 
 The format of the object contained in the `implementations` array is
 identical to the one defined in
-[VC Test Suite Implementations](https://github.com/w3c/vc-test-suite-implementations?tab=readme-ov-file#usage)).
-The `implementations` array may contain more than one implementation object, to
-test multiple implementations in one run.
+[the **_Testing locally_** section of VC Test Suite Implementations](https://github.com/w3c/vc-test-suite-implementations?tab=readme-ov-file#testing-locally)).
+The `implementations` array may contain more than one implementation object,
+enabling you to test multiple implementations in one run.
 
 ```js
-// localConfig.cjs defining local implementations
-// you can specify a BASE_URL before running the tests such as:
+// localConfig.cjs defines local implementations
+// Before running the tests, you can specify a BASE_URL, such as
 // BASE_URL=http://localhost:40443/zDdfsdfs npm test
 const baseUrl = process.env.BASE_URL || 'https://localhost:40443/id';
 module.exports = {
