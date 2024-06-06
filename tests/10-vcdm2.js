@@ -19,7 +19,7 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-describe('Verifiable Credentials Data Model v2.0', function() {
+function setupMatrix() {
   // this will tell the report
   // to make an interop matrix with this suite
   this.matrix = true;
@@ -27,6 +27,48 @@ describe('Verifiable Credentials Data Model v2.0', function() {
   this.implemented = [...match.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Implementer';
+}
+
+function addPerTestMetadata() {
+  // append test meta data to the it/test this.
+  this.currentTest.cell = {
+    columnId: this.currentTest.parent.title,
+    rowId: this.currentTest.title
+  };
+}
+
+// 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
+describe('Basic Conformance', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
+      // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=of%20this%20document-,MUST%20be%20enforced.,-A%20conforming%20document
+      it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
+        '("all relevant normative statements in Sections 4. Basic Concepts, ' +
+        '5. Advanced Concepts, and 6. Syntaxes")', async function() {
+        // not specifically testable; handled by other section tests.
+      });
+      // @link https://w3c.github.io/vc-data-model/#types:~:text=MUST%20produce%20errors%20when%20non%2Dconforming%20documents%20are%20detected.
+      it('verifiers MUST produce errors when non-conforming documents ' +
+        'are detected.', async function() {
+        const doc = {
+          type: ['NonconformingDocument']
+        };
+        await assert.rejects(endpoints.verify(doc));
+        await assert.rejects(endpoints.verifyVp(doc));
+      });
+      // TODO re-review whether all broad MUST statements in this intro section
+      // are adequately covered by other tests, or if they need unique tests.
+    });
+  }
+});
+
+// 4.2 Contexts https://w3c.github.io/vc-data-model/#contexts
+describe('Contexts', function() {
+  setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
     const createOptions = {challenge};
@@ -48,33 +90,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
           );
         }
       });
-      beforeEach(function() {
-        // append test meta data to the it/test this.
-        this.currentTest.cell = {
-          columnId: this.currentTest.parent.title,
-          rowId: this.currentTest.title
-        };
-      });
-      // 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
-      // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=of%20this%20document-,MUST%20be%20enforced.,-A%20conforming%20document
-      it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
-        '("all relevant normative statements in Sections 4. Basic Concepts, ' +
-        '5. Advanced Concepts, and 6. Syntaxes")', async function() {
-        // not specifically testable; handled by other section tests.
-      });
-      // @link https://w3c.github.io/vc-data-model/#types:~:text=MUST%20produce%20errors%20when%20non%2Dconforming%20documents%20are%20detected.
-      it('verifiers MUST produce errors when non-conforming documents ' +
-        'are detected.', async function() {
-        const doc = {
-          type: ['NonconformingDocument']
-        };
-        await assert.rejects(endpoints.verify(doc));
-        await assert.rejects(endpoints.verifyVp(doc));
-      });
-      // TODO re-review whether all broad MUST statements in this intro section
-      // are adequately covered by other tests, or if they need unique tests.
+      beforeEach(addPerTestMetadata);
 
-      // 4.2 Contexts https://w3c.github.io/vc-data-model/#contexts
       // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.
       it('Verifiable credentials MUST include a @context property.',
         async function() {
