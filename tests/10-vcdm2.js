@@ -20,9 +20,6 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 describe('Verifiable Credentials Data Model v2.0', function() {
-  const summaries = new Set();
-  this.summary = summaries;
-  const reportData = [];
   // this will tell the report
   // to make an interop matrix with this suite
   this.matrix = true;
@@ -30,8 +27,6 @@ describe('Verifiable Credentials Data Model v2.0', function() {
   this.implemented = [...match.keys()];
   this.rowLabel = 'Test Name';
   this.columnLabel = 'Issuer';
-  // the reportData will be displayed under the test title
-  this.reportData = reportData;
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
     function reportRow(title, fn) {
