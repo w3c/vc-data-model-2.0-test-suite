@@ -16,8 +16,8 @@ const should = chai.should();
 const require = createRequire(import.meta.url);
 const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
-const vcApiTag = 'vc2.0';
-const {match} = filterByTag({tags: [vcApiTag]});
+const tag = 'vc2.0';
+const {match} = filterByTag({tags: [tag]});
 
 describe('Verifiable Credentials Data Model v2.0', function() {
   const summaries = new Set();
@@ -33,7 +33,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
   // the reportData will be displayed under the test title
   this.reportData = reportData;
   for(const [name, implementation] of match) {
-    const endpoints = new TestEndpoints({implementation, tag: vcApiTag});
+    const endpoints = new TestEndpoints({implementation, tag});
     function reportRow(title, fn) {
       it(title, async function() {
         // append test meta data to the it/test this.
