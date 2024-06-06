@@ -440,8 +440,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         'MUST be interpreted as UTC.', async function() {
         // TODO: add test using regular expression from spec.
         // https://w3c.github.io/vc-data-model/#example-regular-expression-to-detect-a-valid-xml-schema-1-1-part-2-datetimestamp
-        // eslint-disable-next-line max-len
-        const regexp = /-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))/
+        // eslint-disable-next-line max-len, no-unused-vars
+        const regexp = /-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))/;
       });
 
       // 4.9 Securing Mechanisms https://w3c.github.io/vc-data-model/#securing-mechanisms
@@ -515,8 +515,8 @@ describe('Verifiable Credentials Data Model v2.0', function() {
       // @link https://w3c.github.io/vc-data-model/#status:~:text=Status%20schemes%20MUST%20NOT%20be%20implemented%20in%20ways%20that%20enable%20tracking%20of%20individuals
       it.skip('Status schemes MUST NOT be implemented in ways that enable ' +
         'tracking of individuals', async function() {
-          // not testable with automation
-        });
+        // not testable with automation
+      });
 
       reportRow('In Verifiable Presentations, the verifiableCredential ' +
         'property MAY be present. The value MUST be an array of one or more ' +
