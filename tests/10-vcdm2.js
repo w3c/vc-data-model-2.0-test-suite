@@ -146,25 +146,8 @@ describe('Identifiers', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const createOptions = {challenge};
-    const verifyPresentationOptions = {
-      checks: ['proof'],
-      challenge
-    };
 
     describe(name, function() {
-      let issuedVc;
-      before(async function() {
-        try {
-          issuedVc = await endpoints.issue(require(
-            './input/credential-ok.json'));
-        } catch(e) {
-          console.error(
-            `Issuer: ${name} failed to issue "credential-ok.json".`,
-            e
-          );
-        }
-      });
       beforeEach(addPerTestMetadata);
 
       // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20id%20property%20MUST%20express%20an%20identifier%20that%20others%20are%20expected%20to%20use%20when%20expressing%20statements%20about%20a%20specific%20thing%20identified%20by%20that%20identifier.
@@ -200,8 +183,36 @@ describe('Identifiers', function() {
           await assert.rejects(endpoints.issue(require(
             './input/credential-nonsingle-id-fail.json')));
         });
+    });
+  }
+});
 
-      // 4.4 Types https://w3c.github.io/vc-data-model/#types
+// 4.4 Types https://w3c.github.io/vc-data-model/#types
+describe('Types', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+    const createOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
+
+    describe(name, function() {
+      let issuedVc;
+      before(async function() {
+        try {
+          issuedVc = await endpoints.issue(require(
+            './input/credential-ok.json'));
+        } catch(e) {
+          console.error(
+            `Issuer: ${name} failed to issue "credential-ok.json".`,
+            e
+          );
+        }
+      });
+      beforeEach(addPerTestMetadata);
+
       // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20have%20a%20type%20property.
       it('Verifiable credentials MUST have a type property.',
         async function() {
