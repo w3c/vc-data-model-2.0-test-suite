@@ -199,18 +199,6 @@ describe('Types', function() {
     };
 
     describe(name, function() {
-      let issuedVc;
-      before(async function() {
-        try {
-          issuedVc = await endpoints.issue(require(
-            './input/credential-ok.json'));
-        } catch(e) {
-          console.error(
-            `Issuer: ${name} failed to issue "credential-ok.json".`,
-            e
-          );
-        }
-      });
       beforeEach(addPerTestMetadata);
 
       // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20have%20a%20type%20property.
@@ -306,11 +294,40 @@ describe('Types', function() {
       async function() {
         // skipping because SHOULD (not MUST)
       });
+    });
+  }
+});
 
-      // 4.5 Names and Descriptions https://w3c.github.io/vc-data-model/#names-and-descriptions
-      // skipping tests for name and descrpition which are OPTIONAL properties
+// 4.5 Names and Descriptions https://w3c.github.io/vc-data-model/#names-and-descriptions
+// skipping tests for name and descrpition which are OPTIONAL properties
+// TODO: report that this section of the spec is being skipped and why
 
-      // 4.6 Credential Subject https://w3c.github.io/vc-data-model/#credential-subject
+// 4.6 Credential Subject https://w3c.github.io/vc-data-model/#credential-subject
+describe('Credential Subject', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+    const createOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
+
+    describe(name, function() {
+      let issuedVc;
+      before(async function() {
+        try {
+          issuedVc = await endpoints.issue(require(
+            './input/credential-ok.json'));
+        } catch(e) {
+          console.error(
+            `Issuer: ${name} failed to issue "credential-ok.json".`,
+            e
+          );
+        }
+      });
+      beforeEach(addPerTestMetadata);
+
       // @link https://w3c.github.io/vc-data-model/#credential-subject:~:text=A%20verifiable%20credential%20MUST%20have%20a%20credentialSubject%20property.
       it('A verifiable credential MUST have a credentialSubject ' +
         'property.', async function() {
