@@ -26,7 +26,7 @@ describe('Verifiable Credentials Data Model v2.0', function() {
   this.report = true;
   this.implemented = [...match.keys()];
   this.rowLabel = 'Test Name';
-  this.columnLabel = 'Issuer';
+  this.columnLabel = 'Implementer';
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
     function reportRow(title, fn) {
