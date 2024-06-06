@@ -72,24 +72,8 @@ describe('Contexts', function() {
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
     const createOptions = {challenge};
-    const verifyPresentationOptions = {
-      checks: ['proof'],
-      challenge
-    };
 
     describe(name, function() {
-      let issuedVc;
-      before(async function() {
-        try {
-          issuedVc = await endpoints.issue(require(
-            './input/credential-ok.json'));
-        } catch(e) {
-          console.error(
-            `Issuer: ${name} failed to issue "credential-ok.json".`,
-            e
-          );
-        }
-      });
       beforeEach(addPerTestMetadata);
 
       // @link https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.
@@ -153,8 +137,36 @@ describe('Contexts', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo4-fail.json')));
       });
+    });
+  }
+});
 
-      // 4.3 Identifiers https://w3c.github.io/vc-data-model/#identifiers
+// 4.3 Identifiers https://w3c.github.io/vc-data-model/#identifiers
+describe('Identifiers', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+    const createOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
+
+    describe(name, function() {
+      let issuedVc;
+      before(async function() {
+        try {
+          issuedVc = await endpoints.issue(require(
+            './input/credential-ok.json'));
+        } catch(e) {
+          console.error(
+            `Issuer: ${name} failed to issue "credential-ok.json".`,
+            e
+          );
+        }
+      });
+      beforeEach(addPerTestMetadata);
+
       // @link https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20id%20property%20MUST%20express%20an%20identifier%20that%20others%20are%20expected%20to%20use%20when%20expressing%20statements%20about%20a%20specific%20thing%20identified%20by%20that%20identifier.
       it('if present: "The id property MUST express an identifier ' +
         'that others are expected to use when expressing statements about a ' +
