@@ -488,6 +488,19 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         // TODO: add enveloped proof test
       });
 
+      // 4.10 Status https://w3c.github.io/vc-data-model/#status
+      // @link https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type
+      reportRow('If present (credentialStatus.id), the normative guidance ' +
+        'in Section 4.3 Identifiers MUST be followed.', async function() {
+        // id is optional
+        await endpoints.issue(require(
+          './input/credential-status-missing-id-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-status-multiple-id-fail.json')));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-status-nonurl-id-fail.json')));
+      });
+      // @link https://w3c.github.io/vc-data-model/#status:~:text=The%20type%20property%20is%20REQUIRED.%20It%20is%20used%20to%20express%20the%20type%20of%20status%20information%20expressed%20by%20the%20object.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.
       reportRow('(If a credentialStatus property is present), The type ' +
         'property is REQUIRED. It is used to express the type of status ' +
         'information expressed by the object. The related normative ' +
@@ -499,16 +512,12 @@ describe('Verifiable Credentials Data Model v2.0', function() {
         await endpoints.issue(require(
           './input/credential-status-ok.json'));
       });
-      reportRow('If present (credentialStatus.id), the normative guidance ' +
-        'in Section 4.3 Identifiers MUST be followed.', async function() {
-        // id is optional
-        await endpoints.issue(require(
-          './input/credential-status-missing-id-ok.json'));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-status-multiple-id-fail.json')));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-status-nonurl-id-fail.json')));
-      });
+      // @link https://w3c.github.io/vc-data-model/#status:~:text=Status%20schemes%20MUST%20NOT%20be%20implemented%20in%20ways%20that%20enable%20tracking%20of%20individuals
+      it.skip('Status schemes MUST NOT be implemented in ways that enable ' +
+        'tracking of individuals', async function() {
+          // not testable with automation
+        });
+
       reportRow('In Verifiable Presentations, the verifiableCredential ' +
         'property MAY be present. The value MUST be an array of one or more ' +
         'verifiable credential graphs in a cryptographically verifiable ' +
