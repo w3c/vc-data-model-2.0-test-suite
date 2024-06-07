@@ -307,25 +307,8 @@ describe('Credential Subject', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const createOptions = {challenge};
-    const verifyPresentationOptions = {
-      checks: ['proof'],
-      challenge
-    };
 
     describe(name, function() {
-      let issuedVc;
-      before(async function() {
-        try {
-          issuedVc = await endpoints.issue(require(
-            './input/credential-ok.json'));
-        } catch(e) {
-          console.error(
-            `Issuer: ${name} failed to issue "credential-ok.json".`,
-            e
-          );
-        }
-      });
       beforeEach(addPerTestMetadata);
 
       // @link https://w3c.github.io/vc-data-model/#credential-subject:~:text=A%20verifiable%20credential%20MUST%20have%20a%20credentialSubject%20property.
@@ -347,8 +330,19 @@ describe('Credential Subject', function() {
           endpoints.issue(require(
             './input/credential-subject-multiple-empty-fail.json')));
       });
+    });
+  }
+});
 
-      // 4.7 Issuer https://w3c.github.io/vc-data-model/#issuer
+// 4.7 Issuer https://w3c.github.io/vc-data-model/#issuer
+describe('Issuer', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
+
       // @link https://w3c.github.io/vc-data-model/#issuer:~:text=A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.
       it('A verifiable credential MUST have an issuer property.',
         async function() {
@@ -404,8 +398,36 @@ describe('Credential Subject', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-description-extra-prop-en-fail.json')));
       });
+    });
+  }
+});
 
-      // 4.8 Validity Period https://w3c.github.io/vc-data-model/#validity-period
+// 4.8 Validity Period https://w3c.github.io/vc-data-model/#validity-period
+describe('Validity Period', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+    const createOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
+
+    describe(name, function() {
+      let issuedVc;
+      before(async function() {
+        try {
+          issuedVc = await endpoints.issue(require(
+            './input/credential-ok.json'));
+        } catch(e) {
+          console.error(
+            `Issuer: ${name} failed to issue "credential-ok.json".`,
+            e
+          );
+        }
+      });
+      beforeEach(addPerTestMetadata);
+
       // @link https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validFrom%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20becomes%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20future%20or%20in%20the%20past.
       it('If present, the value of the validFrom property MUST be an ' +
         '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
