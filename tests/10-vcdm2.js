@@ -568,8 +568,24 @@ describe('Securing Mechanisms', function() {
         assert.rejects(endpoints.verify(require('./input/credential-ok.json')));
         // TODO: add enveloped proof test
       });
+    });
+  }
+});
 
-      // 4.10 Status https://w3c.github.io/vc-data-model/#status
+// 4.10 Status https://w3c.github.io/vc-data-model/#status
+describe('Status', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+    const createOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
+
       // @link https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type
       it('If present (credentialStatus.id), the normative guidance ' +
         'in Section 4.3 Identifiers MUST be followed.', async function() {
