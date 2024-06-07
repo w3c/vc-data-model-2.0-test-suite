@@ -407,25 +407,8 @@ describe('Validity Period', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const createOptions = {challenge};
-    const verifyPresentationOptions = {
-      checks: ['proof'],
-      challenge
-    };
 
     describe(name, function() {
-      let issuedVc;
-      before(async function() {
-        try {
-          issuedVc = await endpoints.issue(require(
-            './input/credential-ok.json'));
-        } catch(e) {
-          console.error(
-            `Issuer: ${name} failed to issue "credential-ok.json".`,
-            e
-          );
-        }
-      });
       beforeEach(addPerTestMetadata);
 
       // @link https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validFrom%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20becomes%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20future%20or%20in%20the%20past.
@@ -513,8 +496,36 @@ describe('Validity Period', function() {
         // eslint-disable-next-line max-len, no-unused-vars
         const regexp = /-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))/;
       });
+    });
+  }
+});
 
-      // 4.9 Securing Mechanisms https://w3c.github.io/vc-data-model/#securing-mechanisms
+// 4.9 Securing Mechanisms https://w3c.github.io/vc-data-model/#securing-mechanisms
+describe('Securing Mechanisms', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+    const createOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
+
+    describe(name, function() {
+      let issuedVc;
+      before(async function() {
+        try {
+          issuedVc = await endpoints.issue(require(
+            './input/credential-ok.json'));
+        } catch(e) {
+          console.error(
+            `Issuer: ${name} failed to issue "credential-ok.json".`,
+            e
+          );
+        }
+      });
+      beforeEach(addPerTestMetadata);
+
       // as of VC 2.0 this means a proof must be attached to an issued VC
       // at least one proof must be on an issued VC
       // @link https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.9%20Securing%20Mechanisms.
