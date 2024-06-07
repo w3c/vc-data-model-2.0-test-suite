@@ -649,6 +649,18 @@ describe('Status', function() {
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-derived-vc-missing-required-type-fail.json')));
       });
+    });
+  }
+});
+
+// 5. Advanced Concepts https://w3c.github.io/vc-data-model/#advanced-concepts
+describe('Advanced', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
 
       // Advanced
       it('JSON-LD-based processors MUST produce an error when a ' +
