@@ -505,11 +505,6 @@ describe('Securing Mechanisms', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const createOptions = {challenge};
-    const verifyPresentationOptions = {
-      checks: ['proof'],
-      challenge
-    };
 
     describe(name, function() {
       let issuedVc;
