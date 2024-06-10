@@ -311,40 +311,41 @@ describe('Names and Descriptions', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
+      const fixturePath = './input/names-and-descriptions';
       // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
       it('If present, the value of the name property MUST be a string or a ' +
         'language value object as described in 11.1 Language and Base ' +
         'Direction.', async function() {
         await endpoints.issue(require(
-          './input/credential-issuer-name-ok.json'));
+          `${fixturePath}/issuer-name-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-name-optional-ok.json'));
+          `${fixturePath}/issuer-name-optional-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-name-language-en-ok.json'));
+          `${fixturePath}/issuer-name-language-en-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-name-language-direction-en-ok.json'));
+          `${fixturePath}/issuer-name-language-direction-en-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-multi-language-name-ok.json'));
+          `${fixturePath}/issuer-multi-language-name-ok.json`));
         await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-name-extra-prop-en-fail.json')));
+          `${fixturePath}/issuer-name-extra-prop-en-fail.json`)));
       });
       // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
       it('If present, the value of the description property MUST be a string ' +
         'or a language value object as described in 11.1 Language and Base ' +
         'Direction.', async function() {
         await endpoints.issue(require(
-          './input/credential-issuer-description-ok.json'));
+          `${fixturePath}/issuer-description-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-description-optional-ok.json'));
+          `${fixturePath}/issuer-description-optional-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-description-language-en-ok.json'));
+          `${fixturePath}/issuer-description-language-en-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-description-language-' +
-          'direction-en-ok.json'));
+          // eslint-disable-next-line max-len
+          `${fixturePath}/issuer-description-language-direction-en-ok.json`));
         await endpoints.issue(require(
-          './input/credential-issuer-multi-language-description-ok.json'));
+          `${fixturePath}/issuer-multi-language-description-ok.json`));
         await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-description-extra-prop-en-fail.json')));
+          `${fixturePath}/issuer-description-extra-prop-en-fail.json`)));
       });
     });
   }
