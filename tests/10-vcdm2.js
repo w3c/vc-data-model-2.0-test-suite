@@ -299,8 +299,56 @@ describe('Types', function() {
 });
 
 // 4.5 Names and Descriptions https://w3c.github.io/vc-data-model/#names-and-descriptions
-// skipping tests for name and descrpition which are OPTIONAL properties
-// TODO: report that this section of the spec is being skipped and why
+// These tests for name and descrpition are OPTIONAL as those properties may
+// appear anywhere. However, we have tests for them (on `issuer` so far), so
+// keeping them in play seems prudent/useful. They can be expanded later also
+// to cover `name` and/or `description` anywhere they appear.
+describe('Names and Descriptions', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
+
+      // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
+      it('If present, the value of the name property MUST be a string or a ' +
+        'language value object as described in 11.1 Language and Base ' +
+        'Direction.', async function() {
+        await endpoints.issue(require(
+          './input/credential-issuer-name-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-name-optional-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-name-language-en-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-name-language-direction-en-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-multi-language-name-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-issuer-name-extra-prop-en-fail.json')));
+      });
+      // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
+      it('If present, the value of the description property MUST be a string ' +
+        'or a language value object as described in 11.1 Language and Base ' +
+        'Direction.', async function() {
+        await endpoints.issue(require(
+          './input/credential-issuer-description-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-description-optional-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-description-language-en-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-description-language-' +
+          'direction-en-ok.json'));
+        await endpoints.issue(require(
+          './input/credential-issuer-multi-language-description-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-issuer-description-extra-prop-en-fail.json')));
+      });
+    });
+  }
+});
 
 // 4.6 Credential Subject https://w3c.github.io/vc-data-model/#credential-subject
 describe('Credential Subject', function() {
@@ -362,41 +410,6 @@ describe('Issuer', function() {
           './input/credential-issuer-object-no-id-fail.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-not-url-fail.json')));
-      });
-      // TODO: remove. no longer present.
-      it('If present, the value of the "issuer.name" property MUST be ' +
-      'a string or a language value object as described in 10.1 Language and ' +
-        'Base Direction.', async function() {
-        await endpoints.issue(require(
-          './input/credential-issuer-name-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-name-optional-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-name-language-en-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-name-language-direction-en-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-multi-language-name-ok.json'));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-name-extra-prop-en-fail.json')));
-      });
-      // TODO: remove. no longer present.
-      it('If present, the value of the "issuer.description" property ' +
-        'MUST be a string or a language value object as described in 10.1 ' +
-        'Language and Base Direction.', async function() {
-        await endpoints.issue(require(
-          './input/credential-issuer-description-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-description-optional-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-description-language-en-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-description-language-' +
-          'direction-en-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-multi-language-description-ok.json'));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-description-extra-prop-en-fail.json')));
       });
     });
   }
