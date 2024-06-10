@@ -312,10 +312,48 @@ describe('Names and Descriptions', function() {
       beforeEach(addPerTestMetadata);
 
       const fixturePath = './input/names-and-descriptions';
+      // On the main credential object itself--as the spec describes
       // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
       it('If present, the value of the name property MUST be a string or a ' +
         'language value object as described in 11.1 Language and Base ' +
         'Direction.', async function() {
+        await endpoints.issue(require(
+          `${fixturePath}/credential-name-ok.json`));
+        await endpoints.issue(require(
+          `${fixturePath}/credential-name-optional-ok.json`));
+        await endpoints.issue(require(
+          `${fixturePath}/credential-name-language-en-ok.json`));
+        await endpoints.issue(require(
+          `${fixturePath}/credential-name-language-direction-en-ok.json`));
+        await endpoints.issue(require(
+          `${fixturePath}/credential-multi-language-name-ok.json`));
+        await assert.rejects(endpoints.issue(require(
+          `${fixturePath}/credential-name-extra-prop-en-fail.json`)));
+      });
+      // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
+      it('If present, the value of the description property MUST be a string ' +
+        'or a language value object as described in 11.1 Language and Base ' +
+        'Direction.', async function() {
+        await endpoints.issue(require(
+          `${fixturePath}/credential-description-ok.json`));
+        await endpoints.issue(require(
+          `${fixturePath}/credential-description-optional-ok.json`));
+        await endpoints.issue(require(
+          `${fixturePath}/credential-description-language-en-ok.json`));
+        await endpoints.issue(require(
+          // eslint-disable-next-line max-len
+          `${fixturePath}/credential-description-language-direction-en-ok.json`));
+        await endpoints.issue(require(
+          `${fixturePath}/credential-multi-language-description-ok.json`));
+        await assert.rejects(endpoints.issue(require(
+          `${fixturePath}/credential-description-extra-prop-en-fail.json`)));
+      });
+
+      // On `issuer` as in the example at https://w3c.github.io/vc-data-model/#example-usage-of-the-name-and-description-property-0
+      // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
+      it('If present (on `issuer`), the value of the name property MUST be a ' +
+        'string or a language value object as described in 11.1 Language and ' +
+        'Base Direction.', async function() {
         await endpoints.issue(require(
           `${fixturePath}/issuer-name-ok.json`));
         await endpoints.issue(require(
@@ -330,9 +368,9 @@ describe('Names and Descriptions', function() {
           `${fixturePath}/issuer-name-extra-prop-en-fail.json`)));
       });
       // @link https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.
-      it('If present, the value of the description property MUST be a string ' +
-        'or a language value object as described in 11.1 Language and Base ' +
-        'Direction.', async function() {
+      it('If present (on `issuer`), the value of the description property ' +
+        'MUST be a string or a language value object as described in 11.1 ' +
+        'Language and Base Direction.', async function() {
         await endpoints.issue(require(
           `${fixturePath}/issuer-description-ok.json`));
         await endpoints.issue(require(
