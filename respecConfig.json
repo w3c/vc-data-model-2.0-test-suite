@@ -3,8 +3,8 @@
   "group": "vc",
   "specStatus": "base",
   "subtitle": "Verifiable Credentials Data Model v2.0 Interoperability Report",
-  "github": "https://github.com/w3c/vc-data-model-2-test-suite",
-  "edDraftURI": "https://w3c.github.io/vc-data-model-2-test-suite/",
+  "github": "https://github.com/w3c/vc-data-model-2.0-test-suite",
+  "edDraftURI": "https://w3c.github.io/vc-data-model-2.0-test-suite/",
   "doJsonLd": true,
   "includePermalinks": false,
   "otherLinks": [{
