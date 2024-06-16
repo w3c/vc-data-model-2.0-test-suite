@@ -87,7 +87,8 @@
     <section id="abstract">
       <p>
     This is a interoperability report for implementers for the
-    Verifiable Credentials Data Model v2.0 specification.
+    <a href="https://w3c.github.io/vc-data-model/">Verifiable Credentials Data Model
+    v2.0 specification</a>.
       </p>
     </section>
     <section id="sotd">
@@ -96,22 +97,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 61/76 80%
+      Tests passed 61/80 76%
       </p>
       <p>
-      Tests failed 15/76 20%
+      Tests failed 19/80 24%
       </p>
       <p>
-      Failures 15
+      Failures 19
       </p>
       <p>
-      Tests skipped 20
+      Tests skipped 22
       </p>
       <p>
-      Total tests 96
+      Total tests 102
       </p>
       <p>
-        These tests were run on <time>9 June 2024 at 5:05 am UTC</time>
+        These tests were run on <time>16 June 2024 at 5:06 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -134,8 +135,8 @@
     </section>
     <section id="conformance">
       <!--- This will take the tests and display them as matrices -->
-        <section class="informative" id="Verifiable Credentials Data Model v2.0">
-          <h2>Verifiable Credentials Data Model v2.0</h2>
+        <section class="informative" id="Basic Conformance">
+          <h2>Basic Conformance</h2>
           <style>
             .no-wrap {
               white-space: nowrap;
@@ -188,7 +189,7 @@
               <thead>
                 <th width="20%">
                   <div class="text-right small-font">
-                  Issuer &#8658;
+                  Implementer &#8658;
                   </div>
                   <div class="text-left small-font">
                   <span>&#8659;</span><span>Test Name</span>
@@ -267,6 +268,82 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Contexts">
+          <h2>Contexts</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">Verifiable credentials MUST include a @context property.</td>
@@ -612,6 +689,82 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Identifiers">
+          <h2>Identifiers</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">if present: &quot;The id property MUST express an identifier that others are expected to use when expressing statements about a specific thing identified by that identifier.&quot;</td>
@@ -888,6 +1041,82 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Types">
+          <h2>Types</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">Verifiable credentials MUST have a type property.</td>
@@ -1064,7 +1293,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:198:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:229:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1209,7 +1438,7 @@
                         <pre>{
                       "name": "HTTPError",
                       "message": "Request failed with status code 400 Bad Request",
-                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async TestEndpoints.verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:47:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:231:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async TestEndpoints.verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:47:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:264:11)"
                     }</pre>
                       </span>
                     </div>
@@ -1247,6 +1476,476 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Names and Descriptions">
+          <h2>Names and Descriptions</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">If present, the value of the name property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "Error",
+                      "message": "Cannot find module './input/names-and-descriptions/credential-name-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+                      "stack": "Error: Cannot find module './input/names-and-descriptions/credential-name-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)\n    at Module._load (node:internal/modules/cjs/loader:986:27)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:320:31)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "Error",
+                      "message": "Cannot find module './input/names-and-descriptions/credential-name-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+                      "stack": "Error: Cannot find module './input/names-and-descriptions/credential-name-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)\n    at Module._load (node:internal/modules/cjs/loader:986:27)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:320:31)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">If present, the value of the description property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "Error",
+                      "message": "Cannot find module './input/names-and-descriptions/credential-description-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+                      "stack": "Error: Cannot find module './input/names-and-descriptions/credential-description-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)\n    at Module._load (node:internal/modules/cjs/loader:986:27)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:337:31)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "Error",
+                      "message": "Cannot find module './input/names-and-descriptions/credential-description-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js",
+                      "stack": "Error: Cannot find module './input/names-and-descriptions/credential-description-ok.json'\nRequire stack:\n- /home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1145:15)\n    at Module._load (node:internal/modules/cjs/loader:986:27)\n    at Module.require (node:internal/modules/cjs/loader:1233:19)\n    at require (node:internal/modules/helpers:179:18)\n    at Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:337:31)\n    at process.processImmediate (node:internal/timers:478:21)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">If present (on &#x60;issuer&#x60;), the value of the name property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "An unspecified error occurred.",
+                      "stack": "HTTPError: An unspecified error occurred.\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:83:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:363:9)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">If present (on &#x60;issuer&#x60;), the value of the description property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <style>
+                       .hide {
+                         display: none;
+                       }
+                       .err {
+                         position: relative;
+                         z-index: 1;
+                         width: 50rem;
+                         right: calc(0% + 15rem);
+                         background: rgba(0, 0, 0, 0.0);
+                       }
+                       .no-space-around {
+                         margin: 0;
+                         padding: 0;
+                       }
+                       pre {
+                         width: 75%;
+                         white-space: pre-line;
+                         word-break: break-all;
+                         margin: 0;
+                         padding: 0;
+                         background: white;
+                       }
+                       code > span.hljs-attr {
+                         margin-left: 1rem;
+                       }
+                      </style>
+                      <span class="err hide no-space-around">
+                        <pre>{
+                      "name": "HTTPError",
+                      "message": "An unspecified error occurred.",
+                      "stack": "HTTPError: An unspecified error occurred.\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:83:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:380:9)"
+                    }</pre>
+                      </span>
+                    </div>
+                  </td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Credential Subject">
+          <h2>Credential Subject</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">A verifiable credential MUST have a credentialSubject property.</td>
@@ -1354,7 +2053,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:271:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:412:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1392,6 +2091,82 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Issuer">
+          <h2>Issuer</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">A verifiable credential MUST have an issuer property.</td>
@@ -1430,7 +2205,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:281:11)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:436:11)"
                     }</pre>
                       </span>
                     </div>
@@ -1538,167 +2313,91 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:290:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:446:9)"
                     }</pre>
                       </span>
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Validity Period">
+          <h2>Validity Period</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If present, the value of the &quot;issuer.name&quot; property MUST be a string or a language value object as described in 10.1 Language and Base Direction.</td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "HTTPError",
-                      "message": "An unspecified error occurred.",
-                      "stack": "HTTPError: An unspecified error occurred.\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:83:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:306:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
-                    }</pre>
-                      </span>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">If present, the value of the &quot;issuer.description&quot; property MUST be a string or a language value object as described in 10.1 Language and Base Direction.</td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <style>
-                       .hide {
-                         display: none;
-                       }
-                       .err {
-                         position: relative;
-                         z-index: 1;
-                         width: 50rem;
-                         right: calc(0% + 15rem);
-                         background: rgba(0, 0, 0, 0.0);
-                       }
-                       .no-space-around {
-                         margin: 0;
-                         padding: 0;
-                       }
-                       pre {
-                         width: 75%;
-                         white-space: pre-line;
-                         word-break: break-all;
-                         margin: 0;
-                         padding: 0;
-                         background: white;
-                       }
-                       code > span.hljs-attr {
-                         margin-left: 1rem;
-                       }
-                      </style>
-                      <span class="err hide no-space-around">
-                        <pre>{
-                      "name": "HTTPError",
-                      "message": "An unspecified error occurred.",
-                      "stack": "HTTPError: An unspecified error occurred.\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async zcapRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:83:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:322:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
-                    }</pre>
-                      </span>
-                    </div>
-                  </td>
-              </tr>
-              <tr>
-                <!--This is the name of the test-->
-                <td class="subtest">If present, the value of the validFrom property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential becomes valid, which could be a date and time in the future.</td>
+                <td class="subtest">If present, the value of the validFrom property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential becomes valid, which could be a date and time in the future or in the past.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
@@ -1767,7 +2466,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If present, the value of the validUntil property MUST be a string value of an [XMLSCHEMA11-2] combined date-time string representing the date and time the credential ceases to be valid, which could be a date and time in the past.</td>
+                <td class="subtest">If present, the value of the validUntil property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential ceases to be valid, which could be a date and time in the past or in the future.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
@@ -1803,7 +2502,7 @@
                         <pre>{
                       "name": "HTTPError",
                       "message": "Expired",
-                      "stack": "HTTPError: Expired\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:345:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "HTTPError: Expired\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:484:9)"
                     }</pre>
                       </span>
                     </div>
@@ -1979,6 +2678,82 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Securing Mechanisms">
+          <h2>Securing Mechanisms</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">A conforming document MUST be secured by at least one securing mechanism as described in Section 4.9 Securing Mechanisms.</td>
@@ -2186,9 +2961,85 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Status">
+          <h2>Status</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">(If a credentialStatus property is present), The type property is REQUIRED. It is used to express the type of status information expressed by the object. The related normative guidance in Section 4.4 Types MUST be followed.</td>
+                <td class="subtest">If present (credentialStatus.id), the normative guidance in Section 4.3 Identifiers MUST be followed.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
@@ -2224,7 +3075,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:442:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:644:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2264,7 +3115,7 @@
               </tr>
               <tr>
                 <!--This is the name of the test-->
-                <td class="subtest">If present (credentialStatus.id), the normative guidance in Section 4.3 Identifiers MUST be followed.</td>
+                <td class="subtest">(If a credentialStatus property is present), The type property is REQUIRED. It is used to express the type of status information expressed by the object. The related normative guidance in Section 4.4 Types MUST be followed.</td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
@@ -2300,7 +3151,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:456:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:652:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2376,7 +3227,7 @@
                         <pre>{
                       "name": "HTTPError",
                       "message": "Request failed with status code 400 Bad Request",
-                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async TestEndpoints.verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:47:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:469:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "HTTPError: Request failed with status code 400 Bad Request\n    at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)\n    at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)\n    at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:59:27)\n    at async TestEndpoints.verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:47:20)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:675:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2414,6 +3265,82 @@
                     </div>
                   </td>
               </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="Advanced">
+          <h2>Advanced</h2>
+          <style>
+            .no-wrap {
+              white-space: nowrap;
+            }
+            td.optional {
+              background-color: #b9b7b7;
+            }
+           .text-right {
+              text-align: right;
+            }
+           .text-left {
+              text-align: left;
+            }
+           .text-center, th.text-center {
+             text-align: center;
+           }
+           .qr-code {
+             margin-left: 25px;
+           }
+           .row {
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+           }
+           .small-font {
+             font-size: 0.75rem;
+           }
+           .highlight-on-hover:hover {
+             background-color: yellow;
+             cursor: default;
+           }
+           .highlight-on-hover:hover + .relative-pos > .err {
+             display: block;
+           }
+           pre, code.hljs {
+             overflow: auto;
+           }
+           .relative-pos {
+             position: relative;
+             width: 0.5rem;
+             height: 0.5rem;
+             z-index: 1;
+           }
+           .relative-pos:hover > .err {
+             display: block;
+           }
+          </style>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Implementer &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Test Name</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">apicatalog.com</th>
+                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
+                </thead>
+              <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">JSON-LD-based processors MUST produce an error when a JSON-LD context redefines any term in the active context.</td>
@@ -2590,7 +3517,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:513:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:731:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2629,7 +3556,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:513:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:731:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2673,7 +3600,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:520:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:738:9)"
                     }</pre>
                       </span>
                     </div>
@@ -2818,7 +3745,7 @@
                         <pre>{
                       "name": "AssertionError",
                       "message": "Missing expected rejection.",
-                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:548:9)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:45:9)"
+                      "stack": "AssertionError [ERR_ASSERTION]: Missing expected rejection.\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async Context.<anonymous> (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:766:9)"
                     }</pre>
                       </span>
                     </div>
