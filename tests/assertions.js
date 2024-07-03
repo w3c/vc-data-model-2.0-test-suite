@@ -15,7 +15,7 @@ export function shouldThrowInvalidInput({result, error}) {
   error.status.should.not.equal(401,
     'Should not get an Authorization Error.');
   error.status.should.be.oneOf([400, 422],
-    'Expected status code 400 (inalid input) or 422 (unprocessable entity).');
+    'Expected status code 400 (invalid input) or 422 (unprocessable entity).');
 }
 
 export function shouldReturnResult({result, error}) {
