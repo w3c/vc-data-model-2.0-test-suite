@@ -151,18 +151,14 @@ describe('Identifiers', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it('if present: "The id property MUST express an identifier ' +
-        'that others are expected to use when expressing statements about a ' +
-        'specific thing identified by that identifier."', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20id%20property%20MUST%20express%20an%20identifier%20that%20others%20are%20expected%20to%20use%20when%20expressing%20statements%20about%20a%20specific%20thing%20identified%20by%20that%20identifier.`;
+      it('If present, the value of the id property MUST be a single URL, ' +
+        'which MAY be dereferenceable.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.`;
         await endpoints.issue(require('./input/credential-id-other-ok.json'));
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-id-nonidentifier-fail.json')));
-      });
-      it('if present: "The id property MUST NOT have more than one ' +
-        'value."', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20id%20property%20MUST%20NOT%20have%20more%20than%20one%20value.`;
+
         await endpoints.issue(require(
           './input/credential-single-id-ok.json'));
         await endpoints.issue(require(
@@ -171,19 +167,12 @@ describe('Identifiers', function() {
           './input/credential-multi-id-fail.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-subject-multi-id-fail.json')));
-      });
-      it('if present: "The value of the id property MUST be a URL ' +
-        'which MAY be dereferenced."', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20value%20of%20the%20id%20property%20MUST%20be%20a%20URL%20which%20MAY%20be%20dereferenced.`;
+
         await assert.rejects(
           endpoints.issue(require('./input/credential-not-url-id-fail.json')));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-nonsingle-id-fail.json')));
       });
-      it('The value of the id property MUST be a single URL.',
-        async function() {
-          this.test.link = `https://w3c.github.io/vc-data-model/#identifiers:~:text=The%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL.`;
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-nonsingle-id-fail.json')));
-        });
     });
   }
 });
