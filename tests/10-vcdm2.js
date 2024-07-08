@@ -125,9 +125,10 @@ describe('Contexts', function() {
       });
       // TODO: Missing VP variation
       it('Verifiable credential @context: "Subsequent items in the ' +
-        'array MUST be composed of any combination of URLs and/or objects ' +
-        'where each is processable as a JSON-LD Context."', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20array%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
+        'ordered set MUST be composed of any combination of URLs and/or ' +
+        'objects where each is processable as a JSON-LD Context."',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
         await endpoints.issue(require(
           './input/credential-context-combo1-ok.json'));
         await endpoints.issue(require(
