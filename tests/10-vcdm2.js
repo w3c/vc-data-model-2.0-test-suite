@@ -160,18 +160,18 @@ describe('Identifiers', function() {
             './input/credential-id-nonidentifier-fail.json')));
 
         await endpoints.issue(require(
-          './input/credential-single-id-ok.json'));
+          './input/credential-id-single-ok.json'));
         await endpoints.issue(require(
-          './input/credential-subject-single-id-ok.json'));
+          './input/credential-id-subject-single-ok.json'));
         await assert.rejects(endpoints.issue(require(
-          './input/credential-multi-id-fail.json')));
+          './input/credential-id-multi-fail.json')));
         await assert.rejects(endpoints.issue(require(
-          './input/credential-subject-multi-id-fail.json')));
+          './input/credential-id-subject-multi-fail.json')));
 
         await assert.rejects(
-          endpoints.issue(require('./input/credential-not-url-id-fail.json')));
+          endpoints.issue(require('./input/credential-id-not-url-fail.json')));
         await assert.rejects(endpoints.issue(require(
-          './input/credential-nonsingle-id-fail.json')));
+          './input/credential-id-nonsingle-fail.json')));
       });
     });
   }
