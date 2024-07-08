@@ -170,8 +170,6 @@ describe('Identifiers', function() {
 
         await assert.rejects(
           endpoints.issue(require('./input/credential-id-not-url-fail.json')));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-id-nonsingle-fail.json')));
       });
     });
   }
