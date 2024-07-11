@@ -666,10 +666,11 @@ describe('Verifiable Presentations', function() {
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
-      it('In Verifiable Presentations, the verifiableCredential ' +
-        'property MAY be present. The value MUST be an array of one or more ' +
-        'verifiable credential graphs in a cryptographically verifiable ' +
-        'format.', async function() {
+      it('The verifiableCredential property MAY be present. The value MUST ' +
+        'be one or more verifiable credential and/or enveloped verifiable ' +
+        'credential objects (to be clear, the values MUST NOT be non-object ' +
+        'values such as numbers, strings, or URLs).', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text=The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(to%20be%20clear%2C%20the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).`;
         //FIXME remove the internal prove once VC-API presentation
         //creation is stabilized
         const presentationWithCredential = await endpoints.createVp({
