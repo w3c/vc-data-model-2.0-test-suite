@@ -941,22 +941,7 @@ describe('Advanced Concepts', function() {
         // can exist on an issued credential.
         await endpoints.issue(require('./input/credential-evidences-ok.json'));
       });
-      it.skip('(ZKP) The verifiable credential MUST contain a Proof, using ' +
-        'the proof property, so that the holder can derive a verifiable ' +
-        'presentation that reveals only the information than the holder ' +
-        'intends to reveal.', async function() {
-      });
-      it.skip('(ZKP) If a credential definition is being used, the ' +
-        'credential definition MUST be defined in the credentialSchema ' +
-        'property, so that it can be used by all parties to perform various ' +
-        'cryptographic operations in zero-knowledge.', async function() {
-      });
-      it.skip('(ZKP) Each derived verifiable credential within a ' +
-        'verifiable presentation MUST contain all information necessary ' +
-        'to verify the verifiable credential, either by including it ' +
-        'directly within the credential, or by referencing the necessary ' +
-        'information.', async function() {
-      });
+
       it.skip('A verifiable presentation MUST NOT leak information that ' +
         'would enable the verifier to correlate the holder across multiple ' +
         'verifiable presentations.', async function() {
