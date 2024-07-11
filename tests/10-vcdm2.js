@@ -745,6 +745,53 @@ describe('Verifiable Presentations', function() {
           // TODO: implement test
           this.skip();
         });
+
+      // 4.12.2 Enveloped Verifiable Presentations https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations
+      it('The @context property of the object MUST be present and include a ' +
+        'context, such as the base context for this specification, that ' +
+        'defines at least the id, type, and EnvelopedVerifiablePresentation ' +
+        'terms as defined by the base context provided by this specification',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
+        // TODO: implement test
+        this.skip();
+      });
+
+      it('The id value of the object MUST be a data: URL [RFC2397] that ' +
+        'expresses a secured verifiable presentation using an enveloping ' +
+        'securing mechanism, such as Securing Verifiable Credentials using ' +
+        'JOSE and COSE [VC-JOSE-COSE].', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20presentation%20using%20an%20enveloping%20securing%20mechanism%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
+        // TODO: implement test
+        this.skip();
+      });
+
+      it('The type value of the object MUST be ' +
+        'EnvelopedVerifiablePresentation.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiablePresentation.`;
+        // TODO: implement test
+        this.skip();
+      });
+
+      // 4.12.4 Presentations Including Holder Claims https://w3c.github.io/vc-data-model/#presentations-including-holder-claims
+      it('A verifiable presentation that includes a self-asserted verifiable ' +
+        'credential that is only secured using the same mechanism as the ' +
+        'verifiable presentation MUST include a holder property.',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=A%20verifiable%20presentation%20that%20includes%20a%20self%2Dasserted%20verifiable%20credential%20that%20is%20only%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%20MUST%20include%20a%20holder%20property.`;
+        // TODO: implement test
+        this.skip();
+      });
+
+      it('When a self-asserted verifiable credential is secured using the ' +
+        'same mechanism as the verifiable presentation, the value of the ' +
+        'issuer property of the verifiable credential MUST be identical to ' +
+        'the holder property of the verifiable presentation.',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.`;
+        // TODO: implement test
+        this.skip();
+      });
     });
   }
 });
