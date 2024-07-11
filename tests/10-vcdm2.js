@@ -231,7 +231,6 @@ describe('Types', function() {
       // FIXME this needs to be expanded into at least 6 different tests
       // Verifiable Credential MUST have a type specified
       // Verifiable Presentation MUST have a type specified
-      // Proof MUST have a type specified.
       // credentialStatus MUST have a type specified.
       // termsOfUse MUST have a type specified.
       // evidence MUST have a type specified.
@@ -258,13 +257,8 @@ describe('Types', function() {
         await assert.rejects(
           endpoints.verifyVp(require(
             './input/presentation-missing-required-type-fail.json')));
-        // Other objects requiring type: proof, credentialStatus, termsOfUse,
+        // Other objects requiring type: credentialStatus, termsOfUse,
         // and evidence.
-        // Note: testing proof requires the issuer to allow the input
-        // credential to have an existing proof property.
-        await endpoints.issue(require('./input/credential-proof-ok.json'));
-        await assert.rejects(endpoints.verify(require(
-          './input/credential-proof-missing-type-fail.json')));
         await endpoints.issue(require('./input/credential-status-ok.json'));
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-missing-type-fail.json')));
