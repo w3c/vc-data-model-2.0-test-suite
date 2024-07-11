@@ -873,7 +873,7 @@ describe('Data Schemas', function() {
 });
 
 // 5. Advanced Concepts https://w3c.github.io/vc-data-model/#advanced-concepts
-describe('Advanced', function() {
+describe('Advanced Concepts', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
@@ -881,16 +881,23 @@ describe('Advanced', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      // Advanced
+      // 5.2 Extensibility https://w3c.github.io/vc-data-model/#extensibility
+      // 5.2.1 Semantic Interoperability https://w3c.github.io/vc-data-model/#semantic-interoperability
       it('JSON-LD-based processors MUST produce an error when a ' +
         'JSON-LD context redefines any term in the active context.',
       async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=When%20processing%20the%20active%20context%20defined%20by%20the%20base%20JSON%2DLD%20Context%20document%20defined%20in%20this%20specification%2C%20compliant%20JSON%2DLD%2Dbased%20processors%20produce%20an%20error%20when%20a%20JSON%2DLD%20context%20redefines%20any%20term.`;
         // This depends on "@protected" (which is used for the base context).
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type-fail.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type2-fail.json')));
       });
+
+      // 5.3 Integrity of Related Resources https://w3c.github.io/vc-data-model/#integrity-of-related-resources
+      // TODO: describe and implement tests
+
+      // 5.4 Refreshing https://w3c.github.io/vc-data-model/#integrity-of-related-resources
       it.skip('The value of the refreshService property MUST be one or more ' +
         'refresh services that provides enough information to the ' +
         'recipient\'s software such that the recipient can refresh the ' +
@@ -898,16 +905,17 @@ describe('Advanced', function() {
         await endpoints.issue(require('./input/credential-refresh-ok.json'));
         await endpoints.issue(require('./input/credential-refreshs-ok.json'));
       });
-      it.skip('Each refreshService value MUST specify its type (for example, ' +
-        'ManualRefreshService2018) and its id, which is the URL of the ' +
-        'service.', async function() {
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-refresh-no-type-fail.json')));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-refresh-no-id-fail.json')));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-refresh-non-url-id-fail.json')));
-      });
+      it.skip('Each refreshService value MUST specify its type.',
+        async function() {
+          await assert.rejects(endpoints.issue(require(
+            './input/credential-refresh-no-type-fail.json')));
+          await assert.rejects(endpoints.issue(require(
+            './input/credential-refresh-no-id-fail.json')));
+          await assert.rejects(endpoints.issue(require(
+            './input/credential-refresh-non-url-id-fail.json')));
+        });
+
+      // 5.5 Terms of Use https://w3c.github.io/vc-data-model/#terms-of-use
       it('The value of the termsOfUse property MUST specify one or ' +
         'more terms of use policies under which the creator issued the ' +
         'credential or presentation.', async function() {
