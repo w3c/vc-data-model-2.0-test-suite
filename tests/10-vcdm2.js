@@ -929,11 +929,16 @@ describe('Advanced Concepts', function() {
         await endpoints.issue(require(
           './input/credential-termsofuse-id-ok.json'));
       });
+
+      // 5.6 Evidence https://w3c.github.io/vc-data-model/#evidence
       it('The value of the evidence property MUST be one or more ' +
         'evidence schemes providing enough information for a verifier to ' +
         'determine whether the evidence gathered by the issuer meets its ' +
         'confidence requirements for relying on the credential.',
       async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#evidence:~:text=The%20value%20of%20the%20evidence%20property%20MUST%20be%20one%20or%20more%20evidence%20schemes%20providing%20enough%20information%20for%20a%20verifier%20to%20determine%20whether%20the%20evidence%20gathered%20by%20the%20issuer%20meets%20its%20confidence%20requirements%20for%20relying%20on%20the%20credential.`;
+        // TODO: this does not test the statement above, only that `evidence`
+        // can exist on an issued credential.
         await endpoints.issue(require('./input/credential-evidences-ok.json'));
       });
       it.skip('(ZKP) The verifiable credential MUST contain a Proof, using ' +
