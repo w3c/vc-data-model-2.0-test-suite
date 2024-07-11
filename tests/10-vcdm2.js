@@ -38,6 +38,9 @@ function addPerTestMetadata() {
 }
 
 // 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
+// TODO: consolidate scattered MUST statements from this section that are
+// ...elsewhere in the test suite
+// TODO: add missing media type MUSTs
 describe('Basic Conformance', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
@@ -556,6 +559,7 @@ describe('Securing Mechanisms', function() {
 
       // as of VC 2.0 this means a proof must be attached to an issued VC
       // at least one proof must be on an issued VC
+      // TODO: maybe move this up to the 1.3 Conformance section it's from?
       it('A conforming document MUST be secured by at least one ' +
         'securing mechanism as described in Section 4.9 Securing Mechanisms.',
       async function() {
