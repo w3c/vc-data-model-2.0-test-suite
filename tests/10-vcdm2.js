@@ -941,6 +941,18 @@ describe('Advanced Concepts', function() {
         // can exist on an issued credential.
         await endpoints.issue(require('./input/credential-evidences-ok.json'));
       });
+
+      // 5.9 Reserved Extension Points https://w3c.github.io/vc-data-model/#reserved-extension-points
+      // TODO: desrible and implement tests
     });
   }
 });
+
+// 7.1 Verification https://w3c.github.io/vc-data-model/#verification
+// TODO: may need tests written, though only the response could be tested
+
+// 7.2 Problem Details https://w3c.github.io/vc-data-model/#verification
+// TODO: optionaly response format; but we could write tests for it
+
+// 11.1 Language and Base Direction https://w3c.github.io/vc-data-model/#language-and-base-direction
+// TODO: possibly already covered by Name and Description tests
