@@ -917,11 +917,13 @@ describe('Advanced Concepts', function() {
       it('The value of the termsOfUse property MUST specify one or ' +
         'more terms of use policies under which the creator issued the ' +
         'credential or presentation.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=The%20value%20of%20the%20termsOfUse%20property%20MUST%20specify%20one%20or%20more%20terms%20of%20use%20policies%20under%20which%20the%20creator%20issued%20the%20credential%20or%20presentation.`;
         await endpoints.issue(require(
           './input/credential-termsofuses-ok.json'));
       });
       it('Each termsOfUse value MUST specify its type, for example, ' +
         'IssuerPolicy, and MAY specify its instance id.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=Each%20termsOfUse%20value%20MUST%20specify%20its%20type%2C%20for%20example%2C%20IssuerPolicy%2C%20and%20MAY%20specify%20its%20instance%20id.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-termsofuse-no-type-fail.json')));
         await endpoints.issue(require(
