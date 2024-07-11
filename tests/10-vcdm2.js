@@ -898,14 +898,14 @@ describe('Advanced Concepts', function() {
       // TODO: describe and implement tests
 
       // 5.4 Refreshing https://w3c.github.io/vc-data-model/#integrity-of-related-resources
-      it.skip('The value of the refreshService property MUST be one or more ' +
+      it('The value of the refreshService property MUST be one or more ' +
         'refresh services that provides enough information to the ' +
         'recipient\'s software such that the recipient can refresh the ' +
         'verifiable credential.', async function() {
         await endpoints.issue(require('./input/credential-refresh-ok.json'));
         await endpoints.issue(require('./input/credential-refreshs-ok.json'));
       });
-      it.skip('Each refreshService value MUST specify its type.',
+      it('Each refreshService value MUST specify its type.',
         async function() {
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')));
