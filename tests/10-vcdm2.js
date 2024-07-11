@@ -666,6 +666,14 @@ describe('Verifiable Presentations', function() {
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
+
+      it('If [the `id` field is] present, the normative guidance in Section ' +
+        '4.3 Identifiers MUST be followed.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type`;
+        // TODO: implement test
+        this.skip();
+      });
+
       it('The verifiableCredential property MAY be present. The value MUST ' +
         'be one or more verifiable credential and/or enveloped verifiable ' +
         'credential objects (to be clear, the values MUST NOT be non-object ' +
