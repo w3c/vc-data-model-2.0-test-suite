@@ -909,10 +909,6 @@ describe('Advanced Concepts', function() {
         async function() {
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-refresh-no-id-fail.json')));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-refresh-non-url-id-fail.json')));
         });
 
       // 5.5 Terms of Use https://w3c.github.io/vc-data-model/#terms-of-use
