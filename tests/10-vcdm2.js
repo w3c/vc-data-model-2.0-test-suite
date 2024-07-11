@@ -674,6 +674,15 @@ describe('Verifiable Presentations', function() {
         this.skip();
       });
 
+      it('The type property MUST be present. One value of this property MUST ' +
+        'be VerifiablePresentation, but additional types MAY be included.' +
+        'The related normative guidance in Section 4.4 Types MUST be followed.',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.`;
+        // TODO: implement test
+        this.skip();
+      });
+
       it('The verifiableCredential property MAY be present. The value MUST ' +
         'be one or more verifiable credential and/or enveloped verifiable ' +
         'credential objects (to be clear, the values MUST NOT be non-object ' +
