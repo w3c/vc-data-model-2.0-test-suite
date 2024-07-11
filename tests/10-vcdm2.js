@@ -189,22 +189,22 @@ describe('Types', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it('Verifiable credentials MUST have a type property.',
-        async function() {
-          this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20have%20a%20type%20property.`;
-          await assert.rejects(
-            endpoints.issue(require('./input/credential-no-type-fail.json')));
-        });
-      it('Verifiable presentations MUST have a type property.',
-        async function() {
-          this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20have%20a%20type%20property.`;
-          await assert.rejects(endpoints.verifyVp(require(
-            './input/presentation-no-type-fail.json')));
-        });
-      it('The value of the type property MUST be, or map to (through ' +
-        'interpretation of the @context property), one or more URLs.',
+      it('Verifiable credentials MUST contain a type property with an ' +
+        'associated value', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
+        await assert.rejects(
+          endpoints.issue(require('./input/credential-no-type-fail.json')));
+      });
+      it('Verifiable presentations MUST contain a type property with an ' +
+        'associated value', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
+        await assert.rejects(endpoints.verifyVp(require(
+          './input/presentation-no-type-fail.json')));
+      });
+      it('The value of the type property MUST be one or more terms and/or ' +
+        'absolute URL strings.',
       async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20type%20property%20MUST%20be%2C%20or%20map%20to%20(through%20interpretation%20of%20the%20%40context%20property)%2C%20one%20or%20more%20URLs.`;
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20type%20property%20MUST%20be%20one%20or%20more%20terms%20and/or%20absolute%20URL%20strings.`;
         // type is URL: OK
         await endpoints.issue(require('./input/credential-type-url-ok.json'));
         // type mapping to URL: OK
@@ -217,16 +217,17 @@ describe('Types', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-unmapped-fail.json')));
       });
-      it('type property: "If more than one URL is provided, the URLs ' +
-        'MUST be interpreted as an unordered set."', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20more%20than%20one%20URL%20is%20provided%2C%20the%20URLs%20MUST%20be%20interpreted%20as%20an%20unordered%20set.`;
-        //issue VC with multiple urls in type property
-        await endpoints.issue(require(
-          './input/credential-type-urls-order-1-ok.json'));
-        //issue another VC with same urls in a different order
-        await endpoints.issue(require(
-          './input/credential-type-urls-order-2-ok.json'));
-      });
+      it('If more than one value is provided, the order does not matter.',
+        async function() {
+          this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20more%20than%20one%20value%20is%20provided%2C%20the%20order%20does%20not%20matter.`;
+          //issue VC with multiple urls in type property
+          await endpoints.issue(require(
+            './input/credential-type-urls-order-1-ok.json'));
+          //issue another VC with same urls in a different order
+          await endpoints.issue(require(
+            './input/credential-type-urls-order-2-ok.json'));
+        }
+      );
       // FIXME this needs to be expanded into at least 6 different tests
       // Verifiable Credential MUST have a type specified
       // Verifiable Presentation MUST have a type specified
@@ -234,46 +235,47 @@ describe('Types', function() {
       // credentialStatus MUST have a type specified.
       // termsOfUse MUST have a type specified.
       // evidence MUST have a type specified.
-      it('list: "objects that MUST have a type specified."',
-        async function() {
-          this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.`;
-          // (Verifiable) credential requires type VerifiableCredential
-          // (Verifiable) presentation requires type VerifiablePresentation
-          // Additional (more specific) types for these are optional.
-          // Missing type property is tested separately.
-          await endpoints.issue(require(
-            './input/credential-optional-type-ok.json'));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-missing-required-type-fail.json')));
-          const presentationOptionalType = await endpoints.createVp({
-            presentation: require('./input/presentation-optional-type-ok.json'),
-            options: createOptions
-          });
-          await endpoints.verifyVp(
-            presentationOptionalType,
-            verifyPresentationOptions
-          );
-          await assert.rejects(
-            endpoints.verifyVp(require(
-              './input/presentation-missing-required-type-fail.json')));
-          // Other objects requiring type: proof, credentialStatus, termsOfUse,
-          // and evidence.
-          // Note: testing proof requires the issuer to allow the input
-          // credential to have an existing proof property.
-          await endpoints.issue(require('./input/credential-proof-ok.json'));
-          await assert.rejects(endpoints.verify(require(
-            './input/credential-proof-missing-type-fail.json')));
-          await endpoints.issue(require('./input/credential-status-ok.json'));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-status-missing-type-fail.json')));
-          await endpoints.issue(require(
-            './input/credential-termsofuse-ok.json'));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-termsofuse-missing-type-fail.json')));
-          await endpoints.issue(require('./input/credential-evidence-ok.json'));
-          await assert.rejects(endpoints.issue(require(
-            './input/credential-evidence-missing-type-fail.json')));
+      it('VerifiableCredential, VerifiablePresentation, credentialStatus, ' +
+        'termsOfUse, and evidence are "objects that MUST have a type ' +
+        'specified."', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.`;
+        // (Verifiable) credential requires type VerifiableCredential
+        // (Verifiable) presentation requires type VerifiablePresentation
+        // Additional (more specific) types for these are optional.
+        // Missing type property is tested separately.
+        await endpoints.issue(require(
+          './input/credential-optional-type-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-missing-required-type-fail.json')));
+        const presentationOptionalType = await endpoints.createVp({
+          presentation: require('./input/presentation-optional-type-ok.json'),
+          options: createOptions
         });
+        await endpoints.verifyVp(
+          presentationOptionalType,
+          verifyPresentationOptions
+        );
+        await assert.rejects(
+          endpoints.verifyVp(require(
+            './input/presentation-missing-required-type-fail.json')));
+        // Other objects requiring type: proof, credentialStatus, termsOfUse,
+        // and evidence.
+        // Note: testing proof requires the issuer to allow the input
+        // credential to have an existing proof property.
+        await endpoints.issue(require('./input/credential-proof-ok.json'));
+        await assert.rejects(endpoints.verify(require(
+          './input/credential-proof-missing-type-fail.json')));
+        await endpoints.issue(require('./input/credential-status-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-status-missing-type-fail.json')));
+        await endpoints.issue(require(
+          './input/credential-termsofuse-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-termsofuse-missing-type-fail.json')));
+        await endpoints.issue(require('./input/credential-evidence-ok.json'));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-evidence-missing-type-fail.json')));
+      });
       it.skip('All credentials, presentations, and encapsulated objects ' +
         'SHOULD specify, or be associated with, additional more narrow types ' +
         '(like ExampleDegreeCredential, for example) so software systems ' +
