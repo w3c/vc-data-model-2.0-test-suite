@@ -646,7 +646,26 @@ describe('Status', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=Status%20schemes%20MUST%20NOT%20be%20implemented%20in%20ways%20that%20enable%20tracking%20of%20individuals`;
         // not testable with automation
       });
+    });
+  }
+});
 
+// 4.11 Verifiable Credentials https://w3c.github.io/vc-data-model/#verifiable-credentials
+// There are no actual MUSTs here, just references to other sections.
+
+// 4.12 Verifiable Presentations https://w3c.github.io/vc-data-model/#verifiable-presentations
+describe('Verifiable Presentations', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+    const createOptions = {challenge};
+    const verifyPresentationOptions = {
+      checks: ['proof'],
+      challenge
+    };
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
       it('In Verifiable Presentations, the verifiableCredential ' +
         'property MAY be present. The value MUST be an array of one or more ' +
         'verifiable credential graphs in a cryptographically verifiable ' +
