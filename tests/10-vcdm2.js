@@ -718,8 +718,19 @@ describe('Verifiable Presentations', function() {
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-derived-vc-missing-required-type-fail.json')));
       });
+    });
+  }
+});
 
-      // 4.12.1 Enveloped Verifiable Credentials https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials
+// 4.12.1 Enveloped Verifiable Credentials https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials
+describe('VP - Enveloped Verifiable Credentials', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
+
       it('The @context property of the object MUST be present and include a ' +
         'context, such as the base context for this specification, that ' +
         'defines at least the id, type, and EnvelopedVerifiableCredential ' +
@@ -745,8 +756,19 @@ describe('Verifiable Presentations', function() {
           // TODO: implement test
           this.skip();
         });
+    });
+  }
+});
 
-      // 4.12.2 Enveloped Verifiable Presentations https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations
+// 4.12.2 Enveloped Verifiable Presentations https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations
+describe('VP - Enveloped Verifiable Presentations', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
+
       it('The @context property of the object MUST be present and include a ' +
         'context, such as the base context for this specification, that ' +
         'defines at least the id, type, and EnvelopedVerifiablePresentation ' +
@@ -772,8 +794,19 @@ describe('Verifiable Presentations', function() {
         // TODO: implement test
         this.skip();
       });
+    });
+  }
+});
 
-      // 4.12.4 Presentations Including Holder Claims https://w3c.github.io/vc-data-model/#presentations-including-holder-claims
+// 4.12.4 Presentations Including Holder Claims https://w3c.github.io/vc-data-model/#presentations-including-holder-claims
+describe('VP - Presentations Including Holder Claims', function() {
+  setupMatrix.call(this);
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
+
+    describe(name, function() {
+      beforeEach(addPerTestMetadata);
+
       it('A verifiable presentation that includes a self-asserted verifiable ' +
         'credential that is only secured using the same mechanism as the ' +
         'verifiable presentation MUST include a holder property.',
