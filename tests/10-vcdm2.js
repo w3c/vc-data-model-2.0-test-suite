@@ -941,17 +941,6 @@ describe('Advanced Concepts', function() {
         // can exist on an issued credential.
         await endpoints.issue(require('./input/credential-evidences-ok.json'));
       });
-
-      it.skip('A verifiable presentation MUST NOT leak information that ' +
-        'would enable the verifier to correlate the holder across multiple ' +
-        'verifiable presentations.', async function() {
-      });
-      // Syntaxes
-      // FIXME this is a good statement, but not in the spec
-      it.skip('Data model mapping property values to JSON types ' +
-        '(not numeric/boolean/sequence/ordered-set/set/empty): "Other values ' +
-        'MUST be represented as a String type."', async function() {
-      });
     });
   }
 });
