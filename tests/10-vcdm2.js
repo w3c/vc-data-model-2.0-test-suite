@@ -902,11 +902,13 @@ describe('Advanced Concepts', function() {
         'refresh services that provides enough information to the ' +
         'recipient\'s software such that the recipient can refresh the ' +
         'verifiable credential.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=The%20value%20of%20the%20refreshService%20property%20MUST%20be%20one%20or%20more%20refresh%20services%20that%20provides%20enough%20information%20to%20the%20recipient%27s%20software%20such%20that%20the%20recipient%20can%20refresh%20the%20verifiable%20credential.`;
         await endpoints.issue(require('./input/credential-refresh-ok.json'));
         await endpoints.issue(require('./input/credential-refreshs-ok.json'));
       });
       it('Each refreshService value MUST specify its type.',
         async function() {
+          this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=Each%20refreshService%20value%20MUST%20specify%20its%20type.`;
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')));
         });
