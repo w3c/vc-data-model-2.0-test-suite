@@ -419,12 +419,17 @@ describe('Issuer', function() {
         await endpoints.issue(require(
           './input/credential-issuer-object-ok.json'));
         await endpoints.issue(require('./input/credential-issuer-url-ok.json'));
+        await assert.rejects(
+          endpoints.issue(
+            require('./input/credential-issuer-nonurl-fail.json')
+          ),
+          'Failed to reject a numeric issuer identifier.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-nonurl-fail.json')));
+          './input/credential-issuer-object-no-id-fail.json')),
+        'Failed to reject an issuer with an empty object as the value.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-object-no-id-fail.json')));
-        await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-object-id-not-url-fail.json')));
+          './input/credential-issuer-object-id-not-url-fail.json')),
+        'Failed to reject a issuer object containing a numeric identifier.');
       });
     });
   }
