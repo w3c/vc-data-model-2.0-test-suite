@@ -276,14 +276,6 @@ describe('Types', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-evidence-missing-type-fail.json')));
       });
-      it.skip('All credentials, presentations, and encapsulated objects ' +
-        'SHOULD specify, or be associated with, additional more narrow types ' +
-        '(like ExampleDegreeCredential, for example) so software systems ' +
-        'can more easily detect and process this additional information.',
-      async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=All%20credentials%2C%20presentations%2C%20and%20encapsulated%20objects%20SHOULD%20specify%2C%20or%20be%20associated%20with%2C%20additional%20more%20narrow%20types%20(like%20ExampleDegreeCredential%2C%20for%20example)%20so%20software%20systems%20can%20more%20easily%20detect%20and%20process%20this%20additional%20information.`;
-        // skipping because SHOULD (not MUST)
-      });
     });
   }
 });
