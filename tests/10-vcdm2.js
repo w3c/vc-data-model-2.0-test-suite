@@ -193,13 +193,13 @@ describe('Types', function() {
       beforeEach(addPerTestMetadata);
 
       it('Verifiable credentials MUST contain a type property with an ' +
-        'associated value', async function() {
+        'associated value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(
           endpoints.issue(require('./input/credential-no-type-fail.json')));
       });
       it('Verifiable presentations MUST contain a type property with an ' +
-        'associated value', async function() {
+        'associated value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-no-type-fail.json')));
@@ -772,7 +772,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
       it('The @context property of the object MUST be present and include a ' +
         'context, such as the base context for this specification, that ' +
         'defines at least the id, type, and EnvelopedVerifiablePresentation ' +
-        'terms as defined by the base context provided by this specification',
+        'terms as defined by the base context provided by this specification.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
         // TODO: implement test
