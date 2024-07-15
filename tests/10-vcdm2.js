@@ -220,17 +220,16 @@ describe('Types', function() {
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-unmapped-fail.json')));
       });
-      it('If more than one value is provided, the order does not matter.',
-        async function() {
-          this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20more%20than%20one%20value%20is%20provided%2C%20the%20order%20does%20not%20matter.`;
-          //issue VC with multiple urls in type property
-          await endpoints.issue(require(
-            './input/credential-type-urls-order-1-ok.json'));
-          //issue another VC with same urls in a different order
-          await endpoints.issue(require(
-            './input/credential-type-urls-order-2-ok.json'));
-        }
-      );
+      it('If more than one (type) value is provided, the order does not ' +
+        'matter.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20more%20than%20one%20value%20is%20provided%2C%20the%20order%20does%20not%20matter.`;
+        //issue VC with multiple urls in type property
+        await endpoints.issue(require(
+          './input/credential-type-urls-order-1-ok.json'));
+        //issue another VC with same urls in a different order
+        await endpoints.issue(require(
+          './input/credential-type-urls-order-2-ok.json'));
+      });
       // FIXME this needs to be expanded into at least 6 different tests
       // Verifiable Credential MUST have a type specified
       // Verifiable Presentation MUST have a type specified
