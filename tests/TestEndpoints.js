@@ -16,15 +16,12 @@ export class TestEndpoints {
   constructor({implementation, tag}) {
     this.implementation = implementation;
     this.tag = tag;
-    try {this.verifier = implementation.verifiers.find(
-      verifier => verifier.tags.has(tag));
-    } catch {this.verifier = null;}
-    try {this.issuer = implementation.issuers.find(
-      issuer => issuer.tags.has(tag));
-    } catch {this.issuer = null;}
-    try {this.vpVerifier = implementation.vpVerifiers.find(
-        vpVerifier => vpVerifier.tags.has(tag));
-    } catch {this.vpVerifier = null;}
+    this.verifier = implementation.verifiers?.find(
+      verifier => verifier.tags.has(tag)) || null;
+    this.issuer = implementation.issuers?.find(
+      issuer => issuer.tags.has(tag)) || null;
+    this.vpVerifier = implementation.vpVerifiers?.find(
+      vpVerifier => vpVerifier.tags.has(tag)) || null;
   }
   async issue(credential) {
     const {issuer} = this;
