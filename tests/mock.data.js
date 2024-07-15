@@ -13,7 +13,7 @@ const validVc = require('./validVc.json');
 export const createRequestBody = ({issuer, vc = validVc}) => {
   const {settings: {id, options}} = issuer;
   const credential = klona(vc);
-  if (typeof credential.issuer === 'object') {
+  if(typeof credential.issuer === 'object') {
     credential.issuer.id = credential.issuer?.id || id;
   } else {
     credential.issuer = credential?.issuer || id;
