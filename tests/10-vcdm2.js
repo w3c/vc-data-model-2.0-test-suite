@@ -272,6 +272,12 @@ describe('Types', function() {
         await endpoints.issue(require('./input/credential-evidence-ok.json'));
         await assert.rejects(endpoints.issue(require(
           './input/credential-evidence-missing-type-fail.json')));
+        // also test refreshService and credentialSchema
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-refresh-no-type-fail.json')));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-schema-no-type-fail.json')),
+        'Failed to reject credentialSchema without a `type`.');
       });
     });
   }
