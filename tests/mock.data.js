@@ -14,9 +14,13 @@ export const createRequestBody = ({issuer, vc = validVc}) => {
   const {settings: {id, options}} = issuer;
   const credential = klona(vc);
   if(typeof credential.issuer === 'object') {
-    credential.issuer.id = credential.issuer?.id || id;
+    if('id' in credential.issuer && credential.issuer.id === null) {} else {
+      credential.issuer.id = credential.issuer?.id || id;
+    }
   } else {
-    credential.issuer = credential?.issuer || id;
+    if('issuer' in credential && credential.issuer === null) {} else {
+      credential.issuer = credential?.issuer || id;
+    }
   }
   return {
     credential,

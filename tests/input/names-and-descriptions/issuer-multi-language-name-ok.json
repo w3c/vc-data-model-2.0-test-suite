@@ -6,7 +6,6 @@
     "VerifiableCredential"
   ],
   "issuer": {
-    "id": "did:issuer:dog",
     "name": [{
       "@value":"Dog",
       "@language": "en"
