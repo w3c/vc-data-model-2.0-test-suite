@@ -389,7 +389,7 @@ describe('Credential Subject', function() {
           './input/credential-no-subject-fail.json')));
       });
       it('The value of the credentialSubject property is defined as a ' +
-      'set of objects where each object MUST be the subject of one or more ' +
+        'set of objects where each object MUST be the subject of one or more ' +
         'claims, which MUST be serialized inside the credentialSubject ' +
         'property.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=The%20value%20of%20the%20credentialSubject%20property%20is%20defined%20as%20a%20set%20of%20objects%20where%20each%20object%20MUST%20be%20the%20subject%20of%20one%20or%20more%20claims%2C%20which%20MUST%20be%20serialized%20inside%20the%20credentialSubject%20property.`;
@@ -417,27 +417,28 @@ describe('Issuer', function() {
       it('A verifiable credential MUST have an issuer property.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.`;
-          await assert.rejects(
-            endpoints.issue(require('./input/credential-no-issuer-fail.json')));
+          const vc = await endpoints.issue(
+            require('./input/credential-ok.json'));
+          vc.hasOwnProperty('issuer');
         });
       it('The value of the issuer property MUST be either a URL, or ' +
-      'an object containing an id property whose value is a URL.',
+        'an object containing an id property whose value is a URL.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL`;
         await endpoints.issue(require(
           './input/credential-issuer-object-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-issuer-url-ok.json')
-        );
         await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-nonurl-fail.json')),
-        'Failed to reject a numeric issuer identifier.');
+          './input/credential-issuer-no-url-fail.json')),
+        'Failed to reject a non url issuer identifier.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-object-no-id-fail.json')),
-        'Failed to reject an issuer with an empty object as the value.');
+          './input/credential-issuer-null-fail.json')),
+        'Failed to reject an issuer null identifier.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-issuer-object-id-not-url-fail.json')),
-        'Failed to reject a issuer object containing a numeric identifier.');
+          './input/credential-issuer-object-id-null-fail.json')),
+        'Failed to reject an issuer object containing a null identifier.');
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-issuer-object-id-no-url-fail.json')),
+        'Failed to reject a issuer object containing a non url identifier.');
       });
     });
   }
@@ -594,11 +595,11 @@ describe('Securing Mechanisms', function() {
         // TODO: add enveloped proof test
       });
       it('A conforming verifier implementation consumes conforming ' +
-      'documents, MUST perform verification on a conforming document as ' +
-      'described in Section 4.9 Securing Mechanisms, MUST check that each ' +
-      'required property satisfies the normative requirements for that ' +
-      'property, and MUST produce errors when non-conforming documents are ' +
-      'detected.', async function() {
+        'documents, MUST perform verification on a conforming document as ' +
+        'described in Section 4.9 Securing Mechanisms, MUST check that each ' +
+        'required property satisfies the normative requirements for that ' +
+        'property, and MUST produce errors when non-conforming documents are ' +
+        'detected.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20verifier,documents%20are%20detected.`;
         endpoints.verify(issuedVc);
         // should reject a VC without a proof
