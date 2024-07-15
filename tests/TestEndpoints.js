@@ -25,13 +25,13 @@ export class TestEndpoints {
           this.verifier = implementation.verifiers.find(
               verifier => verifier.tags.has(tag));
       } catch {
-          this.vpVerifier = null;
+          this.verifier = null;
       }
       try {
           this.issuer = implementation.issuers.find(
               issuer => issuer.tags.has(tag));
       } catch {
-          this.vpVerifier = null;
+          this.issuer = null;
       }
       try {
           this.vpVerifier = implementation.vpVerifiers.find(
@@ -77,6 +77,9 @@ export class TestEndpoints {
           verifiablePresentation: vp,
           options
       };
+      if (this.vpVerifier === null) {
+        return {};
+      }
       const result = await post(this.vpVerifier, body);
       if (result?.errors?.length) {
           throw result.errors[0];
