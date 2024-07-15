@@ -44,7 +44,7 @@ export class TestEndpoints {
   }
   async verifyVp(vp, options = {checks: []}) {
     if (this.vpVerifier === null) {
-      return {};
+      return null;
     }
     const body = {
       verifiablePresentation: vp,
