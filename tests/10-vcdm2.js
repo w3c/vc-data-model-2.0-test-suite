@@ -60,8 +60,10 @@ describe('Basic Conformance', function() {
         const doc = {
           type: ['NonconformingDocument']
         };
-        await assert.rejects(endpoints.verify(doc));
-        await assert.rejects(endpoints.verifyVp(doc));
+        await assert.rejects(endpoints.verify(doc),
+          'Failed to reject malformed VC.');
+        await assert.rejects(endpoints.verifyVp(doc),
+          'Failed to reject malformed VP.');
       });
       // TODO re-review whether all broad MUST statements in this intro section
       // are adequately covered by other tests, or if they need unique tests.
