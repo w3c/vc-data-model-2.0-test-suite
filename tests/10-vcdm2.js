@@ -87,10 +87,12 @@ describe('Contexts', function() {
           // positive @context test
           const vc = await endpoints.issue(require(
             './input/credential-ok.json'));
-          vc.should.have.property('@context');
+          vc.should.have.property('@context',
+            'Failed to respond with a VC with `@context` intact.');
           // negative @context test
           await assert.rejects(endpoints.issue(
-            require('./input/credential-no-context-fail.json')));
+            require('./input/credential-no-context-fail.json')),
+          'Failed to reject a VC withtout an `@context`.');
         });
       it('Verifiable presentations MUST include a @context property.',
         async function() {
@@ -99,9 +101,11 @@ describe('Contexts', function() {
             presentation: require('./input/presentation-ok.json'),
             options: createOptions
           });
-          vp.should.have.property('@context');
+          vp.should.have.property('@context',
+            'Failed to respond with a VP with `@context` intact.');
           await assert.rejects(endpoints.verifyVp(
-            require('./input/presentation-no-context-fail.json')));
+            require('./input/presentation-no-context-fail.json')),
+          'Failed to reject a VP withtout an `@context`.');
         });
       it('Verifiable credentials: The value of the @context property ' +
         'MUST be an ordered set where the first item is a URL with the value ' +
@@ -109,11 +113,15 @@ describe('Contexts', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
         //positive issue test
         const vc = await endpoints.issue(require('./input/credential-ok.json'));
-        assert(Array.isArray(vc['@context']));
-        assert.strictEqual(vc['@context'][0], baseContextUrl);
+        assert(Array.isArray(vc['@context']),
+          'Failed to support `@context` as an Array.');
+        assert.strictEqual(vc['@context'][0], baseContextUrl,
+          'Failed to keep `@context` order intact.'
+        );
         // negative issue test
         await assert.rejects(endpoints.issue(
-          require('./input/credential-missing-base-context-fail.json')));
+          require('./input/credential-missing-base-context-fail.json')),
+        'Failed to reject a VC that lacked the VC base context URL.');
       });
       it('Verifiable presentations: The value of the @context ' +
         'property MUST be an ordered set where the first item is a URL with ' +
@@ -123,10 +131,13 @@ describe('Contexts', function() {
           presentation: require('./input/presentation-ok.json'),
           options: createOptions
         });
-        assert(Array.isArray(vp['@context']));
-        assert.strictEqual(vp['@context'][0], baseContextUrl);
+        assert(Array.isArray(vp['@context']),
+          'Failed to support `@context` as an Array.');
+        assert.strictEqual(vp['@context'][0], baseContextUrl,
+          'Failed to keep `@context` order intact.');
         await assert.rejects(endpoints.verifyVp(
-          require('./input/presentation-missing-base-context-fail.json')));
+          require('./input/presentation-missing-base-context-fail.json')),
+        'Failed to reject a VP that lacked the VC base context URL.');
       });
       // TODO: Missing VP variation
       it('Verifiable credential @context: "Subsequent items in the ' +
@@ -135,13 +146,18 @@ describe('Contexts', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
         await endpoints.issue(require(
-          './input/credential-context-combo1-ok.json'));
+          './input/credential-context-combo1-ok.json'),
+        'Failed to support multiple `@context` URLs.');
         await endpoints.issue(require(
-          './input/credential-context-combo2-ok.json'));
+          './input/credential-context-combo2-ok.json'),
+        'Failed to support objects in the `@context` Array.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-context-combo3-fail.json')));
+          './input/credential-context-combo3-fail.json')),
+        'Failed to reject a VC with an invalid `@context` URL.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-context-combo4-fail.json')));
+          './input/credential-context-combo4-fail.json')),
+        'Failed to reject a VC with an unsupported `@context` value type ' +
+        '(number).');
       });
     });
   }
