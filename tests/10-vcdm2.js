@@ -238,8 +238,8 @@ describe('Types', function() {
       // termsOfUse MUST have a type specified.
       // evidence MUST have a type specified.
       it('VerifiableCredential, VerifiablePresentation, credentialStatus, ' +
-        'termsOfUse, and evidence are "objects that MUST have a type ' +
-        'specified."', async function() {
+        'termsOfUse, refreshService, credentialSchema, and evidence are ' +
+        '"objects that MUST have a type specified."', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.`;
         // (Verifiable) credential requires type VerifiableCredential
         // (Verifiable) presentation requires type VerifiablePresentation
