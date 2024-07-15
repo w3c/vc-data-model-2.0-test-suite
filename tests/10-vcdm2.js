@@ -726,8 +726,7 @@ describe('Verifiable Presentations', function() {
 // 4.12.1 Enveloped Verifiable Credentials https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials
 describe('VP - Enveloped Verifiable Credentials', function() {
   setupMatrix.call(this);
-  for(const [name, implementation] of match) {
-    const endpoints = new TestEndpoints({implementation, tag});
+  for(const [name] of match) {
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
@@ -764,8 +763,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
 // 4.12.2 Enveloped Verifiable Presentations https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations
 describe('VP - Enveloped Verifiable Presentations', function() {
   setupMatrix.call(this);
-  for(const [name, implementation] of match) {
-    const endpoints = new TestEndpoints({implementation, tag});
+  for(const [name] of match) {
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
@@ -802,8 +800,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
 // 4.12.4 Presentations Including Holder Claims https://w3c.github.io/vc-data-model/#presentations-including-holder-claims
 describe('VP - Presentations Including Holder Claims', function() {
   setupMatrix.call(this);
-  for(const [name, implementation] of match) {
-    const endpoints = new TestEndpoints({implementation, tag});
+  for(const [name] of match) {
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
