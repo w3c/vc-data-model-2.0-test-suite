@@ -37,10 +37,10 @@ function addPerTestMetadata() {
   };
 }
 
-// 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
-// TODO: consolidate scattered MUST statements from this section that are
-// ...elsewhere in the test suite
-// TODO: add missing media type MUSTs
+// // 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
+// // TODO: consolidate scattered MUST statements from this section that are
+// // ...elsewhere in the test suite
+// // TODO: add missing media type MUSTs
 describe('Basic Conformance', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
@@ -426,18 +426,18 @@ describe('Issuer', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL`;
         await endpoints.issue(require(
           './input/credential-issuer-object-ok.json'));
-        await endpoints.issue(require('./input/credential-issuer-url-ok.json'));
-        await assert.rejects(
-          endpoints.issue(
-            require('./input/credential-issuer-nonurl-fail.json')
-          ),
+        await endpoints.issue(require(
+          './input/credential-issuer-url-ok.json')
+        );
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-issuer-nonurl-fail.json')),
           'Failed to reject a numeric issuer identifier.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-no-id-fail.json')),
-        'Failed to reject an issuer with an empty object as the value.');
+          'Failed to reject an issuer with an empty object as the value.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-not-url-fail.json')),
-        'Failed to reject a issuer object containing a numeric identifier.');
+          'Failed to reject a issuer object containing a numeric identifier.');
       });
     });
   }
