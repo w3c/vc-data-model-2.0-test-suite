@@ -88,11 +88,11 @@ describe('Contexts', function() {
           const vc = await endpoints.issue(require(
             './input/credential-ok.json'));
           vc.should.have.property('@context',
-            'Failed to respond with a VC with `@context` intact.');
+            'Failed to respond with a VC with intact `@context`.');
           // negative @context test
           await assert.rejects(endpoints.issue(
             require('./input/credential-no-context-fail.json')),
-          'Failed to reject a VC withtout an `@context`.');
+          'Failed to reject a VC without an `@context`.');
         });
       it('Verifiable presentations MUST include a @context property.',
         async function() {
@@ -102,10 +102,10 @@ describe('Contexts', function() {
             options: createOptions
           });
           vp.should.have.property('@context',
-            'Failed to respond with a VP with `@context` intact.');
+            'Failed to respond with a VP with intact `@context`.');
           await assert.rejects(endpoints.verifyVp(
             require('./input/presentation-no-context-fail.json')),
-          'Failed to reject a VP withtout an `@context`.');
+          'Failed to reject a VP without an `@context`.');
         });
       it('Verifiable credentials: The value of the @context property ' +
         'MUST be an ordered set where the first item is a URL with the value ' +
