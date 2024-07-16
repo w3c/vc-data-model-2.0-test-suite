@@ -87,7 +87,7 @@ describe('Contexts', function() {
           // positive @context test
           const vc = await endpoints.issue(require(
             './input/credential-ok.json'));
-          vc.should.have.property('@context',
+          vc.should.have.property('@context').to.be.an('array',
             'Failed to respond with a VC with intact `@context`.');
           // negative @context test
           await assert.rejects(endpoints.issue(
@@ -101,7 +101,7 @@ describe('Contexts', function() {
             presentation: require('./input/presentation-ok.json'),
             options: createOptions
           });
-          vp.should.have.property('@context',
+          vp.should.have.property('@context').to.be.an('array',
             'Failed to respond with a VP with intact `@context`.');
           await assert.rejects(endpoints.verifyVp(
             require('./input/presentation-no-context-fail.json')),
@@ -145,12 +145,12 @@ describe('Contexts', function() {
         'objects where each is processable as a JSON-LD Context."',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
-        await endpoints.issue(require(
+        await assert.doesNotReject(endpoints.issue(require(
           './input/credential-context-combo1-ok.json'),
-        'Failed to support multiple `@context` URLs.');
-        await endpoints.issue(require(
+        'Failed to support multiple `@context` URLs.'));
+        await assert.doesNotReject(endpoints.issue(require(
           './input/credential-context-combo2-ok.json'),
-        'Failed to support objects in the `@context` Array.');
+        'Failed to support objects in the `@context` Array.'));
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo3-fail.json')),
         'Failed to reject a VC with an invalid `@context` URL.');
@@ -175,15 +175,16 @@ describe('Identifiers', function() {
       it('If present, the value of the id property MUST be a single URL, ' +
         'which MAY be dereferenceable.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.`;
-        await endpoints.issue(require('./input/credential-id-other-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-id-other-ok.json')));
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-id-nonidentifier-fail.json')));
 
-        await endpoints.issue(require(
-          './input/credential-id-single-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-id-subject-single-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-id-single-ok.json')));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-id-subject-single-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-id-multi-fail.json')));
         await assert.rejects(endpoints.issue(require(
@@ -227,10 +228,11 @@ describe('Types', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20type%20property%20MUST%20be%20one%20or%20more%20terms%20and/or%20absolute%20URL%20strings.`;
         // type is URL: OK
-        await endpoints.issue(require('./input/credential-type-url-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-type-url-ok.json')));
         // type mapping to URL: OK
-        await endpoints.issue(require(
-          './input/credential-type-mapped-url-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-type-mapped-url-ok.json')));
         // type mapped not to URL: fail
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-mapped-nonurl-fail.json')));
@@ -242,11 +244,11 @@ describe('Types', function() {
         'matter.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20more%20than%20one%20value%20is%20provided%2C%20the%20order%20does%20not%20matter.`;
         //issue VC with multiple urls in type property
-        await endpoints.issue(require(
-          './input/credential-type-urls-order-1-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-type-urls-order-1-ok.json')));
         //issue another VC with same urls in a different order
-        await endpoints.issue(require(
-          './input/credential-type-urls-order-2-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-type-urls-order-2-ok.json')));
       });
       // FIXME this needs to be expanded into at least 6 different tests
       // Verifiable Credential MUST have a type specified
@@ -262,31 +264,33 @@ describe('Types', function() {
         // (Verifiable) presentation requires type VerifiablePresentation
         // Additional (more specific) types for these are optional.
         // Missing type property is tested separately.
-        await endpoints.issue(require(
-          './input/credential-optional-type-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-optional-type-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-missing-required-type-fail.json')));
         const presentationOptionalType = await endpoints.createVp({
           presentation: require('./input/presentation-optional-type-ok.json'),
           options: createOptions
         });
-        await endpoints.verifyVp(
+        await assert.doesNotReject(endpoints.verifyVp(
           presentationOptionalType,
           verifyPresentationOptions
-        );
+        ));
         await assert.rejects(
           endpoints.verifyVp(require(
             './input/presentation-missing-required-type-fail.json')));
         // Other objects requiring type: credentialStatus, termsOfUse,
         // and evidence.
-        await endpoints.issue(require('./input/credential-status-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-status-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-missing-type-fail.json')));
-        await endpoints.issue(require(
-          './input/credential-termsofuse-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-termsofuse-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-termsofuse-missing-type-fail.json')));
-        await endpoints.issue(require('./input/credential-evidence-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-evidence-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-evidence-missing-type-fail.json')));
         // also test refreshService and credentialSchema
@@ -319,16 +323,16 @@ describe('Names and Descriptions', function() {
         'language value object as described in 11.1 Language and Base ' +
         'Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
-        await endpoints.issue(require(
-          `${fixturePath}/credential-name-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/credential-name-optional-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/credential-name-language-en-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/credential-name-language-direction-en-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/credential-multi-language-name-ok.json`));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-name-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-name-optional-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-name-language-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-name-language-direction-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-multi-language-name-ok.json`)));
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/credential-name-extra-prop-en-fail.json`)));
       });
@@ -336,17 +340,17 @@ describe('Names and Descriptions', function() {
         'or a language value object as described in 11.1 Language and Base ' +
         'Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
-        await endpoints.issue(require(
-          `${fixturePath}/credential-description-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/credential-description-optional-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/credential-description-language-en-ok.json`));
-        await endpoints.issue(require(
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-description-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-description-optional-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-description-language-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
           // eslint-disable-next-line max-len
-          `${fixturePath}/credential-description-language-direction-en-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/credential-multi-language-description-ok.json`));
+          `${fixturePath}/credential-description-language-direction-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/credential-multi-language-description-ok.json`)));
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/credential-description-extra-prop-en-fail.json`)));
       });
@@ -356,16 +360,16 @@ describe('Names and Descriptions', function() {
         'string or a language value object as described in 11.1 Language and ' +
         'Base Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-name-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-name-optional-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-name-language-en-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-name-language-direction-en-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-multi-language-name-ok.json`));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-name-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-name-optional-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-name-language-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-name-language-direction-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-multi-language-name-ok.json`)));
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/issuer-name-extra-prop-en-fail.json`)));
       });
@@ -373,17 +377,17 @@ describe('Names and Descriptions', function() {
         'MUST be a string or a language value object as described in 11.1 ' +
         'Language and Base Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-description-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-description-optional-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-description-language-en-ok.json`));
-        await endpoints.issue(require(
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-description-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-description-optional-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-description-language-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
           // eslint-disable-next-line max-len
-          `${fixturePath}/issuer-description-language-direction-en-ok.json`));
-        await endpoints.issue(require(
-          `${fixturePath}/issuer-multi-language-description-ok.json`));
+          `${fixturePath}/issuer-description-language-direction-en-ok.json`)));
+        await assert.doesNotReject(endpoints.issue(require(
+          `${fixturePath}/issuer-multi-language-description-ok.json`)));
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/issuer-description-extra-prop-en-fail.json`)));
       });
@@ -413,8 +417,8 @@ describe('Credential Subject', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=The%20value%20of%20the%20credentialSubject%20property%20is%20defined%20as%20a%20set%20of%20objects%20where%20each%20object%20MUST%20be%20the%20subject%20of%20one%20or%20more%20claims%2C%20which%20MUST%20be%20serialized%20inside%20the%20credentialSubject%20property.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-subject-no-claims-fail.json')));
-        await endpoints.issue(require(
-          './input/credential-subject-multiple-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-subject-multiple-ok.json')));
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-subject-multiple-empty-fail.json')));
@@ -443,8 +447,8 @@ describe('Issuer', function() {
         'an object containing an id property whose value is a URL.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL`;
-        await endpoints.issue(require(
-          './input/credential-issuer-object-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-issuer-object-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-no-url-fail.json')),
         'Failed to reject an issuer identifier that was not a URL.');
@@ -476,10 +480,10 @@ describe('Validity Period', function() {
         'and time the credential becomes valid, which could be a date and ' +
         'time in the future or in the past.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validFrom%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20becomes%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20future%20or%20in%20the%20past.`;
-        await endpoints.issue(require(
-          './input/credential-validfrom-ms-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-validfrom-tz-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-validfrom-ms-ok.json')));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-validfrom-tz-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-validfrom-invalid-fail.json')));
         // TODO: add validFrom in the future test vector.
@@ -489,11 +493,12 @@ describe('Validity Period', function() {
         'and time the credential ceases to be valid, which could be a date ' +
         'and time in the past or in the future.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validUntil%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20ceases%20to%20be%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20past%20or%20in%20the%20future`;
-        await endpoints.issue(require('./input/credential-validuntil-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-validuntil-ms-ok.json'));
-        await endpoints.issue(require(
-          './input/credential-validuntil-tz-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-validuntil-ok.json')));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-validuntil-ms-ok.json')));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-validuntil-tz-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-validuntil-invalid-fail.json')));
       });
@@ -505,7 +510,7 @@ describe('Validity Period', function() {
           './input/credential-validUntil-validFrom-ok.json');
         positiveTest.validFrom = createTimeStamp({skew: -2});
         positiveTest.validUntil = createTimeStamp({skew: 2});
-        await endpoints.issue(positiveTest);
+        await assert.doesNotReject(endpoints.issue(positiveTest));
         const negativeTest = require(
           './input/credential-validUntil-validFrom-fail.json');
         negativeTest.validFrom = createTimeStamp({skew: 2});
@@ -530,7 +535,7 @@ describe('Validity Period', function() {
           './input/credential-validUntil-validFrom-ok.json');
         positiveTest.validFrom = createTimeStamp({skew: -2});
         positiveTest.validUntil = createTimeStamp({skew: 2});
-        await endpoints.issue(positiveTest);
+        await assert.doesNotReject(endpoints.issue(positiveTest));
         const negativeTest = require(
           './input/credential-validUntil-validFrom-fail.json');
         negativeTest.validFrom = createTimeStamp({skew: 2});
@@ -641,8 +646,8 @@ describe('Status', function() {
         'in Section 4.3 Identifiers MUST be followed.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type`;
         // id is optional
-        await endpoints.issue(require(
-          './input/credential-status-missing-id-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-status-missing-id-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-multiple-id-fail.json')));
         await assert.rejects(endpoints.issue(require(
@@ -657,8 +662,8 @@ describe('Status', function() {
           './input/credential-status-missing-type-fail.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-type-nonurl-fail.json')));
-        await endpoints.issue(require(
-          './input/credential-status-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-status-ok.json')));
       });
       it.skip('Status schemes MUST NOT be implemented in ways that enable ' +
         'tracking of individuals', async function() {
@@ -859,8 +864,10 @@ describe('Data Schemas', function() {
         'determine whether the provided data conforms to the provided ' +
         'schema(s).', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=The%20value%20of%20the%20credentialSchema%20property%20MUST%20be%20one%20or%20more%20data%20schemas%20that%20provide%20verifiers%20with%20enough%20information%20to%20determine%20whether%20the%20provided%20data%20conforms%20to%20the%20provided%20schema(s).`;
-        await endpoints.issue(require('./input/credential-schema-ok.json'));
-        await endpoints.issue(require('./input/credential-schemas-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-schema-ok.json')));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-schemas-ok.json')));
       });
 
       it('Each credentialSchema MUST specify its type (for example, ' +
@@ -882,7 +889,8 @@ describe('Data Schemas', function() {
         'to the processing rules outlined by each associated ' +
         'credentialSchema type property.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=If%20multiple%20schemas%20are%20present%2C%20validity%20is%20determined%20according%20to%20the%20processing%20rules%20outlined%20by%20each%20associated%20credentialSchema%20type%20property.`;
-        await endpoints.issue(require('./input/credential-schemas-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-schemas-ok.json')));
       });
     });
   }
@@ -919,8 +927,10 @@ describe('Advanced Concepts', function() {
         'recipient\'s software such that the recipient can refresh the ' +
         'verifiable credential.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=The%20value%20of%20the%20refreshService%20property%20MUST%20be%20one%20or%20more%20refresh%20services%20that%20provides%20enough%20information%20to%20the%20recipient%27s%20software%20such%20that%20the%20recipient%20can%20refresh%20the%20verifiable%20credential.`;
-        await endpoints.issue(require('./input/credential-refresh-ok.json'));
-        await endpoints.issue(require('./input/credential-refreshs-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-refresh-ok.json')));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-refreshs-ok.json')));
       });
       it('Each refreshService value MUST specify its type.',
         async function() {
@@ -934,16 +944,16 @@ describe('Advanced Concepts', function() {
         'more terms of use policies under which the creator issued the ' +
         'credential or presentation.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=The%20value%20of%20the%20termsOfUse%20property%20MUST%20specify%20one%20or%20more%20terms%20of%20use%20policies%20under%20which%20the%20creator%20issued%20the%20credential%20or%20presentation.`;
-        await endpoints.issue(require(
-          './input/credential-termsofuses-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-termsofuses-ok.json')));
       });
       it('Each termsOfUse value MUST specify its type, for example, ' +
         'IssuerPolicy, and MAY specify its instance id.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=Each%20termsOfUse%20value%20MUST%20specify%20its%20type%2C%20for%20example%2C%20IssuerPolicy%2C%20and%20MAY%20specify%20its%20instance%20id.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-termsofuse-no-type-fail.json')));
-        await endpoints.issue(require(
-          './input/credential-termsofuse-id-ok.json'));
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-termsofuse-id-ok.json')));
       });
 
       // 5.6 Evidence https://w3c.github.io/vc-data-model/#evidence
@@ -955,7 +965,8 @@ describe('Advanced Concepts', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#evidence:~:text=The%20value%20of%20the%20evidence%20property%20MUST%20be%20one%20or%20more%20evidence%20schemes%20providing%20enough%20information%20for%20a%20verifier%20to%20determine%20whether%20the%20evidence%20gathered%20by%20the%20issuer%20meets%20its%20confidence%20requirements%20for%20relying%20on%20the%20credential.`;
         // TODO: this does not test the statement above, only that `evidence`
         // can exist on an issued credential.
-        await endpoints.issue(require('./input/credential-evidences-ok.json'));
+        await assert.doesNotReject(endpoints.issue(
+          require('./input/credential-evidences-ok.json')));
       });
 
       // 5.9 Reserved Extension Points https://w3c.github.io/vc-data-model/#reserved-extension-points
