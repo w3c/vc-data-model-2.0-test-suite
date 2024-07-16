@@ -14,6 +14,10 @@ module.exports = {
     verifiers: [{
       id: 'did:myMethod:implementation:verifier:id',
       endpoint: `${baseUrl}/credentials/verify`
+    }],
+    vpVerifiers: [{
+      id: 'did:myMethod:implementation:verifier:id',
+      endpoint: `${baseUrl}/presentations/verify`
     }]
   }]
 };
