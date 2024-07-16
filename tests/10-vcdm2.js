@@ -432,7 +432,7 @@ describe('Issuer', function() {
         'Failed to reject an issuer identifier that was not a URL.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-null-fail.json')),
-        'Failed to reject an issuer null identifier.');
+        'Failed to reject a null issuer identifier.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-null-fail.json')),
         'Failed to reject an issuer object containing a null identifier.');
