@@ -222,13 +222,15 @@ describe('Types', function() {
         'associated value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(
-          endpoints.issue(require('./input/credential-no-type-fail.json')));
+          endpoints.issue(require('./input/credential-no-type-fail.json')),
+          'Failed to reject a VC without a type.');
       });
       it('Verifiable presentations MUST contain a type property with an ' +
         'associated value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(endpoints.verifyVp(require(
-          './input/presentation-no-type-fail.json')));
+          './input/presentation-no-type-fail.json')),
+        'Failed to reject a VP without a type.');
       });
       it('The value of the type property MUST be one or more terms and/or ' +
         'absolute URL strings.',
@@ -236,26 +238,35 @@ describe('Types', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20type%20property%20MUST%20be%20one%20or%20more%20terms%20and/or%20absolute%20URL%20strings.`;
         // type is URL: OK
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-type-url-ok.json')));
+          require('./input/credential-type-url-ok.json')),
+        'Failed to accept a VC with an additional type as a URL.');
         // type mapping to URL: OK
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-type-mapped-url-ok.json')));
+          './input/credential-type-mapped-url-ok.json')),
+        'Failed to accept a VC with an additional type defined in the \
+        `@context`.');
         // type mapped not to URL: fail
         await assert.rejects(endpoints.issue(require(
-          './input/credential-type-mapped-nonurl-fail.json')));
+          './input/credential-type-mapped-nonurl-fail.json')),
+        'Failed to reject a VC with type mapped to an invalid URL.');
         // type not mapped: fail
         await assert.rejects(endpoints.issue(require(
-          './input/credential-type-unmapped-fail.json')));
+          './input/credential-type-unmapped-fail.json')),
+        'Failed to reject a VC with an unmapped (via `@context`) type.');
       });
       it('If more than one (type) value is provided, the order does not ' +
         'matter.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20more%20than%20one%20value%20is%20provided%2C%20the%20order%20does%20not%20matter.`;
         //issue VC with multiple urls in type property
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-type-urls-order-1-ok.json')));
+          './input/credential-type-urls-order-1-ok.json')),
+        'Failed to accept a VC with different type array ordering (VC type \
+        last).');
         //issue another VC with same urls in a different order
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-type-urls-order-2-ok.json')));
+          './input/credential-type-urls-order-2-ok.json')),
+        'Failed to accept a VC with different type array ordering (VC type \
+        middle).');
       });
       // FIXME this needs to be expanded into at least 6 different tests
       // Verifiable Credential MUST have a type specified
@@ -272,9 +283,11 @@ describe('Types', function() {
         // Additional (more specific) types for these are optional.
         // Missing type property is tested separately.
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-optional-type-ok.json')));
+          './input/credential-optional-type-ok.json')),
+        'Failed to accept a VC with additional type.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-missing-required-type-fail.json')));
+          './input/credential-missing-required-type-fail.json')),
+        'Failed to reject a VC missing the `VerifiableCredential` type.');
         const presentationOptionalType = await endpoints.createVp({
           presentation: require('./input/presentation-optional-type-ok.json'),
           options: createOptions
@@ -282,30 +295,40 @@ describe('Types', function() {
         await assert.doesNotReject(endpoints.verifyVp(
           presentationOptionalType,
           verifyPresentationOptions
-        ));
+        ), 'Failed to accept VP with `@context` mapped type.');
         await assert.rejects(
           endpoints.verifyVp(require(
-            './input/presentation-missing-required-type-fail.json')));
+            './input/presentation-missing-required-type-fail.json')),
+          'Failed to reject VP missing `VerifiableCredential` type.');
         // Other objects requiring type: credentialStatus, termsOfUse,
         // and evidence.
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-status-ok.json')));
+          require('./input/credential-status-ok.json')),
+        'Failed to accept a VC with `credentialStatus` with a `type`.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-status-missing-type-fail.json')));
+          './input/credential-status-missing-type-fail.json')),
+        'Failed to reject a VC with `credentialStatus` without a `type`.');
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-termsofuse-ok.json')));
+          './input/credential-termsofuse-ok.json')),
+        'Failed to accept a VC with `termsOfUse` with a `type`.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-termsofuse-missing-type-fail.json')));
+          './input/credential-termsofuse-missing-type-fail.json')),
+        'Failed to reject a VC with `termsOfUse` without a `type`.');
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-evidence-ok.json')));
+          require('./input/credential-evidence-ok.json')),
+        'Failed to accept a VC with `evidence` with a `type`.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-evidence-missing-type-fail.json')));
+          './input/credential-evidence-missing-type-fail.json')),
+        'Failed to reject a VC with `evidence` without a `type`.');
         // also test refreshService and credentialSchema
+        // TODO: add positive `refreshService` check
         await assert.rejects(endpoints.issue(require(
-          './input/credential-refresh-no-type-fail.json')));
+          './input/credential-refresh-no-type-fail.json')),
+        'Failed to reject a VC with `refreshService` without a `type`.');
+        // TODO: add positive `credentialSchema` check
         await assert.rejects(endpoints.issue(require(
           './input/credential-schema-no-type-fail.json')),
-        'Failed to reject credentialSchema without a `type`.');
+        'Failed to reject `credentialSchema` without a `type`.');
       });
     });
   }
