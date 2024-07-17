@@ -176,22 +176,29 @@ describe('Identifiers', function() {
         'which MAY be dereferenceable.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.`;
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-id-other-ok.json')));
+          require('./input/credential-id-other-ok.json')),
+        'Failed to accept a VC with a DID credentialSubject identifier.');
         await assert.rejects(
           endpoints.issue(require(
-            './input/credential-id-nonidentifier-fail.json')));
+            './input/credential-id-nonidentifier-fail.json')),
+          'Failed to reject a credential with a `null` identifier.');
 
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-id-single-ok.json')));
+          './input/credential-id-single-ok.json')),
+        'Failed to accept a VC with a valid identifier.');
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-id-subject-single-ok.json')));
+          './input/credential-id-subject-single-ok.json')),
+        'Failed to accept a VC with a valid credentialSubject identifier');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-id-multi-fail.json')));
+          './input/credential-id-multi-fail.json')),
+        'Failed to reject a VC with multiple `id` values.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-id-subject-multi-fail.json')));
+          './input/credential-id-subject-multi-fail.json')),
+        'Failed to reject a VC with multiple credentialSubject identifiers.');
 
         await assert.rejects(
-          endpoints.issue(require('./input/credential-id-not-url-fail.json')));
+          endpoints.issue(require('./input/credential-id-not-url-fail.json')),
+          'Failed to reject a credential with an invalid identifier.');
       });
     });
   }
