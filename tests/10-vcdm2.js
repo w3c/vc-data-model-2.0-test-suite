@@ -438,7 +438,7 @@ describe('Issuer', function() {
         'Failed to reject an issuer object containing a null identifier.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-no-url-fail.json')),
-        'Failed to reject an issuer object containing a non URL identifier.');
+        'Failed to reject an issuer object containing a non-URL identifier.');
       });
     });
   }
