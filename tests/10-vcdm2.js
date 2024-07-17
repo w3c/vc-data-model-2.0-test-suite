@@ -438,7 +438,8 @@ describe('Credential Subject', function() {
         'property.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=A%20verifiable%20credential%20MUST%20have%20a%20credentialSubject%20property.`;
         await assert.rejects(endpoints.issue(require(
-          './input/credential-no-subject-fail.json')));
+          './input/credential-no-subject-fail.json')),
+        'Failed to rejet a VC without a `credentialSubject`.');
       });
       it('The value of the credentialSubject property is defined as a ' +
         'set of objects where each object MUST be the subject of one or more ' +
@@ -446,12 +447,18 @@ describe('Credential Subject', function() {
         'property.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=The%20value%20of%20the%20credentialSubject%20property%20is%20defined%20as%20a%20set%20of%20objects%20where%20each%20object%20MUST%20be%20the%20subject%20of%20one%20or%20more%20claims%2C%20which%20MUST%20be%20serialized%20inside%20the%20credentialSubject%20property.`;
         await assert.rejects(endpoints.issue(require(
-          './input/credential-subject-no-claims-fail.json')));
+          './input/credential-subject-no-claims-fail.json')),
+        'Failed to reject a VC with an empty `credentialSubject`.');
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-subject-multiple-ok.json')));
+          './input/credential-subject-multiple-ok.json')),
+        'Failed to accept a VC with multiple `credentialSubject`s.');
+        // TODO: reconsider whether an empty object is a violation; as long as
+        // at least one claim object is included...is there any harm in throwing
+        // out the empties?
         await assert.rejects(
           endpoints.issue(require(
-            './input/credential-subject-multiple-empty-fail.json')));
+            './input/credential-subject-multiple-empty-fail.json')),
+          'Failed to reject VC containing an empty `credentialSubject`.');
       });
     });
   }
