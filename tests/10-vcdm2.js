@@ -645,6 +645,7 @@ describe('Securing Mechanisms', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.9%20Securing%20Mechanisms.`;
         // embedded proof test
+        // TODO: confirm these `exist` tests actually work; chaining seems off
         should.exist(issuedVc, `Expected ${name} to issue a VC.`);
         should.exist(issuedVc.proof, 'Expected VC to have a proof.');
         if(Array.isArray(issuedVc.proof)) {
@@ -653,7 +654,7 @@ describe('Securing Mechanisms', function() {
         } else {
           issuedVc.proof.should.be.an(
             'object',
-            'expected proof to be an object.'
+            'Expected proof to be an object.'
           );
         }
         // TODO: add enveloped proof test
@@ -675,9 +676,14 @@ describe('Securing Mechanisms', function() {
         'property, and MUST produce errors when non-conforming documents are ' +
         'detected.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20verifier,documents%20are%20detected.`;
+        // TODO: this verify is neither awaited nor tested; so just expecting
+        // it to throw? We should be more explicit.
         endpoints.verify(issuedVc);
         // should reject a VC without a proof
-        assert.rejects(endpoints.verify(require('./input/credential-ok.json')));
+        // TODO: VCs are not required to have a `proof` for verification; they
+        // may be "enveloped" instead.
+        assert.rejects(endpoints.verify(require('./input/credential-ok.json')),
+          'Failed to reject a VC missing a `proof`.');
         // TODO: add enveloped proof test
       });
     });
