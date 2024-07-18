@@ -518,11 +518,15 @@ describe('Validity Period', function() {
         'time in the future or in the past.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validFrom%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20becomes%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20future%20or%20in%20the%20past.`;
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-validfrom-ms-ok.json')));
+          './input/credential-validfrom-ms-ok.json')),
+        'Failed to accept a VC with a valid `validFrom` date-time.');
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-validfrom-tz-ok.json')));
+          './input/credential-validfrom-tz-ok.json')),
+        'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-validfrom-invalid-fail.json')));
+          './input/credential-validfrom-invalid-fail.json')),
+        'Failed to reject a VC using an incorrect `validFrom` date-time \
+        format.');
         // TODO: add validFrom in the future test vector.
       });
       it('If present, the value of the validUntil property MUST be an ' +
@@ -531,13 +535,18 @@ describe('Validity Period', function() {
         'and time in the past or in the future.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20present%2C%20the%20value%20of%20the%20validUntil%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20ceases%20to%20be%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20past%20or%20in%20the%20future`;
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-validuntil-ok.json')));
+          require('./input/credential-validuntil-ok.json')),
+        'Failed to accept a VC with a valid `validUntil` date-time.');
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-validuntil-ms-ok.json')));
+          './input/credential-validuntil-ms-ok.json')),
+        'Failed to accept a VC using miliseconds in `validUntil`.');
         await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-validuntil-tz-ok.json')));
+          './input/credential-validuntil-tz-ok.json')),
+        'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-validuntil-invalid-fail.json')));
+          './input/credential-validuntil-invalid-fail.json')),
+        'Failed to reject a VC using an inccorect `validUntil` date-time \
+        format.');
       });
       it('If a validUntil value also exists, the validFrom value MUST ' +
         'express a datetime that is temporally the same or earlier than the ' +
@@ -547,7 +556,8 @@ describe('Validity Period', function() {
           './input/credential-validUntil-validFrom-ok.json');
         positiveTest.validFrom = createTimeStamp({skew: -2});
         positiveTest.validUntil = createTimeStamp({skew: 2});
-        await assert.doesNotReject(endpoints.issue(positiveTest));
+        await assert.doesNotReject(endpoints.issue(positiveTest),
+          'Failed to accept a VC with a `validUntil` after its `validFrom`.');
         const negativeTest = require(
           './input/credential-validUntil-validFrom-fail.json');
         negativeTest.validFrom = createTimeStamp({skew: 2});
@@ -562,8 +572,10 @@ describe('Validity Period', function() {
         if(error) {
           return;
         }
-        assert.rejects(endpoints.verify(result));
+        assert.rejects(endpoints.verify(result),
+          'Failed to reject a VC with a `validUntil` before its `validFrom`.');
       });
+      // TODO: the following tests are identical to the above; refactor.
       it('If a validFrom value also exists, the validUntil value MUST ' +
         'express a datetime that is temporally the same or later than the ' +
         'datetime expressed by the validFrom value.', async function() {
@@ -572,7 +584,8 @@ describe('Validity Period', function() {
           './input/credential-validUntil-validFrom-ok.json');
         positiveTest.validFrom = createTimeStamp({skew: -2});
         positiveTest.validUntil = createTimeStamp({skew: 2});
-        await assert.doesNotReject(endpoints.issue(positiveTest));
+        await assert.doesNotReject(endpoints.issue(positiveTest),
+          'Failed to accept a VC with a `validUntil` after its `validFrom`.');
         const negativeTest = require(
           './input/credential-validUntil-validFrom-fail.json');
         negativeTest.validFrom = createTimeStamp({skew: 2});
@@ -587,7 +600,8 @@ describe('Validity Period', function() {
         if(error) {
           return;
         }
-        assert.rejects(endpoints.verify(result));
+        assert.rejects(endpoints.verify(result),
+          'Failed to reject a VC with a `validUntil` before its `validFrom`.');
       });
       // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
       it.skip('Time values that are incorrectly serialized without an offset ' +
