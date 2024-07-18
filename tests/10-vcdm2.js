@@ -801,9 +801,11 @@ describe('Verifiable Presentations', function() {
           verifyPresentationOptions
         );
         await assert.rejects(endpoints.verifyVp(require(
-          './input/presentation-vc-missing-required-type-fail.json')));
+          './input/presentation-vc-missing-required-type-fail.json')),
+        'Failed to reject a VP containing a VC with no `type` value.');
         await assert.rejects(endpoints.verifyVp(require(
-          './input/presentation-derived-vc-missing-required-type-fail.json')));
+          './input/presentation-derived-vc-missing-required-type-fail.json')),
+        'Failed to reject a derived VP with a missing `type`.');
       });
     });
   }
