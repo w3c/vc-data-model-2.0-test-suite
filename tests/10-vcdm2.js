@@ -572,7 +572,7 @@ describe('Validity Period', function() {
         if(error) {
           return;
         }
-        assert.rejects(endpoints.verify(result),
+        await assert.rejects(endpoints.verify(result),
           'Failed to reject a VC with a `validUntil` before its `validFrom`.');
       });
       // TODO: the following tests are identical to the above; refactor.
@@ -600,7 +600,7 @@ describe('Validity Period', function() {
         if(error) {
           return;
         }
-        assert.rejects(endpoints.verify(result),
+        await assert.rejects(endpoints.verify(result),
           'Failed to reject a VC with a `validUntil` before its `validFrom`.');
       });
       // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
