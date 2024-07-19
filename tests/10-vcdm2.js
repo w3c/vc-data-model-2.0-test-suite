@@ -1002,6 +1002,11 @@ describe('Advanced Concepts', function() {
         'recipient\'s software such that the recipient can refresh the ' +
         'verifiable credential.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=The%20value%20of%20the%20refreshService%20property%20MUST%20be%20one%20or%20more%20refresh%20services%20that%20provides%20enough%20information%20to%20the%20recipient%27s%20software%20such%20that%20the%20recipient%20can%20refresh%20the%20verifiable%20credential.`;
+        // TODO: given that these `refreshService` values are fake...they do
+        // not test the "provides enough information to...refresh"
+        // TODO: these can only be meaningfully tested on issued credentials
+        // that provide *real* `refreshService` values (which will require
+        // opt-in in test suite implementation configuration)
         await assert.doesNotReject(endpoints.issue(
           require('./input/credential-refresh-ok.json')));
         await assert.doesNotReject(endpoints.issue(
@@ -1010,6 +1015,9 @@ describe('Advanced Concepts', function() {
       it('Each refreshService value MUST specify its type.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=Each%20refreshService%20value%20MUST%20specify%20its%20type.`;
+          // TODO: like the above, this does not test the statement, only that
+          // an issuer will fail on someone else's provided and broken
+          // `refreshService` value
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')));
         });
