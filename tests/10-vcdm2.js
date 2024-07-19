@@ -976,15 +976,21 @@ describe('Advanced Concepts', function() {
 
       // 5.2 Extensibility https://w3c.github.io/vc-data-model/#extensibility
       // 5.2.1 Semantic Interoperability https://w3c.github.io/vc-data-model/#semantic-interoperability
+      // TODO: allow implementations to opt-in as "JSON-LD-based"?
       it('JSON-LD-based processors MUST produce an error when a ' +
         'JSON-LD context redefines any term in the active context.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=When%20processing%20the%20active%20context%20defined%20by%20the%20base%20JSON%2DLD%20Context%20document%20defined%20in%20this%20specification%2C%20compliant%20JSON%2DLD%2Dbased%20processors%20produce%20an%20error%20when%20a%20JSON%2DLD%20context%20redefines%20any%20term.`;
         // This depends on "@protected" (which is used for the base context).
+        // FIXME: the fixture below would also fail for missing
+        // `credentialSchema.type`
         await assert.rejects(endpoints.issue(require(
-          './input/credential-redef-type-fail.json')));
+          './input/credential-redef-type-fail.json')),
+        'Failed to reject a VC which redefines the `VerifiableCredential` \
+        type.');
         await assert.rejects(endpoints.issue(require(
-          './input/credential-redef-type2-fail.json')));
+          './input/credential-redef-type2-fail.json')),
+        'Failed to reject a VC containing a redefiled protected term.');
       });
 
       // 5.3 Integrity of Related Resources https://w3c.github.io/vc-data-model/#integrity-of-related-resources
