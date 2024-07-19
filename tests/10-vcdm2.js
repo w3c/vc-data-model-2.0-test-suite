@@ -930,9 +930,11 @@ describe('Data Schemas', function() {
         'schema(s).', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=The%20value%20of%20the%20credentialSchema%20property%20MUST%20be%20one%20or%20more%20data%20schemas%20that%20provide%20verifiers%20with%20enough%20information%20to%20determine%20whether%20the%20provided%20data%20conforms%20to%20the%20provided%20schema(s).`;
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-schema-ok.json')));
+          require('./input/credential-schema-ok.json')),
+        'Failed to accept a VC containing a valid `credentialSchema`.');
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-schemas-ok.json')));
+          require('./input/credential-schemas-ok.json')),
+        'Failed to accept a VC containing multiple valid `credentialSchema`.');
       });
 
       it('Each credentialSchema MUST specify its type (for example, ' +
@@ -954,8 +956,10 @@ describe('Data Schemas', function() {
         'to the processing rules outlined by each associated ' +
         'credentialSchema type property.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=If%20multiple%20schemas%20are%20present%2C%20validity%20is%20determined%20according%20to%20the%20processing%20rules%20outlined%20by%20each%20associated%20credentialSchema%20type%20property.`;
+        // TODO: this doesn't really test the above statement...
         await assert.doesNotReject(endpoints.issue(
-          require('./input/credential-schemas-ok.json')));
+          require('./input/credential-schemas-ok.json')),
+        'Failed to accept a VC containing multiple valid `credentialSchema`.');
       });
     });
   }
