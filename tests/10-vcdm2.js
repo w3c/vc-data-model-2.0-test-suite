@@ -1023,6 +1023,8 @@ describe('Advanced Concepts', function() {
         });
 
       // 5.5 Terms of Use https://w3c.github.io/vc-data-model/#terms-of-use
+      // TODO: remove these tests if Terms of Use section removed from spec
+      // https://github.com/w3c/vc-data-model/pull/1498#issuecomment-2234223927
       it('The value of the termsOfUse property MUST specify one or ' +
         'more terms of use policies under which the creator issued the ' +
         'credential or presentation.', async function() {
