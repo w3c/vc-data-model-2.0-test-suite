@@ -64,7 +64,7 @@ A request to issue a credential (`/credentials/issue`) will look like this:
         "id": "did:example:c276e12ec21ebfeb1f712ebc6f1",
         "name": "Example University"
       }
-    },
+    }
   },
   "options": {}
 }
