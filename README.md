@@ -248,7 +248,7 @@ This file must be a CommonJS module that exports an object containing a
 
 The format of the object contained in the `implementations` array is
 identical to the one defined in
-[the **_Testing locally_** section of VC Test Suite Implementations](https://github.com/w3c/vc-test-suite-implementations?tab=readme-ov-file#testing-locally)).
+[the **_Testing locally_** section of VC Test Suite Implementations](https://github.com/w3c/vc-test-suite-implementations?tab=readme-ov-file#testing-locally).
 The `implementations` array may contain more than one implementation object,
 enabling you to test multiple implementations in one run.
 
