@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    {
+      "ExampleVerifiablePresentation": "https://example.org/#ExampleVerifiablePresentation"
+    }
+  ],
+  "type": [
+    "VerifiablePresentation",
+    "ExampleVerifiablePresentation"
+  ],
+  "verifiableCredential": [
+    {
+      "@context": [
+        "https://www.w3.org/ns/credentials/v2"
+      ],
+      "type": [
+        "VerifiableCredential"
+      ],
+      "issuer": "did:example:issuer",
+      "credentialSubject": {
+        "id": "did:example:subject"
+      }
+    }
+  ]
+}
