@@ -19,6 +19,13 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
+// used with VP creation and verification throughout
+const createOptions = {challenge};
+const verifyPresentationOptions = {
+  checks: ['proof'],
+  challenge
+};
+
 function setupMatrix() {
   // this will tell the report
   // to make an interop matrix with this suite
@@ -76,7 +83,6 @@ describe('Contexts', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const createOptions = {challenge};
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
@@ -208,11 +214,6 @@ describe('Types', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const createOptions = {challenge};
-    const verifyPresentationOptions = {
-      checks: ['proof'],
-      challenge
-    };
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
@@ -744,11 +745,6 @@ describe('Verifiable Presentations', function() {
   setupMatrix.call(this);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const createOptions = {challenge};
-    const verifyPresentationOptions = {
-      checks: ['proof'],
-      challenge
-    };
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
