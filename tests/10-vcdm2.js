@@ -166,6 +166,39 @@ describe('Contexts', function() {
         'Failed to reject a VC with an unsupported `@context` value type ' +
         '(number).');
       });
+      it('Verifiable Presentation `@context`: "Subsequent items in the ' +
+        'ordered set MUST be composed of any combination of URLs and/or ' +
+        'objects where each is processable as a JSON-LD Context."',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
+        await assert.doesNotReject(
+          endpoints.verifyVp(await endpoints.createVp({
+            presentation:
+              require('./input/presentation-context-combo1-ok.json'),
+            options: createOptions
+          }), verifyPresentationOptions),
+          'Failed to support multiple `@context` URLs in a VP.');
+        await assert.doesNotReject(
+          endpoints.verifyVp(await endpoints.createVp({
+            presentation:
+              require('./input/presentation-context-combo2-ok.json'),
+            options: createOptions
+          }), verifyPresentationOptions),
+          'Failed to support objects in the `@context` Array in a VP.');
+        // first create a valid VP
+        const vp = await endpoints.createVp({
+          presentation: require('./input/presentation-vc-ok.json'),
+          options: createOptions
+        });
+        // then inject incorrect `@context` values and test verification
+        vp['@context'][1] = 'https ://not-a-url/contexts/example/v1';
+        await assert.rejects(endpoints.verifyVp(vp),
+          'Failed to reject a VP with an invalid `@context` URL.');
+        vp['@context'][1] = 123192875;
+        await assert.rejects(endpoints.verifyVp(vp),
+          'Failed to reject a VP with an unsupported `@context` value type ' +
+          '(number).');
+      });
     });
   }
 });
