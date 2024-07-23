@@ -337,7 +337,9 @@ describe('Types', function() {
       it('`refreshService` objects MUST have a type specified.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.`;
-          // TODO: add positive `refreshService` check
+          await assert.doesNotReject(endpoints.issue(
+            require('./input/credential-refresh-type-ok.json')),
+          'Failed to accept a VC with `refreshService` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')),
           'Failed to reject a VC with `refreshService` without a `type`.');
