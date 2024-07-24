@@ -244,8 +244,8 @@ describe('Types', function() {
         // type mapping to URL: OK
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-type-mapped-url-ok.json')),
-        'Failed to accept a VC with an additional type defined in the \
-        `@context`.');
+        'Failed to accept a VC with an additional type defined in the ' +
+        '`@context`.');
         // type mapped not to URL: fail
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-mapped-nonurl-fail.json')),
@@ -261,13 +261,13 @@ describe('Types', function() {
         //issue VC with multiple urls in type property
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-type-urls-order-1-ok.json')),
-        'Failed to accept a VC with different type array ordering (VC type \
-        last).');
+        'Failed to accept a VC with different type array ordering (VC type ' +
+        'last).');
         //issue another VC with same urls in a different order
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-type-urls-order-2-ok.json')),
-        'Failed to accept a VC with different type array ordering (VC type \
-        middle).');
+        'Failed to accept a VC with different type array ordering (VC type ' +
+        'middle).');
       });
       // Verifiable Credential MUST have a type specified
       it('Verifiable Credential objects MUST have a type specified.',
@@ -585,8 +585,8 @@ describe('Validity Period', function() {
         'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-validfrom-invalid-fail.json')),
-        'Failed to reject a VC using an incorrect `validFrom` date-time \
-        format.');
+        'Failed to reject a VC using an incorrect `validFrom` date-time ' +
+        'format.');
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-validfrom-ms-ok.json')),
         'Failed to accept a VC with a `validFrom` far into the future.');
@@ -607,8 +607,8 @@ describe('Validity Period', function() {
         'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-validuntil-invalid-fail.json')),
-        'Failed to reject a VC using an inccorect `validUntil` date-time \
-        format.');
+        'Failed to reject a VC using an inccorect `validUntil` date-time ' +
+        'format.');
       });
       it('If a validUntil value also exists, the validFrom value MUST ' +
         'express a datetime that is temporally the same or earlier than the ' +
@@ -1036,8 +1036,8 @@ describe('Advanced Concepts', function() {
         // `credentialSchema.type`
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type-fail.json')),
-        'Failed to reject a VC which redefines the `VerifiableCredential` \
-        type.');
+        'Failed to reject a VC which redefines the `VerifiableCredential` ' +
+        'type.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type2-fail.json')),
         'Failed to reject a VC containing a redefiled protected term.');
