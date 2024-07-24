@@ -709,14 +709,15 @@ describe('Securing Mechanisms', function() {
         'property, and MUST produce errors when non-conforming documents are ' +
         'detected.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20verifier,documents%20are%20detected.`;
-        // TODO: this verify is neither awaited nor tested; so just expecting
-        // it to throw? We should be more explicit.
-        endpoints.verify(issuedVc);
+        await assert.doesNotReject(endpoints.verify(issuedVc),
+          'Failed to verify credential.');
         // should reject a VC without a proof
         // TODO: VCs are not required to have a `proof` for verification; they
-        // may be "enveloped" instead.
-        assert.rejects(endpoints.verify(require('./input/credential-ok.json')),
-          'Failed to reject a VC missing a `proof`.');
+        // may be "enveloped" instead. Use test suite tags to determine? or
+        // should we check media types?
+        await assert.rejects(endpoints.verify(
+          require('./input/credential-ok.json')),
+        'Failed to reject a VC missing a `proof`.');
         // TODO: add enveloped proof test
       });
     });
