@@ -553,7 +553,9 @@ describe('Validity Period', function() {
           './input/credential-validfrom-invalid-fail.json')),
         'Failed to reject a VC using an incorrect `validFrom` date-time \
         format.');
-        // TODO: add validFrom in the future test vector.
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-validfrom-ms-ok.json')),
+        'Failed to accept a VC with a `validFrom` far into the future.');
       });
       it('If present, the value of the validUntil property MUST be an ' +
         '[XMLSCHEMA11-2] dateTimeStamp string value representing the date ' +
