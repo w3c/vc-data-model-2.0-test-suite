@@ -3,7 +3,7 @@
  *
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
-
+import assert from 'node:assert/strict';
 import chai from 'chai';
 
 const should = chai.should();
@@ -57,6 +57,41 @@ export function shouldBeIssuedVc({issuedVc}) {
     should.exist(issuedVc.issuer.id,
       'Expected issuer object to have property id');
   }
+}
+
+/**
+ * Some issuers validate credentials before issuing and others don't.
+ * This asserts that a negative case is rejected at either issuance
+ * or verification.
+ *
+ * @param {object} options - Options to use.
+ * @param {object}options.endpoints - An implementer's endpoints.
+ * @param {object} options.negativeTest - An invalid credential for issuance.
+ * @param {string} options.reason - The reason the negativeTest should fail.
+ *
+ */
+export async function shouldRejectEitherIssueOrVerify({
+  endpoints,
+  negativeTest,
+  reason
+}) {
+  let error;
+  let result;
+  try {
+    //depending on the issuer this may fail to issue an invalid VC
+    result = await endpoints.issue(negativeTest);
+  } catch(e) {
+    error = e;
+  }
+  // if an issuer fails to issue a VC with invalid validFrom
+  // and/or validUntil we count this as a success and return early
+  if(error) {
+    return;
+  }
+  // if an issuer does not validate validFrom and/or validUntil
+  // expect the verifier to reject invalid validFrom and/or
+  // validUntil values
+  await assert.rejects(endpoints.verify(result), reason);
 }
 
 function _shouldBeValidCredentialSubject({credentialSubject}) {
