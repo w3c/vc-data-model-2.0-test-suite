@@ -69,6 +69,8 @@ export function shouldBeIssuedVc({issuedVc}) {
  * @param {object} options.negativeTest - An invalid credential for issuance.
  * @param {string} options.reason - The reason the negativeTest should fail.
  *
+ * @returns {Promise<{error, result}>} Returns the result and error.
+ *
  */
 export async function shouldRejectEitherIssueOrVerify({
   endpoints,
@@ -86,12 +88,13 @@ export async function shouldRejectEitherIssueOrVerify({
   // if an issuer fails to issue a VC with invalid validFrom
   // and/or validUntil we count this as a success and return early
   if(error) {
-    return;
+    return {error, result};
   }
   // if an issuer does not validate validFrom and/or validUntil
   // expect the verifier to reject invalid validFrom and/or
   // validUntil values
   await assert.rejects(endpoints.verify(result), reason);
+  return {error, result};
 }
 
 function _shouldBeValidCredentialSubject({credentialSubject}) {
