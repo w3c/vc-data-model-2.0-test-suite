@@ -19,6 +19,7 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
+const oneYear = 1;
 
 function setupMatrix() {
   // this will tell the report
@@ -614,14 +615,14 @@ describe('Validity Period', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validUntil%20value%20also%20exists%2C%20the%20validFrom%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20earlier%20than%20the%20datetime%20expressed%20by%20the%20validUntil%20value.`;
         const positiveTest = require(
           './input/credential-validUntil-validFrom-ok.json');
-        positiveTest.validFrom = createTimeStamp({skew: -2000});
-        positiveTest.validUntil = createTimeStamp({skew: 2000});
+        positiveTest.validFrom = createTimeStamp({skew: -1 * oneYear});
+        positiveTest.validUntil = createTimeStamp({skew: oneYear});
         await assert.doesNotReject(endpoints.issue(positiveTest),
           'Failed to accept a VC with a `validUntil` after its `validFrom`.');
         const negativeTest = require(
           './input/credential-validUntil-validFrom-fail.json');
-        negativeTest.validFrom = createTimeStamp({skew: 2000});
-        negativeTest.validUntil = createTimeStamp({skew: -2000});
+        negativeTest.validFrom = createTimeStamp({skew: oneYear});
+        negativeTest.validUntil = createTimeStamp({skew: -1 * oneYear});
         await shouldRejectEitherIssueOrVerify({
           endpoints,
           negativeTest,
@@ -636,14 +637,14 @@ describe('Validity Period', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validFrom%20value%20also%20exists%2C%20the%20validUntil%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20later%20than%20the%20datetime%20expressed%20by%20the%20validFrom%20value.`;
         const positiveTest = require(
           './input/credential-validUntil-validFrom-ok.json');
-        positiveTest.validFrom = createTimeStamp({skew: -2000});
-        positiveTest.validUntil = createTimeStamp({skew: 2000});
+        positiveTest.validFrom = createTimeStamp({skew: -1 * oneYear});
+        positiveTest.validUntil = createTimeStamp({skew: oneYear});
         await assert.doesNotReject(endpoints.issue(positiveTest),
           'Failed to accept a VC with a `validUntil` after its `validFrom`.');
         const negativeTest = require(
           './input/credential-validUntil-validFrom-fail.json');
-        negativeTest.validFrom = createTimeStamp({skew: 2000});
-        negativeTest.validUntil = createTimeStamp({skew: -2000});
+        negativeTest.validFrom = createTimeStamp({skew: oneYear});
+        negativeTest.validUntil = createTimeStamp({skew: -1 * oneYear});
         await shouldRejectEitherIssueOrVerify({
           endpoints,
           negativeTest,
