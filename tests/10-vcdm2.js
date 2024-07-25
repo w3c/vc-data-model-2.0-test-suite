@@ -10,6 +10,7 @@ import chai from 'chai';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
+import {shouldRejectEitherIssueOrVerify} from './assertions.js';
 
 const should = chai.should();
 
@@ -621,18 +622,12 @@ describe('Validity Period', function() {
           './input/credential-validUntil-validFrom-fail.json');
         negativeTest.validFrom = createTimeStamp({skew: 2});
         negativeTest.validUntil = createTimeStamp({skew: -2});
-        let error;
-        let result;
-        try {
-          result = await endpoints.issue(negativeTest);
-        } catch(e) {
-          error = e;
-        }
-        if(error) {
-          return;
-        }
-        await assert.rejects(endpoints.verify(result),
-          'Failed to reject a VC with a `validUntil` before its `validFrom`.');
+        await shouldRejectEitherIssueOrVerify({
+          endpoints,
+          negativeTest,
+          reason: 'Failed to reject a VC with a `validUntil` before its ' +
+          '`validFrom`.`'
+        });
       });
       // TODO: the following tests are identical to the above; refactor.
       it('If a validFrom value also exists, the validUntil value MUST ' +
@@ -649,18 +644,12 @@ describe('Validity Period', function() {
           './input/credential-validUntil-validFrom-fail.json');
         negativeTest.validFrom = createTimeStamp({skew: 2});
         negativeTest.validUntil = createTimeStamp({skew: -2});
-        let error;
-        let result;
-        try {
-          result = await endpoints.issue(negativeTest);
-        } catch(e) {
-          error = e;
-        }
-        if(error) {
-          return;
-        }
-        await assert.rejects(endpoints.verify(result),
-          'Failed to reject a VC with a `validUntil` before its `validFrom`.');
+        await shouldRejectEitherIssueOrVerify({
+          endpoints,
+          negativeTest,
+          reason: 'Failed to reject a VC with a `validUntil` before its ' +
+          '`validFrom`.'
+        });
       });
       // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
       it.skip('Time values that are incorrectly serialized without an offset ' +
