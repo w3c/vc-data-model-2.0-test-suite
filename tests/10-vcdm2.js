@@ -9,8 +9,8 @@ import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
-import {TestEndpoints} from './TestEndpoints.js';
 import {shouldRejectEitherIssueOrVerify} from './assertions.js';
+import {TestEndpoints} from './TestEndpoints.js';
 
 const should = chai.should();
 
