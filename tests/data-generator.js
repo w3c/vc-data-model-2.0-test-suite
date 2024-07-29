@@ -93,8 +93,8 @@ export async function createVp({presentation, options = {}}) {
   });
 }
 
-export function createTimeStamp({date = new Date(), skew = 0}) {
-  date.setFullYear(date.getFullYear() + skew);
+export function createTimeStamp({date = new Date(), skewYears = 0}) {
+  date.setFullYear(date.getFullYear() + skewYears);
   const isoString = date.toISOString();
   return `${isoString.substring(0, isoString.length - 5)}Z`;
 }
