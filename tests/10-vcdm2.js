@@ -11,6 +11,7 @@ import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
 
+// eslint-disable-next-line no-unused-vars
 const should = chai.should();
 
 const require = createRequire(import.meta.url);
