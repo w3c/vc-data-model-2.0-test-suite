@@ -885,9 +885,18 @@ describe('Verifiable Presentations', function() {
       it('If [the `id` field is] present, the normative guidance in Section ' +
         '4.3 Identifiers MUST be followed.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type`;
-        // TODO: implement test
-        this.test.cell.skipMessage = 'TBD';
-        this.skip();
+        const presentationWithCredential = await endpoints.createVp({
+          presentation: require('./input/presentation-vc-ok.json'),
+          options: createOptions
+        });
+        if('id' in presentationWithCredential) {
+          presentationWithCredential.id.should.be.a('string',
+            'VP `id` value MUST be a string.');
+          (new URL(presentationWithCredential.id)).should.not.throw(
+            'VP `id` value MUST be a URL.');
+        } else {
+          this.skip();
+        }
       });
 
       it('The type property MUST be present. One value of this property MUST ' +
