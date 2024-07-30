@@ -904,9 +904,16 @@ describe('Verifiable Presentations', function() {
         'The related normative guidance in Section 4.4 Types MUST be followed.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.`;
-        // TODO: implement test
-        this.test.cell.skipMessage = 'TBD';
-        this.skip();
+        const presentationWithCredential = await endpoints.createVp({
+          presentation: require('./input/presentation-vc-ok.json'),
+          options: createOptions
+        });
+        // TODO: given this is what we just sent in to the service...this is not
+        // much of a test.
+        presentationWithCredential.should.have.property('type').that.contains(
+          'VerifiablePresentation',
+          'VP MUST include the `VerifiablePresentation` type value.'
+        );
       });
 
       it('The verifiableCredential property MAY be present. The value MUST ' +
