@@ -921,20 +921,23 @@ describe('Verifiable Presentations', function() {
         'credential objects (to be clear, the values MUST NOT be non-object ' +
         'values such as numbers, strings, or URLs).', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(to%20be%20clear%2C%20the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).`;
-        // FIXME remove internal prove once VC-API presentation
-        // creation is finalized
+        // TODO: Test with remote presentation creation or querying if/when
+        // supported by the implementation
         const presentationWithCredentials = await endpoints.createVp({
           presentation: require('./input/presentation-multiple-vc-ok.json'),
           options: createOptions
         });
-        await endpoints.verifyVp(
+        await assert.doesNotReject(endpoints.verifyVp(
           presentationWithCredentials,
           verifyPresentationOptions
-        );
+        ), 'Failed to verify a valid VP.');
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-vc-missing-required-type-fail.json')),
         {name: 'HTTPError'},
         'Failed to reject a VP containing a VC with no `type` value.');
+        await assert.rejects(endpoints.verifyVp(require(
+          './input/presentation-vc-as-string-fail.json')),
+        'Failed to reject a VP containing a VC represented as a string.');
       });
     });
   }
