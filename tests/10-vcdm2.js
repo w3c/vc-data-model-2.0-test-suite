@@ -921,10 +921,6 @@ describe('Verifiable Presentations', function() {
         'credential objects (to be clear, the values MUST NOT be non-object ' +
         'values such as numbers, strings, or URLs).', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(to%20be%20clear%2C%20the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).`;
-        await assert.doesNotReject(endpoints.verifyVp(require(
-          './input/presentation-enveloped-vc-ok.json')),
-        'Failed to accept a VP containing a enveloped VC.');
-
         // FIXME remove internal prove once VC-API presentation
         // creation is finalized
         const presentationWithCredentials = await endpoints.createVp({
@@ -939,11 +935,6 @@ describe('Verifiable Presentations', function() {
           './input/presentation-vc-missing-required-type-fail.json')),
         {name: 'HTTPError'},
         'Failed to reject a VP containing a VC with no `type` value.');
-        await assert.rejects(endpoints.verifyVp(require(
-          './input/presentation-enveloped-vc-missing-required-type-fail.json')),
-        {name: 'HTTPError'},
-        'Failed to reject a VP containing an enveloped VC with a missing ' +
-        '`type`.');
       });
     });
   }
@@ -952,7 +943,8 @@ describe('Verifiable Presentations', function() {
 // 4.12.1 Enveloped Verifiable Credentials https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials
 describe('VP - Enveloped Verifiable Credentials', function() {
   setupMatrix.call(this);
-  for(const [name] of match) {
+  for(const [name, implementation] of match) {
+    const endpoints = new TestEndpoints({implementation, tag});
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
@@ -963,8 +955,14 @@ describe('VP - Enveloped Verifiable Credentials', function() {
         'terms as defined by the base context provided by this specification.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
-        // TODO: implement test
-        this.test.cell.skipMessage = 'TBD';
+        await assert.doesNotReject(endpoints.verifyVp(require(
+          './input/presentation-enveloped-vc-ok.json')),
+        'Failed to accept a VP containing a enveloped VC.');
+        // TODO: add more `@context` variations to test handling?
+        await assert.rejects(endpoints.verifyVp(require(
+          './input/presentation-enveloped-vc-missing-required-type-fail.json')),
+        'Failed to reject a VP containing an enveloped VC with a missing ' +
+        '`type`.');
         this.skip();
       });
 
