@@ -49,11 +49,12 @@ describe('Basic Conformance', function() {
 
     describe(name, function() {
       beforeEach(addPerTestMetadata);
-      it.skip('Conforming document (compliance): VCDM "MUST be enforced." ' +
+      it('Conforming document (compliance): VCDM "MUST be enforced." ' +
         '("all relevant normative statements in Sections 4. Basic Concepts, ' +
         '5. Advanced Concepts, and 6. Syntaxes")', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#identifiers:~:text=of%20this%20document-,MUST%20be%20enforced.,-A%20conforming%20document`;
-        // not specifically testable; handled by other section tests.
+        this.test.cell.skipMessage = 'Tested by other tests in this suite.';
+        this.skip();
       });
       it('verifiers MUST produce errors when non-conforming documents ' +
         'are detected.', async function() {
@@ -652,13 +653,15 @@ describe('Validity Period', function() {
         });
       });
       // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
-      it.skip('Time values that are incorrectly serialized without an offset ' +
+      it('Time values that are incorrectly serialized without an offset ' +
         'MUST be interpreted as UTC.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=Time%20values%20that%20are%20incorrectly%20serialized%20without%20an%20offset%20MUST%20be%20interpreted%20as%20UTC.`;
         // TODO: add test using regular expression from spec.
         // https://w3c.github.io/vc-data-model/#example-regular-expression-to-detect-a-valid-xml-schema-1-1-part-2-datetimestamp
         // eslint-disable-next-line max-len, no-unused-vars
         const regexp = /-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))/;
+        this.test.cell.skipMessage = 'TBD';
+        this.skip();
       });
     });
   }
@@ -776,10 +779,11 @@ describe('Status', function() {
           './input/credential-status-ok.json')),
         'Failed to accept a VC with a valid `credentialStatus`.');
       });
-      it.skip('Status schemes MUST NOT be implemented in ways that enable ' +
+      it('Status schemes MUST NOT be implemented in ways that enable ' +
         'tracking of individuals', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=Status%20schemes%20MUST%20NOT%20be%20implemented%20in%20ways%20that%20enable%20tracking%20of%20individuals`;
-        // not testable with automation
+        this.test.cell.skipMessage = 'Not testable with automation.';
+        this.skip();
       });
     });
   }
@@ -806,6 +810,7 @@ describe('Verifiable Presentations', function() {
         '4.3 Identifiers MUST be followed.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
@@ -815,6 +820,7 @@ describe('Verifiable Presentations', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
@@ -874,6 +880,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
@@ -883,6 +890,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
         'and COSE [VC-JOSE-COSE].', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20credential%20using%20an%20enveloping%20security%20scheme%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
@@ -890,6 +898,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.`;
           // TODO: implement test
+          this.test.cell.skipMessage = 'TBD';
           this.skip();
         });
     });
@@ -911,6 +920,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
@@ -920,6 +930,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         'JOSE and COSE [VC-JOSE-COSE].', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20presentation%20using%20an%20enveloping%20securing%20mechanism%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
@@ -927,6 +938,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         'EnvelopedVerifiablePresentation.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiablePresentation.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
     });
@@ -947,6 +959,7 @@ describe('VP - Presentations Including Holder Claims', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=A%20verifiable%20presentation%20that%20includes%20a%20self%2Dasserted%20verifiable%20credential%20that%20is%20only%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%20MUST%20include%20a%20holder%20property.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
@@ -957,6 +970,7 @@ describe('VP - Presentations Including Holder Claims', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.`;
         // TODO: implement test
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
     });
