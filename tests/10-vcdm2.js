@@ -70,9 +70,9 @@ describe('Basic Conformance', function() {
         const doc = {
           type: ['NonconformingDocument']
         };
-        await assert.rejects(endpoints.verify(doc),
+        await assert.rejects(endpoints.verify(doc), {name: 'HTTPError'},
           'Failed to reject malformed VC.');
-        await assert.rejects(endpoints.verifyVp(doc),
+        await assert.rejects(endpoints.verifyVp(doc), {name: 'HTTPError'},
           'Failed to reject malformed VP.');
       });
       // TODO re-review whether all broad MUST statements in this intro section
@@ -101,6 +101,7 @@ describe('Contexts', function() {
           // negative @context test
           await assert.rejects(endpoints.issue(
             require('./input/credential-no-context-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VC without an `@context`.');
         });
       it('Verifiable presentations MUST include a @context property.',
@@ -114,6 +115,7 @@ describe('Contexts', function() {
             'Failed to respond with a VP with intact `@context`.');
           await assert.rejects(endpoints.verifyVp(
             require('./input/presentation-no-context-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VP without an `@context`.');
         });
       it('Verifiable credentials: The value of the @context property ' +
@@ -130,6 +132,7 @@ describe('Contexts', function() {
         // negative issue test
         await assert.rejects(endpoints.issue(
           require('./input/credential-missing-base-context-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC that lacked the VC base context URL.');
       });
       it('Verifiable presentations: The value of the @context ' +
@@ -146,6 +149,7 @@ describe('Contexts', function() {
           'Failed to keep `@context` order intact.');
         await assert.rejects(endpoints.verifyVp(
           require('./input/presentation-missing-base-context-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VP that lacked the VC base context URL.');
       });
       it('Verifiable Credential `@context`: "Subsequent items in the ' +
@@ -161,9 +165,11 @@ describe('Contexts', function() {
         'Failed to support objects in the `@context` Array.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo3-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with an invalid `@context` URL.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo4-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with an unsupported `@context` value type ' +
         '(number).');
       });
@@ -222,6 +228,7 @@ describe('Identifiers', function() {
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-id-nonidentifier-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a credential with a `null` identifier.');
 
         await assert.doesNotReject(endpoints.issue(require(
@@ -232,13 +239,16 @@ describe('Identifiers', function() {
         'Failed to accept a VC with a valid credentialSubject identifier');
         await assert.rejects(endpoints.issue(require(
           './input/credential-id-multi-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with multiple `id` values.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-id-subject-multi-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with multiple credentialSubject identifiers.');
 
         await assert.rejects(
           endpoints.issue(require('./input/credential-id-not-url-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a credential with an invalid identifier.');
       });
     });
@@ -259,6 +269,7 @@ describe('Types', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(
           endpoints.issue(require('./input/credential-no-type-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VC without a type.');
       });
       it('Verifiable presentations MUST contain a type property with an ' +
@@ -266,6 +277,7 @@ describe('Types', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-no-type-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VP without a type.');
       });
       it('The value of the type property MUST be one or more terms and/or ' +
@@ -284,10 +296,12 @@ describe('Types', function() {
         // type mapped not to URL: fail
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-mapped-nonurl-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with type mapped to an invalid URL.');
         // type not mapped: fail
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-unmapped-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with an unmapped (via `@context`) type.');
       });
       it('If more than one (type) value is provided, the order does not ' +
@@ -313,6 +327,7 @@ describe('Types', function() {
           'Failed to accept a VC with additional type.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-missing-required-type-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VC missing the `VerifiableCredential` type.');
         }
       );
@@ -331,6 +346,7 @@ describe('Types', function() {
           await assert.rejects(
             endpoints.verifyVp(require(
               './input/presentation-missing-required-type-fail.json')),
+            {name: 'HTTPError'},
             'Failed to reject VP missing `VerifiableCredential` type.');
         }
       );
@@ -343,6 +359,7 @@ describe('Types', function() {
           'Failed to accept a VC with `credentialStatus` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-status-missing-type-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VC with `credentialStatus` without a `type`.');
         }
       );
@@ -355,6 +372,7 @@ describe('Types', function() {
           'Failed to accept a VC with `termsOfUse` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-termsofuse-missing-type-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VC with `termsOfUse` without a `type`.');
         }
       );
@@ -367,6 +385,7 @@ describe('Types', function() {
           'Failed to accept a VC with `evidence` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-evidence-missing-type-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VC with `evidence` without a `type`.');
         }
       );
@@ -378,6 +397,7 @@ describe('Types', function() {
           'Failed to accept a VC with `refreshService` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject a VC with `refreshService` without a `type`.');
         }
       );
@@ -389,6 +409,7 @@ describe('Types', function() {
           'Failed to accept a VC with `credentialSchema` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-schema-no-type-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject `credentialSchema` without a `type`.');
         }
       );
@@ -433,6 +454,7 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC with `name` in multiple languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/credential-name-extra-prop-en-fail.json`)),
+        {name: 'HTTPError'},
         'Failed to reject a VC with `name` containing extra properties.');
       });
       it('If present, the value of the description property MUST be a string ' +
@@ -458,6 +480,7 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC with `description` in multiple languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/credential-description-extra-prop-en-fail.json`)),
+        {name: 'HTTPError'},
         'Failed to reject a VC with `description` containing extra ' +
         'properties.');
       });
@@ -485,6 +508,7 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC with `issuer.name` in multiple languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/issuer-name-extra-prop-en-fail.json`)),
+        {name: 'HTTPError'},
         'Failed to reject a VC with `issuer.name` containing extra ' +
         'properties.');
       });
@@ -513,6 +537,7 @@ describe('Names and Descriptions', function() {
         'languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/issuer-description-extra-prop-en-fail.json`)),
+        {name: 'HTTPError'},
         'Failed to reject a VC with `issuer.description` containing extra ' +
         'properties.');
       });
@@ -534,6 +559,7 @@ describe('Credential Subject', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=A%20verifiable%20credential%20MUST%20have%20a%20credentialSubject%20property.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-no-subject-fail.json')),
+        {name: 'HTTPError'},
         'Failed to rejet a VC without a `credentialSubject`.');
       });
       it('The value of the credentialSubject property is defined as a ' +
@@ -543,6 +569,7 @@ describe('Credential Subject', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=The%20value%20of%20the%20credentialSubject%20property%20is%20defined%20as%20a%20set%20of%20objects%20where%20each%20object%20MUST%20be%20the%20subject%20of%20one%20or%20more%20claims%2C%20which%20MUST%20be%20serialized%20inside%20the%20credentialSubject%20property.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-subject-no-claims-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with an empty `credentialSubject`.');
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-subject-multiple-ok.json')),
@@ -553,6 +580,7 @@ describe('Credential Subject', function() {
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-subject-multiple-empty-fail.json')),
+          {name: 'HTTPError'},
           'Failed to reject VC containing an empty `credentialSubject`.');
       });
     });
@@ -583,15 +611,19 @@ describe('Issuer', function() {
           './input/credential-issuer-object-ok.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-no-url-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject an issuer identifier that was not a URL.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-null-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a null issuer identifier.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-null-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject an issuer object containing a null identifier.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-object-id-no-url-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject an issuer object containing a non-URL identifier.');
       });
     });
@@ -620,6 +652,7 @@ describe('Validity Period', function() {
         'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-validfrom-invalid-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC using an incorrect `validFrom` date-time ' +
         'format.');
         await assert.doesNotReject(endpoints.issue(require(
@@ -642,6 +675,7 @@ describe('Validity Period', function() {
         'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-validuntil-invalid-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC using an inccorect `validUntil` date-time ' +
         'format.');
       });
@@ -776,6 +810,7 @@ describe('Securing Mechanisms', function() {
         // should we check media types?
         await assert.rejects(endpoints.verify(
           require('./input/credential-ok.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC missing a `proof`.');
         // TODO: add enveloped proof test
       });
@@ -801,9 +836,11 @@ describe('Status', function() {
         'Failed to accept a VC with `credentialStatus` without an `id`.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-multiple-id-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with multiple `credentialStatus.id` values.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-nonurl-id-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with a non-URL `credentialStatus.id`.');
       });
       it('(If a credentialStatus property is present), The type ' +
@@ -813,9 +850,11 @@ describe('Status', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=The%20type%20property%20is%20REQUIRED.%20It%20is%20used%20to%20express%20the%20type%20of%20status%20information%20expressed%20by%20the%20object.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-missing-type-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC missing `credentialStatus.type`.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-type-nonurl-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC with a non-URL `credentialStatus.type`.');
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-status-ok.json')),
@@ -893,9 +932,11 @@ describe('Verifiable Presentations', function() {
         );
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-vc-missing-required-type-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VP containing a VC with no `type` value.');
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-derived-vc-missing-required-type-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a derived VP with a missing `type`.');
       });
     });
@@ -1042,12 +1083,15 @@ describe('Data Schemas', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=Each%20credentialSchema%20MUST%20specify%20its%20type%20(for%20example%2C%20JsonSchema)%2C%20and%20an%20id%20property%20that%20MUST%20be%20a%20URL%20identifying%20the%20schema%20file.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-schema-no-type-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject `credentialSchema` without a `type`.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-schema-no-id-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject `credentialSchema` without an `id`.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-schema-non-url-id-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject `credentialSchema` with a numerid `id`.');
       });
 
@@ -1085,10 +1129,12 @@ describe('Advanced Concepts', function() {
         // `credentialSchema.type`
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC which redefines the `VerifiableCredential` ' +
         'type.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type2-fail.json')),
+        {name: 'HTTPError'},
         'Failed to reject a VC containing a redefiled protected term.');
       });
 
@@ -1118,7 +1164,9 @@ describe('Advanced Concepts', function() {
           // an issuer will fail on someone else's provided and broken
           // `refreshService` value
           await assert.rejects(endpoints.issue(require(
-            './input/credential-refresh-no-type-fail.json')));
+            './input/credential-refresh-no-type-fail.json')),
+          {name: 'HTTPError'},
+          'Failed to reject a VC with `refreshService` without a `type`.');
         });
 
       // 5.5 Terms of Use https://w3c.github.io/vc-data-model/#terms-of-use
@@ -1135,7 +1183,8 @@ describe('Advanced Concepts', function() {
         'IssuerPolicy, and MAY specify its instance id.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=Each%20termsOfUse%20value%20MUST%20specify%20its%20type%2C%20for%20example%2C%20IssuerPolicy%2C%20and%20MAY%20specify%20its%20instance%20id.`;
         await assert.rejects(endpoints.issue(require(
-          './input/credential-termsofuse-no-type-fail.json')));
+          './input/credential-termsofuse-no-type-fail.json')),
+        {name: 'HTTPError'});
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-termsofuse-id-ok.json')));
       });
