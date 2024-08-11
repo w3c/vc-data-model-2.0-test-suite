@@ -180,22 +180,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 148/180 82%
+      Tests passed 201/240 83%
       </p>
       <p>
-      Tests failed 32/180 18%
+      Tests failed 39/240 17%
       </p>
       <p>
-      Failures 32
+      Failures 39
       </p>
       <p>
-      Tests skipped 52
+      Tests skipped 55
       </p>
       <p>
-      Total tests 232
+      Total tests 295
       </p>
       <p>
-        These tests were run on <time>4 August 2024 at 5:06 am UTC</time>
+        These tests were run on <time>11 August 2024 at 5:06 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -262,14 +262,52 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-model/#identifiers:~:text&#x3D;of%20this%20document-,MUST%20be%20enforced.,-A%20conforming%20document">Conforming document (compliance): VCDM &quot;MUST be enforced.&quot; (&quot;all relevant normative statements in Sections 4. Basic Concepts, 5. Advanced Concepts, and 6. Syntaxes&quot;)</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+              </tr>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;MUST%20produce%20errors%20when%20non%2Dconforming%20documents%20are%20detected.">verifiers MUST produce errors when non-conforming documents are detected.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -320,6 +358,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -328,6 +367,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.">Verifiable credentials MUST include a @context property.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -375,6 +419,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -382,6 +431,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.">Verifiable credentials: The value of the @context property MUST be an ordered set where the first item is a URL with the value https://www.w3.org/ns/credentials/v2.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -429,11 +483,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.">Verifiable credential @context: &quot;Subsequent items in the ordered set MUST be composed of any combination of URLs and/or objects where each is processable as a JSON-LD Context.&quot;</a>
+                    <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.">Verifiable Credential &#x60;@context&#x60;: &quot;Subsequent items in the ordered set MUST be composed of any combination of URLs and/or objects where each is processable as a JSON-LD Context.&quot;</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -444,6 +503,59 @@
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.">Verifiable Presentation &#x60;@context&#x60;: &quot;Subsequent items in the ordered set MUST be composed of any combination of URLs and/or objects where each is processable as a JSON-LD Context.&quot;</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:181:9)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:181:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -486,6 +598,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -494,6 +607,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.">If present, the value of the id property MUST be a single URL, which MAY be dereferenceable.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -544,6 +662,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -552,6 +671,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.">Verifiable credentials MUST contain a type property with an associated value.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -599,6 +723,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -610,10 +739,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:255:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:302:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -626,11 +755,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:255:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:302:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -645,6 +779,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;If%20more%20than%20one%20value%20is%20provided%2C%20the%20order%20does%20not%20matter.">If more than one (type) value is provided, the order does not matter.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -692,6 +831,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -708,7 +852,7 @@
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:293:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:342:11)</pre>
                       </details>
                     </div>
                   </td>
@@ -726,8 +870,13 @@
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
                     Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:293:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:342:11)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -746,11 +895,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with &#x60;credentialStatus&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with &#x60;credentialStatus&#x60; without a &#x60;type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;credentialStatus&#x60; without a &#x60;type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;credentialStatus&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:310:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:360:11)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -779,11 +933,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with &#x60;termsOfUse&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with &#x60;termsOfUse&#x60; without a &#x60;type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;termsOfUse&#x60; without a &#x60;type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;termsOfUse&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:322:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:373:11)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -812,11 +971,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with &#x60;evidence&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with &#x60;evidence&#x60; without a &#x60;type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;evidence&#x60; without a &#x60;type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;evidence&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:334:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:386:11)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -845,22 +1009,21 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:345:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:398:11)</pre>
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:345:11)</pre>
-                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -884,22 +1047,21 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:356:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:410:11)</pre>
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:356:11)</pre>
-                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -942,6 +1104,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -959,13 +1122,18 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; with language &amp; direction expressed.
-                    Actual message: &quot;An unspecified error occurred.&quot;:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; with language &amp; direction expressed.
-                    Actual message: &quot;An unspecified error occurred.&quot;
+                        <summary>Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
+                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
+                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:393:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:445:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -994,13 +1162,18 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC using &#x60;description&#x60; with language &amp; direction expressed.
-                    Actual message: &quot;An unspecified error occurred.&quot;:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;description&#x60; with language &amp; direction expressed.
-                    Actual message: &quot;An unspecified error occurred.&quot;
+                        <summary>Got unwanted rejection: Failed to accept a VC using &#x60;description&#x60; in a defined language.
+                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;description&#x60; in a defined language.
+                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:417:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:470:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1034,8 +1207,13 @@
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;issuer.name&#x60; with language &amp; direction expressed.
                     Actual message: &quot;An unspecified error occurred.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:445:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:502:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1069,8 +1247,13 @@
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;issuer.description&#x60; with language &amp; direction expressed.
                     Actual message: &quot;An unspecified error occurred.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:471:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:529:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1113,6 +1296,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -1121,6 +1305,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#credential-subject:~:text&#x3D;A%20verifiable%20credential%20MUST%20have%20a%20credentialSubject%20property.">A verifiable credential MUST have a credentialSubject property.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -1152,11 +1341,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with an empty &#x60;credentialSubject&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with an empty &#x60;credentialSubject&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an empty &#x60;credentialSubject&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with an empty &#x60;credentialSubject&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:510:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:570:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1204,6 +1398,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -1212,6 +1407,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#issuer:~:text&#x3D;A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.">A verifiable credential MUST have an issuer property.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -1243,10 +1443,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject an issuer identifier that was not a URL.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject an issuer identifier that was not a URL.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:550:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:612:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1254,21 +1454,44 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject an issuer identifier that was not a URL.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject an issuer identifier that was not a URL.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:550:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:612:9)</pre>
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Failed to reject a null issuer identifier.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Failed to reject a null issuer identifier.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:616:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Failed to reject a null issuer identifier.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Failed to reject a null issuer identifier.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:616:9)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Failed to reject a null issuer identifier.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Failed to reject a null issuer identifier.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:616:9)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>
@@ -1301,6 +1524,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -1309,6 +1533,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#validity-period:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20validFrom%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20becomes%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20future%20or%20in%20the%20past.">If present, the value of the validFrom property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential becomes valid, which could be a date and time in the future or in the past.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -1345,8 +1574,13 @@
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid &#x60;validUntil&#x60; date-time.
                     Actual message: &quot;Expired&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:600:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:667:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1389,8 +1623,13 @@
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a &#x60;validUntil&#x60; before its &#x60;validFrom&#x60;.&#x60;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async shouldRejectEitherIssueOrVerify (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/assertions.js:96:3)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:628:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:696:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1423,12 +1662,49 @@
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a &#x60;validUntil&#x60; before its &#x60;validFrom&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async shouldRejectEitherIssueOrVerify (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/assertions.js:96:3)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:650:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:718:9)</pre>
                       </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-model/#validity-period:~:text&#x3D;Time%20values%20that%20are%20incorrectly%20serialized%20without%20an%20offset%20MUST%20be%20interpreted%20as%20UTC.">Time values that are incorrectly serialized without an offset MUST be interpreted as UTC.</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
                     </div>
                   </td>
@@ -1462,6 +1738,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -1470,6 +1747,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text&#x3D;A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.9%20Securing%20Mechanisms.">A conforming document MUST be secured by at least one securing mechanism as described in Section 4.9 Securing Mechanisms.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -1517,6 +1799,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -1533,8 +1820,13 @@
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify credential.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:735:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:805:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1582,6 +1874,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -1594,11 +1887,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:769:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:841:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1627,10 +1925,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC missing &#x60;credentialStatus.type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC missing &#x60;credentialStatus.type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC missing &#x60;credentialStatus.type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC missing &#x60;credentialStatus.type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:778:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:851:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1643,15 +1941,52 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:781:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:855:9)</pre>
                       </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+              </tr>
+              <tr>
+                <!--This is the name of the test-->
+                <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-model/#status:~:text&#x3D;Status%20schemes%20MUST%20NOT%20be%20implemented%20in%20ways%20that%20enable%20tracking%20of%20individuals">Status schemes MUST NOT be implemented in ways that enable tracking of individuals</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
                     </div>
                   </td>
@@ -1685,14 +2020,20 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text&#x3D;verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type">If [the &#x60;id&#x60; field is] present, the normative guidance in Section 4.3 Identifiers MUST be followed.</a>
+                    <a href="https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text&#x3D;verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type">If [the &#x60;id&#x60; field is] present, the normative guidance in Section 4.3 Identifiers MUST be followed.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -1717,26 +2058,31 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text&#x3D;The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.">The type property MUST be present. One value of this property MUST be VerifiablePresentation, but additional types MAY be included.The related normative guidance in Section 4.4 Types MUST be followed.</a>
+                    <a href="https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text&#x3D;The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.">The type property MUST be present. One value of this property MUST be VerifiablePresentation, but additional types MAY be included.The related normative guidance in Section 4.4 Types MUST be followed.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                     </div>
                   </td>
@@ -1744,22 +2090,19 @@
               <tr>
                 <!--This is the name of the test-->
                 <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#verifiable-credentials:~:text&#x3D;The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(to%20be%20clear%2C%20the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).">The verifiableCredential property MAY be present. The value MUST be one or more verifiable credential and/or enveloped verifiable credential objects (to be clear, the values MUST NOT be non-object values such as numbers, strings, or URLs).</a>
+                    <a href="https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text&#x3D;The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(to%20be%20clear%2C%20the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).">The verifiableCredential property MAY be present. The value MUST be one or more verifiable credential and/or enveloped verifiable credential objects (to be clear, the values MUST NOT be non-object values such as numbers, strings, or URLs).</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 400 Bad Request:</summary>
-                        <pre>HTTPError: Request failed with status code 400 Bad Request
-                        at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        <summary>Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:62:27)
-                        at async TestEndpoints.verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:50:20)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:841:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:930:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1772,16 +2115,18 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Request failed with status code 500 Internal Server Error:</summary>
-                        <pre>HTTPError: Request failed with status code 500 Internal Server Error
-                        at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        <summary>Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
-                        at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
-                        at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:62:27)
-                        at async TestEndpoints.verifyVp (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:50:20)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:841:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:930:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1819,6 +2164,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -1827,24 +2173,69 @@
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.">The @context property of the object MUST be present and include a context, such as the base context for this specification, that defines at least the id, type, and EnvelopedVerifiableCredential terms as defined by the base context provided by this specification.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:961:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:961:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:961:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:961:9)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:961:9)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>
@@ -1874,6 +2265,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -1881,6 +2277,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.">The type value of the object MUST be EnvelopedVerifiableCredential.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -1931,6 +2332,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -1939,6 +2341,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text&#x3D;The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.">The @context property of the object MUST be present and include a context, such as the base context for this specification, that defines at least the id, type, and EnvelopedVerifiablePresentation terms as defined by the base context provided by this specification.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -1986,6 +2393,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -1993,6 +2405,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text&#x3D;The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiablePresentation.">The type value of the object MUST be EnvelopedVerifiablePresentation.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -2043,6 +2460,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -2071,6 +2489,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -2078,6 +2501,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text&#x3D;When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.">When a self-asserted verifiable credential is secured using the same mechanism as the verifiable presentation, the value of the issuer property of the verifiable credential MUST be identical to the holder property of the verifiable presentation.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -2128,6 +2556,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -2136,6 +2565,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#data-schemas:~:text&#x3D;The%20value%20of%20the%20credentialSchema%20property%20MUST%20be%20one%20or%20more%20data%20schemas%20that%20provide%20verifiers%20with%20enough%20information%20to%20determine%20whether%20the%20provided%20data%20conforms%20to%20the%20provided%20schema(s).">The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s).</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -2167,10 +2601,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1001:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1091:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -2178,11 +2612,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without an &#x60;id&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without an &#x60;id&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1001:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1095:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2202,6 +2641,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#data-schemas:~:text&#x3D;If%20multiple%20schemas%20are%20present%2C%20validity%20is%20determined%20according%20to%20the%20processing%20rules%20outlined%20by%20each%20associated%20credentialSchema%20type%20property.">If multiple schemas are present, validity is determined according to the processing rules outlined by each associated credentialSchema type property.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -2252,6 +2696,7 @@
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">Open Security and Identity</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
+                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
               <tr>
@@ -2260,6 +2705,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#data-schemas:~:text&#x3D;When%20processing%20the%20active%20context%20defined%20by%20the%20base%20JSON%2DLD%20Context%20document%20defined%20in%20this%20specification%2C%20compliant%20JSON%2DLD%2Dbased%20processors%20produce%20an%20error%20when%20a%20JSON%2DLD%20context%20redefines%20any%20term.">JSON-LD-based processors MUST produce an error when a JSON-LD context redefines any term in the active context.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -2307,6 +2757,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -2318,22 +2773,21 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection.
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1078:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1173:11)</pre>
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1078:11)</pre>
-                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2373,6 +2827,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
               <tr>
                 <!--This is the name of the test-->
@@ -2384,11 +2843,16 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection.
+                        <summary>Missing expected rejection (HTTPError).:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError).
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1095:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/10-vcdm2.js:1192:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2413,6 +2877,11 @@
                     <a href="https://w3c.github.io/vc-data-model/#evidence:~:text&#x3D;The%20value%20of%20the%20evidence%20property%20MUST%20be%20one%20or%20more%20evidence%20schemes%20providing%20enough%20information%20for%20a%20verifier%20to%20determine%20whether%20the%20evidence%20gathered%20by%20the%20issuer%20meets%20its%20confidence%20requirements%20for%20relying%20on%20the%20credential.">The value of the evidence property MUST be one or more evidence schemes providing enough information for a verifier to determine whether the evidence gathered by the issuer meets its confidence requirements for relying on the credential.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
