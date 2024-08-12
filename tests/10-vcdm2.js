@@ -748,10 +748,10 @@ describe('Securing Mechanisms', function() {
       // as of VC 2.0 this means a proof must be attached to an issued VC
       // at least one proof must be on an issued VC
       // TODO: maybe move this up to the 1.3 Conformance section it's from?
-      it('A conforming document MUST be secured by at least one ' +
-        'securing mechanism as described in Section 4.9 Securing Mechanisms.',
+      it('A conforming document MUST be secured by at least one securing ' +
+        'mechanism as described in Section 4.12 Securing Mechanisms.',
       async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.9%20Securing%20Mechanisms.`;
+        this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.12%20Securing%20Mechanisms.`;
         // embedded proof test
         issuedVc.should.have.property('type').that.does
           .include('VerifiableCredential', `Expected ${name} to issue a VC.`);
@@ -773,8 +773,8 @@ describe('Securing Mechanisms', function() {
         'documents, MUST include all required properties in the conforming ' +
         'documents that it produces, and MUST secure the conforming ' +
         'documents it produces using a securing mechanism as described in ' +
-        'Section 4.9 Securing Mechanisms.', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20issuer%20implementation%20produces%20conforming%20documents%2C%20MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20that%20it%20produces%2C%20and%20MUST%20secure%20the%20conforming%20documents%20it%20produces%20using%20a%20securing%20mechanism%20as%20described%20in%20Section%204.9%20Securing%20Mechanisms.`;
+        'Section 4.12 Securing Mechanisms.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20issuer%20implementation%20produces%20conforming%20documents%2C%20MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20that%20it%20produces%2C%20and%20MUST%20secure%20the%20conforming%20documents%20it%20produces%20using%20a%20securing%20mechanism%20as%20described%20in%20Section%204.12%20Securing%20Mechanisms.`;
         // TODO: check "all required properties" (use a shared function)
         issuedVc.should.have.property('type').that.does
           .include('VerifiableCredential', `Expected ${name} to issue a VC.`);
@@ -784,7 +784,7 @@ describe('Securing Mechanisms', function() {
       });
       it('A conforming verifier implementation consumes conforming ' +
         'documents, MUST perform verification on a conforming document as ' +
-        'described in Section 4.9 Securing Mechanisms, MUST check that each ' +
+        'described in Section 4.12 Securing Mechanisms, MUST check that each ' +
         'required property satisfies the normative requirements for that ' +
         'property, and MUST produce errors when non-conforming documents are ' +
         'detected.', async function() {
