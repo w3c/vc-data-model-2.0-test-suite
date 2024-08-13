@@ -60,9 +60,9 @@ describe('Data Schemas', function() {
       });
 
       it('If multiple schemas are present, validity is determined according ' +
-        'to the processing rules outlined by each associated ' +
-        'credentialSchema type property.', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=If%20multiple%20schemas%20are%20present%2C%20validity%20is%20determined%20according%20to%20the%20processing%20rules%20outlined%20by%20each%20associated%20credentialSchema%20type%20property.`;
+        'to the processing rules outlined by each associated type property',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#data-schemas:~:text=If%20multiple%20schemas%20are%20present%2C%20validity%20is%20determined%20according%20to%20the%20processing%20rules%20outlined%20by%20each%20associated%20type%20property.`;
         // TODO: this doesn't really test the above statement...
         await assert.doesNotReject(endpoints.issue(
           require('./input/credential-schemas-ok.json')),
