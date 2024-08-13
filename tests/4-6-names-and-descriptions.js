@@ -19,7 +19,7 @@ const require = createRequire(import.meta.url);
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-// 4.5 Names and Descriptions https://w3c.github.io/vc-data-model/#names-and-descriptions
+// 4.6 Names and Descriptions https://w3c.github.io/vc-data-model/#names-and-descriptions
 // These tests for name and descrpition are OPTIONAL as those properties may
 // appear anywhere. However, we have tests for them (on `issuer` so far), so
 // keeping them in play seems prudent/useful. They can be expanded later also

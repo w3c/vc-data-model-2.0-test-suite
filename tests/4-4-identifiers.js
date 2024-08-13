@@ -19,7 +19,7 @@ const require = createRequire(import.meta.url);
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-// 4.3 Identifiers https://w3c.github.io/vc-data-model/#identifiers
+// 4.4 Identifiers https://w3c.github.io/vc-data-model/#identifiers
 describe('Identifiers', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {

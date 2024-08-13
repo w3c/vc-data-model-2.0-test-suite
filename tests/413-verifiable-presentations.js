@@ -19,10 +19,7 @@ const require = createRequire(import.meta.url);
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-// 4.11 Verifiable Credentials https://w3c.github.io/vc-data-model/#verifiable-credentials
-// There are no actual MUSTs here, just references to other sections.
-
-// 4.12 Verifiable Presentations https://w3c.github.io/vc-data-model/#verifiable-presentations
+// 4.13 Verifiable Presentations https://w3c.github.io/vc-data-model/#verifiable-presentations
 describe('Verifiable Presentations', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {

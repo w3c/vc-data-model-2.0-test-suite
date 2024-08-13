@@ -19,7 +19,7 @@ const require = createRequire(import.meta.url);
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-// 4.9 Securing Mechanisms https://w3c.github.io/vc-data-model/#securing-mechanisms
+// 4.12 Securing Mechanisms https://w3c.github.io/vc-data-model/#securing-mechanisms
 describe('Securing Mechanisms', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {

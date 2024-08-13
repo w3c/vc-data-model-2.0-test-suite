@@ -19,7 +19,7 @@ const require = createRequire(import.meta.url);
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-// 4.13 Data Schemas https://w3c.github.io/vc-data-model/#data-schemas
+// 4.11 Data Schemas https://w3c.github.io/vc-data-model/#data-schemas
 describe('Data Schemas', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
