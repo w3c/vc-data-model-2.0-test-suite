@@ -21,7 +21,7 @@ const require = createRequire(import.meta.url);
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-// 4.8 Validity Period https://w3c.github.io/vc-data-model/#validity-period
+// 4.9 Validity Period https://w3c.github.io/vc-data-model/#validity-period
 describe('Validity Period', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {

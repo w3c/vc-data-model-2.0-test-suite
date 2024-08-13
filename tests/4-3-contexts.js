@@ -20,7 +20,10 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-// 4.2 Contexts https://w3c.github.io/vc-data-model/#contexts
+// 4.2 Verifiable Credentials https://w3c.github.io/vc-data-model/#verifiable-credentials
+// There are no actual MUSTs here, just references to other sections.
+
+// 4.3 Contexts https://w3c.github.io/vc-data-model/#contexts
 describe('Contexts', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
