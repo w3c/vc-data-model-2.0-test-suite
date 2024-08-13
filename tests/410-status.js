@@ -29,8 +29,8 @@ describe('Status', function() {
       beforeEach(addPerTestMetadata);
 
       it('If present (credentialStatus.id), the normative guidance ' +
-        'in Section 4.3 Identifiers MUST be followed.', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type`;
+        'in Section 4.4 Identifiers MUST be followed.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type`;
         // id is optional
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-status-missing-id-ok.json')),
@@ -47,8 +47,8 @@ describe('Status', function() {
       it('(If a credentialStatus property is present), The type ' +
         'property is REQUIRED. It is used to express the type of status ' +
         'information expressed by the object. The related normative ' +
-        'guidance in Section 4.4 Types MUST be followed.', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=The%20type%20property%20is%20REQUIRED.%20It%20is%20used%20to%20express%20the%20type%20of%20status%20information%20expressed%20by%20the%20object.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.`;
+        'guidance in Section 4.5 Types MUST be followed.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=The%20type%20property%20is%20REQUIRED.%20It%20is%20used%20to%20express%20the%20type%20of%20status%20information%20expressed%20by%20the%20object.%20The%20related%20normative%20guidance%20in%20Section%204.5%20Types%20MUST%20be%20followed.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-missing-type-fail.json')),
         {name: 'HTTPError'},
@@ -61,9 +61,9 @@ describe('Status', function() {
           './input/credential-status-ok.json')),
         'Failed to accept a VC with a valid `credentialStatus`.');
       });
-      it('Status schemes MUST NOT be implemented in ways that enable ' +
-        'tracking of individuals', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=Status%20schemes%20MUST%20NOT%20be%20implemented%20in%20ways%20that%20enable%20tracking%20of%20individuals`;
+      it('Credential status specifications MUST NOT enable tracking of ' +
+        'individuals', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=Credential%20status%20specifications%20MUST%20NOT%20enable%20tracking%20of%20individuals`;
         this.test.cell.skipMessage = 'Not testable with automation.';
         this.skip();
       });
