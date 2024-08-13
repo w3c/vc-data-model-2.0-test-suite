@@ -52,7 +52,7 @@ export class TestEndpoints {
       options: {
         challenge,
         ...vpVerifierOptions,
-        // request specific options should override endpoint options
+        // request-specific options should override endpoint options
         ...options
       }
     };
