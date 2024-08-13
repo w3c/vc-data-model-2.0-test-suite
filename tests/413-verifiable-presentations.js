@@ -29,8 +29,8 @@ describe('Verifiable Presentations', function() {
       beforeEach(addPerTestMetadata);
 
       it('If [the `id` field is] present, the normative guidance in Section ' +
-        '4.3 Identifiers MUST be followed.', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type`;
+        '4.4 Identifiers MUST be followed.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type`;
         const presentationWithCredential = await endpoints.createVp({
           presentation: require('./input/presentation-vc-ok.json')
         });
@@ -46,9 +46,9 @@ describe('Verifiable Presentations', function() {
 
       it('The type property MUST be present. One value of this property MUST ' +
         'be VerifiablePresentation, but additional types MAY be included.' +
-        'The related normative guidance in Section 4.4 Types MUST be followed.',
+        'The related normative guidance in Section 4.5 Types MUST be followed.',
       async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.`;
+        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.5%20Types%20MUST%20be%20followed.`;
         const presentationWithCredential = await endpoints.createVp({
           presentation: require('./input/presentation-vc-ok.json')
         });
@@ -60,11 +60,11 @@ describe('Verifiable Presentations', function() {
         );
       });
 
-      it('The verifiableCredential property MAY be present. The value MUST ' +
-        'be one or more verifiable credential and/or enveloped verifiable ' +
-        'credential objects (to be clear, the values MUST NOT be non-object ' +
-        'values such as numbers, strings, or URLs).', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(to%20be%20clear%2C%20the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).`;
+      it('The verifiableCredential property MAY be present. The value MUST be' +
+        'one or more verifiable credential and/or enveloped verifiable ' +
+        'credential objects (the values MUST NOT be non-object values such ' +
+        'as numbers, strings, or URLs).', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).`;
         // TODO: Test with remote presentation creation or querying if/when
         // supported by the implementation
         const presentationWithCredentials = await endpoints.createVp({
