@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
+import {challenge, createVp} from './data-generator.js';
 import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
-import {createVp} from './data-generator.js';
 import http from 'http';
 import receiveJson from './receive-json.js';
 
@@ -29,7 +29,10 @@ export class TestEndpoints {
     return post(issuer, issueBody);
   }
   async createVp({presentation, options = {}}) {
-    return createVp({presentation, options});
+    return createVp({presentation, options: {
+      challenge,
+      ...options
+    }});
   }
   async verify(vc) {
     const verifyBody = createVerifyRequestBody({vc});
@@ -39,7 +42,7 @@ export class TestEndpoints {
     }
     return result;
   }
-  async verifyVp(vp, options = {checks: []}) {
+  async verifyVp(vp, options = {}) {
     if(this.vpVerifier === null) {
       return null;
     }
@@ -47,6 +50,7 @@ export class TestEndpoints {
     const body = {
       verifiablePresentation: vp,
       options: {
+        challenge,
         ...vpVerifierOptions,
         // request specific options should override endpoint options
         ...options
