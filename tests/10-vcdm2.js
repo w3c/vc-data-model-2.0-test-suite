@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
+import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -21,30 +22,12 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
-function setupMatrix() {
-  // this will tell the report
-  // to make an interop matrix with this suite
-  this.matrix = true;
-  this.report = true;
-  this.implemented = [...match.keys()];
-  this.rowLabel = 'Test Name';
-  this.columnLabel = 'Implementer';
-}
-
-function addPerTestMetadata() {
-  // append test meta data to the it/test this.
-  this.currentTest.cell = {
-    columnId: this.currentTest.parent.title,
-    rowId: this.currentTest.title
-  };
-}
-
 // // 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
 // // TODO: consolidate scattered MUST statements from this section that are
 // // ...elsewhere in the test suite
 // // TODO: add missing media type MUSTs
 describe('Basic Conformance', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -76,7 +59,7 @@ describe('Basic Conformance', function() {
 
 // 4.2 Contexts https://w3c.github.io/vc-data-model/#contexts
 describe('Contexts', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -200,7 +183,7 @@ describe('Contexts', function() {
 
 // 4.3 Identifiers https://w3c.github.io/vc-data-model/#identifiers
 describe('Identifiers', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -245,7 +228,7 @@ describe('Identifiers', function() {
 
 // 4.4 Types https://w3c.github.io/vc-data-model/#types
 describe('Types', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -409,7 +392,7 @@ describe('Types', function() {
 // keeping them in play seems prudent/useful. They can be expanded later also
 // to cover `name` and/or `description` anywhere they appear.
 describe('Names and Descriptions', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -533,7 +516,7 @@ describe('Names and Descriptions', function() {
 
 // 4.6 Credential Subject https://w3c.github.io/vc-data-model/#credential-subject
 describe('Credential Subject', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -576,7 +559,7 @@ describe('Credential Subject', function() {
 
 // 4.7 Issuer https://w3c.github.io/vc-data-model/#issuer
 describe('Issuer', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -619,7 +602,7 @@ describe('Issuer', function() {
 
 // 4.8 Validity Period https://w3c.github.io/vc-data-model/#validity-period
 describe('Validity Period', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -726,7 +709,7 @@ describe('Validity Period', function() {
 
 // 4.9 Securing Mechanisms https://w3c.github.io/vc-data-model/#securing-mechanisms
 describe('Securing Mechanisms', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -807,7 +790,7 @@ describe('Securing Mechanisms', function() {
 
 // 4.10 Status https://w3c.github.io/vc-data-model/#status
 describe('Status', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -862,7 +845,7 @@ describe('Status', function() {
 
 // 4.12 Verifiable Presentations https://w3c.github.io/vc-data-model/#verifiable-presentations
 describe('Verifiable Presentations', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -928,7 +911,7 @@ describe('Verifiable Presentations', function() {
 
 // 4.12.1 Enveloped Verifiable Credentials https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials
 describe('VP - Enveloped Verifiable Credentials', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -975,7 +958,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
 
 // 4.12.2 Enveloped Verifiable Presentations https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations
 describe('VP - Enveloped Verifiable Presentations', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name] of match) {
 
     describe(name, function() {
@@ -1015,7 +998,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
 
 // 4.12.4 Presentations Including Holder Claims https://w3c.github.io/vc-data-model/#presentations-including-holder-claims
 describe('VP - Presentations Including Holder Claims', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name] of match) {
 
     describe(name, function() {
@@ -1047,7 +1030,7 @@ describe('VP - Presentations Including Holder Claims', function() {
 
 // 4.13 Data Schemas https://w3c.github.io/vc-data-model/#data-schemas
 describe('Data Schemas', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -1100,7 +1083,7 @@ describe('Data Schemas', function() {
 
 // 5. Advanced Concepts https://w3c.github.io/vc-data-model/#advanced-concepts
 describe('Advanced Concepts', function() {
-  setupMatrix.call(this);
+  setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
