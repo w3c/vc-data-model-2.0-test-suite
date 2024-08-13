@@ -4,10 +4,10 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {challenge, createTimeStamp} from './data-generator.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
+import {createTimeStamp} from './data-generator.js';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {shouldRejectEitherIssueOrVerify} from './assertions.js';
 import {TestEndpoints} from './TestEndpoints.js';
@@ -20,12 +20,6 @@ const baseContextUrl = 'https://www.w3.org/ns/credentials/v2';
 
 const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
-
-// used with VP creation and verification throughout
-const createOptions = {challenge};
-const verifyPresentationOptions = {
-  challenge
-};
 
 function setupMatrix() {
   // this will tell the report
@@ -107,8 +101,7 @@ describe('Contexts', function() {
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
           const vp = await endpoints.createVp({
-            presentation: require('./input/presentation-ok.json'),
-            options: createOptions
+            presentation: require('./input/presentation-ok.json')
           });
           vp.should.have.property('@context').to.be.an('array',
             'Failed to respond with a VP with intact `@context`.');
@@ -139,8 +132,7 @@ describe('Contexts', function() {
         'the value https://www.w3.org/ns/credentials/v2.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
         const vp = await endpoints.createVp({
-          presentation: require('./input/presentation-ok.json'),
-          options: createOptions
+          presentation: require('./input/presentation-ok.json')
         });
         assert(Array.isArray(vp['@context']),
           'Failed to support `@context` as an Array.');
@@ -180,21 +172,18 @@ describe('Contexts', function() {
         await assert.doesNotReject(
           endpoints.verifyVp(await endpoints.createVp({
             presentation:
-              require('./input/presentation-context-combo1-ok.json'),
-            options: createOptions
-          }), verifyPresentationOptions),
+              require('./input/presentation-context-combo1-ok.json')
+          })),
           'Failed to support multiple `@context` URLs in a VP.');
         await assert.doesNotReject(
           endpoints.verifyVp(await endpoints.createVp({
             presentation:
-              require('./input/presentation-context-combo2-ok.json'),
-            options: createOptions
-          }), verifyPresentationOptions),
+              require('./input/presentation-context-combo2-ok.json')
+          })),
           'Failed to support objects in the `@context` Array in a VP.');
         // first create a valid VP
         const vp = await endpoints.createVp({
-          presentation: require('./input/presentation-vc-ok.json'),
-          options: createOptions
+          presentation: require('./input/presentation-vc-ok.json')
         });
         // then inject incorrect `@context` values and test verification
         vp['@context'][1] = 'https ://not-a-url/contexts/example/v1';
@@ -335,12 +324,10 @@ describe('Types', function() {
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.`;
           const presentationOptionalType = await endpoints.createVp({
-            presentation: require('./input/presentation-optional-type-ok.json'),
-            options: createOptions
+            presentation: require('./input/presentation-optional-type-ok.json')
           });
           await assert.doesNotReject(endpoints.verifyVp(
-            presentationOptionalType,
-            verifyPresentationOptions
+            presentationOptionalType
           ), 'Failed to accept VP with `@context` mapped type.');
           await assert.rejects(
             endpoints.verifyVp(require(
@@ -885,8 +872,7 @@ describe('Verifiable Presentations', function() {
         '4.3 Identifiers MUST be followed.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.3%20Identifiers%20MUST%20be%20followed.,-type`;
         const presentationWithCredential = await endpoints.createVp({
-          presentation: require('./input/presentation-vc-ok.json'),
-          options: createOptions
+          presentation: require('./input/presentation-vc-ok.json')
         });
         if('id' in presentationWithCredential) {
           presentationWithCredential.id.should.be.a('string',
@@ -904,8 +890,7 @@ describe('Verifiable Presentations', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.4%20Types%20MUST%20be%20followed.`;
         const presentationWithCredential = await endpoints.createVp({
-          presentation: require('./input/presentation-vc-ok.json'),
-          options: createOptions
+          presentation: require('./input/presentation-vc-ok.json')
         });
         // TODO: given this is what we just sent in to the service...this is not
         // much of a test.
@@ -923,12 +908,10 @@ describe('Verifiable Presentations', function() {
         // TODO: Test with remote presentation creation or querying if/when
         // supported by the implementation
         const presentationWithCredentials = await endpoints.createVp({
-          presentation: require('./input/presentation-multiple-vc-ok.json'),
-          options: createOptions
+          presentation: require('./input/presentation-multiple-vc-ok.json')
         });
         await assert.doesNotReject(endpoints.verifyVp(
-          presentationWithCredentials,
-          verifyPresentationOptions
+          presentationWithCredentials
         ), 'Failed to verify a valid VP.');
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-vc-missing-required-type-fail.json')),
