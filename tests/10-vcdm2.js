@@ -24,7 +24,6 @@ const {match} = filterByTag({tags: [tag]});
 // used with VP creation and verification throughout
 const createOptions = {challenge};
 const verifyPresentationOptions = {
-  checks: ['proof'],
   challenge
 };
 

@@ -43,9 +43,14 @@ export class TestEndpoints {
     if(this.vpVerifier === null) {
       return null;
     }
+    const {settings: {options: vpVerifierOptions}} = this.vpVerifier;
     const body = {
       verifiablePresentation: vp,
-      options
+      options: {
+        ...vpVerifierOptions,
+        // request specific options should override endpoint options
+        ...options
+      }
     };
     const result = await post(this.vpVerifier, body);
     if(result?.errors?.length) {
