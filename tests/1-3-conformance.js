@@ -17,9 +17,6 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // // 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
-// // TODO: consolidate scattered MUST statements from this section that are
-// // ...elsewhere in the test suite
-// // TODO: add missing media type MUSTs
 describe('Basic Conformance', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
@@ -45,8 +42,6 @@ describe('Basic Conformance', function() {
         await assert.rejects(endpoints.verifyVp(doc), {name: 'HTTPError'},
           'Failed to reject malformed VP.');
       });
-      // TODO re-review whether all broad MUST statements in this intro section
-      // are adequately covered by other tests, or if they need unique tests.
     });
   }
 });
