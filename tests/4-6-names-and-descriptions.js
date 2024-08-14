@@ -24,6 +24,13 @@ const {match} = filterByTag({tags: [tag]});
 // appear anywhere. However, we have tests for them (on `issuer` so far), so
 // keeping them in play seems prudent/useful. They can be expanded later also
 // to cover `name` and/or `description` anywhere they appear.
+
+// Also, the normative section...
+// 11.1 Language and Base Direction https://w3c.github.io/vc-data-model/#language-and-base-direction
+// ...is partially covered by these tests. A more complete approach would test
+// any occurance of a "Value Object" (detecting `@value` throughout the tree)
+// and test for conformat member properties (`@language` and `@direction`) and
+// fail on the existence of any other properties.
 describe('Names and Descriptions', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
