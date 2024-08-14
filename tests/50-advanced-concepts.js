@@ -151,6 +151,3 @@ describe('Advanced Concepts', function() {
 
 // 7.2 Problem Details https://w3c.github.io/vc-data-model/#problem-details
 // TODO: optionaly response format; but we could write tests for it
-
-// 11.1 Language and Base Direction https://w3c.github.io/vc-data-model/#language-and-base-direction
-// TODO: possibly already covered by Name and Description tests
