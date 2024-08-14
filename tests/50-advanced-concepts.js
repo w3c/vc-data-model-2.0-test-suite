@@ -132,8 +132,16 @@ describe('Advanced Concepts', function() {
           require('./input/credential-evidences-ok.json')));
       });
 
-      // 5.9 Reserved Extension Points https://w3c.github.io/vc-data-model/#reserved-extension-points
-      // TODO: desrible and implement tests
+      // 5.10 Reserved Extension Points https://w3c.github.io/vc-data-model/#reserved-extension-points
+      it('In order to avoid collisions regarding how the following ' +
+        'properties are used, implementations MUST specify a type property ' +
+        'in the value associated with the reserved property.',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#reserved-extension-points:~:text=In%20order%20to%20avoid%20collisions%20regarding%20how%20the%20following%20properties%20are%20used%2C%20implementations%20MUST%20specify%20a%20type%20property%20in%20the%20value%20associated%20with%20the%20reserved%20property.`;
+        // TODO: implement
+        this.test.skipMessage = 'TBD';
+        this.skip();
+      });
     });
   }
 });
