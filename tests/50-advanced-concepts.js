@@ -50,7 +50,28 @@ describe('Advanced Concepts', function() {
       });
 
       // 5.3 Integrity of Related Resources https://w3c.github.io/vc-data-model/#integrity-of-related-resources
-      // TODO: describe and implement tests
+      it('The value of the relatedResource property MUST be one or more ' +
+        'objects of the following form:', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20value%20of%20the%20relatedResource%20property%20MUST%20be%20one%20or%20more%20objects%20of%20the%20following%20form%3A`;
+        // TODO: implement
+        this.test.skipMessage = 'TBD';
+        this.skip();
+      });
+      it('The identifier for the resource is REQUIRED and conforms to the ' +
+        'format defined in Section 4.4 Identifiers. The value MUST be unique ' +
+        'among the list of related resource objects.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.`;
+        // TODO: implement
+        this.test.skipMessage = 'TBD';
+        this.skip();
+      });
+      it('Each object associated with relatedResource MUST contain at least ' +
+        'a digestSRI or a digestMultibase value.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=Each%20object%20associated%20with%20relatedResource%20MUST%20contain%20at%20least%20a%20digestSRI%20or%20a%20digestMultibase%20value.`;
+        // TODO: implement
+        this.test.skipMessage = 'TBD';
+        this.skip();
+      });
 
       // 5.4 Refreshing https://w3c.github.io/vc-data-model/#integrity-of-related-resources
       it('The value of the refreshService property MUST be one or more ' +
