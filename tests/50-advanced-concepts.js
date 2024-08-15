@@ -78,9 +78,11 @@ describe('Advanced Concepts', function() {
       it('Each object associated with relatedResource MUST contain at least ' +
         'a digestSRI or a digestMultibase value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=Each%20object%20associated%20with%20relatedResource%20MUST%20contain%20at%20least%20a%20digestSRI%20or%20a%20digestMultibase%20value.`;
-        // TODO: implement
-        this.test.skipMessage = 'TBD';
-        this.skip();
+        await assert.rejects(endpoints.issue(require(
+          './input/relatedResource/relatedResource-no-digest-fail.json'
+        )),
+        {name: 'HTTPError'},
+        'Failed to reject VC with relatedResource missing digest info.');
       });
 
       // 5.4 Refreshing https://w3c.github.io/vc-data-model/#integrity-of-related-resources
