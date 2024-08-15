@@ -55,7 +55,7 @@ describe('Advanced Concepts', function() {
       it('The value of the relatedResource property MUST be one or more ' +
         'objects of the following form:', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20value%20of%20the%20relatedResource%20property%20MUST%20be%20one%20or%20more%20objects%20of%20the%20following%20form%3A`;
-        this.test.skipMessage = 'TBD';
+        this.test.cell.skipMessage = 'TBD';
         await assert.doesNotReject(endpoints.issue(require(
           './input/relatedResource/relatedResource-ok.json'
         )), 'Failed to accept a VC with valid relatedResource objects.');
@@ -155,7 +155,7 @@ describe('Advanced Concepts', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#reserved-extension-points:~:text=In%20order%20to%20avoid%20collisions%20regarding%20how%20the%20following%20properties%20are%20used%2C%20implementations%20MUST%20specify%20a%20type%20property%20in%20the%20value%20associated%20with%20the%20reserved%20property.`;
         // TODO: implement
-        this.test.skipMessage = 'TBD';
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
     });
