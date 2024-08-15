@@ -8,10 +8,9 @@ import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
-import {createTimeStamp} from './data-generator.js';
 import {filterByTag} from 'vc-test-suite-implementations';
-import {shouldRejectEitherIssueOrVerify} from './assertions.js';
 import {TestEndpoints} from './TestEndpoints.js';
+import {testTemporality} from './assertions.js';
 
 // eslint-disable-next-line no-unused-vars
 const should = chai.should();
@@ -70,36 +69,17 @@ describe('Validity Period', function() {
         'Failed to reject a VC using an inccorect `validUntil` date-time ' +
         'format.');
       });
-
-      async function testTemporality() {
-        const positiveTest = require(
-          './input/credential-validUntil-validFrom-ok.json');
-        positiveTest.validFrom = createTimeStamp({skewYears: -1});
-        positiveTest.validUntil = createTimeStamp({skewYears: 1});
-        await assert.doesNotReject(endpoints.issue(positiveTest),
-          'Failed to accept a VC with a `validUntil` after its `validFrom`.');
-        const negativeTest = require(
-          './input/credential-validUntil-validFrom-fail.json');
-        negativeTest.validFrom = createTimeStamp({skewYears: 1});
-        negativeTest.validUntil = createTimeStamp({skewYears: -1});
-        await shouldRejectEitherIssueOrVerify({
-          endpoints,
-          negativeTest,
-          reason: 'Failed to reject a VC with a `validUntil` before its ' +
-          '`validFrom`.`'
-        });
-      }
       it('If a validUntil value also exists, the validFrom value MUST ' +
         'express a datetime that is temporally the same or earlier than the ' +
         'datetime expressed by the validUntil value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validUntil%20value%20also%20exists%2C%20the%20validFrom%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20earlier%20than%20the%20datetime%20expressed%20by%20the%20validUntil%20value.`;
-        await testTemporality();
+        await testTemporality(endpoints);
       });
       it('If a validFrom value also exists, the validUntil value MUST ' +
         'express a datetime that is temporally the same or later than the ' +
         'datetime expressed by the validFrom value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validFrom%20value%20also%20exists%2C%20the%20validUntil%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20later%20than%20the%20datetime%20expressed%20by%20the%20validFrom%20value.`;
-        await testTemporality();
+        await testTemporality(endpoints);
       });
       // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
       it('Time values that are incorrectly serialized without an offset ' +

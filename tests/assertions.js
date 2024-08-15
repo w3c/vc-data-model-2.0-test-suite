@@ -5,8 +5,13 @@
  */
 import assert from 'node:assert/strict';
 import chai from 'chai';
+import {createRequire} from 'module';
+import {createTimeStamp} from './data-generator.js';
+import {TestEndpoints} from './TestEndpoints.js';
 
 const should = chai.should();
+
+const require = createRequire(import.meta.url);
 
 export function shouldThrowInvalidInput({result, error}) {
   should.not.exist(result, 'Expected no result from issuer.');
@@ -95,6 +100,30 @@ export async function shouldRejectEitherIssueOrVerify({
   // validUntil values
   await assert.rejects(endpoints.verify(result), reason);
   return {error, result};
+}
+
+/**
+ * Test various values of `validFrom` and `validUntil`.
+ *
+ * @param {TestEndpoints} endpoints - Endpoints collection to test against.
+ */
+export async function testTemporality(endpoints) {
+  const positiveTest = require(
+    './input/credential-validUntil-validFrom-ok.json');
+  positiveTest.validFrom = createTimeStamp({skewYears: -1});
+  positiveTest.validUntil = createTimeStamp({skewYears: 1});
+  await assert.doesNotReject(endpoints.issue(positiveTest),
+    'Failed to accept a VC with a `validUntil` after its `validFrom`.');
+  const negativeTest = require(
+    './input/credential-validUntil-validFrom-fail.json');
+  negativeTest.validFrom = createTimeStamp({skewYears: 1});
+  negativeTest.validUntil = createTimeStamp({skewYears: -1});
+  await shouldRejectEitherIssueOrVerify({
+    endpoints,
+    negativeTest,
+    reason: 'Failed to reject a VC with a `validUntil` before its ' +
+      '`validFrom`.`'
+  });
 }
 
 function _shouldBeValidCredentialSubject({credentialSubject}) {
