@@ -57,6 +57,10 @@ describe('Advanced Concepts', function() {
         await assert.doesNotReject(endpoints.issue(require(
           './input/relatedResource/relatedResource-ok.json'
         )), 'Failed to accept a VC with valid relatedResource objects.');
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/relatedResource/relatedResource-with-mediaType-ok.json'
+        )),
+        'Failed to accept a VC with valid relatedResource.mediaType values.');
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-list-of-strings-fail.json'
         )),
