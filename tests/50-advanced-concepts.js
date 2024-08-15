@@ -69,9 +69,11 @@ describe('Advanced Concepts', function() {
         'format defined in Section 4.4 Identifiers. The value MUST be unique ' +
         'among the list of related resource objects.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.`;
-        // TODO: implement
-        this.test.skipMessage = 'TBD';
-        this.skip();
+        await assert.rejects(endpoints.issue(require(
+          './input/relatedResource/relatedResource-missing-id-fail.json'
+        )),
+        {name: 'HTTPError'},
+        'Failed to reject VC with relatedResource missing its `id` field.');
       });
       it('Each object associated with relatedResource MUST contain at least ' +
         'a digestSRI or a digestMultibase value.', async function() {

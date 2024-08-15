@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "credentialSubject": {
+    "id": "did:example:subject"
+  },
+  "relatedResource": [{
+    "url": "https://www.w3.org/ns/credentials/v2",
+    "digestMultibase": "uEres1usWcWCmW7uolIW2uA0CjQ8iRV14eGaZStJL73Vz"
+  }]
+}
