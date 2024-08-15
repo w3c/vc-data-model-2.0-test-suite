@@ -53,9 +53,15 @@ describe('Advanced Concepts', function() {
       it('The value of the relatedResource property MUST be one or more ' +
         'objects of the following form:', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20value%20of%20the%20relatedResource%20property%20MUST%20be%20one%20or%20more%20objects%20of%20the%20following%20form%3A`;
-        // TODO: implement
         this.test.skipMessage = 'TBD';
-        this.skip();
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/relatedResource/relatedResource-ok.json'
+        )), 'Failed to accept a VC with valid relatedResource objects.');
+        await assert.rejects(endpoints.issue(require(
+          './input/relatedResource/relatedResource-list-of-strings-fail.json'
+        )),
+        {name: 'HTTPError'},
+        'Failed to reject VC with relatedResource as an array of strings.');
       });
       it('The identifier for the resource is REQUIRED and conforms to the ' +
         'format defined in Section 4.4 Identifiers. The value MUST be unique ' +
