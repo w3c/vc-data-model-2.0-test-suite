@@ -180,13 +180,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 195/240 81%
+      Tests passed 166/240 69%
       </p>
       <p>
-      Tests failed 45/240 19%
+      Tests failed 74/240 31%
       </p>
       <p>
-      Failures 45
+      Failures 74
       </p>
       <p>
       Tests skipped 75
@@ -195,7 +195,7 @@
       Total tests 315
       </p>
       <p>
-        These tests were run on <time>18 August 2024 at 5:06 am UTC</time>
+        These tests were run on <time>25 August 2024 at 5:06 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -377,9 +377,19 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu:</summary>
+                        <pre>HTTPError: DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu
+                        at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:71:27)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-3-contexts.js:39:22)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -441,9 +451,19 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu:</summary>
+                        <pre>HTTPError: DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu
+                        at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:71:27)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-3-contexts.js:67:20)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -505,9 +525,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-3-contexts.js:100:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -633,9 +661,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with a DID credentialSubject identifier.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a DID credentialSubject identifier.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-4-identifiers.js:34:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -771,10 +807,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.
+                        <summary>Got unwanted rejection: Failed to accept a VC with an additional type as a URL.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with an additional type as a URL.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:66:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:52:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -805,9 +843,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with different type array ordering (VC type last).
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with different type array ordering (VC type last).
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:75:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -837,9 +883,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with additional type.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with additional type.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:89:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -939,9 +993,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;credentialStatus&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;credentialStatus&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:119:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -977,9 +1039,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;termsOfUse&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;termsOfUse&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:132:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1015,9 +1085,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;evidence&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;evidence&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:145:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1053,9 +1131,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;refreshService&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;refreshService&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:157:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1091,9 +1177,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;credentialSchema&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;credentialSchema&#x60; with a &#x60;type&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:169:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1163,9 +1257,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with a &#x60;name&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a &#x60;name&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-6-names-and-descriptions.js:48:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1203,9 +1305,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;description&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;description&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-6-names-and-descriptions.js:73:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1243,9 +1353,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;issuer.name&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;issuer.name&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-6-names-and-descriptions.js:102:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1283,9 +1401,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;issuer.description&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;issuer.description&#x60; as a string.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-6-names-and-descriptions.js:128:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1347,9 +1473,19 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu:</summary>
+                        <pre>HTTPError: DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu
+                        at fn (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/core/Ky.js:28:29)
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async _handleResponse (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/@digitalbazaar/http-client/lib/httpClient.js:101:16)
+                        at async makeHttpsRequest (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/vc-test-suite-implementations/lib/requests.js:49:14)
+                        at async post (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/TestEndpoints.js:71:27)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:34:22)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1395,10 +1531,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Failed to reject a null issuer identifier.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Failed to reject a null issuer identifier.
+                        <summary>Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:48:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:42:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1511,9 +1649,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with multiple &#x60;credentialSubject&#x60;s.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with multiple &#x60;credentialSubject&#x60;s.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-8-credential-subject.js:49:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1575,9 +1721,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with a valid &#x60;validFrom&#x60; date-time.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid &#x60;validFrom&#x60; date-time.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-9-validity-period.js:38:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1615,9 +1769,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with a valid &#x60;validUntil&#x60; date-time.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid &#x60;validUntil&#x60; date-time.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-9-validity-period.js:58:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1651,11 +1813,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with a &#x60;validUntil&#x60; before its &#x60;validFrom&#x60;.&#x60;:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a &#x60;validUntil&#x60; before its &#x60;validFrom&#x60;.&#x60;
+                        <summary>Got unwanted rejection: Failed to accept a VC with a &#x60;validUntil&#x60; after its &#x60;validFrom&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a &#x60;validUntil&#x60; after its &#x60;validFrom&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async shouldRejectEitherIssueOrVerify (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/assertions.js:96:3)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-9-validity-period.js:87:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-9-validity-period.js:81:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1690,11 +1853,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with a &#x60;validUntil&#x60; before its &#x60;validFrom&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a &#x60;validUntil&#x60; before its &#x60;validFrom&#x60;.
+                        <summary>Got unwanted rejection: Failed to accept a VC with a &#x60;validUntil&#x60; after its &#x60;validFrom&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a &#x60;validUntil&#x60; after its &#x60;validFrom&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async shouldRejectEitherIssueOrVerify (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/assertions.js:96:3)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-9-validity-period.js:109:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-9-validity-period.js:103:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1795,9 +1959,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with &#x60;credentialStatus&#x60; without an &#x60;id&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with &#x60;credentialStatus&#x60; without an &#x60;id&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/410-status.js:35:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1837,10 +2009,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.
+                        <summary>Got unwanted rejection: Failed to accept a VC with a valid &#x60;credentialStatus&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid &#x60;credentialStatus&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/410-status.js:56:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/410-status.js:60:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -1935,9 +2109,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC containing a valid &#x60;credentialSchema&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC containing a valid &#x60;credentialSchema&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/411-data-schemas.js:36:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2011,9 +2193,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC containing multiple valid &#x60;credentialSchema&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC containing multiple valid &#x60;credentialSchema&#x60;.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/411-data-schemas.js:67:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2075,9 +2265,15 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Cannot read properties of undefined (reading &#x27;should&#x27;):</summary>
+                        <pre>TypeError: Cannot read properties of undefined (reading &#x27;should&#x27;)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/412-securing-mechanisms.js:51:18)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2107,9 +2303,15 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Cannot read properties of undefined (reading &#x27;should&#x27;):</summary>
+                        <pre>TypeError: Cannot read properties of undefined (reading &#x27;should&#x27;)
+                        at Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/412-securing-mechanisms.js:74:18)
+                        at process.processImmediate (node:internal/timers:483:21)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2147,9 +2349,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify credential.
+                    Actual message: &quot;&#x27;verifiableCredential&#x27;&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify credential.
+                    Actual message: &quot;&#x27;verifiableCredential&#x27;&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/412-securing-mechanisms.js:87:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2891,9 +3101,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:87:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2961,9 +3179,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:111:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2999,9 +3225,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:120:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3031,9 +3265,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;:</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection.
+                    Actual message: &quot;DID not found: did:key:z6MksCeXh9Jwp4ZTEb5Kei7sJpBLpUyS3oaAib8wbtJQqsQu&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:131:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
