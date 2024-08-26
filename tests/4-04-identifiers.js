@@ -20,7 +20,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // 4.4 Identifiers https://w3c.github.io/vc-data-model/#identifiers
-describe('Identifiers', function() {
+describe('4.04 Identifiers', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});

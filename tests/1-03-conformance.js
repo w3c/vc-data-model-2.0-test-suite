@@ -4,13 +4,11 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
+import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
 import {
-  addPerTestMetadata,
-  includesAllRequiredProperties,
-  isSecured,
-  setupMatrix,
-  trimText
-} from './helpers.js';
+  shouldBeSecured,
+  shouldIncludeAllRequiredProperties
+} from './assertions.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -26,7 +24,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // // 1.3 Conformance https://w3c.github.io/vc-data-model/#conformance
-describe('Conformance', function() {
+describe('1.03 Conformance', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
@@ -71,20 +69,20 @@ describe('Conformance', function() {
         securing mechanism as described in Section 4.12 Securing Mechanisms.`),
       async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.12%20Securing%20Mechanisms.`;
-        isSecured(name, issuedVc);
+        shouldBeSecured(name, issuedVc);
       });
       it(trimText(`A conforming issuer implementation MUST include all
         required properties in the conforming documents it produces.`),
       async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces`;
-        includesAllRequiredProperties(issuedVc);
+        shouldIncludeAllRequiredProperties(issuedVc);
       });
       it(trimText(`A conforming issuer implementation MUST secure the
         conforming documents it produces using a securing mechanism
         described in Section 4.12 Securing Mechanisms.`),
       async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20secure%20the%20conforming%20documents%20it%20produces%20using%20a%20securing%20mechanism%20described%20in%20Section%204.12%20Securing%20Mechanisms.`;
-        isSecured(name, issuedVc);
+        shouldBeSecured(name, issuedVc);
       });
       it(trimText(`A conforming verifier implementation MUST perform
         verification on a conforming document as described in
