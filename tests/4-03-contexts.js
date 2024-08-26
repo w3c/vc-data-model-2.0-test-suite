@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {addPerTestMetadata, setupMatrix} from './helpers.js';
+import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -32,7 +32,7 @@ describe('Contexts', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it('Verifiable credentials MUST include a @context property.',
+      it(trimText(`Verifiable credentials MUST include a @context property.`),
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
           // positive @context test
@@ -46,7 +46,7 @@ describe('Contexts', function() {
           {name: 'HTTPError'},
           'Failed to reject a VC without an `@context`.');
         });
-      it('Verifiable presentations MUST include a @context property.',
+      it(trimText(`Verifiable presentations MUST include a @context property.`),
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
           const vp = await endpoints.createVp({
@@ -59,9 +59,16 @@ describe('Contexts', function() {
           {name: 'HTTPError'},
           'Failed to reject a VP without an `@context`.');
         });
-      it('Verifiable credentials: The value of the @context property ' +
-        'MUST be an ordered set where the first item is a URL with the value ' +
-        'https://www.w3.org/ns/credentials/v2.', async function() {
+      it(trimText(`Application developers MUST understand every JSON-LD 
+        context used by their application.`),
+      async function() {
+        this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#contexts:~:text=Application%20developers%20MUST%20understand%20every%20JSON%2DLD%20context%20used%20by%20their%20application`;
+        this.test.cell.skipMessage = 'Untestable through automation.';
+        this.skip();
+      });
+      it(trimText(`Verifiable credentials: The value of the @context property
+        MUST be an ordered set where the first item is a URL with the value
+        https://www.w3.org/ns/credentials/v2.`), async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
         //positive issue test
         const vc = await endpoints.issue(require('./input/credential-ok.json'));
@@ -76,9 +83,10 @@ describe('Contexts', function() {
         {name: 'HTTPError'},
         'Failed to reject a VC that lacked the VC base context URL.');
       });
-      it('Verifiable presentations: The value of the @context ' +
-        'property MUST be an ordered set where the first item is a URL with ' +
-        'the value https://www.w3.org/ns/credentials/v2.', async function() {
+      it(trimText(`Verifiable presentations: The value of the @context
+        property MUST be an ordered set where the first item is a URL with
+        the value https://www.w3.org/ns/credentials/v2.`),
+      async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
         const vp = await endpoints.createVp({
           presentation: require('./input/presentation-ok.json')
@@ -92,9 +100,9 @@ describe('Contexts', function() {
         {name: 'HTTPError'},
         'Failed to reject a VP that lacked the VC base context URL.');
       });
-      it('Verifiable Credential `@context`: "Subsequent items in the ' +
-        'ordered set MUST be composed of any combination of URLs and/or ' +
-        'objects where each is processable as a JSON-LD Context."',
+      it(trimText(`Verifiable Credential '@context': "Subsequent items in the
+        ordered set MUST be composed of any combination of URLs and/or
+        objects where each is processable as a JSON-LD Context."`),
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
         await assert.doesNotReject(endpoints.issue(require(
@@ -113,9 +121,9 @@ describe('Contexts', function() {
         'Failed to reject a VC with an unsupported `@context` value type ' +
         '(number).');
       });
-      it('Verifiable Presentation `@context`: "Subsequent items in the ' +
-        'ordered set MUST be composed of any combination of URLs and/or ' +
-        'objects where each is processable as a JSON-LD Context."',
+      it(trimText(`Verifiable Presentation "@context" "Subsequent items in the
+        ordered set MUST be composed of any combination of URLs and/or
+        objects where each is processable as a JSON-LD Context."`),
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
         await assert.doesNotReject(
