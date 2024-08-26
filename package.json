@@ -40,7 +40,7 @@
     "@digitalbazaar/ed25519-multikey": "^1.0.1",
     "@digitalbazaar/eddsa-2022-cryptosuite": "^1.0.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.5.0",
-    "@digitalbazaar/vc": "github:digitalbazaar/vc#update-vc-2.0",
+    "@digitalbazaar/vc": "^7.0.0",
     "bnid": "^3.0.0",
     "chai": "^4.3.6",
     "klona": "^2.0.5",
