@@ -21,10 +21,7 @@ export function trimText(string) {
 export function extractEnvelopedCredential(issuedVc) {
   issuedVc.should.have.property('id').that.does
     .include('data:application/vc+jwt', `Missing id field.`);
-  const vcId = issuedVc.id;
-  const jwt = vcId.split(',')[1];
-  const payload = jwt.split('.')[1];
-  const credential = atob(payload);
+  const credential = atob(issuedVc.id.split(',')[1].split('.')[1]);
   // TODO: needs more error handling
   return JSON.parse(credential);
 }
