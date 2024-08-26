@@ -31,7 +31,7 @@ const {match} = filterByTag({tags: [tag]});
 // any occurance of a "Value Object" (detecting `@value` throughout the tree)
 // and test for conformat member properties (`@language` and `@direction`) and
 // fail on the existence of any other properties.
-describe('Names and Descriptions', function() {
+describe('4.06 Names and Descriptions', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
