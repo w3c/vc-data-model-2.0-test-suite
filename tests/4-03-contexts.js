@@ -10,7 +10,7 @@ import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
-import {TestEndpoints} from '../tests/TestEndpoints.js';
+import {TestEndpoints} from './TestEndpoints.js';
 
 // eslint-disable-next-line no-unused-vars
 const should = chai.should();
