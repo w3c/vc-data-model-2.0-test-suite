@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
+import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -41,10 +41,9 @@ describe('Names and Descriptions', function() {
 
       const fixturePath = './input/names-and-descriptions';
       // On the main credential object itself--as the spec describes
-      it(trimText(`Credential: If present, the value of the name 
-        property MUST be a string or a language value object as 
-        described in 11.1 Language and Base Direction.`),
-      async function() {
+      it('If present, the value of the name property MUST be a string or a ' +
+        'language value object as described in 11.1 Language and Base ' +
+        'Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
         await assert.doesNotReject(endpoints.issue(require(
           `${fixturePath}/credential-name-ok.json`)),
@@ -67,10 +66,9 @@ describe('Names and Descriptions', function() {
         {name: 'HTTPError'},
         'Failed to reject a VC with `name` containing extra properties.');
       });
-      it(trimText(`Credential: If present, the value of the description 
-        property MUST be a string or a language value object as 
-        described in 11.1 Language and Base Direction.`),
-      async function() {
+      it('If present, the value of the description property MUST be a string ' +
+        'or a language value object as described in 11.1 Language and Base ' +
+        'Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
         await assert.doesNotReject(endpoints.issue(require(
           `${fixturePath}/credential-description-ok.json`)),
@@ -97,9 +95,9 @@ describe('Names and Descriptions', function() {
       });
 
       // On `issuer` as in the example at https://w3c.github.io/vc-data-model/#example-usage-of-the-name-and-description-property-0
-      it(trimText(`Issuer: If present, the value of the name 
-        property MUST be a string or a language value object as 
-        described in 11.1 Language and Base Direction.`), async function() {
+      it('If present (on `issuer`), the value of the name property MUST be a ' +
+        'string or a language value object as described in 11.1 Language and ' +
+        'Base Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
         await assert.doesNotReject(endpoints.issue(require(
           `${fixturePath}/issuer-name-ok.json`)),
@@ -123,10 +121,9 @@ describe('Names and Descriptions', function() {
         'Failed to reject a VC with `issuer.name` containing extra ' +
         'properties.');
       });
-      it(trimText(`Issuer: If present, the value of the 
-        description property MUST be a string or a language 
-        value object as described in 11.1 Language and Base Direction.`),
-      async function() {
+      it('If present (on `issuer`), the value of the description property ' +
+        'MUST be a string or a language value object as described in 11.1 ' +
+        'Language and Base Direction.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text=If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.`;
         await assert.doesNotReject(endpoints.issue(require(
           `${fixturePath}/issuer-description-ok.json`)),

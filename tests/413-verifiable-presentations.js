@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
+import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -28,9 +28,8 @@ describe('Verifiable Presentations', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it(trimText(`If [the "id" field is] present, the normative guidance 
-        in Section 4.4 Identifiers MUST be followed.`),
-      async function() {
+      it('If [the `id` field is] present, the normative guidance in Section ' +
+        '4.4 Identifiers MUST be followed.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type`;
         const presentationWithCredential = await endpoints.createVp({
           presentation: require('./input/presentation-vc-ok.json')
@@ -45,10 +44,9 @@ describe('Verifiable Presentations', function() {
         }
       });
 
-      it(trimText(`The type property MUST be present. 
-        One value of this property MUST be VerifiablePresentation, 
-        but additional types MAY be included. The related 
-        normative guidance in Section 4.5 Types MUST be followed.`),
+      it('The type property MUST be present. One value of this property MUST ' +
+        'be VerifiablePresentation, but additional types MAY be included.' +
+        'The related normative guidance in Section 4.5 Types MUST be followed.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.5%20Types%20MUST%20be%20followed.`;
         const presentationWithCredential = await endpoints.createVp({
@@ -62,12 +60,10 @@ describe('Verifiable Presentations', function() {
         );
       });
 
-      it(trimText(`The verifiableCredential property MAY be present. 
-        The value MUST be one or more verifiable credential and/or 
-        enveloped verifiable credential objects 
-        (the values MUST NOT be non-object values 
-        such as numbers, strings, or URLs).`),
-      async function() {
+      it('The verifiableCredential property MAY be present. The value MUST be' +
+        'one or more verifiable credential and/or enveloped verifiable ' +
+        'credential objects (the values MUST NOT be non-object values such ' +
+        'as numbers, strings, or URLs).', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).`;
         // TODO: Test with remote presentation creation or querying if/when
         // supported by the implementation
@@ -85,16 +81,6 @@ describe('Verifiable Presentations', function() {
           './input/presentation-vc-as-string-fail.json')),
         'Failed to reject a VP containing a VC represented as a string.');
       });
-      it(trimText(`These objects are called verifiable credential graphs and 
-        MUST express information that is secured using a securing mechanism.`),
-      async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=These%20objects%20are%20called%20verifiable%20credential%20graphs%20and%20MUST%20express%20information%20that%20is%20secured%20using%20a%20securing%20mechanism.`;
-      });
-      it(trimText(`If present, the "holder" preperty value MUST be either 
-        a URL or an object containing an id property.`),
-      async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=If%20present%2C%20the%20value%20MUST%20be%20either%20a%20URL%20or%20an%20object%20containing%20an%20id%20property.`;
-      });
     });
   }
 });
@@ -108,10 +94,10 @@ describe('VP - Enveloped Verifiable Credentials', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it(trimText(`The @context property of the object MUST be present and 
-        include a context, such as the base context for this specification, that
-        defines at least the id, type, and EnvelopedVerifiableCredential
-        terms as defined by the base context provided by this specification.`),
+      it('The @context property of the object MUST be present and include a ' +
+        'context, such as the base context for this specification, that ' +
+        'defines at least the id, type, and EnvelopedVerifiableCredential ' +
+        'terms as defined by the base context provided by this specification.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
         await assert.doesNotReject(endpoints.verifyVp(require(
@@ -120,29 +106,28 @@ describe('VP - Enveloped Verifiable Credentials', function() {
         // TODO: add more `@context` variations to test handling?
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-enveloped-vc-missing-required-type-fail.json')),
-        trimText(`Failed to reject a VP containing an enveloped VC with a 
-          missing "type".`));
+        'Failed to reject a VP containing an enveloped VC with a missing ' +
+        '`type`.');
         this.skip();
       });
 
-      it(trimText(`The id value of the object MUST be a data: URL [RFC2397] that
-        expresses a secured verifiable credential using an enveloping
-        security scheme, such as Securing Verifiable Credentials using JOSE
-        and COSE [VC-JOSE-COSE].`), async function() {
+      it('The id value of the object MUST be a data: URL [RFC2397] that ' +
+        'expresses a secured verifiable credential using an enveloping ' +
+        'security scheme, such as Securing Verifiable Credentials using JOSE ' +
+        'and COSE [VC-JOSE-COSE].', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20credential%20using%20an%20enveloping%20security%20scheme%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
         // TODO: implement test
         this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
-      it(trimText(`The type value of the object MUST be 
-        EnvelopedVerifiableCredential.`),
-      async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.`;
-        // TODO: implement test
-        this.test.cell.skipMessage = 'TBD';
-        this.skip();
-      });
+      it('The type value of the object MUST be EnvelopedVerifiableCredential.',
+        async function() {
+          this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.`;
+          // TODO: implement test
+          this.test.cell.skipMessage = 'TBD';
+          this.skip();
+        });
     });
   }
 });
@@ -155,10 +140,10 @@ describe('VP - Enveloped Verifiable Presentations', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it(trimText(`The @context property of the object MUST be present and 
-        include a context, such as the base context for this specification, that
-        defines at least the id, type, and EnvelopedVerifiablePresentation
-        terms as defined by the base context provided by this specification.`),
+      it('The @context property of the object MUST be present and include a ' +
+        'context, such as the base context for this specification, that ' +
+        'defines at least the id, type, and EnvelopedVerifiablePresentation ' +
+        'terms as defined by the base context provided by this specification.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
         // TODO: implement test
@@ -166,18 +151,18 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         this.skip();
       });
 
-      it(trimText(`The id value of the object MUST be a data: URL [RFC2397] that
-        expresses a secured verifiable presentation using an enveloping
-        securing mechanism, such as Securing Verifiable Credentials using
-        JOSE and COSE [VC-JOSE-COSE].`), async function() {
+      it('The id value of the object MUST be a data: URL [RFC2397] that ' +
+        'expresses a secured verifiable presentation using an enveloping ' +
+        'securing mechanism, such as Securing Verifiable Credentials using ' +
+        'JOSE and COSE [VC-JOSE-COSE].', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20presentation%20using%20an%20enveloping%20securing%20mechanism%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
         // TODO: implement test
         this.test.cell.skipMessage = 'TBD';
         this.skip();
       });
 
-      it(trimText(`The type value of the object MUST be ' +
-        'EnvelopedVerifiablePresentation.`), async function() {
+      it('The type value of the object MUST be ' +
+        'EnvelopedVerifiablePresentation.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiablePresentation.`;
         // TODO: implement test
         this.test.cell.skipMessage = 'TBD';
@@ -195,10 +180,9 @@ describe('VP - Presentations Including Holder Claims', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it(trimText(`A verifiable presentation that includes a 
-        self-asserted verifiable credential that is only secured 
-        using the same mechanism as the verifiable presentation 
-        MUST include a holder property.`),
+      it('A verifiable presentation that includes a self-asserted verifiable ' +
+        'credential that is only secured using the same mechanism as the ' +
+        'verifiable presentation MUST include a holder property.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=A%20verifiable%20presentation%20that%20includes%20a%20self%2Dasserted%20verifiable%20credential%20that%20is%20only%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%20MUST%20include%20a%20holder%20property.`;
         // TODO: implement test
@@ -206,11 +190,10 @@ describe('VP - Presentations Including Holder Claims', function() {
         this.skip();
       });
 
-      it(trimText(`When a self-asserted verifiable credential is 
-        secured using the same mechanism as the verifiable presentation, 
-        the value of the issuer property of the verifiable credential 
-        MUST be identical to the holder property of the 
-        verifiable presentation.`),
+      it('When a self-asserted verifiable credential is secured using the ' +
+        'same mechanism as the verifiable presentation, the value of the ' +
+        'issuer property of the verifiable credential MUST be identical to ' +
+        'the holder property of the verifiable presentation.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.`;
         // TODO: implement test
