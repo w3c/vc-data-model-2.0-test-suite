@@ -24,7 +24,7 @@ const {match} = filterByTag({tags: [tag]});
 // There are no actual MUSTs here, just references to other sections.
 
 // 4.3 Contexts https://w3c.github.io/vc-data-model/#contexts
-describe('4.03 Contexts', function() {
+describe('Contexts', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});

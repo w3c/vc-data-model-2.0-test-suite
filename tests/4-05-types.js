@@ -20,7 +20,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // 4.5 Types https://w3c.github.io/vc-data-model/#types
-describe('4.05 Types', function() {
+describe('Types', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});

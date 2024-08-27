@@ -20,7 +20,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // 4.10 Status https://w3c.github.io/vc-data-model/#status
-describe('4.10 Status', function() {
+describe('Status', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});

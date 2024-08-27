@@ -20,7 +20,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // 4.7 Issuer https://w3c.github.io/vc-data-model/#issuer
-describe('4.07 Issuer', function() {
+describe('Issuer', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
