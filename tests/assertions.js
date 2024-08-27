@@ -7,6 +7,7 @@ import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
 import {createTimeStamp} from './data-generator.js';
+import {extractIfEnveloped} from './helpers.js';
 import {TestEndpoints} from './TestEndpoints.js';
 
 const should = chai.should();
@@ -28,40 +29,39 @@ export function shouldReturnResult({result, error}) {
   should.exist(result, 'Expected a result');
 }
 
-export function shouldBeIssuedVc({issuedVc}) {
-  issuedVc.should.be.an(
+export function shouldBeCredential(credential) {
+  credential.should.be.an(
     'object',
     'Expected the issued Verifiable Credential to be an object.'
   );
-  issuedVc.should.have.property('@context');
-  issuedVc.should.have.property('type');
-  issuedVc.type.should.contain(
+  credential.should.have.property('@context');
+  credential.should.have.property('type');
+  credential.type.should.contain(
     'VerifiableCredential',
     'Expected `type` to contain "VerifiableCredential".'
   );
-  issuedVc.should.have.property('id');
-  issuedVc.id.should.be.a(
-    'string',
-    'Expected `id` to be a string.'
-  );
-  issuedVc.should.have.property('credentialSubject');
+  credential.should.have.property('credentialSubject');
   _shouldBeValidCredentialSubject(
-    {credentialSubject: issuedVc.credentialSubject});
-  issuedVc.should.have.property('issuer');
-  const issuerType = typeof(issuedVc.issuer);
+    {credentialSubject: credential.credentialSubject});
+  credential.should.have.property('issuer');
+  const issuerType = typeof(credential.issuer);
   issuerType.should.be.oneOf(
     ['string', 'object'],
     'Expected `issuer` to be a string or an object.'
   );
+  if(issuerType === 'object') {
+    should.exist(credential.issuer.id,
+      'Expected issuer object to have property id');
+  }
+}
+
+export function shouldBeIssuedVc({issuedVc}) {
+  shouldBeCredential(issuedVc);
   issuedVc.should.have.property('proof');
   issuedVc.proof.should.be.an(
     'object',
     'Expected `proof` to be an object.'
   );
-  if(issuerType === 'object') {
-    should.exist(issuedVc.issuer.id,
-      'Expected issuer object to have property id');
-  }
 }
 
 /**
@@ -152,4 +152,57 @@ function _shouldHaveClaims({subject}) {
     0,
     'Expected credentialSubject to have at least one claim.'
   );
+}
+
+export function shouldBeSecured(name, issuedVc) {
+  if('proof' in issuedVc) {
+    shouldHaveEmbeddedProof(name, issuedVc);
+  } else {
+    shouldHaveEnvelopedProof(name, issuedVc);
+  }
+}
+
+export function shouldHaveEmbeddedProof(name, issuedVc) {
+  issuedVc.should.have.property('type').that.does
+    .include('VerifiableCredential', `Expected ${name} to issue a VC.`);
+  issuedVc.should.have.property('proof').which.is.not.a('string',
+    'Expected VC to have a `proof`.');
+  if(Array.isArray(issuedVc.proof)) {
+    issuedVc.proof.length.should.be.gt(0,
+      'Expected at least one `proof`.');
+    issuedVc.proof.every(p => typeof p === 'object').should.be.true;
+  } else {
+    issuedVc.proof.should.be.an(
+      'object',
+      'Expected `proof` to be an object.'
+    );
+  }
+}
+
+export function shouldHaveEnvelopedProof(name, issuedVc) {
+  issuedVc.should.have.property('type').that.does
+    .include('EnvelopedVerifiableCredential',
+      `Expected ${name} to issue a VC.`);
+  issuedVc.should.have.property('id').that.does
+    .include('data:application/vc+jwt');
+  const credential = extractIfEnveloped(issuedVc);
+  credential.should.exist();
+}
+
+export function checkRequiredProperties(issuedVc) {
+  issuedVc.should.have.property('@context');
+  issuedVc.should.have.property('type');
+  if(issuedVc.type == 'EnvelopedVerifiableCredential' ||
+     'EnvelopedVerifiableCredential' in issuedVc.type) {
+    issuedVc.should.have.property('id');
+    const extractedCredential = extractIfEnveloped(issuedVc);
+    extractedCredential.should.have.property('@context');
+    extractedCredential.should.have.property('type');
+    extractedCredential.should.have.property('issuer');
+    extractedCredential.should.have.property('credentialSubject');
+  } else {
+    issuedVc.should.have.property('issuer');
+    issuedVc.should.have.property('credentialSubject');
+    issuedVc.should.have.property('proof');
+  }
 }
