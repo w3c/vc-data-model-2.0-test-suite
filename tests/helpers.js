@@ -14,3 +14,23 @@ export function addPerTestMetadata() {
     rowId: this.currentTest.title
   };
 }
+
+export function extractIfEnveloped(input) {
+  if(input.type == 'EnvelopedVerifiableCredential' ||
+    'EnvelopedVerifiableCredential' in input.type
+  ) {
+    input.should.have.property('id').that.does
+      .include('data:application/vc+jwt', `Missing id field.`);
+    const extractedCredential = atob(input.id.split(',')[1].split('.')[1]);
+    return JSON.parse(extractedCredential);
+  } else if(input.type == 'EnvelopedVerifiablePresentation' ||
+    'EnvelopedVerifiablePresentation' in input.type
+  ) {
+    input.should.have.property('id').that.does
+      .include('data:application/vp+jwt', `Missing id field.`);
+    const extractedPresentation = atob(input.id.split(',')[1].split('.')[1]);
+    return JSON.parse(extractedPresentation);
+  } else {
+    return input;
+  }
+}
