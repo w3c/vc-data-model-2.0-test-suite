@@ -67,7 +67,7 @@ describe('Advanced Concepts', function() {
           './input/relatedResource/relatedResource-list-of-strings-fail.json'
         )),
         {name: 'HTTPError'},
-        'Failed to reject VC with relatedResource as an array of strings.');
+        'Failed to reject a VC with a relatedResource as an array of strings.');
       });
       it('The identifier for the resource is REQUIRED and conforms to the ' +
         'format defined in Section 4.4 Identifiers. The value MUST be unique ' +
@@ -77,7 +77,7 @@ describe('Advanced Concepts', function() {
           './input/relatedResource/relatedResource-missing-id-fail.json'
         )),
         {name: 'HTTPError'},
-        'Failed to reject VC with relatedResource missing its `id` field.');
+        'Failed to reject a VC with a relatedResource with no `id` field.');
       });
       it('Each object associated with relatedResource MUST contain at least ' +
         'a digestSRI or a digestMultibase value.', async function() {
@@ -86,7 +86,7 @@ describe('Advanced Concepts', function() {
           './input/relatedResource/relatedResource-no-digest-fail.json'
         )),
         {name: 'HTTPError'},
-        'Failed to reject VC with relatedResource missing digest info.');
+        'Failed to reject a VC with a relatedResource with no digest info.');
       });
 
       // 5.4 Refreshing https://w3c.github.io/vc-data-model/#integrity-of-related-resources
