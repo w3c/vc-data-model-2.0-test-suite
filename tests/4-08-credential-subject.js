@@ -51,9 +51,6 @@ describe('4.08 Credential Subject', function() {
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-subject-multiple-ok.json')),
         'Failed to accept a VC with multiple `credentialSubject`s.');
-        // TODO: reconsider whether an empty object is a violation; as long as
-        // at least one claim object is included...is there any harm in throwing
-        // out the empties?
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-subject-multiple-empty-fail.json')),

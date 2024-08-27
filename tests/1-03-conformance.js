@@ -54,18 +54,14 @@ describe('1.03 Conformance', function() {
       it('Verifiable Credential: A conforming document MUST be a \
         verifiable credential with a media type of application/vc'
         .replace(spaces, ' '), async function() {
-        this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=A%20conforming%20document%20MUST%20be%20either%20a%20verifiable%20credential%20with%20a%20media%20type%20of%20application/vc%20or%20a%20verifiable%20presentation%20with%20a%20media%20type%20of%20application/vp.`;
-        this.test.cell.skipMessage = 'TBD';
+        this.test.cell.skipMessage = 'Cannot be tested at the document layer.';
         this.skip();
-        // TODO How can we test for the media type application/vc?
       });
       it('Verifiable Presentation: A conforming document MUST be a \
         verifiable presentation with a media type of application/vp.'
         .replace(spaces, ' '), async function() {
-        this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=A%20conforming%20document%20MUST%20be%20either%20a%20verifiable%20credential%20with%20a%20media%20type%20of%20application/vc%20or%20a%20verifiable%20presentation%20with%20a%20media%20type%20of%20application/vp.`;
-        this.test.cell.skipMessage = 'TBD';
+        this.test.cell.skipMessage = 'Cannot be tested at the document layer.';
         this.skip();
-        // TODO How can we test for the media type application/vp?
       });
       it('A conforming document MUST be secured by at least one \
         securing mechanism as described in Section 4.12 Securing Mechanisms.'

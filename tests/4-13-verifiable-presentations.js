@@ -60,8 +60,6 @@ describe('4.13 Verifiable Presentations', function() {
         const presentationWithCredential = await endpoints.createVp({
           presentation: require('./input/presentation-vc-ok.json')
         });
-        // TODO: given this is what we just sent in to the service...this is not
-        // much of a test.
         presentationWithCredential.should.have.property('type').that.contains(
           'VerifiablePresentation',
           'VP MUST include the `VerifiablePresentation` type value.'
