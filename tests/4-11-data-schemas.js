@@ -20,7 +20,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // 4.11 Data Schemas https://w3c.github.io/vc-data-model/#data-schemas
-describe('4.11 Data Schemas', function() {
+describe('Data Schemas', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});

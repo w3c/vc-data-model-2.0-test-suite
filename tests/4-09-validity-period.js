@@ -5,12 +5,11 @@
  */
 
 // eslint-disable-next-line max-len
-import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
+import {addPerTestMetadata, setupMatrix, trimText, validityPeriodCheck} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
-import {shouldHaveValidPeriod} from './assertions.js';
 import {TestEndpoints} from './TestEndpoints.js';
 
 // eslint-disable-next-line no-unused-vars
@@ -22,7 +21,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // 4.9 Validity Period https://w3c.github.io/vc-data-model/#validity-period
-describe('4.09 Validity Period', function() {
+describe('Validity Period', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
@@ -77,14 +76,14 @@ describe('4.09 Validity Period', function() {
         datetime expressed by the validUntil value.`),
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validUntil%20value%20also%20exists%2C%20the%20validFrom%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20earlier%20than%20the%20datetime%20expressed%20by%20the%20validUntil%20value.`;
-        await shouldHaveValidPeriod(endpoints);
+        await validityPeriodCheck(endpoints);
       });
       it(trimText(`If a validFrom value also exists, the validUntil value MUST
         express a datetime that is temporally the same or later than the
         datetime expressed by the validFrom value.`),
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validFrom%20value%20also%20exists%2C%20the%20validUntil%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20later%20than%20the%20datetime%20expressed%20by%20the%20validFrom%20value.`;
-        await shouldHaveValidPeriod(endpoints);
+        await validityPeriodCheck(endpoints);
       });
       // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
       it(trimText(`Time values that are incorrectly serialized without an offset

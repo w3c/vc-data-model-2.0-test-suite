@@ -20,7 +20,7 @@ const tag = 'vc2.0';
 const {match} = filterByTag({tags: [tag]});
 
 // 5. Advanced Concepts https://w3c.github.io/vc-data-model/#advanced-concepts
-describe('5.00 Advanced Concepts', function() {
+describe('Advanced Concepts', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
