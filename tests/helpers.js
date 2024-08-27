@@ -22,7 +22,7 @@ export function extractEnvelopedCredential(issuedVc) {
   issuedVc.should.have.property('id').that.does
     .include('data:application/vc+jwt', `Missing id field.`);
   const vcId = issuedVc.id;
-  const jwt = vcId.split(',')[1];
+  const jwt = vcId.split(';')[1];
   const payload = jwt.split('.')[1];
   const credential = atob(payload);
   // TODO: needs more error handling
