@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
+import {addPerTestMetadata, setupMatrix, spaces} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -28,9 +28,9 @@ describe('4.04 Identifiers', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it(trimText(`If present, id property's value MUST be a single URL, 
-        which MAY be dereferenceable.`),
-      async function() {
+      it('If present, id property`s value MUST be a single URL, \
+        which MAY be dereferenceable.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.`;
         await assert.doesNotReject(endpoints.issue(
           require('./input/credential-id-other-ok.json')),

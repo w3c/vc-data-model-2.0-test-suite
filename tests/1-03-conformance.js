@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
+import {addPerTestMetadata, setupMatrix, spaces} from './helpers.js';
 import {
   shouldBeSecured,
   shouldIncludeAllRequiredProperties
@@ -13,6 +13,7 @@ import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
+import {shouldBeConformingDocument} from './assertions.js';
 import {TestEndpoints} from './TestEndpoints.js';
 
 // eslint-disable-next-line no-unused-vars
@@ -43,51 +44,52 @@ describe('1.03 Conformance', function() {
         }
       });
       beforeEach(addPerTestMetadata);
-      it(trimText(`Conforming document (compliance): Sections 
-        4. Basic Concepts, 5. Advanced Concepts, and 6. Syntaxes 
-        of this document (VCDM 2.0 specification) MUST be enforced.`),
-      async function() {
+      it('Conforming document (compliance): Sections \
+        4. Basic Concepts, 5. Advanced Concepts, and 6. Syntaxes \
+        of this document (VCDM 2.0 specification) MUST be enforced.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#identifiers:~:text=of%20this%20document-,MUST%20be%20enforced.,-A%20conforming%20document`;
-        this.test.cell.skipMessage = 'Tested by other tests in this suite.';
-        this.skip();
+        shouldBeConformingDocument(issuedVc);
       });
-      it(trimText(`Verifiable Credential: A conforming document MUST be a 
-        verifiable credential with a media type of application/vc`),
-      async function() {
+      it('Verifiable Credential: A conforming document MUST be a \
+        verifiable credential with a media type of application/vc'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=A%20conforming%20document%20MUST%20be%20either%20a%20verifiable%20credential%20with%20a%20media%20type%20of%20application/vc%20or%20a%20verifiable%20presentation%20with%20a%20media%20type%20of%20application/vp.`;
-        this.test.cell.skipMessage = 'Tested by other tests in this suite.';
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
+        // TODO How can we test for the media type application/vc?
       });
-      it(trimText(`Verifiable Presentation: A conforming document MUST be a 
-        verifiable presentation with a media type of application/vp.`),
-      async function() {
+      it('Verifiable Presentation: A conforming document MUST be a \
+        verifiable presentation with a media type of application/vp.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=A%20conforming%20document%20MUST%20be%20either%20a%20verifiable%20credential%20with%20a%20media%20type%20of%20application/vc%20or%20a%20verifiable%20presentation%20with%20a%20media%20type%20of%20application/vp.`;
-        this.test.cell.skipMessage = 'Tested by other tests in this suite.';
+        this.test.cell.skipMessage = 'TBD';
         this.skip();
+        // TODO How can we test for the media type application/vp?
       });
-      it(trimText(`A conforming document MUST be secured by at least one
-        securing mechanism as described in Section 4.12 Securing Mechanisms.`),
-      async function() {
+      it('A conforming document MUST be secured by at least one \
+        securing mechanism as described in Section 4.12 Securing Mechanisms.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.12%20Securing%20Mechanisms.`;
         shouldBeSecured(name, issuedVc);
       });
-      it(trimText(`A conforming issuer implementation MUST include all
-        required properties in the conforming documents it produces.`),
-      async function() {
+      it('A conforming issuer implementation MUST include all \
+        required properties in the conforming documents it produces.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces`;
         shouldIncludeAllRequiredProperties(issuedVc);
       });
-      it(trimText(`A conforming issuer implementation MUST secure the
-        conforming documents it produces using a securing mechanism
-        described in Section 4.12 Securing Mechanisms.`),
-      async function() {
+      it('A conforming issuer implementation MUST secure the \
+        conforming documents it produces using a securing mechanism \
+        described in Section 4.12 Securing Mechanisms.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20secure%20the%20conforming%20documents%20it%20produces%20using%20a%20securing%20mechanism%20described%20in%20Section%204.12%20Securing%20Mechanisms.`;
         shouldBeSecured(name, issuedVc);
       });
-      it(trimText(`A conforming verifier implementation MUST perform
-        verification on a conforming document as described in
-        Section 4.12 Securing Mechanisms.`),
-      async function() {
+      it('A conforming verifier implementation MUST perform \
+        verification on a conforming document as described in \
+        Section 4.12 Securing Mechanisms.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20perform%20verification%20on%20a%20conforming%20document%20as%20described%20in%20Section%204.12%20Securing%20Mechanisms`;
         await assert.doesNotReject(endpoints.verify(issuedVc),
           'Failed to verify credential.');
@@ -101,15 +103,15 @@ describe('1.03 Conformance', function() {
         'Failed to reject a VC missing a `proof`.');
         // TODO: add enveloped proof test
       });
-      it(trimText(`A conforming verifier implementation MUST check
-        that each required property satisfies the normative requirements
-        for that property.`),
-      async function() {
+      it('A conforming verifier implementation MUST check \
+        that each required property satisfies the normative requirements \
+        for that property.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20check%20that%20each%20required%20property%20satisfies%20the%20normative%20requirements%20for%20that%20property`;
       });
-      it(trimText(`A conforming verifier implementation MUST produce errors
-        when non-conforming documents are detected.`),
-      async function() {
+      it('A conforming verifier implementation MUST produce errors \
+        when non-conforming documents are detected.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20produce%20errors%20when%20non%2Dconforming%20documents%20are%20detected`;
         const doc = {
           type: ['NonconformingDocument']

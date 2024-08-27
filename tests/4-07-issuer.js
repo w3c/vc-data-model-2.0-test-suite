@@ -4,7 +4,8 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {addPerTestMetadata, setupMatrix, trimText} from './helpers.js';
+import {addPerTestMetadata, extractIfEnveloped, setupMatrix, spaces}
+  from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -28,16 +29,17 @@ describe('4.07 Issuer', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
-      it(trimText(`A verifiable credential MUST have an issuer property.`),
-        async function() {
-          this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.`;
-          const vc = await endpoints.issue(
-            require('./input/credential-ok.json'));
-          vc.hasOwnProperty('issuer');
-        });
-      it(trimText(`The value of the issuer property MUST be either a URL, or
-        an object containing an id property whose value is a URL.`),
-      async function() {
+      it('A verifiable credential MUST have an issuer property.'
+        .replace(spaces, ' '), async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.`;
+        let vc = await endpoints.issue(
+          require('./input/credential-ok.json'));
+        vc = extractIfEnveloped(vc);
+        vc.hasOwnProperty('issuer');
+      });
+      it('The value of the issuer property MUST be either a URL, or \
+        an object containing an id property whose value is a URL.'
+        .replace(spaces, ' '), async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL`;
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-issuer-object-ok.json')));
