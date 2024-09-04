@@ -9,11 +9,11 @@
     "id": "did:example:subject"
   },
   "relatedResource": [{
-    "id": "https://www.w3.org/ns/credentials/v2",
-    "digestMultibase": "uEres1usWcWCmW7uolIW2uA0CjQ8iRV14eGaZStJL73Vz"
+    "id": "https://w3c.github.io/vc-data-model/related-resource.json",
+    "digestMultibase": "uZTQ0MjM1NiAgcmVwb3J0cy9yZWxhdGVkLXJlc291cmNlLmpzb24K"
   },{
-    "id": "https://www.w3.org/ns/credentials/examples/v2",
+    "id": "https://w3c.github.io/vc-data-model/related-resource.json",
     "digestSRI":
-      "sha384-zNNbQTWCSUSi0bbz7dbua+RcENv7C6FvlmYJ1Y+I727HsPOHdzwELMYO9Mz68M26"
+      "sha256-ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
   }]
 }
