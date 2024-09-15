@@ -91,7 +91,7 @@
       details.hide {
         display: none;
       }
-      details.err {
+      .err {
         position: absolute;
         z-index: 1;
         white-space: nowrap;
@@ -102,6 +102,7 @@
         box-shadow: 0 0 5px darkgray;
         min-width: 25em;
       }
+      span.err,
       details.err summary {
         color: indianred;
       }
@@ -180,22 +181,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 196/240 81%
+      Tests passed 200/255 78%
       </p>
       <p>
-      Tests failed 44/240 19%
+      Tests failed 55/255 22%
       </p>
       <p>
-      Failures 44
+      Failures 55
       </p>
       <p>
-      Tests skipped 75
+      Tests skipped 60
       </p>
       <p>
       Total tests 315
       </p>
       <p>
-        These tests were run on <time>8 September 2024 at 5:07 am UTC</time>
+        These tests were run on <time>15 September 2024 at 5:06 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -274,26 +275,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Tested by other tests in this suite.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Tested by other tests in this suite.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Tested by other tests in this suite.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Tested by other tests in this suite.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Tested by other tests in this suite.</span>
                     </div>
                   </td>
               </tr>
@@ -532,7 +538,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -550,7 +556,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
                     Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -563,7 +569,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -576,7 +582,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -755,7 +761,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:66:9)</pre>
@@ -771,7 +777,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with an unmapped (via &#x60;@context&#x60;) type.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:66:9)</pre>
@@ -864,7 +870,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -882,7 +888,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
-                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
                     Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -895,7 +901,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -908,7 +914,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -927,7 +933,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;credentialStatus&#x60; without a &#x60;type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;credentialStatus&#x60; without a &#x60;type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;credentialStatus&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:122:11)</pre>
@@ -965,7 +971,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;termsOfUse&#x60; without a &#x60;type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;termsOfUse&#x60; without a &#x60;type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;termsOfUse&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:135:11)</pre>
@@ -1003,7 +1009,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;evidence&#x60; without a &#x60;type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;evidence&#x60; without a &#x60;type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;evidence&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:148:11)</pre>
@@ -1041,7 +1047,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:160:11)</pre>
@@ -1079,7 +1085,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:172:11)</pre>
@@ -1155,7 +1161,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
-                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;:</summary>
+                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
                     Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1195,7 +1201,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VC using &#x60;description&#x60; in a defined language.
-                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;:</summary>
+                    Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;description&#x60; in a defined language.
                     Actual message: &quot;A validation error occured in the &#x27;Issue Credential&#x27; validator.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1235,7 +1241,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VC using &#x60;issuer.name&#x60; with language &amp; direction expressed.
-                    Actual message: &quot;Invalid credential.&quot;:</summary>
+                    Actual message: &quot;Invalid credential.&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;issuer.name&#x60; with language &amp; direction expressed.
                     Actual message: &quot;Invalid credential.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1275,7 +1281,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VC using &#x60;issuer.description&#x60; with language &amp; direction expressed.
-                    Actual message: &quot;Invalid credential.&quot;:</summary>
+                    Actual message: &quot;Invalid credential.&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;issuer.description&#x60; with language &amp; direction expressed.
                     Actual message: &quot;Invalid credential.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1373,7 +1379,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:44:9)</pre>
@@ -1384,44 +1390,26 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject an issuer identifier that was not a URL.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:44:9)</pre>
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Failed to reject a null issuer identifier.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Failed to reject a null issuer identifier.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:48:9)</pre>
-                      </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Failed to reject a null issuer identifier.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Failed to reject a null issuer identifier.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:48:9)</pre>
-                      </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Failed to reject a null issuer identifier.:</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Failed to reject a null issuer identifier.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-7-issuer.js:48:9)</pre>
-                      </details>
                     </div>
                   </td>
               </tr>
@@ -1499,7 +1487,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an empty &#x60;credentialSubject&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with an empty &#x60;credentialSubject&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with an empty &#x60;credentialSubject&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-8-credential-subject.js:45:9)</pre>
@@ -1602,7 +1590,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VC with a valid &#x60;validUntil&#x60; date-time.
-                    Actual message: &quot;Expired&quot;:</summary>
+                    Actual message: &quot;Expired&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid &#x60;validUntil&#x60; date-time.
                     Actual message: &quot;Expired&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -1704,26 +1692,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -1769,7 +1762,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/410-status.js:42:9)</pre>
@@ -1807,7 +1800,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC missing &#x60;credentialStatus.type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC missing &#x60;credentialStatus.type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC missing &#x60;credentialStatus.type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/410-status.js:52:9)</pre>
@@ -1823,7 +1816,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a non-URL &#x60;credentialStatus.type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/410-status.js:56:9)</pre>
@@ -1850,26 +1843,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Not testable with automation.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Not testable with automation.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Not testable with automation.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Not testable with automation.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Not testable with automation.</span>
                     </div>
                   </td>
               </tr>
@@ -1947,7 +1945,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/411-data-schemas.js:48:9)</pre>
@@ -1958,7 +1956,7 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without an &#x60;id&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without an &#x60;id&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject &#x60;credentialSchema&#x60; without an &#x60;id&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/411-data-schemas.js:52:9)</pre>
@@ -2120,7 +2118,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify credential.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify credential.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2138,7 +2136,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify credential.
-                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify credential.
                     Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2198,26 +2196,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Test skipped.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Test skipped.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Test skipped.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Test skipped.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">Test skipped.</span>
                     </div>
                   </td>
               </tr>
@@ -2264,7 +2267,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2282,7 +2285,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
                     Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2295,7 +2298,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2308,7 +2311,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2360,7 +2363,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2373,7 +2376,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2386,7 +2389,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
-                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
                     Actual message: &quot;Request failed with status code 500 Internal Server Error&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2399,7 +2402,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2412,7 +2415,7 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;:</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
@@ -2430,26 +2433,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -2462,26 +2470,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -2526,26 +2539,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -2558,26 +2576,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -2590,26 +2613,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -2654,26 +2682,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -2686,26 +2719,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
@@ -2779,29 +2817,53 @@
                     <a href="https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text&#x3D;The%20value%20of%20the%20relatedResource%20property%20MUST%20be%20one%20or%20more%20objects%20of%20the%20following%20form%3A">The value of the relatedResource property MUST be one or more objects of the following form:</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:66:9)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:66:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:66:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
-                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource as an array of strings.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:66:9)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>
@@ -2811,29 +2873,59 @@
                     <a href="https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text&#x3D;The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.">The identifier for the resource is REQUIRED and conforms to the format defined in Section 4.4 Identifiers. The value MUST be unique among the list of related resource objects.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:76:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:76:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:76:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:76:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no &#x60;id&#x60; field.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:76:9)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>
@@ -2843,29 +2935,59 @@
                     <a href="https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text&#x3D;Each%20object%20associated%20with%20relatedResource%20MUST%20contain%20at%20least%20a%20digestSRI%20or%20a%20digestMultibase%20value.">Each object associated with relatedResource MUST contain at least a digestSRI or a digestMultibase value.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:85:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:85:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:85:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:85:9)</pre>
+                      </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with a relatedResource with no digest info.
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:85:9)</pre>
+                      </details>
                     </div>
                   </td>
               </tr>
@@ -2911,10 +3033,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.:</summary>
+                        <summary>Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject a VC with &#x60;refreshService&#x60; without a &#x60;type&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:100:11)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:114:11)</pre>
                       </details>
                     </div>
                   </td>
@@ -2981,10 +3103,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError).:</summary>
+                        <summary>Missing expected rejection (HTTPError).</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError).
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:119:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/50-advanced-concepts.js:133:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -3050,26 +3172,31 @@
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
+                      <span class="err hide">TBD</span>
                     </div>
                   </td>
               </tr>
