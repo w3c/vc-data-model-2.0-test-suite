@@ -9,7 +9,6 @@
     "id": "did:example:subject"
   },
   "relatedResource": [{
-    "id": "https://w3c.github.io/vc-data-model/related-resource.json",
     "digestMultibase": "uZTQ0MjM1NiAgcmVwb3J0cy9yZWxhdGVkLXJlc291cmNlLmpzb24K"
   }]
 }
