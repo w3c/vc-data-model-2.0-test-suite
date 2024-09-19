@@ -11,6 +11,7 @@ import {createLocalVp} from './data-generator.js';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {injectOrReject} from './assertions.js';
+import {klona} from 'klona';
 import {TestEndpoints} from './TestEndpoints.js';
 
 // eslint-disable-next-line no-unused-vars
@@ -50,11 +51,16 @@ describe('Contexts', function() {
       it('Verifiable presentations MUST include a @context property.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
-          const vp = await createLocalVp({
+          const validVp = await createLocalVp({
             presentation: require('./input/presentation-ok.json')
           });
-          delete vp['@context'];
-          await assert.rejects(endpoints.verifyVp(vp),
+          await assert.doesNotReject(
+            endpoints.verifyVp(validVp),
+            `verifier ${name} rejected VP with valid @context.`
+          );
+          const invalidVp = klona(validVp);
+          delete invalidVp['@context'];
+          await assert.rejects(endpoints.verifyVp(invalidVp),
             'Failed to reject a VP with a missing @context.');
         });
       it('Verifiable credentials: The value of the @context property ' +
