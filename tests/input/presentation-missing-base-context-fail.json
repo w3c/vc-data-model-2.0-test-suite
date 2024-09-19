@@ -1,7 +1,5 @@
 {
-  "@context": [
-    "https://www.w3.org/ns/credentials/examples/v2"
-  ],
+  "@context": [],
   "type": [
     "VerifiablePresentation"
   ]
