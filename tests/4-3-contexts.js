@@ -84,7 +84,7 @@ describe('Contexts', function() {
         'the value https://www.w3.org/ns/credentials/v2.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
         const vp = await createLocalVp({
-          presentation: require('./input/presentation-ok.json')
+          presentation: require('./input/presentation-context-order-fail.json')
         });
         vp['@context'] = [
           'https://www.w3.org/ns/credentials/examples/v2',
