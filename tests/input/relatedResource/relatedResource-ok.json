@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2"
+  ],
+  "type": [
+    "VerifiableCredential"
+  ],
+  "credentialSubject": {
+    "id": "did:example:subject"
+  },
+  "relatedResource": [{
+    "id": "https://w3c.github.io/vc-data-model/related-resource.json",
+    "digestMultibase": "uZTQ0MjM1NiAgcmVwb3J0cy9yZWxhdGVkLXJlc291cmNlLmpzb24K"
+  },{
+    "id": "https://w3c.github.io/vc-data-model/related-resource.json",
+    "digestSRI":
+      "sha256-ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  }]
+}
