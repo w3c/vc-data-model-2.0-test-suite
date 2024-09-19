@@ -12,7 +12,6 @@ import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
 
-// eslint-disable-next-line no-unused-vars
 const should = chai.should();
 
 const require = createRequire(import.meta.url);
@@ -40,31 +39,27 @@ describe('Basic Conformance', function() {
         }
       });
       beforeEach(addPerTestMetadata);
-      it('Conforming document (compliance): VCDM "MUST be enforced." ' +
-        '("all relevant normative statements in Sections 4. Basic Concepts, ' +
-        '5. Advanced Concepts, and 6. Syntaxes")', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#identifiers:~:text=of%20this%20document-,MUST%20be%20enforced.,-A%20conforming%20document`;
-        this.test.cell.skipMessage = 'Tested by other tests in this suite.';
-        this.skip();
-      });
       it('A conforming document MUST be secured by at least one securing ' +
         'mechanism as described in Section 4.12 Securing Mechanisms.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text=A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.12%20Securing%20Mechanisms.`;
         // covers both embedded and enveloped dynamically
-        shouldBeSecured(issuedVc);
+        should.exist(issuedVc, `Expected ${name} to have issued a VC.`);
+        shouldBeSecured(name, issuedVc);
       });
       it('A conforming issuer implementation MUST include all ' +
         'required properties in the conforming documents it produces.',
       async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces`;
-        checkRequiredProperties(issuedVc);
+        should.exist(issuedVc, `Expected ${name} to have issued a VC.`);
+        checkRequiredProperties(name, issuedVc);
       });
       it('A conforming issuer implementation MUST secure the ' +
         'conforming documents it produces using a securing mechanism' +
         'described in Section 4.12 Securing Mechanisms.',
       async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces`;
+        should.exist(issuedVc, `Expected ${name} to have issued a VC.`);
         shouldBeSecured(name, issuedVc);
       });
       it('A conforming verifier implementation MUST perform ' +
