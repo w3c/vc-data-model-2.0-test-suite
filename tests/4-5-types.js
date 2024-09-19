@@ -7,6 +7,7 @@
 import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
+import {createLocalVp} from './data-generator.js';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
@@ -99,7 +100,7 @@ describe('Types', function() {
       it('Verifiable Presentation objects MUST have a type specified.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.`;
-          const presentationOptionalType = await endpoints.createVp({
+          const presentationOptionalType = await createLocalVp({
             presentation: require('./input/presentation-optional-type-ok.json')
           });
           await assert.doesNotReject(endpoints.verifyVp(

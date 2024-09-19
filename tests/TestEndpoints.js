@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
-import {challenge, createVp} from './data-generator.js';
 import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
+import {challenge} from './data-generator.js';
 import http from 'http';
 import receiveJson from './receive-json.js';
 
@@ -28,11 +28,9 @@ export class TestEndpoints {
     const issueBody = createRequestBody({issuer, vc: credential});
     return post(issuer, issueBody);
   }
-  async createVp({presentation, options = {}}) {
-    return createVp({presentation, options: {
-      challenge,
-      ...options
-    }});
+  // FIXME implement createVp in the future
+  async createVp() {
+    throw new Error('Create VP not implemented yet.');
   }
   async verify(vc) {
     const verifyBody = createVerifyRequestBody({vc});

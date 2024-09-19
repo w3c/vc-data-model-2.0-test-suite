@@ -7,6 +7,7 @@
 import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
+import {createLocalVp} from './data-generator.js';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {injectOrReject} from './assertions.js';
@@ -49,7 +50,7 @@ describe('Contexts', function() {
       it('Verifiable presentations MUST include a @context property.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
-          const vp = await endpoints.createVp({
+          const vp = await createLocalVp({
             presentation: require('./input/presentation-ok.json')
           });
           delete vp['@context'];
@@ -76,7 +77,7 @@ describe('Contexts', function() {
         'property MUST be an ordered set where the first item is a URL with ' +
         'the value https://www.w3.org/ns/credentials/v2.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
-        const vp = await endpoints.createVp({
+        const vp = await createLocalVp({
           presentation: require('./input/presentation-ok.json')
         });
         vp['@context'] = [
@@ -113,19 +114,19 @@ describe('Contexts', function() {
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.`;
         await assert.doesNotReject(
-          endpoints.verifyVp(await endpoints.createVp({
+          endpoints.verifyVp(await createLocalVp({
             presentation:
               require('./input/presentation-context-combo1-ok.json')
           })),
           'Failed to support multiple `@context` URLs in a VP.');
         await assert.doesNotReject(
-          endpoints.verifyVp(await endpoints.createVp({
+          endpoints.verifyVp(await createLocalVp({
             presentation:
               require('./input/presentation-context-combo2-ok.json')
           })),
           'Failed to support objects in the `@context` Array in a VP.');
         // first create a valid VP
-        const vp = await endpoints.createVp({
+        const vp = await createLocalVp({
           presentation: require('./input/presentation-vc-ok.json')
         });
         // then inject incorrect `@context` values and test verification
