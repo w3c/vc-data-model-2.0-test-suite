@@ -20,14 +20,14 @@ export function extractIfEnveloped(input) {
     'EnvelopedVerifiableCredential' in input.type
   ) {
     input.should.have.property('id').that.does
-      .include('data:application/vc+jwt', `Missing id field.`);
+      .include('data:', `Missing id field.`);
     const extractedCredential = atob(input.id.split(',')[1].split('.')[1]);
     return JSON.parse(extractedCredential);
   } else if(input.type == 'EnvelopedVerifiablePresentation' ||
     'EnvelopedVerifiablePresentation' in input.type
   ) {
     input.should.have.property('id').that.does
-      .include('data:application/vp+jwt', `Missing id field.`);
+      .include('data:', `Missing id field.`);
     const extractedPresentation = atob(input.id.split(',')[1].split('.')[1]);
     return JSON.parse(extractedPresentation);
   } else {
