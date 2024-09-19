@@ -72,7 +72,7 @@ describe('Basic Conformance', function() {
       });
       it('A conforming verifier implementation MUST check ' +
         'that each required property satisfies the normative requirements' +
-        'for that property',
+        'for that property.',
       async function() {
         this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces`;
         this.test.cell.skipMessage = 'Tested by other tests in this suite.';
