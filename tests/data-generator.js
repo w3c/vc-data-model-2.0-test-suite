@@ -59,7 +59,7 @@ async function getKeys() {
 }
 
 /**
- * An extremely basic VP creator. This is not final
+ * An extremely basic local VP creator. This is not final
  * and will probably change.
  *
  * @param {object} options - Options to use.
@@ -68,7 +68,7 @@ async function getKeys() {
  *
  * @returns {Promise<object>} Resolves to a signed VP.
  */
-export async function createVp({presentation, options = {}}) {
+export async function createLocalVp({presentation, options = {challenge}}) {
   const {signer, keyPair} = await getKeys({options});
   options.suite = new DataIntegrityProof({
     signer,

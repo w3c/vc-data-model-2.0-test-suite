@@ -8,6 +8,7 @@ import {addPerTestMetadata, setupMatrix}
   from './helpers.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
+import {createLocalVp} from './data-generator.js';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
@@ -32,7 +33,7 @@ describe('Verifiable Presentations', function() {
       it('If [the `id` field is] present, the normative guidance in Section ' +
         '4.4 Identifiers MUST be followed.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type`;
-        const presentationWithCredential = await endpoints.createVp({
+        const presentationWithCredential = await createLocalVp({
           presentation: require('./input/presentation-vc-ok.json')
         });
         if('id' in presentationWithCredential) {
@@ -51,7 +52,7 @@ describe('Verifiable Presentations', function() {
         'The related normative guidance in Section 4.5 Types MUST be followed.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.5%20Types%20MUST%20be%20followed.`;
-        const presentationWithCredential = await endpoints.createVp({
+        const presentationWithCredential = await createLocalVp({
           presentation: require('./input/presentation-vc-ok.json')
         });
         presentationWithCredential.should.have.property('type').that.contains(
@@ -67,7 +68,7 @@ describe('Verifiable Presentations', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text=The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).`;
         // TODO: Test with remote presentation creation or querying if/when
         // supported by the implementation
-        const presentationWithCredentials = await endpoints.createVp({
+        const presentationWithCredentials = await createLocalVp({
           presentation: require('./input/presentation-multiple-vc-ok.json')
         });
         await assert.doesNotReject(endpoints.verifyVp(
