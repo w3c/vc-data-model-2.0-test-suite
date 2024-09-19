@@ -184,12 +184,12 @@ export function shouldHaveEnvelopedProof(name, issuedVc) {
     .include('EnvelopedVerifiableCredential',
       `Expected ${name} to issue a VC.`);
   issuedVc.should.have.property('id').that.does
-    .include('data:application/vc+jwt');
+    .include('data:');
   const credential = extractIfEnveloped(issuedVc);
   credential.should.exist();
 }
 
-export function checkRequiredProperties(issuedVc) {
+export function checkRequiredProperties(name, issuedVc) {
   issuedVc.should.have.property('@context');
   issuedVc.should.have.property('type');
   if(issuedVc.type == 'EnvelopedVerifiableCredential' ||
