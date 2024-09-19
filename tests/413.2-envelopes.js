@@ -65,7 +65,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20credential%20using%20an%20enveloping%20security%20scheme%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
         issuedVc.should.have.property('id').that.does
           .include('data:',
-            `Expecting id field to be a data: URL [RFC2397].`);
+            `Expecting id field to be a 'data:' scheme URL [RFC2397].`);
         const extractedCredential = extractIfEnveloped(issuedVc);
         shouldBeCredential(extractedCredential);
       });
@@ -123,7 +123,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         this.skip();
         createdVp.should.have.property('id').that.does
           .include('data:application/vp+jwt',
-            `Expecting id field to be a data: URL [RFC2397].`);
+            `Expecting id field to be a 'data:' scheme URL [RFC2397].`);
         // TODO extract and test Presentation
       });
 
