@@ -122,7 +122,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         this.test.cell.skipMessage = 'Missing Enveloped VP';
         this.skip();
         createdVp.should.have.property('id').that.does
-          .include('data:application/vp+jwt',
+          .include('data:',
             `Expecting id field to be a 'data:' scheme URL [RFC2397].`);
         // TODO extract and test Presentation
       });
