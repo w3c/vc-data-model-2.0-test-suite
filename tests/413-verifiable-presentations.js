@@ -41,6 +41,7 @@ describe('Verifiable Presentations', function() {
           (new URL(presentationWithCredential.id)).should.not.throw(
             'VP `id` value MUST be a URL.');
         } else {
+          this.test.cell.skipMessage = 'No ID field present.';
           this.skip();
         }
       });
