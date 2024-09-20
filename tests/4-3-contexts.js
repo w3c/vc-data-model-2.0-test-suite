@@ -5,11 +5,11 @@
  */
 
 import {addPerTestMetadata, setupMatrix} from './helpers.js';
-import {injectOrReject} from './assertions.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
+import {injectOrReject} from './assertions.js';
 import {TestEndpoints} from './TestEndpoints.js';
 
 // eslint-disable-next-line no-unused-vars
@@ -37,36 +37,40 @@ describe('Contexts', function() {
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
           // positive @context test
-          let vc = await endpoints.issue(require(
+          const vc = await endpoints.issue(require(
             './input/credential-ok.json'));
           vc.should.have.property('@context').to.be.an('array',
             'Failed to respond with a VC with intact `@context`.');
           // negative @context test
-          await injectOrReject(endpoints, './input/credential-no-context-fail-or-inject.json');
-          
+          await injectOrReject(endpoints,
+            './input/credential-no-context-fail-or-inject.json');
+
         });
       it('Verifiable presentations MUST include a @context property.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
-          this.test.cell.skipMessage = 'Requires invalid VP to send to verifier.';
-          this.skip();
+          const vp = await endpoints.createVp({
+            presentation: require('./input/presentation-ok.json')
+          });
+          delete vp['@context'];
+          await assert.rejects(endpoints.verifyVp(vp),
+            'Failed to reject a VP with a missing @context.');
         });
       it('Verifiable credentials: The value of the @context property ' +
         'MUST be an ordered set where the first item is a URL with the value ' +
         'https://www.w3.org/ns/credentials/v2.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
         //positive issue test
-        const vc = await endpoints.issue(require('./input/credential-ok.json'));
+        const vc = await endpoints.issue(require(
+          './input/credential-ok.json'));
         assert(Array.isArray(vc['@context']),
           'Failed to support `@context` as an Array.');
         assert.strictEqual(vc['@context'][0], baseContextUrl,
           'Failed to keep `@context` order intact.'
         );
         // negative issue test
-        await assert.rejects(endpoints.issue(
-          require('./input/credential-missing-base-context-fail.json')),
-        {name: 'HTTPError'},
-        'Failed to reject a VC that lacked the VC base context URL.');
+        await injectOrReject(endpoints,
+          './input/credential-missing-base-context-fail-or-inject.json');
       });
       it('Verifiable presentations: The value of the @context ' +
         'property MUST be an ordered set where the first item is a URL with ' +
@@ -75,14 +79,12 @@ describe('Contexts', function() {
         const vp = await endpoints.createVp({
           presentation: require('./input/presentation-ok.json')
         });
-        assert(Array.isArray(vp['@context']),
-          'Failed to support `@context` as an Array.');
-        assert.strictEqual(vp['@context'][0], baseContextUrl,
-          'Failed to keep `@context` order intact.');
-        await assert.rejects(endpoints.verifyVp(
-          require('./input/presentation-missing-base-context-fail.json')),
-        {name: 'HTTPError'},
-        'Failed to reject a VP that lacked the VC base context URL.');
+        vp['@context'] = [
+          'https://www.w3.org/ns/credentials/examples/v2',
+          'https://www.w3.org/ns/credentials/v2'
+        ];
+        await assert.rejects(endpoints.verifyVp(vp),
+          'Failed to reject a VP with unordered @context.');
       });
       it('Verifiable Credential `@context`: "Subsequent items in the ' +
         'ordered set MUST be composed of any combination of URLs and/or ' +
@@ -127,6 +129,9 @@ describe('Contexts', function() {
           presentation: require('./input/presentation-vc-ok.json')
         });
         // then inject incorrect `@context` values and test verification
+        vp['@context'][1] = 'https://example.com';
+        await assert.rejects(endpoints.verifyVp(vp),
+          'Failed to reject a VP with an invalid `@context` URL.');
         vp['@context'][1] = 'https ://not-a-url/contexts/example/v1';
         await assert.rejects(endpoints.verifyVp(vp),
           'Failed to reject a VP with an invalid `@context` URL.');
