@@ -41,6 +41,10 @@ is capable of issuing and verifying verifiable credentials and verifiable
 presentations. If your implementation is not VC-API compatible, it is possible
 to "wrap" the implementation in a minimal VC-API implementation. Example code
 for which is available at https://github.com/Wind4Greg/Server-for-VCs
+Additionally your verifier will need to be able to verify Verifiable Credentials
+and Verifiable Presentations signed with `eddsa-rdfc-2022`. We also recommend
+that any issuer endpoints submitted to this test suite also issue using 
+`eddsa-rdfc-2022`.
 
 The issuer endpoint will need to conform to the
 [VC Issuer API](https://w3c-ccg.github.io/vc-api/#issue-credential).
@@ -93,7 +97,7 @@ look like this:
     },
     "proof": {
       "type": "DataIntegrityProof",
-      "cryptosuite": "eddsa-2022",
+      "cryptosuite": "eddsa-rdfc-2022",
       "created": "2023-06-18T21:19:10Z",
       "proofPurpose": "assertionMethod",
       "verificationMethod": "https://university.example/issuers/565049#key-1",
@@ -129,7 +133,7 @@ will look like this:
     },
     "proof": {
       "type": "DataIntegrityProof",
-      "cryptosuite": "eddsa-2022",
+      "cryptosuite": "eddsa-rdfc-2022",
       "created": "2023-06-18T21:19:10Z",
       "proofPurpose": "assertionMethod",
       "verificationMethod": "https://university.example/issuers/565049#key-1",
@@ -183,7 +187,7 @@ will look like this:
       },
       "proof": {
         "type": "DataIntegrityProof",
-        "cryptosuite": "eddsa-2022",
+        "cryptosuite": "eddsa-rdfc-2022",
         "created": "2023-06-18T21:19:10Z",
         "proofPurpose": "assertionMethod",
         "verificationMethod": "https://university.example/issuers/565049#key-1",
@@ -192,7 +196,7 @@ will look like this:
     }],
     "proof": {
       "type": "DataIntegrityProof",
-      "cryptosuite": "eddsa-2022",
+      "cryptosuite": "eddsa-rdfc-2022",
       "challenge": "08cf4ce0-2bd0-11ee-8622-83054936f200",
       "domain": "example.com",
       "created": "2023-06-18T21:19:10Z",
