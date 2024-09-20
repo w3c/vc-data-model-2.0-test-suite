@@ -11,6 +11,7 @@ import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {
   cryptosuite as eddsa2022Cryptosuite
 } from '@digitalbazaar/eddsa-2022-cryptosuite';
+import jsigs from 'jsonld-signatures';
 import {klona} from 'klona';
 import {randomFillSync} from 'node:crypto';
 
@@ -77,20 +78,49 @@ export async function createLocalVp({presentation, options = {challenge}}) {
   options.documentLoader = options.documentLoader || _documentLoader;
   // sign those vcs
   if(presentation?.verifiableCredential) {
-    presentation.verifiableCredential = await Promise.all(
-      presentation.verifiableCredential.map(credential => {
-        // if there is already a proof don't add it
-        if(credential.proof) {
-          return credential;
-        }
-        credential.issuer = keyPair.id;
-        return vc.issue({credential: klona(credential), ...options});
-      }));
+    presentation.verifiableCredential = await _signCredentials({
+      credentials: presentation.verifiableCredential,
+      keyPair,
+      options
+    });
   }
   return vc.signPresentation({
     presentation: klona(presentation),
     ...options
   });
+}
+
+export async function createInvalidVp({
+  presentation,
+  testLoader = _documentLoader,
+  options = {challenge, safe: false}
+}) {
+  const {signer, keyPair} = await getKeys({options});
+  options.suite = new DataIntegrityProof({
+    signer,
+    cryptosuite: eddsa2022Cryptosuite
+  });
+  options.documentLoader = testLoader;
+  // sign those vcs
+  if(presentation?.verifiableCredential) {
+    presentation.verifiableCredential = await _signCredentials({
+      credentials: presentation.verifiableCredential,
+      keyPair,
+      options
+    });
+  }
+  return jsigs.sign(presentation, options);
+}
+
+async function _signCredentials({credentials, keyPair, options}) {
+  return Promise.all(credentials.map(credential => {
+    // if there is already a proof don't add it
+    if(credential.proof) {
+      return credential;
+    }
+    credential.issuer = keyPair.id;
+    return vc.issue({credential: klona(credential), ...options});
+  }));
 }
 
 export function createTimeStamp({date = new Date(), skewYears = 0}) {
