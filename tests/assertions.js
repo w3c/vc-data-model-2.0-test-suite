@@ -213,10 +213,14 @@ export async function injectOrReject(endpoints, inputFile) {
   try {
     const vc = await endpoints.issue(require(inputFile));
     vc.should.have.property('@context').to.be.an('array',
-      'Failed to respond with a VC with intact `@context`.');
+      'Failed to respond with a VC with injected `@context`.');
+    assert.strictEqual(vc['@context'][0],
+      'https://www.w3.org/ns/credentials/v2',
+      'Failed to keep `@context` order intact.'
+    );
   } catch(err) {
     await assert.rejects(endpoints.issue(require(inputFile)),
       {name: 'HTTPError'},
-      'Failed to reject a VC without an `@context`.');
+      'Failed to reject a VC without a missing or incomplete `@context`.');
   }
 }
