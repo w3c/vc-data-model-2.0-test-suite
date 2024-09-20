@@ -15,6 +15,8 @@ import jsigs from 'jsonld-signatures';
 import {klona} from 'klona';
 import {randomFillSync} from 'node:crypto';
 
+const {AuthenticationProofPurpose} = jsigs.purposes;
+
 // use base64 encoded 128 bit number as the challenge
 const buf = Buffer.alloc(16); // 128 bits
 export const challenge = 'u' + randomFillSync(buf).toString('base64url');
@@ -95,6 +97,9 @@ export async function createInvalidVp({
   testLoader = _documentLoader,
   options = {challenge, safe: false}
 }) {
+  options.purpose = new AuthenticationProofPurpose({
+    challenge: options.challenge
+  });
   const {signer, keyPair} = await getKeys({options});
   options.suite = new DataIntegrityProof({
     signer,
