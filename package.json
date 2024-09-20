@@ -35,8 +35,8 @@
   },
   "homepage": "https://github.com/w3c/vc-data-model-2.0-test-suite#readme",
   "dependencies": {
-    "@digitalbazaar/data-integrity": "^1.4.0",
-    "@digitalbazaar/data-integrity-context": "^1.0.0",
+    "@digitalbazaar/data-integrity": "^2.5.0",
+    "@digitalbazaar/data-integrity-context": "^2.0.1",
     "@digitalbazaar/ed25519-multikey": "^1.0.1",
     "@digitalbazaar/eddsa-2022-cryptosuite": "^1.0.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.5.0",
