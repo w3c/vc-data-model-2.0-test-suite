@@ -38,7 +38,6 @@
     "@digitalbazaar/data-integrity": "^2.5.0",
     "@digitalbazaar/data-integrity-context": "^2.0.1",
     "@digitalbazaar/ed25519-multikey": "^1.0.1",
-    "@digitalbazaar/eddsa-2022-cryptosuite": "^1.0.0",
     "@digitalbazaar/eddsa-rdfc-2022-cryptosuite": "^1.1.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.5.0",
     "@digitalbazaar/vc": "^7.0.0",

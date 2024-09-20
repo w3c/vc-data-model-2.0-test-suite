@@ -9,8 +9,8 @@ import * as vc from '@digitalbazaar/vc';
 import {CONTEXT, CONTEXT_URL} from '@digitalbazaar/data-integrity-context';
 import {DataIntegrityProof} from '@digitalbazaar/data-integrity';
 import {
-  cryptosuite as eddsa2022Cryptosuite
-} from '@digitalbazaar/eddsa-2022-cryptosuite';
+  cryptosuite as eddsaRdfc2020Cryptosuite
+} from '@digitalbazaar/eddsa-rdfc-2022-cryptosuite';
 import jsigs from 'jsonld-signatures';
 import {klona} from 'klona';
 import {randomFillSync} from 'node:crypto';
@@ -73,7 +73,7 @@ export async function createLocalVp({presentation, options = {challenge}}) {
   const {signer, keyPair} = await getKeys({options});
   options.suite = new DataIntegrityProof({
     signer,
-    cryptosuite: eddsa2022Cryptosuite
+    cryptosuite: eddsaRdfc2020Cryptosuite
   });
   options.documentLoader = options.documentLoader || _documentLoader;
   // sign those vcs
@@ -98,7 +98,7 @@ export async function createInvalidVp({
   const {signer, keyPair} = await getKeys({options});
   options.suite = new DataIntegrityProof({
     signer,
-    cryptosuite: eddsa2022Cryptosuite
+    cryptosuite: eddsaRdfc2020Cryptosuite
   });
   options.documentLoader = testLoader;
   // sign those vcs
