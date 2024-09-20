@@ -36,28 +36,47 @@ describe('Contexts', function() {
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
           // positive @context test
-          const vc = await endpoints.issue(require(
+          let vc = await endpoints.issue(require(
             './input/credential-ok.json'));
           vc.should.have.property('@context').to.be.an('array',
             'Failed to respond with a VC with intact `@context`.');
           // negative @context test
-          await assert.rejects(endpoints.issue(
-            require('./input/credential-no-context-fail.json')),
-          {name: 'HTTPError'},
-          'Failed to reject a VC without an `@context`.');
+          // we do a try catch to allow implementation supporting 
+          // context injection to still pass this test
+          try {
+            vc = await endpoints.issue(require(
+              './input/credential-no-context-fail-or-inject.json'));
+            vc.should.have.property('@context').to.be.an('array',
+              'Failed to respond with a VC with intact `@context`.');
+          }
+          catch(err) {
+            await assert.rejects(endpoints.issue(
+              require('./input/credential-no-context-fail-or-inject.json')),
+            {name: 'HTTPError'},
+            'Failed to reject a VC without an `@context`.');
+          }
+          
         });
       it('Verifiable presentations MUST include a @context property.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.`;
-          const vp = await endpoints.createVp({
+          let vp = await endpoints.createVp({
             presentation: require('./input/presentation-ok.json')
           });
           vp.should.have.property('@context').to.be.an('array',
-            'Failed to respond with a VP with intact `@context`.');
-          await assert.rejects(endpoints.verifyVp(
-            require('./input/presentation-no-context-fail.json')),
-          {name: 'HTTPError'},
-          'Failed to reject a VP without an `@context`.');
+            'Failed to respond with a VP with injected `@context`.');
+          try {
+            vp = await endpoints.issue(require(
+              './input/presentation-no-context-fail-or-inject.json'));
+            vp.should.have.property('@context').to.be.an('array',
+            'Failed to respond with a VP with injected `@context`.');
+          }
+          catch(err) {
+            await assert.rejects(endpoints.issue(
+              require('./input/presentation-no-context-fail-or-inject.json')),
+            {name: 'HTTPError'},
+            'Failed to reject a VC without an `@context`.');
+          }
         });
       it('Verifiable credentials: The value of the @context property ' +
         'MUST be an ordered set where the first item is a URL with the value ' +
