@@ -206,3 +206,17 @@ export function checkRequiredProperties(name, issuedVc) {
     issuedVc.should.have.property('proof');
   }
 }
+
+export async function injectOrReject(endpoints, inputFile) {
+  // we do a try catch to allow implementation supporting
+  // context injection to still pass this test
+  try {
+    const vc = await endpoints.issue(require(inputFile));
+    vc.should.have.property('@context').to.be.an('array',
+      'Failed to respond with a VC with intact `@context`.');
+  } catch(err) {
+    await assert.rejects(endpoints.issue(require(inputFile)),
+      {name: 'HTTPError'},
+      'Failed to reject a VC without an `@context`.');
+  }
+}
