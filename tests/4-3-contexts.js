@@ -83,8 +83,14 @@ describe('Contexts', function() {
         'property MUST be an ordered set where the first item is a URL with ' +
         'the value https://www.w3.org/ns/credentials/v2.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
-        const vp = await createInvalidVp({
+        const vpInvalidContextOrder = await createInvalidVp({
           presentation: require('./input/presentation-context-order-fail.json')
+        });
+        await assert.rejects(endpoints.verifyVp(vpInvalidContextOrder),
+          {name: 'HTTPError'},
+          'Failed to reject a VP that has the wrong context order.');
+        const vp = createLocalVp({
+          presentation: require('./input/presentation-ok.json')
         });
         vp['@context'] = [
           'https://www.w3.org/ns/credentials/examples/v2',
@@ -92,6 +98,10 @@ describe('Contexts', function() {
         ];
         await assert.rejects(endpoints.verifyVp(vp),
           'Failed to reject a VP with unordered @context.');
+        await assert.rejects(endpoints.verifyVp(
+          require('./input/presentation-missing-base-context-fail.json')),
+        {name: 'HTTPError'},
+        'Failed to reject a VP that lacked the VC base context URL.');
       });
       it('Verifiable Credential `@context`: "Subsequent items in the ' +
         'ordered set MUST be composed of any combination of URLs and/or ' +
