@@ -5,9 +5,9 @@
  */
 
 import {addPerTestMetadata, setupMatrix} from './helpers.js';
+import {createInvalidVp, createLocalVp} from './data-generator.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
-import {createLocalVp} from './data-generator.js';
 import {createRequire} from 'module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {injectOrReject} from './assertions.js';
@@ -83,7 +83,7 @@ describe('Contexts', function() {
         'property MUST be an ordered set where the first item is a URL with ' +
         'the value https://www.w3.org/ns/credentials/v2.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.`;
-        const vp = await createLocalVp({
+        const vp = await createInvalidVp({
           presentation: require('./input/presentation-context-order-fail.json')
         });
         vp['@context'] = [
