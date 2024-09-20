@@ -28,7 +28,8 @@ export class TestEndpoints {
     const issueBody = createRequestBody({issuer, vc: credential});
     return post(issuer, issueBody);
   }
-  // FIXME implement createVp in the future
+  // FIXME implement createVp for implementation endpoints in the future
+  // @see https://w3c-ccg.github.io/vc-api/#create-presentation
   async createVp() {
     throw new Error('Create VP not implemented yet.');
   }
