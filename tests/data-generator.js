@@ -72,6 +72,7 @@ async function getKeys() {
  * @returns {Promise<object>} Resolves to a signed VP.
  */
 export async function createLocalVp({presentation, options = {challenge}}) {
+  const _presentation = klona(presentation);
   const {signer, keyPair} = await getKeys({options});
   options.suite = new DataIntegrityProof({
     signer,
@@ -79,15 +80,15 @@ export async function createLocalVp({presentation, options = {challenge}}) {
   });
   options.documentLoader = options.documentLoader || _documentLoader;
   // sign those vcs
-  if(presentation?.verifiableCredential) {
-    presentation.verifiableCredential = await _signCredentials({
-      credentials: presentation.verifiableCredential,
+  if(_presentation?.verifiableCredential) {
+    _presentation.verifiableCredential = await _signCredentials({
+      credentials: _presentation.verifiableCredential,
       keyPair,
       options
     });
   }
   return vc.signPresentation({
-    presentation: klona(presentation),
+    presentation: _presentation,
     ...options
   });
 }
@@ -97,6 +98,7 @@ export async function createInvalidVp({
   testLoader = _documentLoader,
   options = {challenge, safe: false}
 }) {
+  const _presentation = klona(presentation);
   options.purpose = new AuthenticationProofPurpose({
     challenge: options.challenge
   });
@@ -107,14 +109,14 @@ export async function createInvalidVp({
   });
   options.documentLoader = testLoader;
   // sign those vcs
-  if(presentation?.verifiableCredential) {
-    presentation.verifiableCredential = await _signCredentials({
-      credentials: presentation.verifiableCredential,
+  if(_presentation?.verifiableCredential) {
+    _presentation.verifiableCredential = await _signCredentials({
+      credentials: _presentation.verifiableCredential,
       keyPair,
       options
     });
   }
-  return jsigs.sign(presentation, options);
+  return jsigs.sign(_presentation, options);
 }
 
 async function _signCredentials({credentials, keyPair, options}) {
