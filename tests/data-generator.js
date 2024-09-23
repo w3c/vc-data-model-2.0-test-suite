@@ -20,6 +20,7 @@ const {AuthenticationProofPurpose} = jsigs.purposes;
 // use base64 encoded 128 bit number as the challenge
 const buf = Buffer.alloc(16); // 128 bits
 export const challenge = 'u' + randomFillSync(buf).toString('base64url');
+export const domain = 'github.com/w3c/vc-data-model-2.0-test-suite';
 
 const _documentLoader = url => {
   // adds support for the data integrity context
@@ -71,7 +72,7 @@ async function getKeys() {
  *
  * @returns {Promise<object>} Resolves to a signed VP.
  */
-export async function createLocalVp({presentation, options = {challenge}}) {
+export async function createLocalVp({presentation, options = {}}) {
   const _presentation = klona(presentation);
   const {signer, keyPair} = await getKeys({options});
   options.suite = new DataIntegrityProof({
@@ -89,6 +90,8 @@ export async function createLocalVp({presentation, options = {challenge}}) {
   }
   return vc.signPresentation({
     presentation: _presentation,
+    domain,
+    challenge,
     ...options
   });
 }
@@ -96,7 +99,7 @@ export async function createLocalVp({presentation, options = {challenge}}) {
 export async function createInvalidVp({
   presentation,
   testLoader = _documentLoader,
-  options = {challenge, safe: false}
+  options = {challenge, domain, safe: false}
 }) {
   const _presentation = klona(presentation);
   options.purpose = new AuthenticationProofPurpose({

@@ -8,7 +8,7 @@ import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
-import {challenge} from './data-generator.js';
+import {domain, challenge} from './data-generator.js';
 import http from 'http';
 import receiveJson from './receive-json.js';
 
@@ -49,6 +49,7 @@ export class TestEndpoints {
     const body = {
       verifiablePresentation: vp,
       options: {
+        domain,
         challenge,
         ...vpVerifierOptions,
         // request-specific options should override endpoint options
