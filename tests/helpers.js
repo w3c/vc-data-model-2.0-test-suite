@@ -21,15 +21,17 @@ export function extractIfEnveloped(input) {
   ) {
     input.should.have.property('id').that.does
       .include('data:', `Missing id field.`);
-    const extractedCredential = atob(input.id.split(',')[1].split('.')[1]);
-    return JSON.parse(extractedCredential);
+    let extractedCredential = atob(input.id.split(',')[1].split('.')[1]);
+    extractedCredential = JSON.parse(extractedCredential);
+    return extractedCredential?.vc || extractedCredential;
   } else if(input.type == 'EnvelopedVerifiablePresentation' ||
     'EnvelopedVerifiablePresentation' in input.type
   ) {
     input.should.have.property('id').that.does
       .include('data:', `Missing id field.`);
-    const extractedPresentation = atob(input.id.split(',')[1].split('.')[1]);
-    return JSON.parse(extractedPresentation);
+    let extractedPresentation = atob(input.id.split(',')[1].split('.')[1]);
+    extractedPresentation = JSON.parse(extractedPresentation);
+    return extractedPresentation?.vp || extractedPresentation;
   } else {
     return input;
   }
