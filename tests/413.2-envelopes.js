@@ -88,19 +88,6 @@ describe('VP - Enveloped Verifiable Presentations', function() {
     const endpoints = new TestEndpoints({implementation, tag});
 
     describe(name, function() {
-      let createdVp;
-      before(async function() {
-        try {
-          createdVp = await endpoints.createVp({
-            presentation: require('./input/presentation-vc-ok.json')
-          });
-        } catch(e) {
-          console.error(
-            `Holder: ${name} failed to create "presentation-vc-ok.json".`,
-            e
-          );
-        }
-      });
       beforeEach(addPerTestMetadata);
 
       it('The @context property of the object MUST be present and include a ' +
@@ -109,9 +96,11 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         'terms as defined by the base context provided by this specification.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
-        // TODO: implement test, dynamic presentation from issued
-        this.test.cell.skipMessage = 'Missing Enveloped VP';
-        this.skip();
+        await assert.rejects(
+          endpoints.verifyVp(require(
+            './input/enveloped-presentation-context-fail.json')),
+          {name: 'HTTPError'},
+          'Failed to reject Enveloped VP missing contexts.');
       });
 
       it('The id value of the object MUST be a data: URL [RFC2397] that ' +
@@ -119,22 +108,21 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         'securing mechanism, such as Securing Verifiable Credentials using ' +
         'JOSE and COSE [VC-JOSE-COSE].', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20presentation%20using%20an%20enveloping%20securing%20mechanism%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
-        this.test.cell.skipMessage = 'Missing Enveloped VP';
-        this.skip();
-        createdVp.should.have.property('id').that.does
-          .include('data:',
-            `Expecting id field to be a 'data:' scheme URL [RFC2397].`);
-        // TODO extract and test Presentation
+        await assert.rejects(
+          endpoints.verifyVp(require(
+            './input/enveloped-presentation-id-fail.json')),
+          {name: 'HTTPError'},
+          'Failed to reject Enveloped VP with an id that is not a data url.');
       });
 
       it('The type value of the object MUST be ' +
         'EnvelopedVerifiablePresentation.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiablePresentation.`;
-        this.test.cell.skipMessage = 'Missing Enveloped VP';
-        this.skip();
-        createdVp.should.have.property('type').that.does
-          .include('EnvelopedVerifiablePresentation',
-            `Expecting type field to be EnvelopedVerifiablePresentation`);
+        await assert.rejects(
+          endpoints.verifyVp(require(
+            './input/enveloped-presentation-type-fail.json')),
+          {name: 'HTTPError'},
+          'Failed to reject VP w/o type "EnvelopedVerifiablePresentation".');
       });
     });
   }
