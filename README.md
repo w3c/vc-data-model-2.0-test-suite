@@ -35,18 +35,19 @@ npm i
 
 ## Setup
 
-In order to integrate with this test suite, you will need to use a
+To integrate with this test suite, you will need a
 [VC-API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that
-is capable of issuing and verifying verifiable credentials and verifiable
+are capable of issuing and verifying verifiable credentials and verifiable
 presentations. If your implementation is not VC-API compatible, it is possible
-to "wrap" the implementation in a minimal VC-API implementation. Example code
-for which is available at https://github.com/Wind4Greg/Server-for-VCs
-Additionally your verifier will need to be able to verify Verifiable Credentials
-and Verifiable Presentations signed with `eddsa-rdfc-2022`. We also recommend
+to "wrap" the implementation in a minimal VC-API implementation, example code
+for which is available at <https://github.com/Wind4Greg/Server-for-VCs>.
+Additionally, your verifier will need to be able to verify Verifiable Credentials
+and Verifiable Presentations signed with `eddsa-rdfc-2022`. We recommend
 that any issuer endpoints submitted to this test suite also issue using
-`eddsa-rdfc-2022`. VerifiablePresentations will be submitted for verification
-both signed and unsigned. Signed VPs from this suite will have a domain and challenge set.
-The domain should be the test repo and the challenge is static.
+`eddsa-rdfc-2022`. Both signed and unsigned Verifiable Presentations will
+be submitted for verification. Signed Verifiable Presentations from this suite
+will have a domain and challenge set. The domain should be the test repo, and
+the challenge is static.
 
 The issuer endpoint will need to conform to the
 [VC Issuer API](https://w3c-ccg.github.io/vc-api/#issue-credential).
