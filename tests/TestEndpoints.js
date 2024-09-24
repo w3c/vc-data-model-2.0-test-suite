@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023
  */
 
+import {challenge, domain} from './data-generator.js';
 import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
-import {domain, challenge} from './data-generator.js';
 import http from 'http';
 import receiveJson from './receive-json.js';
 
