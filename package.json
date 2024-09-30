@@ -49,9 +49,18 @@
     "vc-test-suite-implementations": "github:w3c/vc-test-suite-implementations"
   },
   "devDependencies": {
+    "allure-commandline": "^2.30.0",
+    "allure-mocha": "^3.0.3",
     "eslint": "^8.19.0",
     "eslint-config-digitalbazaar": "^4.0.1",
     "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-unicorn": "^43.0.0"
+  },
+  "mocha": {
+    "parallel": false,
+    "reporter": "allure-mocha",
+    "reporterOptions": {
+      "resultsDir": "allure-results"
+    }
   }
 }

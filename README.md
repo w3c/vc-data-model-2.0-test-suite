@@ -16,6 +16,7 @@ specification.
 - [Setup](#setup)
 - [Usage](#usage)
   - [Testing Locally](#testing-locally)
+  - [Allure Reporting](#allure-reporting)
 - [Implementation](#implementation)
   - [VC-API](#vc-api)
 - [Contribute](#contribute)
@@ -326,6 +327,19 @@ as env variables to the test script. To see which ones require client secrets,
 you can check the
 [vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
 library.
+
+### Allure Reporting
+It's also possible to generate local allure reports for analyzing and debuging results.
+
+To run the tests and browse the report, use the following commands:
+```bash
+# Running the tests
+npx mocha tests/
+
+# Running the reporting server
+allure serve allure-results
+
+```
 
 ## Contribute
 
