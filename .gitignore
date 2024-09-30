@@ -17,3 +17,4 @@ localConfig.cjs
 config.json
 reports/**
 !.gitkeep
+allure-results
