@@ -80,6 +80,10 @@
       justify-content: center;
       width: fit-content;
     }
+    .at-risk {
+      outline: thin #c45e0a solid;
+    }
+    
         </style>
   </head>
   <body>
@@ -181,22 +185,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 230/324 70%
+      Tests passed 279/376 74%
       </p>
       <p>
-      Tests failed 94/324 30%
+      Tests failed 97/376 26%
       </p>
       <p>
-      Failures 94
+      Failures 97
       </p>
       <p>
-      Tests skipped 36
+      Tests skipped 42
       </p>
       <p>
-      Total tests 360
+      Total tests 418
       </p>
       <p>
-        These tests were run on <time>29 September 2024 at 5:07 am UTC</time>
+        These tests were run on <time>6 October 2024 at 5:07 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -263,11 +267,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#securing-mechanisms:~:text&#x3D;A%20conforming%20document%20MUST%20be%20secured%20by%20at%20least%20one%20securing%20mechanism%20as%20described%20in%20Section%204.12%20Securing%20Mechanisms.">A conforming document MUST be secured by at least one securing mechanism as described in Section 4.12 Securing Mechanisms.</a>
@@ -310,8 +315,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text&#x3D;MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces">A conforming issuer implementation MUST include all required properties in the conforming documents it produces.</a>
@@ -361,8 +371,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text&#x3D;MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces">A conforming issuer implementation MUST secure the conforming documents it produces using a securing mechanismdescribed in Section 4.12 Securing Mechanisms.</a>
@@ -405,8 +420,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text&#x3D;MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces">A conforming verifier implementation MUST perform verification on a conforming document as described inSection 4.12 Securing Mechanisms.</a>
@@ -458,8 +478,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="at-risk">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text&#x3D;MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces">A conforming verifier implementation MUST check that each required property satisfies the normative requirementsfor that property.</a>
@@ -501,13 +526,24 @@
                       <span class="err hide">Tested by other tests in this suite.</span>
                     </div>
                   </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                      <span class="err hide">Tested by other tests in this suite.</span>
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;MUST%20produce%20errors%20when%20non%2Dconforming%20documents%20are%20detected.">A conforming verifier implementation MUST produce errors when non-conforming documents are detected.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="passed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
@@ -568,11 +604,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.">Verifiable credentials MUST include a @context property.</a>
@@ -618,8 +655,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20include%20a%20%40context%20property.">Verifiable presentations MUST include a @context property.</a>
@@ -657,6 +699,19 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
+                        <summary>Got unwanted rejection: verifier Procivis One Core rejected VP with valid @context.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: verifier Procivis One Core rejected VP with valid @context.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-3-contexts.js:57:11)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
                         <summary>Got unwanted rejection: verifier SpruceID rejected VP with valid @context.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: verifier SpruceID rejected VP with valid @context.
@@ -680,7 +735,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.">Verifiable credentials: The value of the @context property MUST be an ordered set where the first item is a URL with the value https://www.w3.org/ns/credentials/v2.</a>
@@ -726,8 +781,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;The%20value%20of%20the%20%40context%20property%20MUST%20be%20an%20ordered%20set%20where%20the%20first%20item%20is%20a%20URL%20with%20the%20value%20https%3A//www.w3.org/ns/credentials/v2.">Verifiable presentations: The value of the @context property MUST be an ordered set where the first item is a URL with the value https://www.w3.org/ns/credentials/v2.</a>
@@ -763,8 +823,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.">Verifiable Credential &#x60;@context&#x60;: &quot;Subsequent items in the ordered set MUST be composed of any combination of URLs and/or objects where each is processable as a JSON-LD Context.&quot;</a>
@@ -808,8 +873,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Subsequent%20items%20in%20the%20ordered%20set%20MUST%20be%20composed%20of%20any%20combination%20of%20URLs%20and/or%20objects%2C%20where%20each%20is%20processable%20as%20a%20JSON%2DLD%20Context.">Verifiable Presentation &#x60;@context&#x60;: &quot;Subsequent items in the ordered set MUST be composed of any combination of URLs and/or objects where each is processable as a JSON-LD Context.&quot;</a>
@@ -877,6 +947,19 @@
                       </details>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-3-contexts.js:132:9)</pre>
+                      </details>
+                    </div>
+                  </td>
               </tr>
             </tbody>
             </table>
@@ -907,11 +990,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.">If present, the value of the id property MUST be a single URL, which MAY be dereferenceable.</a>
@@ -928,6 +1012,11 @@
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-4-identifiers.js:34:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -985,11 +1074,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.">Verifiable credentials MUST contain a type property with an associated value.</a>
@@ -1025,8 +1115,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.">Verifiable presentations MUST contain a type property with an associated value.</a>
@@ -1062,8 +1157,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;The%20value%20of%20the%20type%20property%20MUST%20be%20one%20or%20more%20terms%20and/or%20absolute%20URL%20strings.">The value of the type property MUST be one or more terms and/or absolute URL strings.</a>
@@ -1113,8 +1213,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;If%20more%20than%20one%20value%20is%20provided%2C%20the%20order%20does%20not%20matter.">If more than one (type) value is provided, the order does not matter.</a>
@@ -1158,8 +1263,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.">Verifiable Credential objects MUST have a type specified.</a>
@@ -1203,8 +1313,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.">Verifiable Presentation objects MUST have a type specified.</a>
@@ -1264,8 +1379,21 @@
                       </details>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:106:11)</pre>
+                      </details>
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.">&#x60;credentialStatus&#x60; objects MUST have a type specified.</a>
@@ -1315,8 +1443,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.">&#x60;termsOfUse&#x60; objects MUST have a type specified.</a>
@@ -1366,8 +1499,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.">&#x60;evidence&#x60; objects MUST have a type specified.</a>
@@ -1417,8 +1555,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.">&#x60;refreshService&#x60; objects MUST have a type specified.</a>
@@ -1468,8 +1611,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;the%20following%20table%20lists%20the%20objects%20that%20MUST%20have%20a%20type%20specified.">&#x60;credentialSchema&#x60; objects MUST have a type specified.</a>
@@ -1497,6 +1645,11 @@
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-5-types.js:173:11)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1549,11 +1702,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.">If present, the value of the name property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</a>
@@ -1605,8 +1759,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.">If present, the value of the description property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</a>
@@ -1658,8 +1817,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20name%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.">If present (on &#x60;issuer&#x60;), the value of the name property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</a>
@@ -1711,8 +1875,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#names-and-descriptions:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20description%20property%20MUST%20be%20a%20string%20or%20a%20language%20value%20object%20as%20described%20in%2011.1%20Language%20and%20Base%20Direction.">If present (on &#x60;issuer&#x60;), the value of the description property MUST be a string or a language value object as described in 11.1 Language and Base Direction.</a>
@@ -1764,6 +1933,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
             </tbody>
             </table>
@@ -1794,11 +1968,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#issuer:~:text&#x3D;A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.">A verifiable credential MUST have an issuer property.</a>
@@ -1844,8 +2019,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#issuer:~:text&#x3D;The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL">The value of the issuer property MUST be either a URL, or an object containing an id property whose value is a URL.</a>
@@ -1901,6 +2081,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
             </tbody>
             </table>
@@ -1931,11 +2116,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#credential-subject:~:text&#x3D;A%20verifiable%20credential%20MUST%20contain%20a%20credentialSubject%20property.">A verifiable credential MUST contain a credentialSubject property.</a>
@@ -1971,8 +2157,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#credential-subject:~:text&#x3D;The%20value%20of%20the%20credentialSubject%20property%20is%20a%20set%20of%20objects%20where%20each%20object%20MUST%20be%20the%20subject%20of%20one%20or%20more%20claims%2C%20which%20MUST%20be%20serialized%20inside%20the%20credentialSubject%20property.">The value of the credentialSubject property is a set of objects where each object MUST be the subject of one or more claims, which MUST be serialized inside the credentialSubject property.</a>
@@ -2000,6 +2191,11 @@
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-8-credential-subject.js:45:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2052,11 +2248,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#validity-period:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20validFrom%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20becomes%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20future%20or%20in%20the%20past.">If present, the value of the validFrom property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential becomes valid, which could be a date and time in the future or in the past.</a>
@@ -2100,8 +2297,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#validity-period:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20validUntil%20property%20MUST%20be%20an%20%5BXMLSCHEMA11%2D2%5D%20dateTimeStamp%20string%20value%20representing%20the%20date%20and%20time%20the%20credential%20ceases%20to%20be%20valid%2C%20which%20could%20be%20a%20date%20and%20time%20in%20the%20past%20or%20in%20the%20future">If present, the value of the validUntil property MUST be an [XMLSCHEMA11-2] dateTimeStamp string value representing the date and time the credential ceases to be valid, which could be a date and time in the past or in the future.</a>
@@ -2153,8 +2355,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#validity-period:~:text&#x3D;If%20a%20validUntil%20value%20also%20exists%2C%20the%20validFrom%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20earlier%20than%20the%20datetime%20expressed%20by%20the%20validUntil%20value.">If a validUntil value also exists, the validFrom value MUST express a datetime that is temporally the same or earlier than the datetime expressed by the validUntil value.</a>
@@ -2199,8 +2406,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#validity-period:~:text&#x3D;If%20a%20validFrom%20value%20also%20exists%2C%20the%20validUntil%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20later%20than%20the%20datetime%20expressed%20by%20the%20validFrom%20value.">If a validFrom value also exists, the validUntil value MUST express a datetime that is temporally the same or later than the datetime expressed by the validFrom value.</a>
@@ -2245,13 +2457,24 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="at-risk">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#validity-period:~:text&#x3D;Time%20values%20that%20are%20incorrectly%20serialized%20without%20an%20offset%20MUST%20be%20interpreted%20as%20UTC.">Time values that are incorrectly serialized without an offset MUST be interpreted as UTC.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                      <span class="err hide">TBD</span>
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -2318,11 +2541,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#status:~:text&#x3D;credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type">If present (credentialStatus.id), the normative guidance in Section 4.4 Identifiers MUST be followed.</a>
@@ -2372,8 +2596,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#status:~:text&#x3D;The%20type%20property%20is%20REQUIRED.%20It%20is%20used%20to%20express%20the%20type%20of%20status%20information%20expressed%20by%20the%20object.%20The%20related%20normative%20guidance%20in%20Section%204.5%20Types%20MUST%20be%20followed.">(If a credentialStatus property is present), The type property is REQUIRED. It is used to express the type of status information expressed by the object. The related normative guidance in Section 4.5 Types MUST be followed.</a>
@@ -2423,13 +2652,24 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="at-risk">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#status:~:text&#x3D;Credential%20status%20specifications%20MUST%20NOT%20enable%20tracking%20of%20individuals">Credential status specifications MUST NOT enable tracking of individuals</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                      <span class="err hide">Not testable with automation.</span>
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -2496,11 +2736,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#data-schemas:~:text&#x3D;The%20value%20of%20the%20credentialSchema%20property%20MUST%20be%20one%20or%20more%20data%20schemas%20that%20provide%20verifiers%20with%20enough%20information%20to%20determine%20whether%20the%20provided%20data%20conforms%20to%20the%20provided%20schema(s).">The value of the credentialSchema property MUST be one or more data schemas that provide verifiers with enough information to determine whether the provided data conforms to the provided schema(s).</a>
@@ -2544,8 +2785,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#data-schemas:~:text&#x3D;Each%20credentialSchema%20MUST%20specify%20its%20type%20(for%20example%2C%20JsonSchema)%2C%20and%20an%20id%20property%20that%20MUST%20be%20a%20URL%20identifying%20the%20schema%20file.">Each credentialSchema MUST specify its type (for example, JsonSchema), and an id property that MUST be a URL identifying the schema file.</a>
@@ -2593,8 +2839,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#data-schemas:~:text&#x3D;If%20multiple%20schemas%20are%20present%2C%20validity%20is%20determined%20according%20to%20the%20processing%20rules%20outlined%20by%20each%20associated%20type%20property.">If multiple schemas are present, validity is determined according to the processing rules outlined by each associated type property</a>
@@ -2611,6 +2862,11 @@
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/411-data-schemas.js:67:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2668,11 +2924,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text&#x3D;verifiable%20presentation.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type">If [the &#x60;id&#x60; field is] present, the normative guidance in Section 4.4 Identifiers MUST be followed.</a>
@@ -2710,6 +2967,19 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
+                        <summary>Got unwanted rejection: Expected verifier Procivis One Core to verify a VP with a valid id.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier Procivis One Core to verify a VP with a valid id.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413-verifiable-presentations.js:40:9)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
                         <summary>Got unwanted rejection: Expected verifier SpruceID to verify a VP with a valid id.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier SpruceID to verify a VP with a valid id.
@@ -2733,7 +3003,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text&#x3D;The%20type%20property%20MUST%20be%20present.%20It%20is%20used%20to%20express%20the%20type%20of%20verifiable%20presentation.%20One%20value%20of%20this%20property%20MUST%20be%20VerifiablePresentation%2C%20but%20additional%20types%20MAY%20be%20included.%20The%20related%20normative%20guidance%20in%20Section%204.5%20Types%20MUST%20be%20followed.">The type property MUST be present. One value of this property MUST be VerifiablePresentation, but additional types MAY be included.The related normative guidance in Section 4.5 Types MUST be followed.</a>
@@ -2779,6 +3049,19 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
+                        <summary>Got unwanted rejection: Expected verifier Procivis One Core to verify a VP with initial type VerifiablePresentation.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier Procivis One Core to verify a VP with initial type VerifiablePresentation.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413-verifiable-presentations.js:54:9)</pre>
+                      </details>
+                    </div>
+                  </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
                         <summary>Got unwanted rejection: Expected verifier SpruceID to verify a VP with initial type VerifiablePresentation.
                     Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier SpruceID to verify a VP with initial type VerifiablePresentation.
@@ -2802,7 +3085,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#verifiable-presentations:~:text&#x3D;The%20verifiableCredential%20property%20MAY%20be%20present.%20The%20value%20MUST%20be%20one%20or%20more%20verifiable%20credential%20and/or%20enveloped%20verifiable%20credential%20objects%20(the%20values%20MUST%20NOT%20be%20non%2Dobject%20values%20such%20as%20numbers%2C%20strings%2C%20or%20URLs).">The verifiableCredential property MAY be present. The value MUST beone or more verifiable credential and/or enveloped verifiable credential objects (the values MUST NOT be non-object values such as numbers, strings, or URLs).</a>
@@ -2870,6 +3153,19 @@
                       </details>
                     </div>
                   </td>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413-verifiable-presentations.js:71:9)</pre>
+                      </details>
+                    </div>
+                  </td>
               </tr>
             </tbody>
             </table>
@@ -2900,11 +3196,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="at-risk">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text&#x3D;A%20verifiable%20presentation%20that%20includes%20a%20self%2Dasserted%20verifiable%20credential%20that%20is%20only%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%20MUST%20include%20a%20holder%20property.">A verifiable presentation that includes a self-asserted verifiable credential that is only secured using the same mechanism as the verifiable presentation MUST include a holder property.</a>
@@ -2946,13 +3243,25 @@
                       <span class="err hide">TBD</span>
                     </div>
                   </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                      <span class="err hide">TBD</span>
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="at-risk">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text&#x3D;When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.">When a self-asserted verifiable credential is secured using the same mechanism as the verifiable presentation, the value of the issuer property of the verifiable credential MUST be identical to the holder property of the verifiable presentation.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                      <span class="err hide">TBD</span>
+                    </div>
+                  </td>
                   <td class="pending not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
@@ -3019,7 +3328,7 @@
                     <th class="no-wrap small-font text-center">OpSecId</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="at-risk">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.">The @context property of the object MUST be present and include a context, such as the base context for this specification, that defines at least the id, type, and EnvelopedVerifiableCredential terms as defined by the base context provided by this specification.</a>
@@ -3029,9 +3338,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP containing an enveloped VC with a missing &#x60;type&#x60;.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP containing an enveloped VC with a missing &#x60;type&#x60;.
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413.2-envelopes.js:55:9)</pre>
+                        <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413.2-envelopes.js:51:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -3041,7 +3353,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20credential%20using%20an%20enveloping%20security%20scheme%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.">The id value of the object MUST be a data: URL [RFC2397] that expresses a secured verifiable credential using an enveloping security scheme, such as Securing Verifiable Credentials using JOSE and COSE [VC-JOSE-COSE].</a>
@@ -3058,7 +3370,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.">The type value of the object MUST be EnvelopedVerifiableCredential.</a>
@@ -3104,20 +3416,15 @@
                     <th class="no-wrap small-font text-center">OpSecId</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text&#x3D;The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.">The @context property of the object MUST be present and include a context, such as the base context for this specification, that defines at least the id, type, and EnvelopedVerifiablePresentation terms as defined by the base context provided by this specification.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject Enveloped VP missing contexts.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject Enveloped VP missing contexts.
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413.2-envelopes.js:99:9)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3126,20 +3433,15 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text&#x3D;The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20presentation%20using%20an%20enveloping%20securing%20mechanism%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.">The id value of the object MUST be a data: URL [RFC2397] that expresses a secured verifiable presentation using an enveloping securing mechanism, such as Securing Verifiable Credentials using JOSE and COSE [VC-JOSE-COSE].</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject Enveloped VP with an id that is not a data url.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject Enveloped VP with an id that is not a data url.
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413.2-envelopes.js:111:9)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3148,20 +3450,15 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text&#x3D;The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiablePresentation.">The type value of the object MUST be EnvelopedVerifiablePresentation.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection (HTTPError): Failed to reject VP w/o type &quot;EnvelopedVerifiablePresentation&quot;.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection (HTTPError): Failed to reject VP w/o type &quot;EnvelopedVerifiablePresentation&quot;.
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/413.2-envelopes.js:121:9)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3199,11 +3496,12 @@
                     <th class="no-wrap small-font text-center">apicatalog.com</th>
                     <th class="no-wrap small-font text-center">Digital Bazaar</th>
                     <th class="no-wrap small-font text-center">OpSecId</th>
+                    <th class="no-wrap small-font text-center">Procivis One Core</th>
                     <th class="no-wrap small-font text-center">SpruceID</th>
                     <th class="no-wrap small-font text-center">VC Issuer Mock</th>
                 </thead>
               <tbody>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#data-schemas:~:text&#x3D;When%20processing%20the%20active%20context%20defined%20by%20the%20base%20JSON%2DLD%20Context%20document%20defined%20in%20this%20specification%2C%20compliant%20JSON%2DLD%2Dbased%20processors%20produce%20an%20error%20when%20a%20JSON%2DLD%20context%20redefines%20any%20term.">When processing the active context defined by the base JSON-LD Context document defined in this specification, compliant JSON-LD-based processors produce an error when a JSON-LD context redefines any term.</a>
@@ -3239,8 +3537,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text&#x3D;The%20value%20of%20the%20relatedResource%20property%20MUST%20be%20one%20or%20more%20objects%20of%20the%20following%20form%3A">The value of the relatedResource property MUST be one or more objects of the following form:</a>
@@ -3280,6 +3583,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
@@ -3303,7 +3611,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text&#x3D;The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.">The identifier for the resource is REQUIRED and conforms to the format defined in Section 4.4 Identifiers. The value MUST be unique among the list of related resource objects.</a>
@@ -3341,6 +3649,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
@@ -3364,7 +3677,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text&#x3D;Each%20object%20associated%20with%20relatedResource%20MUST%20contain%20at%20least%20a%20digestSRI%20or%20a%20digestMultibase%20value.">Each object associated with relatedResource MUST contain at least a digestSRI or a digestMultibase value.</a>
@@ -3402,6 +3715,11 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
@@ -3425,7 +3743,7 @@
                     </div>
                   </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#terms-of-use:~:text&#x3D;The%20value%20of%20the%20refreshService%20property%20MUST%20be%20one%20or%20more%20refresh%20services%20that%20provides%20enough%20information%20to%20the%20recipient%27s%20software%20such%20that%20the%20recipient%20can%20refresh%20the%20verifiable%20credential.">The value of the refreshService property MUST be one or more refresh services that provides enough information to the recipient&#x27;s software such that the recipient can refresh the verifiable credential.</a>
@@ -3469,8 +3787,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#terms-of-use:~:text&#x3D;Each%20refreshService%20value%20MUST%20specify%20its%20type.">Each refreshService value MUST specify its type.</a>
@@ -3512,8 +3835,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#terms-of-use:~:text&#x3D;The%20value%20of%20the%20termsOfUse%20property%20MUST%20specify%20one%20or%20more%20terms%20of%20use%20policies%20under%20which%20the%20creator%20issued%20the%20credential%20or%20presentation.">The value of the termsOfUse property MUST specify one or more terms of use policies under which the creator issued the credential or presentation.</a>
@@ -3557,8 +3885,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#terms-of-use:~:text&#x3D;Each%20termsOfUse%20value%20MUST%20specify%20its%20type%2C%20for%20example%2C%20IssuerPolicy%2C%20and%20MAY%20specify%20its%20instance%20id.">Each termsOfUse value MUST specify its type, for example, IssuerPolicy, and MAY specify its instance id.</a>
@@ -3608,8 +3941,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#evidence:~:text&#x3D;If%20present%2C%20the%20value%20associated%20with%20the%20evidence%20property%20is%20a%20single%20object%20or%20a%20set%20of%20one%20or%20more%20objects.">If present, the value associated with the evidence property is a single object or a set of one or more objects.</a>
@@ -3653,8 +3991,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
               </tr>
-              <tr>
+              <tr class="at-risk">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#reserved-extension-points:~:text&#x3D;In%20order%20to%20avoid%20collisions%20regarding%20how%20the%20following%20properties%20are%20used%2C%20implementations%20MUST%20specify%20a%20type%20property%20in%20the%20value%20associated%20with%20the%20reserved%20property.">In order to avoid collisions regarding how the following properties are used, implementations MUST specify a type property in the value associated with the reserved property.</a>
@@ -3694,6 +4037,52 @@
                     <div class= "highlight-on-hover">🚫</div>
                     <div class="relative-pos">
                       <span class="err hide">TBD</span>
+                    </div>
+                  </td>
+                  <td class="pending not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">🚫</div>
+                    <div class="relative-pos">
+                      <span class="err hide">TBD</span>
+                    </div>
+                  </td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+          <div>
+            <div class="flex-center">
+              <div class="row">
+              </div>
+              <div class="">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="informative" id="At Risk">
+          <h2>At Risk</h2>
+          <div class="row">
+            <table class="simple">
+              <thead>
+                <th width="20%">
+                  <div class="text-right small-font">
+                  Reason &#8658;
+                  </div>
+                  <div class="text-left small-font">
+                  <span>&#8659;</span><span>Statement</span>
+                  </div>
+                </th>
+                    <th class="no-wrap small-font text-center">At least 2 passing implementations</th>
+                </thead>
+              <tbody>
+              <tr class="at-risk">
+                <!--This is the name of the test-->
+                <td class="subtest">
+                    <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.">The @context property of the object MUST be present and include a context, such as the base context for this specification, that defines at least the id, type, and EnvelopedVerifiableCredential terms as defined by the base context provided by this specification.</a>
+                </td>
+                <!--These contain if the test passed, failed, or was skipped-->
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
               </tr>
