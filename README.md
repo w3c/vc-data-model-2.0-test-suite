@@ -284,7 +284,7 @@ module.exports = {
 ```
 
 ### Allure Reporting
-It's also possible to generate local allure reports for analyzing and debuging results. [Allure](https://allurereport.org/) is a language agnostic reporting framework which enables useful features for developers and test-suite designers.
+It's also possible to generate local allure reports for analyzing and debugging results. [Allure](https://allurereport.org/) is a language agnostic reporting framework which enables useful features for developers and test-suite designers.
 
 To run the tests and browse the report, use the following commands:
 ```bash
