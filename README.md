@@ -293,7 +293,6 @@ npx mocha tests/
 
 # Running the reporting server
 allure serve allure-results
-
 ```
 
 ## Implementation
