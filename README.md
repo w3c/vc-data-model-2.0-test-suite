@@ -283,6 +283,19 @@ module.exports = {
   }];
 ```
 
+### Allure Reporting
+It's also possible to generate local allure reports for analyzing and debuging results. [Allure](https://allurereport.org/) is a language agnostic reporting framework which enables useful features for developers and test-suite designers.
+
+To run the tests and browse the report, use the following commands:
+```bash
+# Running the tests
+npx mocha tests/
+
+# Running the reporting server
+allure serve allure-results
+
+```
+
 ## Implementation
 
 ### VC-API
@@ -326,19 +339,6 @@ as env variables to the test script. To see which ones require client secrets,
 you can check the
 [vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
 library.
-
-### Allure Reporting
-It's also possible to generate local allure reports for analyzing and debuging results.
-
-To run the tests and browse the report, use the following commands:
-```bash
-# Running the tests
-npx mocha tests/
-
-# Running the reporting server
-allure serve allure-results
-
-```
 
 ## Contribute
 
