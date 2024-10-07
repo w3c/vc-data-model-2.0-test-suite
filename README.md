@@ -19,6 +19,7 @@ specification.
   - [Allure Reporting](#allure-reporting)
 - [Implementation](#implementation)
   - [VC-API](#vc-api)
+  - [Enveloping Proof](#enveloping-proof)
 - [Contribute](#contribute)
 - [License](#license)
 
@@ -339,6 +340,33 @@ as env variables to the test script. To see which ones require client secrets,
 you can check the
 [vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
 library.
+
+### Enveloping Proof
+Implementers who rely on an enveloping proof securing mechanism can add the `EnvelopingProof` tag to their implementation registration.
+
+This will instruct the test suite to conduct further testing on the implementation and assert the Data Model based on the payload instead of the direct output.
+
+```json
+{
+  "name": "My Company",
+  "implementation": "My implementation",
+  "issuers": [{
+    "id": "",
+    "endpoint": "https://issuer.mycompany.com/credentials/issue",
+    "tags": ["vc2.0", "EnvelopingProof"]
+  }],
+  "verifiers": [{
+    "id": "",
+    "endpoint": "https://verifier.mycompany.com/credentials/verify",
+    "tags": ["vc2.0", "EnvelopingProof"]
+  }],
+  "vpVerifiers": [{
+    "id": "",
+    "endpoint": "https://verifier.mycompany.com/presentations/verify",
+    "tags": ["vc2.0", "EnvelopingProof"]
+  }]
+}
+```
 
 ## Contribute
 
