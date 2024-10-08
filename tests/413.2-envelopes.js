@@ -26,17 +26,17 @@ describe('VP - Enveloped Verifiable Credentials', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const issuer_envelope_support =
+    const issuerEnvelopeSupport =
       endpoints.issuer.settings.tags.includes(
         'EnvelopingProof');
-    const vpVerifier_envelope_support =
+    const vpVerifierEnvelopeSupport =
       endpoints.vpVerifier.settings.tags.includes(
         'EnvelopingProof');
 
     describe(name, function() {
       let issuedVc;
       before(async function() {
-        if(issuer_envelope_support) {
+        if(issuerEnvelopeSupport) {
           try {
             issuedVc = await endpoints.issue(require(
               './input/credential-ok.json'));
@@ -58,7 +58,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
         'terms as defined by the base context provided by this specification.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
-        if(!vpVerifier_envelope_support) {
+        if(!vpVerifierEnvelopeSupport) {
           this.test.cell.skipMessage = 'No envelope support.';
           this.skip();
         } else {
@@ -78,7 +78,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
         'security scheme, such as Securing Verifiable Credentials using JOSE ' +
         'and COSE [VC-JOSE-COSE].', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20credential%20using%20an%20enveloping%20security%20scheme%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
-        if(!issuer_envelope_support) {
+        if(!issuerEnvelopeSupport) {
           this.test.cell.skipMessage = 'No envelope support.';
           this.skip();
         } else {
@@ -93,7 +93,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
       it('The type value of the object MUST be EnvelopedVerifiableCredential.',
         async function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.`;
-          if(!issuer_envelope_support) {
+          if(!issuerEnvelopeSupport) {
             this.test.cell.skipMessage = 'No envelope support.';
             this.skip();
           } else {
@@ -111,7 +111,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const vpVerifier_envelope_support =
+    const vpVerifierEnvelopeSupport =
       endpoints.vpVerifier.settings.tags.includes(
         'EnvelopingProof');
 
@@ -124,7 +124,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         'terms as defined by the base context provided by this specification.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiablePresentation%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.`;
-        if(!vpVerifier_envelope_support) {
+        if(!vpVerifierEnvelopeSupport) {
           this.test.cell.skipMessage = 'No envelope support.';
           this.skip();
         } else {
@@ -141,7 +141,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
         'securing mechanism, such as Securing Verifiable Credentials using ' +
         'JOSE and COSE [VC-JOSE-COSE].', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20presentation%20using%20an%20enveloping%20securing%20mechanism%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.`;
-        if(!vpVerifier_envelope_support) {
+        if(!vpVerifierEnvelopeSupport) {
           this.test.cell.skipMessage = 'No envelope support.';
           this.skip();
         } else {
@@ -156,7 +156,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
       it('The type value of the object MUST be ' +
         'EnvelopedVerifiablePresentation.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#enveloped-verifiable-presentations:~:text=The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiablePresentation.`;
-        if(!vpVerifier_envelope_support) {
+        if(!vpVerifierEnvelopeSupport) {
           this.test.cell.skipMessage = 'No envelope support.';
           this.skip();
         } else {
