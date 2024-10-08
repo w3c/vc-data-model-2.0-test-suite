@@ -19,7 +19,6 @@ const should = chai.should();
 const require = createRequire(import.meta.url);
 
 const tag = 'vc2.0';
-// const tag = 'EnvelopingProof';
 const {match} = filterByTag({tags: [tag]});
 
 // 4.12.1 Enveloped Verifiable Credentials https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials
