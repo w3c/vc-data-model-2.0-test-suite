@@ -7,6 +7,6 @@ COPY package.json ./
 COPY tests/ ./
 
 RUN npm i
-RUN npx test tests/
+RUN npx mocha tests/
 
 ENTRYPOINT ["npx", "allure", "serve", "-h", "0.0.0.0", "-p", "8080"]
