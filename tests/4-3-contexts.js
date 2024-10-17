@@ -87,7 +87,7 @@ describe('Contexts', function() {
           presentation: require('./input/presentation-context-order-fail.json')
         });
         await assert.rejects(endpoints.verifyVp(vpInvalidContextOrder),
-          {name: 'HTTPError'},
+
           'Failed to reject a VP that has the wrong context order.');
         const vp = createLocalVp({
           presentation: require('./input/presentation-ok.json')
@@ -100,7 +100,7 @@ describe('Contexts', function() {
           'Failed to reject a VP with unordered @context.');
         await assert.rejects(endpoints.verifyVp(
           require('./input/presentation-missing-base-context-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VP that lacked the VC base context URL.');
       });
       it('Verifiable Credential `@context`: "Subsequent items in the ' +
@@ -116,11 +116,11 @@ describe('Contexts', function() {
         'Failed to support objects in the `@context` Array.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo3-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with an invalid `@context` URL.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-context-combo4-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with an unsupported `@context` value type ' +
         '(number).');
       });

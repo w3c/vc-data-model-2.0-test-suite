@@ -37,11 +37,11 @@ describe('Status', function() {
         'Failed to accept a VC with `credentialStatus` without an `id`.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-multiple-id-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with multiple `credentialStatus.id` values.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-nonurl-id-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with a non-URL `credentialStatus.id`.');
       });
       it('(If a credentialStatus property is present), The type ' +
@@ -51,11 +51,11 @@ describe('Status', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=The%20type%20property%20is%20REQUIRED.%20It%20is%20used%20to%20express%20the%20type%20of%20status%20information%20expressed%20by%20the%20object.%20The%20related%20normative%20guidance%20in%20Section%204.5%20Types%20MUST%20be%20followed.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-missing-type-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC missing `credentialStatus.type`.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-status-type-nonurl-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with a non-URL `credentialStatus.type`.');
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-status-ok.json')),

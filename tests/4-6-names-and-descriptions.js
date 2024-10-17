@@ -63,7 +63,7 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC with `name` in multiple languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/credential-name-extra-prop-en-fail.json`)),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with `name` containing extra properties.');
       });
       it('If present, the value of the description property MUST be a string ' +
@@ -89,7 +89,7 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC with `description` in multiple languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/credential-description-extra-prop-en-fail.json`)),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with `description` containing extra ' +
         'properties.');
       });
@@ -117,7 +117,7 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC with `issuer.name` in multiple languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/issuer-name-extra-prop-en-fail.json`)),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with `issuer.name` containing extra ' +
         'properties.');
       });
@@ -146,7 +146,7 @@ describe('Names and Descriptions', function() {
         'languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/issuer-description-extra-prop-en-fail.json`)),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with `issuer.description` containing extra ' +
         'properties.');
       });

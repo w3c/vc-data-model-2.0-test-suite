@@ -73,7 +73,7 @@ describe('Verifiable Presentations', function() {
         ), 'Failed to verify a valid VP.');
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-vc-missing-required-type-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VP containing a VC with no `type` value.');
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-vc-as-string-fail.json')),

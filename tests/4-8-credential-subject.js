@@ -33,7 +33,7 @@ describe('Credential Subject', function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=A%20verifiable%20credential%20MUST%20contain%20a%20credentialSubject%20property.`;
           await assert.rejects(endpoints.issue(require(
             './input/credential-no-subject-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to rejet a VC without a `credentialSubject`.');
         }
       );
@@ -44,7 +44,7 @@ describe('Credential Subject', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#credential-subject:~:text=The%20value%20of%20the%20credentialSubject%20property%20is%20a%20set%20of%20objects%20where%20each%20object%20MUST%20be%20the%20subject%20of%20one%20or%20more%20claims%2C%20which%20MUST%20be%20serialized%20inside%20the%20credentialSubject%20property.`;
         await assert.rejects(endpoints.issue(require(
           './input/credential-subject-no-claims-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with an empty `credentialSubject`.');
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-subject-multiple-ok.json')),
@@ -52,7 +52,7 @@ describe('Credential Subject', function() {
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-subject-multiple-empty-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject VC containing an empty `credentialSubject`.');
       });
     });

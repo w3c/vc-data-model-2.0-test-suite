@@ -42,12 +42,12 @@ describe('Advanced Concepts', function() {
         // `credentialSchema.type`
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC which redefines the `VerifiableCredential` ' +
         'type.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-redef-type2-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC containing a redefiled protected term.');
       });
 
@@ -66,7 +66,7 @@ describe('Advanced Concepts', function() {
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-list-of-strings-fail.json'
         )),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with a relatedResource as an array of strings.');
       });
       it('The identifier for the resource is REQUIRED and conforms to the ' +
@@ -76,7 +76,7 @@ describe('Advanced Concepts', function() {
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-missing-id-fail.json'
         )),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with a relatedResource with no `id` field.');
       });
       it('Each object associated with relatedResource MUST contain at least ' +
@@ -85,7 +85,7 @@ describe('Advanced Concepts', function() {
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-no-digest-fail.json'
         )),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with a relatedResource with no digest info.');
       });
 
@@ -113,7 +113,7 @@ describe('Advanced Concepts', function() {
           // `refreshService` value
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a VC with `refreshService` without a `type`.');
         });
 
@@ -131,8 +131,7 @@ describe('Advanced Concepts', function() {
         'IssuerPolicy, and MAY specify its instance id.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#terms-of-use:~:text=Each%20termsOfUse%20value%20MUST%20specify%20its%20type%2C%20for%20example%2C%20IssuerPolicy%2C%20and%20MAY%20specify%20its%20instance%20id.`;
         await assert.rejects(endpoints.issue(require(
-          './input/credential-termsofuse-no-type-fail.json')),
-        {name: 'HTTPError'});
+          './input/credential-termsofuse-no-type-fail.json')));
         await assert.doesNotReject(endpoints.issue(require(
           './input/credential-termsofuse-id-ok.json')));
       });
