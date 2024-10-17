@@ -9,6 +9,7 @@ import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
+import {addJsonAttachment} from './helpers.js';
 import http from 'http';
 import receiveJson from './receive-json.js';
 
@@ -26,7 +27,10 @@ export class TestEndpoints {
   async issue(credential) {
     const {issuer} = this;
     const issueBody = createRequestBody({issuer, vc: credential});
-    return post(issuer, issueBody);
+    await addJsonAttachment('Request', issueBody);
+    const response = post(issuer, issueBody);
+    await addJsonAttachment('Response', response);
+    return response;
   }
   // FIXME implement createVp for implementation endpoints in the future
   // @see https://w3c-ccg.github.io/vc-api/#create-presentation
@@ -35,10 +39,12 @@ export class TestEndpoints {
   }
   async verify(vc) {
     const verifyBody = createVerifyRequestBody({vc});
+    await addJsonAttachment('Request', verifyBody);
     const result = await post(this.verifier, verifyBody);
     if(result?.errors?.length) {
       throw result.errors[0];
     }
+    await addJsonAttachment('Response', result);
     return result;
   }
   async verifyVp(vp, options = {}) {
