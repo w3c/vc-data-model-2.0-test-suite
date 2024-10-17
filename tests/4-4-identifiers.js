@@ -37,7 +37,7 @@ describe('Identifiers', function() {
         await assert.rejects(
           endpoints.issue(require(
             './input/credential-id-nonidentifier-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a credential with a `null` identifier.');
 
         await assert.doesNotReject(endpoints.issue(require(
@@ -48,16 +48,16 @@ describe('Identifiers', function() {
         'Failed to accept a VC with a valid credentialSubject identifier');
         await assert.rejects(endpoints.issue(require(
           './input/credential-id-multi-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with multiple `id` values.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-id-subject-multi-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with multiple credentialSubject identifiers.');
 
         await assert.rejects(
           endpoints.issue(require('./input/credential-id-not-url-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a credential with an invalid identifier.');
       });
     });

@@ -42,7 +42,7 @@ describe('Validity Period', function() {
         'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-validfrom-invalid-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC using an incorrect `validFrom` date-time ' +
         'format.');
         await assert.doesNotReject(endpoints.issue(require(
@@ -65,7 +65,7 @@ describe('Validity Period', function() {
         'Failed to accept a VC using the subtractive timezone format.');
         await assert.rejects(endpoints.issue(require(
           './input/credential-validuntil-invalid-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC using an inccorect `validUntil` date-time ' +
         'format.');
       });

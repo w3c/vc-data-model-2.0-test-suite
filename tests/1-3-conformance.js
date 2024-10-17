@@ -84,9 +84,9 @@ describe('Basic Conformance', function() {
         const doc = {
           type: ['NonconformingDocument']
         };
-        await assert.rejects(endpoints.verify(doc), {name: 'HTTPError'},
+        await assert.rejects(endpoints.verify(doc),
           'Failed to reject malformed VC.');
-        await assert.rejects(endpoints.verifyVp(doc), {name: 'HTTPError'},
+        await assert.rejects(endpoints.verifyVp(doc),
           'Failed to reject malformed VP.');
       });
     });

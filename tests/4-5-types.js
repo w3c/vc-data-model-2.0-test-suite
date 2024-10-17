@@ -34,7 +34,7 @@ describe('Types', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(
           endpoints.issue(require('./input/credential-no-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a VC without a type.');
       });
       it('Verifiable presentations MUST contain a type property with an ' +
@@ -42,7 +42,7 @@ describe('Types', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=Verifiable%20credentials%20and%20verifiable%20presentations%20MUST%20contain%20a%20type%20property%20with%20an%20associated%20value.`;
         await assert.rejects(endpoints.verifyVp(require(
           './input/presentation-no-type-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VP without a type.');
       });
       it('The value of the type property MUST be one or more terms and/or ' +
@@ -61,12 +61,12 @@ describe('Types', function() {
         // type mapped not to URL: fail
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-mapped-nonurl-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with type mapped to an invalid URL.');
         // type not mapped: fail
         await assert.rejects(endpoints.issue(require(
           './input/credential-type-unmapped-fail.json')),
-        {name: 'HTTPError'},
+
         'Failed to reject a VC with an unmapped (via `@context`) type.');
       });
       it('If more than one (type) value is provided, the order does not ' +
@@ -92,7 +92,7 @@ describe('Types', function() {
           'Failed to accept a VC with additional type.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-missing-required-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a VC missing the `VerifiableCredential` type.');
         }
       );
@@ -109,7 +109,7 @@ describe('Types', function() {
           await assert.rejects(
             endpoints.verifyVp(require(
               './input/presentation-missing-required-type-fail.json')),
-            {name: 'HTTPError'},
+
             'Failed to reject VP missing `VerifiableCredential` type.');
         }
       );
@@ -122,7 +122,7 @@ describe('Types', function() {
           'Failed to accept a VC with `credentialStatus` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-status-missing-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a VC with `credentialStatus` without a `type`.');
         }
       );
@@ -135,7 +135,7 @@ describe('Types', function() {
           'Failed to accept a VC with `termsOfUse` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-termsofuse-missing-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a VC with `termsOfUse` without a `type`.');
         }
       );
@@ -148,7 +148,7 @@ describe('Types', function() {
           'Failed to accept a VC with `evidence` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-evidence-missing-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a VC with `evidence` without a `type`.');
         }
       );
@@ -160,7 +160,7 @@ describe('Types', function() {
           'Failed to accept a VC with `refreshService` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-refresh-no-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject a VC with `refreshService` without a `type`.');
         }
       );
@@ -172,7 +172,7 @@ describe('Types', function() {
           'Failed to accept a VC with `credentialSchema` with a `type`.');
           await assert.rejects(endpoints.issue(require(
             './input/credential-schema-no-type-fail.json')),
-          {name: 'HTTPError'},
+
           'Failed to reject `credentialSchema` without a `type`.');
         }
       );

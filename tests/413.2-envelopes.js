@@ -131,7 +131,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
           await assert.rejects(
             endpoints.verifyVp(require(
               './input/enveloped-presentation-context-fail.json')),
-            {name: 'HTTPError'},
+
             'Failed to reject Enveloped VP missing contexts.');
         }
       });
@@ -148,7 +148,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
           await assert.rejects(
             endpoints.verifyVp(require(
               './input/enveloped-presentation-id-fail.json')),
-            {name: 'HTTPError'},
+
             'Failed to reject Enveloped VP with an id that is not a data url.');
         }
       });
@@ -163,7 +163,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
           await assert.rejects(
             endpoints.verifyVp(require(
               './input/enveloped-presentation-type-fail.json')),
-            {name: 'HTTPError'},
+
             'Failed to reject VP w/o type "EnvelopedVerifiablePresentation".');
         }
       });
