@@ -11,9 +11,13 @@ specification.
 
 ## Table of Contents
 
+<!-- TOC tocDepth:2..3 -->
+
+- [Table of Contents](#table-of-contents)
 - [Background](#background)
 - [Install](#install)
 - [Setup](#setup)
+  - [Test Suite HTTP API](#test-suite-http-api)
 - [Usage](#usage)
   - [Testing Locally](#testing-locally)
   - [Allure Reporting](#allure-reporting)
@@ -22,6 +26,8 @@ specification.
   - [Enveloping Proof](#enveloping-proof)
 - [Contribute](#contribute)
 - [License](#license)
+
+<!-- /TOC -->
 
 ## Background
 
