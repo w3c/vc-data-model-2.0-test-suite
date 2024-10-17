@@ -334,11 +334,12 @@ allure serve allure-results
 
 ## Implementation
 
-### VC-API
-To add your implementation to this test suite You will need to add 3 endpoints to your implementation manifest.
-- A credentials issuer endpoint (`/credentials/issue`) in the `issuers` property.
-- A credentials verifier endpoint (`/credentials/verify`) in the `verifiers` property.
-- A presentations verifier endpoint (`presentations/verify`) in the `vpVerifiers` property.
+To add your implementation to this test suite, add a test manifest describing
+your implementation to the
+[`w3c/vc-test-suite-implementations`](https://github.com/w3c/vc-test-suite-implementations)
+repo by following the
+[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
+instructions.
 
 All endpoints will need the tag `vc2.0`. A simplified manifest will roughly
 look like the following:
@@ -365,16 +366,13 @@ look like the following:
 }
 ```
 
-This example above is for a set of unauthenticated endpoints. You may add zcap
-or oauth2 authentication to your endpoints.
+This example above is for a set of unauthenticated endpoints. You may add
+[ZCAP](https://w3c-ccg.github.io/zcap-spec/)
+or OAuth2 authentication to your endpoints.
 
-See the [vc-test-suite-implementations README here](https://github.com/w3c/vc-test-suite-implementations).
-
-To run the tests, some implementations require client secrets that can be passed
-as env variables to the test script. To see which ones require client secrets,
-you can check the
-[vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
-library.
+See the
+[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
+for more information.
 
 ### Enveloping Proof
 Implementers who rely on an enveloping proof securing mechanism can add the `EnvelopingProof` tag to their implementation registration.
