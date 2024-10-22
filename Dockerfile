@@ -1,8 +1,6 @@
 FROM node:18
 
-WORKDIR /test-suite
-
-RUN apt update
+WORKDIR /test-suitegit status
 
 COPY package.json ./
 COPY tests/ ./tests
