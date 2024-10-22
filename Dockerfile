@@ -1,6 +1,6 @@
 FROM node:18
 
-WORKDIR /test-suitegit status
+WORKDIR /test-suite
 
 COPY package.json ./
 COPY tests/ ./tests
