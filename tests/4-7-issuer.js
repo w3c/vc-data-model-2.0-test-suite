@@ -39,8 +39,8 @@ describe('Issuer', function() {
         'an object containing an id property whose value is a URL.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL`;
-        await assert.doesNotReject(endpoints.issue(require(
-          './input/credential-issuer-object-ok.json')));
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-issuer-empty-object-fail.json')));
         await assert.rejects(endpoints.issue(require(
           './input/credential-issuer-no-url-fail.json')),
 
