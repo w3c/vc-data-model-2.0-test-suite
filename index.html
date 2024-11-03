@@ -185,13 +185,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 373/476 78%
+      Tests passed 372/476 78%
       </p>
       <p>
-      Tests failed 103/476 22%
+      Tests failed 104/476 22%
       </p>
       <p>
-      Failures 103
+      Failures 104
       </p>
       <p>
       Tests skipped 100
@@ -200,7 +200,7 @@
       Total tests 576
       </p>
       <p>
-        These tests were run on <time>31 October 2024 at 4:03 am UTC</time>
+        These tests were run on <time>3 November 2024 at 5:08 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1162,9 +1162,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request failed with status code 404 Not Found&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request failed with status code 404 Not Found&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4-4-identifiers.js:43:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
