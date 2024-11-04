@@ -13,7 +13,6 @@ specification.
 
 <!-- TOC tocDepth:2..3 -->
 
-- [Table of Contents](#table-of-contents)
 - [Background](#background)
 - [Install](#install)
 - [Setup](#setup)
@@ -50,7 +49,7 @@ compatible with the VC-API, it is possible to "wrap" the implementation in a
 minimal VC-API implementation (example code is available at
 <https://github.com/Wind4Greg/Server-for-VCs>).
 
-Additionally, verifier implementations will need to be able to verify Verifiable Credentials
+Additionally, verifier implementations will need to be able to process Verifiable Credentials
 and Verifiable Presentations signed with `eddsa-rdfc-2022`. We recommend
 that any issuer endpoints used with this test suite also issue using
 `eddsa-rdfc-2022`. Both signed and unsigned Verifiable Presentations will
@@ -366,11 +365,11 @@ look like the following:
 }
 ```
 
-This example above is for a set of unauthenticated endpoints. You may add
+The example above is for a set of unauthenticated endpoints. You may add
 [ZCAP](https://w3c-ccg.github.io/zcap-spec/)
-or OAuth2 authentication to your endpoints.
+or [OAuth2 authentication](https://oauth.net/2/client-authentication/) to your endpoints.
 
-See the
+See
 [Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
 for more information.
 
