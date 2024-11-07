@@ -365,7 +365,7 @@ look like the following:
 }
 ```
 
-The example above is for a set of unauthenticated endpoints. You may add
+The example above is for a set of unauthenticated endpoints. You can add
 [ZCAP](https://w3c-ccg.github.io/zcap-spec/)
 or [OAuth2 authentication](https://oauth.net/2/client-authentication/) to your endpoints.
 
