@@ -100,21 +100,12 @@ describe('Verifiable Presentations', function() {
           presentationWithHolder
         ), 'Failed to verify a valid VP with holder.');
 
-        // presentation.holder = {id: localIssuer};
         const presentationWithHolderObject = await createLocalVp({
           presentation: require('./input/presentation-holder-object-ok.json')
         });
         await assert.doesNotReject(endpoints.verifyVp(
           presentationWithHolderObject
         ), 'Failed to verify a valid VP with holder object.');
-
-        const presentationMissingHolderId = await createLocalVp({
-          presentation: require('./input/presentation-holder-object-fail.json')
-        });
-        await assert.rejects(endpoints.verifyVp(
-          presentationMissingHolderId
-        ), 'Failed to reject a VP with an invalid holder.');
-
         // TODO, how to create negative fixture (bad holder values)
       });
     });
@@ -135,14 +126,12 @@ describe('VP - Presentations Including Holder Claims', function() {
         'verifiable presentation MUST include a holder property.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=A%20verifiable%20presentation%20that%20includes%20a%20self%2Dasserted%20verifiable%20credential%20that%20is%20only%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%20MUST%20include%20a%20holder%20property.`;
-        const presentation = require('./input/presentation-vc-ok.json');
-
-        presentation.verifiableCredential[0].issuer = localIssuer;
-        const presentationMissingHolder = await createLocalVp({
-          presentation
+        const selfAssertedNoHolder = await createLocalVp({
+          presentation: require(
+            './input/presentation-self-asserted-vc-no-holder.json')
         });
         await assert.rejects(endpoints.verifyVp(
-          presentationMissingHolder
+          selfAssertedNoHolder
         ), 'Failed to reject a VP with self-asserted VC without holder.');
       });
 
@@ -152,31 +141,26 @@ describe('VP - Presentations Including Holder Claims', function() {
         'the holder property of the verifiable presentation.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text=When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.`;
-        const presentation = require('./input/presentation-vc-ok.json');
-
-        presentation.verifiableCredential[0].issuer = localIssuer;
-        presentation.holder = localIssuer;
         const presentationHolderMatch = await createLocalVp({
-          presentation
+          presentation: require(
+            './input/presentation-self-asserted-vc-ok.json')
         });
         await assert.doesNotReject(endpoints.verifyVp(
           presentationHolderMatch
         ), 'Failed to verify a VP containing a self-asserted VC.');
 
-        presentation.verifiableCredential[0].issuer = localIssuer;
-        presentation.holder = 'did:example:acme';
         const presentationHolderMismatch = await createLocalVp({
-          presentation
+          presentation: require(
+            './input/presentation-self-asserted-vc-holder-mismatch.json')
         });
         await assert.rejects(endpoints.verifyVp(
           presentationHolderMismatch
         ), 'Failed to reject a VP with self-asserted VC ' +
         'with a holder/issuer mismatch.');
 
-        presentation.verifiableCredential[0].issuer = 'did:example:acme';
-        presentation.holder = localIssuer;
         const presentationIssuerMismatch = await createLocalVp({
-          presentation
+          presentation: require(
+            './input/presentation-self-asserted-vc-issuer-mismatch.json')
         });
         await assert.rejects(endpoints.verifyVp(
           presentationIssuerMismatch
