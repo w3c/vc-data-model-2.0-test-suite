@@ -21,6 +21,8 @@ const {AuthenticationProofPurpose} = jsigs.purposes;
 const buf = Buffer.alloc(16); // 128 bits
 export const challenge = 'u' + randomFillSync(buf).toString('base64url');
 export const domain = 'github.com/w3c/vc-data-model-2.0-test-suite';
+export const localIssuer =
+  'did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj';
 
 const _documentLoader = url => {
   // adds support for the data integrity context

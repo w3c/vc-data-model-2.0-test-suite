@@ -55,9 +55,11 @@ describe('Advanced Concepts', function() {
       it('The value of the relatedResource property MUST be one or more ' +
         'objects of the following form:', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20value%20of%20the%20relatedResource%20property%20MUST%20be%20one%20or%20more%20objects%20of%20the%20following%20form%3A`;
-        this.test.cell.skipMessage = 'TBD';
         await assert.doesNotReject(endpoints.issue(require(
-          './input/relatedResource/relatedResource-ok.json'
+          './input/relatedResource/relatedResource-digest-sri-ok.json'
+        )), 'Failed to accept a VC with valid relatedResource objects.');
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/relatedResource/relatedResource-digest-multibase-ok.json'
         )), 'Failed to accept a VC with valid relatedResource objects.');
         await assert.doesNotReject(endpoints.issue(require(
           './input/relatedResource/relatedResource-with-mediaType-ok.json'
@@ -66,18 +68,24 @@ describe('Advanced Concepts', function() {
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-list-of-strings-fail.json'
         )),
-
         'Failed to reject a VC with a relatedResource as an array of strings.');
       });
       it('The identifier for the resource is REQUIRED and conforms to the ' +
-        'format defined in Section 4.4 Identifiers. The value MUST be unique ' +
-        'among the list of related resource objects.', async function() {
+        'format defined in Section 4.4 Identifiers.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.`;
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-missing-id-fail.json'
         )),
-
         'Failed to reject a VC with a relatedResource with no `id` field.');
+      });
+      it('The value MUST be unique ' +
+        'among the list of related resource objects.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.`;
+        await assert.rejects(endpoints.issue(require(
+          './input/relatedResource/relatedResource-duplicate-id-fail.json'
+        )),
+        'Failed to reject a VC with a relatedResource with ' +
+        'a duplicate `id` field.');
       });
       it('Each object associated with relatedResource MUST contain at least ' +
         'a digestSRI or a digestMultibase value.', async function() {
@@ -85,8 +93,20 @@ describe('Advanced Concepts', function() {
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-no-digest-fail.json'
         )),
-
         'Failed to reject a VC with a relatedResource with no digest info.');
+      });
+      it('If the digest provided by the issuer does not match the digest ' +
+        'computed for the retrieved resource, the conforming verifier ' +
+        'implementation MUST produce an error.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=Each%20object%20associated%20with%20relatedResource%20MUST%20contain%20at%20least%20a%20digestSRI%20or%20a%20digestMultibase%20value.`;
+        await assert.rejects(endpoints.issue(require(
+          './input/relatedResource/relatedResource-digest-sri-fail.json'
+        )),
+        'Failed to reject a VC with a relatedResource with wrong digest.');
+        await assert.rejects(endpoints.issue(require(
+          './input/relatedResource/relatedResource-digest-multibase-fail.json'
+        )),
+        'Failed to reject a VC with a relatedResource with wrong digest.');
       });
 
       // 5.4 Refreshing https://w3c.github.io/vc-data-model/#integrity-of-related-resources
@@ -160,9 +180,3 @@ describe('Advanced Concepts', function() {
     });
   }
 });
-
-// 7.1 Verification https://w3c.github.io/vc-data-model/#verification
-// TODO: may need tests written, though only the response could be tested
-
-// 7.2 Problem Details https://w3c.github.io/vc-data-model/#problem-details
-// TODO: optionaly response format; but we could write tests for it

@@ -35,8 +35,10 @@ describe('Issuer', function() {
             require('./input/credential-ok.json'));
           vc.hasOwnProperty('issuer');
         });
-      it('The value of the issuer property MUST be either a URL, or ' +
-        'an object containing an id property whose value is a URL.',
+      it('The value of the issuer property MUST be either a URL or an ' +
+        'object containing an id property whose value is a URL; ' +
+        'in either case, the issuer selects this URL to identify itself in a ' +
+        'globally unambiguous way.',
       async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=The%20value%20of%20the%20issuer%20property%20MUST%20be%20either%20a%20URL%2C%20or%20an%20object%20containing%20an%20id%20property%20whose%20value%20is%20a%20URL`;
         await assert.doesNotReject(endpoints.issue(require(

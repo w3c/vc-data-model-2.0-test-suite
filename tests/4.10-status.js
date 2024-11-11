@@ -28,6 +28,25 @@ describe('Status', function() {
     describe(name, function() {
       beforeEach(addPerTestMetadata);
 
+      it('The type property is REQUIRED.', async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type`;
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-status-missing-type-fail.json')),
+        'Failed to reject a VC with `credentialStatus` without a `type`.');
+      });
+
+      it('The related normative guidance in Section 4.5 ' +
+        'Types MUST be followed.',
+      async function() {
+        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type`;
+        await assert.doesNotReject(endpoints.issue(require(
+          './input/credential-status-ok.json')),
+        'Failed to accept a VC with `credentialStatus` with a `type`.');
+        await assert.rejects(endpoints.issue(require(
+          './input/credential-status-missing-type-fail.json')),
+        'Failed to reject a VC with `credentialStatus` without a `type`.');
+      });
+
       it('If present (credentialStatus.id), the normative guidance ' +
         'in Section 4.4 Identifiers MUST be followed.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=credential%20status%20object.-,If%20present%2C%20the%20normative%20guidance%20in%20Section%204.4%20Identifiers%20MUST%20be%20followed.,-type`;
