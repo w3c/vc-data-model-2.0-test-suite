@@ -29,7 +29,7 @@ describe('VP - Enveloped Verifiable Credentials', function() {
     const issuerEnvelopeSupport =
       endpoints.issuer.settings.tags.includes(
         'EnvelopingProof');
-    const vpVerifierEnvelopeSupport =
+    const vpVerifierEnvelopeSupport = endpoints.vpVerifier &&
       endpoints.vpVerifier.settings.tags.includes(
         'EnvelopingProof');
 
@@ -111,7 +111,7 @@ describe('VP - Enveloped Verifiable Presentations', function() {
   setupMatrix.call(this, match);
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
-    const vpVerifierEnvelopeSupport =
+    const vpVerifierEnvelopeSupport = endpoints.vpVerifier &&
       endpoints.vpVerifier.settings.tags.includes(
         'EnvelopingProof');
 
