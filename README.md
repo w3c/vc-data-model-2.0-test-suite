@@ -174,9 +174,9 @@ HTTP/1.1 200 OK
 
 ```json
 {
-  "checks": ["proof"],
-  "warnings": ["invalid-uri"],
-  "errors": ["invalid proof"]
+  "verified": true,
+  "results": {},
+  "error": ["invalid proof"]
 }
 ```
 
@@ -252,7 +252,7 @@ HTTP/1.1 200 OK
 
 ```json
 {
-  "checks": ["proof"],
+  "verified": true,
   "warnings": ["invalid-uri"],
   "errors": ["invalid proof"]
 }
