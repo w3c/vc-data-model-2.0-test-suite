@@ -1,3 +1,6 @@
+import * as allure from 'allure-js-commons';
+import {ContentType} from 'allure-js-commons';
+
 export function setupMatrix(match) {
   // this will tell the report
   // to make an interop matrix with this suite
@@ -35,4 +38,18 @@ export function extractIfEnveloped(input) {
   } else {
     return input;
   }
+}
+
+export async function addJsonAttachment(fileName, content) {
+  try {
+    // Temporarily disable the console log to avoid unnecessary info logs.
+    const consoleLog = console.log;
+    console.log = function() {};
+    await allure.attachment(
+      fileName,
+      JSON.stringify(content, null, 2),
+      ContentType.JSON
+    );
+    console.log = consoleLog;
+  } catch(err) {}
 }
