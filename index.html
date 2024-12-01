@@ -200,7 +200,7 @@
       Total tests 781
       </p>
       <p>
-        These tests were run on <time>24 November 2024 at 5:10 am UTC</time>
+        These tests were run on <time>1 December 2024 at 5:10 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1336,10 +1336,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a credential with a &#x60;null&#x60; identifier.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a credential with a &#x60;null&#x60; identifier.
+                        <summary>Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.04-identifiers.js:37:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.04-identifiers.js:43:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -3727,10 +3729,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VC with multiple &#x60;credentialStatus.id&#x60; values.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with multiple &#x60;credentialStatus.id&#x60; values.
+                        <summary>Missing expected rejection: Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a non-URL &#x60;credentialStatus.id&#x60;.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.10-status.js:57:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.10-status.js:61:9)</pre>
                       </details>
                     </div>
                   </td>
