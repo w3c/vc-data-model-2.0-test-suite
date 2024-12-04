@@ -9,6 +9,7 @@
   "type": "module",
   "scripts": {
     "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options abstract=\"$PWD/abstract.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",suiteLog='./suite.log',templateData=\"$PWD/reports/index.json\",title=\"VC v2.0 Interoperability Report\" --timeout 15000 --preserve-symlinks",
+    "test-allure": "npx mocha tests/ -R allure-mocha -O 'resultsDir=allure-results'",
     "lint": "eslint ."
   },
   "repository": {
@@ -55,12 +56,5 @@
     "eslint-config-digitalbazaar": "^4.0.1",
     "eslint-plugin-jsdoc": "^39.3.3",
     "eslint-plugin-unicorn": "^43.0.0"
-  },
-  "mocha": {
-    "parallel": false,
-    "reporter": "allure-mocha",
-    "reporterOptions": {
-      "resultsDir": "allure-results"
-    }
   }
 }
