@@ -185,13 +185,13 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 523/683 76%
+      Tests passed 522/683 76%
       </p>
       <p>
-      Tests failed 160/683 24%
+      Tests failed 161/683 24%
       </p>
       <p>
-      Failures 160
+      Failures 161
       </p>
       <p>
       Tests skipped 98
@@ -200,7 +200,7 @@
       Total tests 781
       </p>
       <p>
-        These tests were run on <time>6 December 2024 at 3:08 pm UTC</time>
+        These tests were run on <time>6 December 2024 at 3:58 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -468,9 +468,17 @@
                     <a href="https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text&#x3D;MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces">A conforming verifier implementation MUST perform verification on a conforming document as described inSection 4.12 Securing Mechanisms.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify credential.
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify credential.
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/1.03-conformance.js:70:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -791,9 +799,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: verifier apicatalog.com rejected VP with valid @context.
-                    Actual message: &quot;MissingVerifiable&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: verifier apicatalog.com rejected VP with valid @context.
-                    Actual message: &quot;MissingVerifiable&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.03-contexts.js:57:11)</pre>
                       </details>
@@ -1097,9 +1105,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;InvalidDocument&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;InvalidDocument&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.03-contexts.js:132:9)</pre>
                       </details>
@@ -1237,31 +1245,32 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.">If present, the value of the id property MUST be a single URL, which MAY be dereferenceable.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
                   <td class="failed not-optional highlight-on-hover text-center">
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC with a valid identifier.
-                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid identifier.
-                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.04-identifiers.js:43:9)</pre>
+                        <summary>Got unwanted rejection: Failed to accept a VC with a DID credentialSubject identifier.
+                    Actual message: &quot;Request to &quot;https://us-central1-api-catalog.cloudfunctions.net/vc-api-issue-ed25519&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a DID credentialSubject identifier.
+                    Actual message: &quot;Request to &quot;https://us-central1-api-catalog.cloudfunctions.net/vc-api-issue-ed25519&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.04-identifiers.js:34:9)</pre>
                       </details>
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
+                    </div>
+                  </td>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
+                    <div class="relative-pos">
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1720,9 +1729,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
-                    Actual message: &quot;MissingVerifiable&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
-                    Actual message: &quot;MissingVerifiable&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.05-types.js:106:11)</pre>
                       </details>
@@ -3971,9 +3980,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Expected verifier apicatalog.com to verify a VP with a valid id.
-                    Actual message: &quot;InvalidDocument&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier apicatalog.com to verify a VP with a valid id.
-                    Actual message: &quot;InvalidDocument&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:39:9)</pre>
                       </details>
@@ -4065,9 +4074,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Expected verifier apicatalog.com to verify a VP with initial type VerifiablePresentation.
-                    Actual message: &quot;MissingVerifiable&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier apicatalog.com to verify a VP with initial type VerifiablePresentation.
-                    Actual message: &quot;MissingVerifiable&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:51:11)</pre>
                       </details>
@@ -4159,9 +4168,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Expected verifier apicatalog.com to verify a VP with initial type VerifiablePresentation.
-                    Actual message: &quot;MissingVerifiable&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier apicatalog.com to verify a VP with initial type VerifiablePresentation.
-                    Actual message: &quot;MissingVerifiable&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:66:9)</pre>
                       </details>
@@ -4253,9 +4262,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;InvalidDocument&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;InvalidDocument&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:84:9)</pre>
                       </details>
@@ -4355,9 +4364,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify a valid VP with holder.
-                    Actual message: &quot;InvalidDocument&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP with holder.
-                    Actual message: &quot;InvalidDocument&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:99:9)</pre>
                       </details>
@@ -4592,9 +4601,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;InvalidDocument&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;InvalidDocument&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:148:9)</pre>
                       </details>
@@ -4765,9 +4774,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
-                    Actual message: &quot;MissingProof&quot;</summary>
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
-                    Actual message: &quot;MissingProof&quot;
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13.2-envelopes.js:65:11)</pre>
                       </details>
@@ -5827,7 +5836,7 @@
                         <summary>Missing expected rejection: Failed to reject a VC with a relatedResource with wrong digest.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a relatedResource with wrong digest.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:102:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:106:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -6343,12 +6352,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;MissingVerifiable&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
-                    Actual message: &quot;MissingVerifiable&quot;
+                        <summary>Got unwanted rejection: Failed to verify a valid VC.
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VC.
+                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/7-algorithms.js:46:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/7-algorithms.js:40:9)</pre>
                       </details>
                     </div>
                   </td>
