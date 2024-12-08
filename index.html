@@ -185,22 +185,22 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-      Tests passed 522/683 76%
+      Tests passed 527/687 76%
       </p>
       <p>
-      Tests failed 161/683 24%
+      Tests failed 160/687 24%
       </p>
       <p>
-      Failures 161
+      Failures 160
       </p>
       <p>
-      Tests skipped 98
+      Tests skipped 94
       </p>
       <p>
       Total tests 781
       </p>
       <p>
-        These tests were run on <time>6 December 2024 at 3:58 pm UTC</time>
+        These tests were run on <time>8 December 2024 at 5:13 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1245,17 +1245,9 @@
                     <a href="https://w3c.github.io/vc-data-model/#types:~:text&#x3D;If%20present%2C%20the%20value%20of%20the%20id%20property%20MUST%20be%20a%20single%20URL%2C%20which%20MAY%20be%20dereferenceable.">If present, the value of the id property MUST be a single URL, which MAY be dereferenceable.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC with a DID credentialSubject identifier.
-                    Actual message: &quot;Request to &quot;https://us-central1-api-catalog.cloudfunctions.net/vc-api-issue-ed25519&quot; timed out.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a DID credentialSubject identifier.
-                    Actual message: &quot;Request to &quot;https://us-central1-api-catalog.cloudfunctions.net/vc-api-issue-ed25519&quot; timed out.&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.04-identifiers.js:34:9)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4631,15 +4623,9 @@
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:165:9)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4832,10 +4818,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
-                      <span class="err hide">No envelope support.</span>
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VP containing a enveloped VC.
+                    Actual message: &quot;Request failed with status code 400 Bad Request&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13.2-envelopes.js:65:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
@@ -5086,10 +5079,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <span class="err hide">No envelope support.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
@@ -5156,10 +5148,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <span class="err hide">No envelope support.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
@@ -5226,10 +5217,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="pending not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">🚫</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <span class="err hide">No envelope support.</span>
                     </div>
                   </td>
                   <td class="pending not-optional highlight-on-hover text-center">
@@ -5388,12 +5378,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC with valid relatedResource.mediaType values.
-                    Actual message: &quot;relatedResource must have unique ids&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with valid relatedResource.mediaType values.
-                    Actual message: &quot;relatedResource must have unique ids&quot;
+                        <summary>Got unwanted rejection: Failed to accept a VC with valid relatedResource objects.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with valid relatedResource objects.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:64:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:58:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -5836,7 +5826,7 @@
                         <summary>Missing expected rejection: Failed to reject a VC with a relatedResource with wrong digest.</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VC with a relatedResource with wrong digest.
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:106:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:102:9)</pre>
                       </details>
                     </div>
                   </td>
