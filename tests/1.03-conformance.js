@@ -70,14 +70,6 @@ describe('Basic Conformance', function() {
         await assert.doesNotReject(endpoints.verify(issuedVc),
           'Failed to verify credential.');
       });
-      it('A conforming verifier implementation MUST check ' +
-        'that each required property satisfies the normative requirements' +
-        'for that property.',
-      async function() {
-        this.test.link = `https://www.w3.org/TR/vc-data-model-2.0/#conformance:~:text=MUST%20include%20all%20required%20properties%20in%20the%20conforming%20documents%20it%20produces`;
-        this.test.cell.skipMessage = 'Tested by other tests in this suite.';
-        this.skip();
-      });
       it('A conforming verifier implementation MUST produce errors ' +
         'when non-conforming documents are detected.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#types:~:text=MUST%20produce%20errors%20when%20non%2Dconforming%20documents%20are%20detected.`;
