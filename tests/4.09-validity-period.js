@@ -81,17 +81,6 @@ describe('Validity Period', function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=If%20a%20validFrom%20value%20also%20exists%2C%20the%20validUntil%20value%20MUST%20express%20a%20datetime%20that%20is%20temporally%20the%20same%20or%20later%20than%20the%20datetime%20expressed%20by%20the%20validFrom%20value.`;
         await testTemporality(endpoints);
       });
-      // 4.8.1 Representing Time https://w3c.github.io/vc-data-model/#representing-time
-      it('Time values that are incorrectly serialized without an offset ' +
-        'MUST be interpreted as UTC.', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#validity-period:~:text=Time%20values%20that%20are%20incorrectly%20serialized%20without%20an%20offset%20MUST%20be%20interpreted%20as%20UTC.`;
-        // TODO: add test using regular expression from spec.
-        // https://w3c.github.io/vc-data-model/#example-regular-expression-to-detect-a-valid-xml-schema-1-1-part-2-datetimestamp
-        // eslint-disable-next-line max-len, no-unused-vars
-        const regexp = /-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\.[0-9]+)?|(24:00:00(\.0+)?))(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))/;
-        this.test.cell.skipMessage = 'TBD';
-        this.skip();
-      });
     });
   }
 });
