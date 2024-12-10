@@ -98,7 +98,7 @@ describe('Advanced Concepts', function() {
       it('If the digest provided by the issuer does not match the digest ' +
         'computed for the retrieved resource, the conforming verifier ' +
         'implementation MUST produce an error.', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=Each%20object%20associated%20with%20relatedResource%20MUST%20contain%20at%20least%20a%20digestSRI%20or%20a%20digestMultibase%20value.`;
+        this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=If%20the%20digest%20provided%20by%20the%20issuer%20does%20not%20match%20the%20digest%20computed%20for%20the%20retrieved%20resource%2C%20the%20conforming%20verifier%20implementation%20MUST%20produce%20an%20error.`;
         await assert.rejects(endpoints.issue(require(
           './input/relatedResource/relatedResource-digest-sri-fail.json'
         )),
