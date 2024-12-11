@@ -46,11 +46,10 @@ export const secureCredential = async ({
   const body = {credential, options};
   const {data, result, error} = await issuer.post({json: body});
   if(!result || !result.ok) {
-    // console.warn(
-    //   `initial vc creation failed for ${(result || error)?.requestUrl}`,
-    //   error,
-    //   JSON.stringify(data, null, 2)
-    // );
+    console.warn(
+      `initial vc creation failed for ${(result || error)?.requestUrl}`,
+      error
+    );
     return null;
   }
   return data;
