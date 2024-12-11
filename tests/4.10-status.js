@@ -80,12 +80,6 @@ describe('Status', function() {
           './input/credential-status-ok.json')),
         'Failed to accept a VC with a valid `credentialStatus`.');
       });
-      it('Credential status specifications MUST NOT enable tracking of ' +
-        'individuals', async function() {
-        this.test.link = `https://w3c.github.io/vc-data-model/#status:~:text=Credential%20status%20specifications%20MUST%20NOT%20enable%20tracking%20of%20individuals`;
-        this.test.cell.skipMessage = 'Not testable with automation.';
-        this.skip();
-      });
     });
   }
 });
