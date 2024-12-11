@@ -128,7 +128,7 @@ describe('Enveloped Verifiable Credentials', function() {
             negativeFixture.type = ['VerifiableCredential'];
             await assert.rejects(endpoints.verify(negativeFixture),
               'Failed to reject an enveloped VC with an ' +
-          'invalid `type`.');
+              'invalid `type`.');
           }
         });
     });
