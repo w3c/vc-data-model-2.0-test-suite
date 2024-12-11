@@ -36,3 +36,51 @@ export function extractIfEnveloped(input) {
     return input;
   }
 }
+
+export const secureCredential = async ({
+  issuer,
+  credential,
+}) => {
+  const {settings: {id: issuerId, options = {}}} = issuer;
+  credential.issuer = issuerId;
+  const body = {credential, options};
+  const {data, result, error} = await issuer.post({json: body});
+  if(!result || !result.ok) {
+    // console.warn(
+    //   `initial vc creation failed for ${(result || error)?.requestUrl}`,
+    //   error,
+    //   JSON.stringify(data, null, 2)
+    // );
+    return null;
+  }
+  return data;
+};
+
+export function generateCredential({
+  context = ['https://www.w3.org/ns/credentials/v2'],
+  type = ['VerifiableCredential'],
+  credentialSubject = {
+    id: 'did:example:alice',
+    name: 'Alice'
+  }
+} = {}) {
+  const credential = {
+    '@context': context,
+    type,
+    credentialSubject
+  };
+  return credential;
+}
+
+export function generateEnvelope({
+  context = 'https://www.w3.org/ns/credentials/v2',
+  type,
+  id
+} = {}) {
+  const envelopeCredential = {
+    '@context': context,
+    type,
+    id
+  };
+  return envelopeCredential;
+}
