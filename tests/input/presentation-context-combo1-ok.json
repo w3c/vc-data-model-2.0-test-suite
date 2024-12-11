@@ -5,6 +5,7 @@
   "type": [
     "VerifiablePresentation"
   ],
+  "holder": "did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj",
   "verifiableCredential": [
     {
       "@context": [
