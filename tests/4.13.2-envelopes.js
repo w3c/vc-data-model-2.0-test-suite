@@ -121,7 +121,7 @@ describe('Enveloped Verifiable Credentials', function() {
             delete negativeFixture.type;
             await assert.rejects(endpoints.verify(negativeFixture),
               'Failed to reject an enveloped VC with an enveloped VC with a ' +
-          'missing `type`.');
+              'missing `type`.');
 
             // Replace type field
             negativeFixture = structuredClone(envelopedCredential);
