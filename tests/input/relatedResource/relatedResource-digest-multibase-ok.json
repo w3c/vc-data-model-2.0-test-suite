@@ -9,7 +9,7 @@
     "id": "did:example:subject"
   },
   "relatedResource": [{
-    "id": "https://w3c.github.io/vc-data-model/related-resource.json",
-    "digestMultibase": "uZTQ0MjM1NiAgcmVwb3J0cy9yZWxhdGVkLXJlc291cmNlLmpzb24K"
+    "id": "https://raw.githubusercontent.com/w3c-ccg/vc-examples/bf5b8f9b16a204702ba2de0cfadbd9f86dbe299d/docs/edu/university-degree-verifiable-credential.json",
+    "digestMultibase": "uEiAjCHMnK5-ayOIZLWo_TBoKYVvSAprlkYEjRlm19Cj0uw"
   }]
 }

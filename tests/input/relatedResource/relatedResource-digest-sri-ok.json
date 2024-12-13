@@ -8,9 +8,10 @@
   "credentialSubject": {
     "id": "did:example:subject"
   },
-  "relatedResource": [{
-    "id": "https://w3c.github.io/vc-data-model/related-resource.json",
-    "digestSRI":
-      "sha256-ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
-  }]
+  "relatedResource": [
+    {
+      "id": "https://raw.githubusercontent.com/w3c-ccg/vc-examples/bf5b8f9b16a204702ba2de0cfadbd9f86dbe299d/docs/edu/university-degree-verifiable-credential.json",
+      "digestSRI": "sha256-MIwhzJyufmsjiGS1qP0waCmFb0gKa5ZGBI0ZZtfQo9Ls="
+    }
+  ]
 }
