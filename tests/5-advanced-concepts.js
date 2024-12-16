@@ -5,6 +5,7 @@
  */
 
 import {addPerTestMetadata, setupMatrix} from './helpers.js';
+import {credential, relatedResource} from './fixtures.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createRequire} from 'module';
@@ -22,6 +23,8 @@ const {match} = filterByTag({tags: [tag]});
 // 5. Advanced Concepts https://w3c.github.io/vc-data-model/#advanced-concepts
 describe('Advanced Concepts', function() {
   setupMatrix.call(this, match);
+  let positiveFixture;
+  let negativeFixture;
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
@@ -55,20 +58,40 @@ describe('Advanced Concepts', function() {
       it('The value of the relatedResource property MUST be one or more ' +
         'objects of the following form:', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20value%20of%20the%20relatedResource%20property%20MUST%20be%20one%20or%20more%20objects%20of%20the%20following%20form%3A`;
-        await assert.doesNotReject(endpoints.issue(require(
-          './input/relatedResource/relatedResource-digest-sri-ok.json'
-        )), 'Failed to accept a VC with valid relatedResource objects.');
-        await assert.doesNotReject(endpoints.issue(require(
-          './input/relatedResource/relatedResource-digest-multibase-ok.json'
-        )), 'Failed to accept a VC with valid relatedResource objects.');
-        await assert.doesNotReject(endpoints.issue(require(
-          './input/relatedResource/relatedResource-with-mediaType-ok.json'
-        )),
-        'Failed to accept a VC with valid relatedResource.mediaType values.');
-        await assert.rejects(endpoints.issue(require(
-          './input/relatedResource/relatedResource-list-of-strings-fail.json'
-        )),
-        'Failed to reject a VC with a relatedResource as an array of strings.');
+
+        positiveFixture = structuredClone(credential);
+
+        // digestSRI positive test
+        positiveFixture.relatedResource = {
+          id: relatedResource.id,
+          digestSRI: relatedResource.digestSRI,
+        };
+        await assert.doesNotReject(endpoints.issue(positiveFixture),
+          'Failed to accept a VC with valid relatedResource objects.');
+
+        // digestMultibase positive test
+        positiveFixture.relatedResource = {
+          id: relatedResource.id,
+          digestMultibase: relatedResource.digestMultibase,
+        };
+        await assert.doesNotReject(endpoints.issue(positiveFixture),
+          'Failed to accept a VC with valid relatedResource objects.');
+
+        // mediaType positive test
+        positiveFixture.relatedResource = [{
+          id: relatedResource.id,
+          mediaType: relatedResource.mediaType,
+          digestSRI: relatedResource.digestSRI,
+        }];
+        await assert.doesNotReject(endpoints.issue(positiveFixture),
+          'Failed to accept a VC with valid relatedResource mediaType.');
+
+        negativeFixture = structuredClone(credential);
+        negativeFixture.relatedResource = [{
+          id: relatedResource.id,
+        }];
+        await assert.rejects(endpoints.issue(negativeFixture),
+          'Failed to reject a VC with a relatedResource as an array of strings.');
       });
       it('The identifier for the resource is REQUIRED and conforms to the ' +
         'format defined in Section 4.4 Identifiers.', async function() {
