@@ -87,49 +87,81 @@ describe('Advanced Concepts', function() {
           'Failed to accept a VC with valid relatedResource mediaType.');
 
         negativeFixture = structuredClone(credential);
-        negativeFixture.relatedResource = [{
-          id: relatedResource.id,
-        }];
+
+        // Data model negative test (array of strings)
+        negativeFixture.relatedResource = [
+          relatedResource.id
+        ];
         await assert.rejects(endpoints.issue(negativeFixture),
-          'Failed to reject a VC with a relatedResource as an array of strings.');
+          'Failed to reject a VC with a relatedResource as array of strings.');
       });
       it('The identifier for the resource is REQUIRED and conforms to the ' +
         'format defined in Section 4.4 Identifiers.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.`;
-        await assert.rejects(endpoints.issue(require(
-          './input/relatedResource/relatedResource-missing-id-fail.json'
-        )),
-        'Failed to reject a VC with a relatedResource with no `id` field.');
+
+        negativeFixture = structuredClone(credential);
+
+        // Missing ID negative test
+        negativeFixture.relatedResource = [{
+          digestMultibase: relatedResource.digestMultibase,
+        }];
+        await assert.rejects(endpoints.issue(negativeFixture),
+          'Failed to reject a VC with a relatedResource with no `id` field.');
       });
       it('The value MUST be unique ' +
         'among the list of related resource objects.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=The%20identifier%20for%20the%20resource%20is%20REQUIRED%20and%20conforms%20to%20the%20format%20defined%20in%20Section%204.4%20Identifiers.%20The%20value%20MUST%20be%20unique%20among%20the%20list%20of%20related%20resource%20objects.`;
-        await assert.rejects(endpoints.issue(require(
-          './input/relatedResource/relatedResource-duplicate-id-fail.json'
-        )),
-        'Failed to reject a VC with a relatedResource with ' +
+
+        negativeFixture = structuredClone(credential);
+
+        // Duplicate ID negative test
+        negativeFixture.relatedResource = [{
+          id: relatedResource.id,
+          digestSRI: relatedResource.digestSRI,
+        }, {
+          id: relatedResource.id,
+          digestMultibase: relatedResource.digestMultibase,
+        }];
+        await assert.rejects(endpoints.issue(negativeFixture),
+          'Failed to reject a VC with a relatedResource with ' +
         'a duplicate `id` field.');
       });
       it('Each object associated with relatedResource MUST contain at least ' +
         'a digestSRI or a digestMultibase value.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=Each%20object%20associated%20with%20relatedResource%20MUST%20contain%20at%20least%20a%20digestSRI%20or%20a%20digestMultibase%20value.`;
-        await assert.rejects(endpoints.issue(require(
-          './input/relatedResource/relatedResource-no-digest-fail.json'
-        )),
-        'Failed to reject a VC with a relatedResource with no digest info.');
+
+        negativeFixture = structuredClone(credential);
+
+        // Missing digest negative test
+        negativeFixture.relatedResource = [{
+          id: relatedResource.id
+        }];
+        await assert.rejects(endpoints.issue(negativeFixture),
+          'Failed to reject a VC with a relatedResource with no digest info.');
       });
       it('If the digest provided by the issuer does not match the digest ' +
         'computed for the retrieved resource, the conforming verifier ' +
         'implementation MUST produce an error.', async function() {
         this.test.link = `https://w3c.github.io/vc-data-model/#integrity-of-related-resources:~:text=If%20the%20digest%20provided%20by%20the%20issuer%20does%20not%20match%20the%20digest%20computed%20for%20the%20retrieved%20resource%2C%20the%20conforming%20verifier%20implementation%20MUST%20produce%20an%20error.`;
-        await assert.rejects(endpoints.issue(require(
-          './input/relatedResource/relatedResource-digest-sri-fail.json'
-        )),
-        'Failed to reject a VC with a relatedResource with wrong digest.');
-        await assert.rejects(endpoints.issue(require(
-          './input/relatedResource/relatedResource-digest-multibase-fail.json'
-        )),
-        'Failed to reject a VC with a relatedResource with wrong digest.');
+
+        negativeFixture = structuredClone(credential);
+
+        // Wrong digestMultibase negative test
+        negativeFixture.relatedResource = [{
+          id: relatedResource.id,
+          digestMultibase: 'uM4RgWQc3RUDtjJCSgTJtTfvpZ7SPEg_LNO0ESlovQC0'
+        }];
+        await assert.rejects(endpoints.issue(negativeFixture),
+          'Failed to reject a VC with a relatedResource with wrong digest.');
+
+        // Wrong digestSRI negative test
+        negativeFixture.relatedResource = [{
+          id: relatedResource.id,
+          digestSRI: 'sha256-' +
+          '3384605907374540ed8c909281326d4dfbe967b48f120fcb34ed044a5a2f402d'
+        }];
+        await assert.rejects(endpoints.issue(negativeFixture),
+          'Failed to reject a VC with a relatedResource with wrong digest.');
       });
 
       // 5.4 Refreshing https://w3c.github.io/vc-data-model/#integrity-of-related-resources
