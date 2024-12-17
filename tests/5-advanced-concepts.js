@@ -157,8 +157,8 @@ describe('Advanced Concepts', function() {
         // Wrong digestSRI negative test
         negativeFixture.relatedResource = [{
           id: relatedResource.id,
-          digestSRI: 'sha256-' +
-          '3384605907374540ed8c909281326d4dfbe967b48f120fcb34ed044a5a2f402d'
+          digestSRI: 'sha384-' +
+          '_rCVIV7fSXXTNIvpiq26jRDyj8JG8TDjij-tD0ewLk4JpnXEz6a5AeeY_1qQ0d0P'
         }];
         await assert.rejects(endpoints.issue(negativeFixture),
           'Failed to reject a VC with a relatedResource with wrong digest.');
