@@ -41,7 +41,7 @@ describe('Enveloped Verifiable Credentials', function() {
       before(async function() {
         verifiableCredential = generateEnvelope({
           type: 'EnvelopedVerifiableCredential',
-          id: `data:application/vc+jwt,${vc_jwt}`
+          id: `data:application/jwt,${vc_jwt}`
         });
       });
       beforeEach(addPerTestMetadata);
