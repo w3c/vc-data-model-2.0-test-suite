@@ -68,7 +68,7 @@ export const verifyCredential = async ({
   const body = {verifiableCredential, options};
   if(verifier.settings.zcap) {
     const response = await makeZcapRequest(verifier.settings, body);
-    return response?.data?.verifiableCredential;
+    return response?.data;
   } else {
     const {data, result, error} = await verifier.post({json: body});
     if(!result || !result.ok) {
@@ -88,7 +88,7 @@ export const verifyPresentation = async ({
   const body = {verifiablePresentation, options};
   if(vpVerifier.settings.zcap) {
     const response = await makeZcapRequest(vpVerifier.settings, body);
-    return response?.data?.verifiableCredential;
+    return response?.data;
   } else {
     const {data, result, error} = await vpVerifier.post({json: body});
     if(!result || !result.ok) {
