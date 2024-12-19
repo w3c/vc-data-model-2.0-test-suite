@@ -23,7 +23,7 @@ export async function makeZcapRequest(settings, body) {
   const response = await zcapClient.write({
     url: settings.endpoint,
     json: body,
-    capability: JSON.parse(settings.zcap.capability)
+    capability
   });
   return response;
 }
