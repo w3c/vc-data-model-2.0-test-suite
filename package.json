@@ -9,7 +9,8 @@
   "type": "module",
   "scripts": {
     "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options abstract=\"$PWD/abstract.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",suiteLog='./suite.log',templateData=\"$PWD/reports/index.json\",title=\"VC v2.0 Interoperability Report\" --timeout 15000 --preserve-symlinks",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test-issuance": "node test.mjs"
   },
   "repository": {
     "type": "git",
@@ -38,6 +39,9 @@
     "@digitalbazaar/data-integrity": "^2.5.0",
     "@digitalbazaar/data-integrity-context": "^2.0.1",
     "@digitalbazaar/ed25519-multikey": "^1.0.1",
+    "@digitalbazaar/did-method-key": "^5.2.0",
+    "@digitalbazaar/ed25519-signature-2020": "^5.4.0",
+    "@digitalbazaar/ezcap": "^4.1.0",
     "@digitalbazaar/eddsa-rdfc-2022-cryptosuite": "^1.1.0",
     "@digitalbazaar/mocha-w3c-interop-reporter": "^1.5.0",
     "@digitalbazaar/vc": "^7.0.0",

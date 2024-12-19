@@ -1,3 +1,6 @@
+import {challenge} from './fixtures.js';
+import {makeZcapRequest} from './zcapHandler.js';
+
 export function setupMatrix(match) {
   // this will tell the report
   // to make an interop matrix with this suite
@@ -44,15 +47,56 @@ export const secureCredential = async ({
   const {settings: {id: issuerId, options = {}}} = issuer;
   credential.issuer = issuerId;
   const body = {credential, options};
-  const {data, result, error} = await issuer.post({json: body});
-  if(!result || !result.ok) {
-    console.warn(
-      `initial vc creation failed for ${(result || error)?.requestUrl}`,
-      error
-    );
-    return null;
+  if(issuer.settings.zcap) {
+    const response = await makeZcapRequest(issuer.settings, body);
+    return response?.data?.verifiableCredential;
+  } else {
+    const {data, result, error} = await issuer.post({json: body});
+    if(!result || !result.ok) {
+      error;
+      return null;
+    }
+    return data;
   }
-  return data;
+};
+
+export const verifyCredential = async ({
+  verifier,
+  verifiableCredential,
+}) => {
+  const {settings: {options = {}}} = verifier;
+  const body = {verifiableCredential, options};
+  if(verifier.settings.zcap) {
+    const response = await makeZcapRequest(verifier.settings, body);
+    return response?.data?.verifiableCredential;
+  } else {
+    const {data, result, error} = await verifier.post({json: body});
+    if(!result || !result.ok) {
+      error;
+      return null;
+    }
+    return data;
+  }
+};
+
+export const verifyPresentation = async ({
+  vpVerifier,
+  verifiablePresentation,
+}) => {
+  const {settings: {options = {}}} = vpVerifier;
+  options.challenge = challenge;
+  const body = {verifiablePresentation, options};
+  if(vpVerifier.settings.zcap) {
+    const response = await makeZcapRequest(vpVerifier.settings, body);
+    return response?.data?.verifiableCredential;
+  } else {
+    const {data, result, error} = await vpVerifier.post({json: body});
+    if(!result || !result.ok) {
+      error;
+      return null;
+    }
+    return data;
+  }
 };
 
 export function generateCredential({
@@ -83,3 +127,6 @@ export function generateEnvelope({
   };
   return envelopeCredential;
 }
+
+export const secureEnvelope = async ({
+}) => {};
