@@ -11,9 +11,12 @@ specification.
 
 ## Table of Contents
 
+<!-- TOC tocDepth:2..3 -->
+
 - [Background](#background)
 - [Install](#install)
 - [Setup](#setup)
+  - [Test Suite HTTP API](#test-suite-http-api)
 - [Usage](#usage)
   - [Testing Locally](#testing-locally)
   - [Allure Reporting](#allure-reporting)
@@ -22,6 +25,8 @@ specification.
   - [Enveloping Proof](#enveloping-proof)
 - [Contribute](#contribute)
 - [License](#license)
+
+<!-- /TOC -->
 
 ## Background
 
@@ -37,24 +42,29 @@ npm i
 
 ## Setup
 
-To integrate with this test suite, you will need a
-[VC-API compatible](https://w3c-ccg.github.io/vc-api/) issuer and verifier that
-are capable of issuing and verifying verifiable credentials and verifiable
-presentations. If your implementation is not VC-API compatible, it is possible
-to "wrap" the implementation in a minimal VC-API implementation, example code
-for which is available at <https://github.com/Wind4Greg/Server-for-VCs>.
-Additionally, your verifier will need to be able to verify Verifiable Credentials
+This test suite uses an HTTP API (based on the
+[VC-API](https://w3c-ccg.github.io/vc-api/)) for passing  credentials into
+issuer and verifier implementations. If your implementation is not already
+compatible with the VC-API, it is possible to "wrap" the implementation in a
+minimal VC-API implementation (example code is available at
+<https://github.com/Wind4Greg/Server-for-VCs>).
+
+Additionally, verifier implementations will need to be able to process Verifiable Credentials
 and Verifiable Presentations signed with `eddsa-rdfc-2022`. We recommend
-that any issuer endpoints submitted to this test suite also issue using
+that any issuer endpoints used with this test suite also issue using
 `eddsa-rdfc-2022`. Both signed and unsigned Verifiable Presentations will
 be submitted for verification. Signed Verifiable Presentations from this suite
 will have a domain and challenge set. The domain should be the test repo, and
 the challenge is static.
 
-The issuer endpoint will need to conform to the
-[VC Issuer API](https://w3c-ccg.github.io/vc-api/#issue-credential).
+### Test Suite HTTP API
 
-A request to issue a credential (`/credentials/issue`) will look like this:
+
+A request to **issue a credential** (`/credentials/issue`) will look like this:
+
+```http
+POST /credentials/issue
+```
 
 ```json
 {
@@ -81,6 +91,10 @@ A request to issue a credential (`/credentials/issue`) will look like this:
 
 The response from a call to issue a credential (`/credentials/issue`) will
 look like this:
+
+```http
+HTTP/1.1 200 OK
+```
 
 ```json
 {
@@ -112,11 +126,12 @@ look like this:
 }
 ```
 
-The credential verifier endpoint will need to conform to the
-[VC Verifier API](https://w3c-ccg.github.io/vc-api/#verify-credential).
-
-A request to the verifier endpoint (`/credentials/verify`) for a credential
+A request to the **verifier endpoint** (`/credentials/verify`) for a credential
 will look like this:
+
+```http
+POST /credentials/verify
+```
 
 ```json
 {
@@ -147,26 +162,36 @@ will look like this:
   },
   "options": {}
 }
-
 ```
 
 A response from the verifier endpoint (`/credentials/verify`) for a
 verifiable credential might look like this (only HTTP response codes are
 checked):
 
+```http
+HTTP/1.1 200 OK
+```
+
 ```json
 {
-  "checks": ["proof"],
-  "warnings": ["invalid-uri"],
-  "errors": ["invalid proof"]
+  "verified": true,
+  "results": {},
+  "error": ["invalid proof"]
 }
 ```
 
-The presentation verifier endpoint will need to conform to the
-[VC Verifier API](https://w3c-ccg.github.io/vc-api/#verify-presentation).
+The credential verifier endpoint is based on the
+[VC-API Verify Credential](https://w3c-ccg.github.io/vc-api/#verify-credential)
+endpoint.
 
-A request to the verifier endpoint for a presentation (`/presentations/verify`)
-will look like this:
+---
+
+A request to the **verifier endpoint** for a presentation
+(`/presentations/verify`) will look like this:
+
+```http
+POST /presentations/verify
+```
 
 ```json
 {
@@ -221,13 +246,22 @@ A response from the verifier endpoint (`/credentials/verify`) for a
 verifiable presentation might look like this (only HTTP response codes are
 checked):
 
+```http
+HTTP/1.1 200 OK
+```
+
 ```json
 {
-  "checks": ["proof"],
+  "verified": true,
   "warnings": ["invalid-uri"],
   "errors": ["invalid proof"]
 }
 ```
+
+The presentation verifier endpoint is based on the
+[VC API Verify Presentation](https://w3c-ccg.github.io/vc-api/#verify-presentation) endpoint.
+
+#### Required Contexts
 
 Implementations are expected to not error when any of the following context
 files are used in a verifiable credential or a verifiable presentation:
@@ -299,11 +333,12 @@ allure serve allure-results
 
 ## Implementation
 
-### VC-API
-To add your implementation to this test suite You will need to add 3 endpoints to your implementation manifest.
-- A credentials issuer endpoint (`/credentials/issue`) in the `issuers` property.
-- A credentials verifier endpoint (`/credentials/verify`) in the `verifiers` property.
-- A presentations verifier endpoint (`presentations/verify`) in the `vpVerifiers` property.
+To add your implementation to this test suite, add a test manifest describing
+your implementation to the
+[`w3c/vc-test-suite-implementations`](https://github.com/w3c/vc-test-suite-implementations)
+repo by following the
+[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
+instructions.
 
 All endpoints will need the tag `vc2.0`. A simplified manifest will roughly
 look like the following:
@@ -330,16 +365,13 @@ look like the following:
 }
 ```
 
-This example above is for a set of unauthenticated endpoints. You may add zcap
-or oauth2 authentication to your endpoints.
+The example above is for a set of unauthenticated endpoints. You can add
+[ZCAP](https://w3c-ccg.github.io/zcap-spec/)
+or [OAuth2 authentication](https://oauth.net/2/client-authentication/) to your endpoints.
 
-See the [vc-test-suite-implementations README here](https://github.com/w3c/vc-test-suite-implementations).
-
-To run the tests, some implementations require client secrets that can be passed
-as env variables to the test script. To see which ones require client secrets,
-you can check the
-[vc-test-suite-implementations](https://github.com/w3c/vc-test-suite-implementations)
-library.
+See
+[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
+for more information.
 
 ### Enveloping Proof
 Implementers who rely on an enveloping proof securing mechanism can add the `EnvelopingProof` tag to their implementation registration.
