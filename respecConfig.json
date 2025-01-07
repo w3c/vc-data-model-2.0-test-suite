@@ -14,14 +14,13 @@
       "href": "https://www.w3.org/TR/vc-data-model-2.0/"
     }]
   }],
-  "editors": [
-    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" },
-    { "name": "Andrew Jones", "url": "https://github.com/aljones15", 
-      "company": "Digital Bazaar", "companyURL": "https://digitalbazaar.com/"}
-  ],
   "authors": [
-    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" },
     { "name": "Andrew Jones", "url": "https://github.com/aljones15",
-      "company": "Digital Bazaar", "companyURL": "https://digitalbazaar.com/"}
+      "company": "Digital Bazaar, Inc.", "companyURL": "https://digitalbazaar.com/"},
+    { "name": "Benjamin Young", "url": "https://github.com/BigBlueHat",
+      "company": "Digital Bazaar, Inc.", "companyURL": "https://digitalbazaar.com/" },
+    { "name": "Patrick St. Louis", "url": "https://github.com/PatStLouis",
+      "company": "OpSecId", "companyURL": "https://github.com/OpSecId" },
+    { "name": "Charles E. Lehner", "url": "https://www.w3.org/wiki/User:Cel" }
   ]
 }
