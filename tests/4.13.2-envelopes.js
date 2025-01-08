@@ -68,14 +68,14 @@ describe('Enveloped Verifiable Credentials', function() {
           negativeFixture = structuredClone(verifiableCredential);
           negativeFixture['@context'] = [];
           await assert.rejects(
-            verifyCredential({verifier, negativeFixture}),
+            verifyCredential({verifier, verifiableCredential: negativeFixture}),
             'Failed to reject an enveloped VC with invalid context.');
 
           // Replace context with an invalid value
           negativeFixture = structuredClone(verifiableCredential);
           negativeFixture['@context'] = 'https://www.w3.org/ns/credentials/examples/v2';
           await assert.rejects(
-            verifyCredential({verifier, negativeFixture}),
+            verifyCredential({verifier, verifiableCredential: negativeFixture}),
             'Failed to reject an enveloped VC with invalid context.');
         }
       });
@@ -101,7 +101,7 @@ describe('Enveloped Verifiable Credentials', function() {
           negativeFixture = structuredClone(verifiableCredential);
           negativeFixture.id = negativeFixture.id.split(',').pop();
           await assert.rejects(
-            verifyCredential({verifier, negativeFixture}),
+            verifyCredential({verifier, verifiableCredential: negativeFixture}),
             'Failed to reject an enveloped VC with an invalid data url id.');
         }
       });
@@ -125,7 +125,8 @@ describe('Enveloped Verifiable Credentials', function() {
             negativeFixture = structuredClone(verifiableCredential);
             delete negativeFixture.type;
             await assert.rejects(
-              verifyCredential({verifier, negativeFixture}),
+              verifyCredential(
+                {verifier, verifiableCredential: negativeFixture}),
               'Failed to reject an enveloped VC with an enveloped VC with a ' +
               'missing `type`.');
 
@@ -133,7 +134,8 @@ describe('Enveloped Verifiable Credentials', function() {
             negativeFixture = structuredClone(verifiableCredential);
             negativeFixture.type = 'VerifiableCredential';
             await assert.rejects(
-              verifyCredential({verifier, negativeFixture}),
+              verifyCredential(
+                {verifier, verifiableCredential: negativeFixture}),
               'Failed to reject an enveloped VC with an ' +
               'invalid `type`.');
           }
@@ -176,14 +178,16 @@ describe('Enveloped Verifiable Presentations', function() {
           negativeFixture = structuredClone(verifiablePresentation);
           negativeFixture['@context'] = [];
           await assert.rejects(
-            verifyPresentation({vpVerifier, negativeFixture}),
+            verifyPresentation(
+              {vpVerifier, verifiablePresentation: negativeFixture}),
             'Failed to reject Enveloped VP missing contexts.');
 
           // Replace context field with invalid context
           negativeFixture = structuredClone(verifiablePresentation);
           negativeFixture['@context'] = ['https://www.w3.org/ns/credentials/examples/v2'];
           await assert.rejects(
-            verifyPresentation({vpVerifier, negativeFixture}),
+            verifyPresentation(
+              {vpVerifier, verifiablePresentation: negativeFixture}),
             'Failed to reject Enveloped VP missing contexts.');
         }
       });
@@ -203,7 +207,8 @@ describe('Enveloped Verifiable Presentations', function() {
           negativeFixture = structuredClone(verifiablePresentation);
           negativeFixture.id = negativeFixture.id.split(',').pop();
           await assert.rejects(
-            verifyPresentation({vpVerifier, negativeFixture}),
+            verifyPresentation(
+              {vpVerifier, verifiablePresentation: negativeFixture}),
             'Failed to reject Enveloped VP with an id that is not a data url.');
         }
       });
@@ -221,7 +226,8 @@ describe('Enveloped Verifiable Presentations', function() {
           negativeFixture = structuredClone(verifiablePresentation);
           negativeFixture.type = ['VerifiablePresentation'];
           await assert.rejects(
-            verifyPresentation({vpVerifier, negativeFixture}),
+            verifyPresentation(
+              {vpVerifier, verifiablePresentation: negativeFixture}),
             'Failed to reject VP w/o type "EnvelopedVerifiablePresentation".');
         }
       });
