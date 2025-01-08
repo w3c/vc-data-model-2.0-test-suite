@@ -54,7 +54,7 @@ export const secureCredential = async ({
     const {data, result, error} = await issuer.post({json: body});
     if(!result || !result.ok) {
       error;
-      return null;
+      throw new Error('Request rejected.');
     }
     return data;
   }
@@ -73,7 +73,7 @@ export const verifyCredential = async ({
     const {data, result, error} = await verifier.post({json: body});
     if(!result || !result.ok) {
       error;
-      return null;
+      throw new Error('Request rejected.');
     }
     return data;
   }
@@ -93,7 +93,7 @@ export const verifyPresentation = async ({
     const {data, result, error} = await vpVerifier.post({json: body});
     if(!result || !result.ok) {
       error;
-      return null;
+      throw new Error('Request rejected.');
     }
     return data;
   }
