@@ -185,7 +185,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>9 January 2025 at 4:54 pm UTC</time>
+        These tests were run on <time>9 January 2025 at 5:12 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1164,9 +1164,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.04-identifiers.js:43:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2138,9 +2146,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; with language &amp; direction expressed.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; with language &amp; direction expressed.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.06-names-and-descriptions.js:57:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3969,9 +3985,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:84:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4420,7 +4444,7 @@
                     <th class="no-wrap small-font text-center">OpSecId</th>
                 </thead>
               <tbody>
-              <tr class="at-risk">
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.">The @context property of the object MUST be present and include a context, such as the base context for this specification, that defines at least the id, type, and EnvelopedVerifiableCredential terms as defined by the base context provided by this specification.</a>
@@ -4431,21 +4455,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept an enveloped VC.
-                    Actual message: &quot;Request rejected.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept an enveloped VC.
-                    Actual message: &quot;Request rejected.&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13.2-envelopes.js:63:11)</pre>
-                      </details>
                     </div>
                   </td>
               </tr>
-              <tr class="at-risk">
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20credential%20using%20an%20enveloping%20security%20scheme%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.">The id value of the object MUST be a data: URL [RFC2397] that expresses a secured verifiable credential using an enveloping security scheme, such as Securing Verifiable Credentials using JOSE and COSE [VC-JOSE-COSE].</a>
@@ -4456,21 +4472,13 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept an enveloped VC.
-                    Actual message: &quot;Request rejected.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept an enveloped VC.
-                    Actual message: &quot;Request rejected.&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13.2-envelopes.js:96:11)</pre>
-                      </details>
                     </div>
                   </td>
               </tr>
-              <tr class="at-risk">
+              <tr class="confirmed">
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.">The type value of the object MUST be EnvelopedVerifiableCredential.</a>
@@ -4481,17 +4489,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept an enveloped VC.
-                    Actual message: &quot;Request rejected.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept an enveloped VC.
-                    Actual message: &quot;Request rejected.&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13.2-envelopes.js:120:13)</pre>
-                      </details>
                     </div>
                   </td>
               </tr>
@@ -5614,9 +5614,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/verifier/profiles/ed8564d3-7c96-40ec-8a1e-08c7224a08f5/v1.latest/presentations/verify&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/verifier/profiles/ed8564d3-7c96-40ec-8a1e-08c7224a08f5/v1.latest/presentations/verify&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/7-algorithms.js:46:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -5731,42 +5739,6 @@
                 <!--This is the name of the test-->
                 <td class="subtest">
                     <a href="https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text&#x3D;When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.">When a self-asserted verifiable credential is secured using the same mechanism as the verifiable presentation, the value of the issuer property of the verifiable credential MUST be identical to the holder property of the verifiable presentation.</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-              </tr>
-              <tr class="at-risk">
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20%40context%20property%20of%20the%20object%20MUST%20be%20present%20and%20include%20a%20context%2C%20such%20as%20the%20base%20context%20for%20this%20specification%2C%20that%20defines%20at%20least%20the%20id%2C%20type%2C%20and%20EnvelopedVerifiableCredential%20terms%20as%20defined%20by%20the%20base%20context%20provided%20by%20this%20specification.">The @context property of the object MUST be present and include a context, such as the base context for this specification, that defines at least the id, type, and EnvelopedVerifiableCredential terms as defined by the base context provided by this specification.</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-              </tr>
-              <tr class="at-risk">
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20id%20value%20of%20the%20object%20MUST%20be%20a%20data%3A%20URL%20%5BRFC2397%5D%20that%20expresses%20a%20secured%20verifiable%20credential%20using%20an%20enveloping%20security%20scheme%2C%20such%20as%20Securing%20Verifiable%20Credentials%20using%20JOSE%20and%20COSE%20%5BVC%2DJOSE%2DCOSE%5D.">The id value of the object MUST be a data: URL [RFC2397] that expresses a secured verifiable credential using an enveloping security scheme, such as Securing Verifiable Credentials using JOSE and COSE [VC-JOSE-COSE].</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-              </tr>
-              <tr class="at-risk">
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#enveloped-verifiable-credentials:~:text&#x3D;The%20type%20value%20of%20the%20object%20MUST%20be%20EnvelopedVerifiableCredential.">The type value of the object MUST be EnvelopedVerifiableCredential.</a>
                 </td>
                 <!--These contain if the test passed, failed, or was skipped-->
                   <td class="failed not-optional highlight-on-hover text-center">
