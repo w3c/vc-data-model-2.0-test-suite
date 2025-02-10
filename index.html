@@ -185,7 +185,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>9 February 2025 at 5:13 am UTC</time>
+        These tests were run on <time>10 February 2025 at 3:45 pm UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -742,9 +742,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: verifier OpSecId rejected VP with valid @context.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: verifier OpSecId rejected VP with valid @context.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.03-contexts.js:57:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -1048,9 +1056,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.03-contexts.js:132:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -1630,9 +1646,17 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept VP with &#x60;@context&#x60; mapped type.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.05-types.js:106:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -2119,17 +2143,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
-                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
-                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.06-names-and-descriptions.js:54:9)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -3646,9 +3662,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Expected verifier OpSecId to verify a VP with a valid id.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier OpSecId to verify a VP with a valid id.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:39:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -3740,9 +3764,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Expected verifier OpSecId to verify a VP with initial type VerifiablePresentation.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier OpSecId to verify a VP with initial type VerifiablePresentation.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:51:11)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -3834,9 +3866,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Expected verifier OpSecId to verify a VP with initial type VerifiablePresentation.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier OpSecId to verify a VP with initial type VerifiablePresentation.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:66:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4038,9 +4078,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to verify a valid VP with holder.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP with holder.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:99:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4084,276 +4132,6 @@
                     Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc-issuer-mock.onrender.com/didkit-http/presentations/verify&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:99:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-              </tr>
-            </tbody>
-            </table>
-          </div>
-          <div>
-            <div class="flex-center">
-              <div class="row">
-              </div>
-              <div class="">
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="informative" id="VP - Presentations Including Holder Claims">
-          <h2>VP - Presentations Including Holder Claims</h2>
-          <div class="row">
-            <table class="simple">
-              <thead>
-                <th width="20%">
-                  <div class="text-right small-font">
-                  Implementer &#8658;
-                  </div>
-                  <div class="text-left small-font">
-                  <span>&#8659;</span><span>Test Name</span>
-                  </div>
-                </th>
-                    <th class="no-wrap small-font text-center">apicatalog.com</th>
-                    <th class="no-wrap small-font text-center">Aviary Tech</th>
-                    <th class="no-wrap small-font text-center">Digital Bazaar</th>
-                    <th class="no-wrap small-font text-center">Gen Digital</th>
-                    <th class="no-wrap small-font text-center">Kataru Content VC</th>
-                    <th class="no-wrap small-font text-center">MakoLab</th>
-                    <th class="no-wrap small-font text-center">OpSecId</th>
-                    <th class="no-wrap small-font text-center">Procivis One Core</th>
-                    <th class="no-wrap small-font text-center">SpruceID</th>
-                    <th class="no-wrap small-font text-center">Trential</th>
-                    <th class="no-wrap small-font text-center">VC Issuer Mock</th>
-                </thead>
-              <tbody>
-              <tr class="confirmed">
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text&#x3D;A%20verifiable%20presentation%20that%20includes%20a%20self%2Dasserted%20verifiable%20credential%20that%20is%20only%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%20MUST%20include%20a%20holder%20property.">A verifiable presentation that includes a self-asserted verifiable credential that is only secured using the same mechanism as the verifiable presentation MUST include a holder property.</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:133:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:133:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:133:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:133:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:133:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC without holder.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:133:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
-                    <div class="relative-pos">
-                    </div>
-                  </td>
-              </tr>
-              <tr class="at-risk">
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text&#x3D;When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.">When a self-asserted verifiable credential is secured using the same mechanism as the verifiable presentation, the value of the issuer property of the verifiable credential MUST be identical to the holder property of the verifiable presentation.</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;A non-empty JSON Pointer must begin with a &#x27;/&#x27;&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:148:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:156:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:156:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:165:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:156:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:156:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:156:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://canivc.core.dev.procivis-one.com/vc-api/presentations/verify&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://canivc.core.dev.procivis-one.com/vc-api/presentations/verify&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:148:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.spruceid.xyz/presentations/verify&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.spruceid.xyz/presentations/verify&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:148:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject a VP with self-asserted VC with a holder/issuer mismatch.
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:156:9)</pre>
-                      </details>
-                    </div>
-                  </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc-issuer-mock.onrender.com/didkit-http/presentations/verify&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a VP containing a self-asserted VC.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc-issuer-mock.onrender.com/didkit-http/presentations/verify&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:148:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -4650,9 +4428,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to accept a VC with valid relatedResource objects.
-                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with valid relatedResource objects.
-                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:69:9)</pre>
                       </details>
@@ -5590,10 +5368,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Missing expected rejection: Failed to reject an invalid VP.</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Missing expected rejection: Failed to reject an invalid VP.
+                        <summary>Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify a valid VP.
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/7-algorithms.js:50:9)</pre>
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/7-algorithms.js:46:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -5639,46 +5419,6 @@
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/7-algorithms.js:46:9)</pre>
                       </details>
-                    </div>
-                  </td>
-              </tr>
-            </tbody>
-            </table>
-          </div>
-          <div>
-            <div class="flex-center">
-              <div class="row">
-              </div>
-              <div class="">
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="informative" id="At Risk">
-          <h2>At Risk</h2>
-          <div class="row">
-            <table class="simple">
-              <thead>
-                <th width="20%">
-                  <div class="text-right small-font">
-                  Reason &#8658;
-                  </div>
-                  <div class="text-left small-font">
-                  <span>&#8659;</span><span>Statement</span>
-                  </div>
-                </th>
-                    <th class="no-wrap small-font text-center">At least 2 passing implementations</th>
-                </thead>
-              <tbody>
-              <tr class="at-risk">
-                <!--This is the name of the test-->
-                <td class="subtest">
-                    <a href="https://w3c.github.io/vc-data-model/#presentations-including-holder-claims:~:text&#x3D;When%20a%20self%2Dasserted%20verifiable%20credential%20is%20secured%20using%20the%20same%20mechanism%20as%20the%20verifiable%20presentation%2C%20the%20value%20of%20the%20issuer%20property%20of%20the%20verifiable%20credential%20MUST%20be%20identical%20to%20the%20holder%20property%20of%20the%20verifiable%20presentation.">When a self-asserted verifiable credential is secured using the same mechanism as the verifiable presentation, the value of the issuer property of the verifiable credential MUST be identical to the holder property of the verifiable presentation.</a>
-                </td>
-                <!--These contain if the test passed, failed, or was skipped-->
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
-                    <div class="relative-pos">
                     </div>
                   </td>
               </tr>
