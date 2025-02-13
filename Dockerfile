@@ -8,5 +8,4 @@ COPY reports/ ./reports
 
 RUN npm i
 RUN npm install --global serve
-RUN npm t
-CMD [ "serve", "-p", "8000", "reports/" ]
+CMD [ "npm", "t" ]
