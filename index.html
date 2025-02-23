@@ -185,7 +185,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>16 February 2025 at 5:11 am UTC</time>
+        These tests were run on <time>23 February 2025 at 5:12 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -1165,9 +1165,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid identifier.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.04-identifiers.js:43:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -2135,9 +2143,17 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC using &#x60;name&#x60; in a defined language.
+                    Actual message: &quot;Request to &quot;https://krakend-k8s-dev3.dev.dts-dsa.com/vcs/issuer/profiles/d4b42a1f-92ff-45f8-b81f-b24f3f3e37bc/v1.latest/credentials/issue&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.06-names-and-descriptions.js:54:9)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
