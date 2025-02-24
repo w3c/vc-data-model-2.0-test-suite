@@ -1,0 +1,93 @@
+name: Publish Test-Suite Image
+run-name: Publish Test-Suite ${{ inputs.tag || github.event.release.tag_name }} Image
+on:
+  release:
+    types: [published]
+
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Image tag"
+        required: true
+        type: string
+      platforms:
+        description: "Platforms - Comma separated list of the platforms to support."
+        required: true
+        default: linux/amd64
+        type: string
+      ref:
+        description: "Optional - The branch, tag or SHA to checkout."
+        required: false
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  PLATFORMS: ${{ inputs.platforms || 'linux/amd64,linux/arm64' }}
+
+jobs:
+  publish-image:
+    if: github.repository_owner == 'w3c'
+    strategy:
+      fail-fast: false
+
+    name: Publish Test-Suite Image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || '' }}
+
+      - name: Gather image info
+        id: info
+        run: |
+          echo "repo-owner=${GITHUB_REPOSITORY_OWNER,,}" >> $GITHUB_OUTPUT
+
+      - name: Cache Docker layers
+        uses: actions/cache@v4
+        with:
+          path: /tmp/.buildx-cache
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to the GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Image Metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ghcr.io/${{ steps.info.outputs.repo-owner }}/vc-data-model-2.0-test-suite
+          tags: |
+            type=raw,value=${{ inputs.tag || github.event.release.tag_name }}
+
+      - name: Build and Push Image to ghcr.io
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=local,src=/tmp/.buildx-cache
+          cache-to: type=local,dest=/tmp/.buildx-cache-new,mode=max
+          platforms: ${{ env.PLATFORMS }}
+
+      # Temp fix
+      # https://github.com/docker/build-push-action/issues/252
+      # https://github.com/moby/buildkit/issues/1896
+      - name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache
+          mv /tmp/.buildx-cache-new /tmp/.buildx-cache
