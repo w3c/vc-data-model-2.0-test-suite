@@ -16,12 +16,11 @@ specification.
 - [Background](#background)
 - [Install](#install)
 - [Setup](#setup)
-  - [Test Suite HTTP API](#test-suite-http-api)
 - [Usage](#usage)
   - [Testing Locally](#testing-locally)
   - [Allure Reporting](#allure-reporting)
 - [Implementation](#implementation)
-  - [VC-API](#vc-api)
+  - [Test Suite HTTP API](#test-suite-http-api)
   - [Enveloping Proof](#enveloping-proof)
 - [Contribute](#contribute)
 - [License](#license)
@@ -56,6 +55,120 @@ that any issuer endpoints used with this test suite also issue using
 be submitted for verification. Signed Verifiable Presentations from this suite
 will have a domain and challenge set. The domain should be the test repo, and
 the challenge is static.
+
+#### Required Contexts
+
+Implementations are expected to not error when any of the following context
+files are used in a verifiable credential or a verifiable presentation:
+
+- [VC 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
+- [VC Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
+
+## Usage
+
+To add your implementation to this test suite, add a test manifest describing
+your implementation to the
+[`w3c/vc-test-suite-implementations`](https://github.com/w3c/vc-test-suite-implementations)
+repo by following the
+[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
+instructions.
+
+All endpoints will need the tag `vc2.0`. A simplified manifest will roughly
+look like the following:
+
+```js
+{
+  "name": "My Company",
+  "implementation": "My implementation",
+  "issuers": [{
+    "id": "",
+    "endpoint": "https://issuer.mycompany.com/credentials/issue",
+    "tags": ["vc2.0"]
+  }],
+  "verifiers": [{
+    "id": "",
+    "endpoint": "https://verifier.mycompany.com/credentials/verify",
+    "tags": ["vc2.0"]
+  }],
+  "vpVerifiers": [{
+    "id": "",
+    "endpoint": "https://verifier.mycompany.com/presentations/verify",
+    "tags": ["vc2.0"]
+  }]
+}
+```
+
+The example above is for a set of unauthenticated endpoints. You can add
+[ZCAP](https://w3c-ccg.github.io/zcap-spec/)
+or [OAuth2 authentication](https://oauth.net/2/client-authentication/) to your endpoints.
+
+See
+[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
+for more information.
+
+### Testing Locally
+
+To test a single implementation or endpoint running locally, you can
+copy `localConfig.example.cjs` to `localConfig.cjs`
+in the root directory of the test suite.
+
+```bash
+cp localConfig.example.cjs localConfig.cjs
+```
+
+This file must be a CommonJS module that exports an object containing a
+`settings` object (for configuring the test suite code itself) and an
+`implementations` array (for configuring the implementation(s) to test against).
+
+The format of the object contained in the `implementations` array is
+identical to the one defined in
+[the **_Testing locally_** section of VC Test Suite Implementations](https://github.com/w3c/vc-test-suite-implementations?tab=readme-ov-file#testing-locally).
+The `implementations` array may contain more than one implementation object,
+enabling you to test multiple implementations in one run.
+
+```js
+// localConfig.cjs defines local implementations
+// Before running the tests, you can specify a BASE_URL, such as
+// BASE_URL=http://localhost:40443/zDdfsdfs npm test
+const baseUrl = process.env.BASE_URL || 'https://localhost:40443/id';
+module.exports = {
+  settings: {
+    enableInteropTests: false, // default
+    testAllImplementations: false // default
+  },
+  implementations: [{
+    name: 'My Company',
+    implementation: 'My Implementation Name',
+    issuers: [{
+      id: 'did:myMethod:implementation:issuer:id',
+      endpoint: `${baseUrl}/credentials/issue`
+    }],
+    verifiers: [{
+      id: 'did:myMethod:implementation:verifier:id',
+      endpoint: `${baseUrl}/credentials/verify`
+    }]
+  }];
+```
+
+Then...
+
+```sh
+npm test
+```
+
+### Allure Reporting
+It's also possible to generate local allure reports for analyzing and debugging results. [Allure](https://allurereport.org/) is a language agnostic reporting framework which enables useful features for developers and test-suite designers.
+
+To run the tests and browse the report, use the following commands:
+```bash
+# Running the tests
+npx mocha tests/
+
+# Running the reporting server
+allure serve allure-results
+```
+
+## Implementation
 
 ### Test Suite HTTP API
 
@@ -259,118 +372,6 @@ HTTP/1.1 200 OK
 
 The presentation verifier endpoint is based on the
 [VC API Verify Presentation](https://w3c-ccg.github.io/vc-api/#verify-presentation) endpoint.
-
-#### Required Contexts
-
-Implementations are expected to not error when any of the following context
-files are used in a verifiable credential or a verifiable presentation:
-
-- [VC 2.0 Context - https://www.w3.org/ns/credentials/v2](https://www.w3.org/ns/credentials/v2)
-- [VC Examples Context - https://www.w3.org/ns/credentials/examples/v2](https://www.w3.org/ns/credentials/examples/v2)
-
-## Usage
-
-```sh
-npm test
-```
-
-### Testing Locally
-
-To test a single implementation or endpoint running locally, you can
-copy `localConfig.example.cjs` to `localConfig.cjs`
-in the root directory of the test suite.
-
-```bash
-cp localConfig.example.cjs localConfig.cjs
-```
-
-This file must be a CommonJS module that exports an object containing a
-`settings` object (for configuring the test suite code itself) and an
-`implementations` array (for configuring the implementation(s) to test against).
-
-The format of the object contained in the `implementations` array is
-identical to the one defined in
-[the **_Testing locally_** section of VC Test Suite Implementations](https://github.com/w3c/vc-test-suite-implementations?tab=readme-ov-file#testing-locally).
-The `implementations` array may contain more than one implementation object,
-enabling you to test multiple implementations in one run.
-
-```js
-// localConfig.cjs defines local implementations
-// Before running the tests, you can specify a BASE_URL, such as
-// BASE_URL=http://localhost:40443/zDdfsdfs npm test
-const baseUrl = process.env.BASE_URL || 'https://localhost:40443/id';
-module.exports = {
-  settings: {
-    enableInteropTests: false, // default
-    testAllImplementations: false // default
-  },
-  implementations: [{
-    name: 'My Company',
-    implementation: 'My Implementation Name',
-    issuers: [{
-      id: 'did:myMethod:implementation:issuer:id',
-      endpoint: `${baseUrl}/credentials/issue`
-    }],
-    verifiers: [{
-      id: 'did:myMethod:implementation:verifier:id',
-      endpoint: `${baseUrl}/credentials/verify`
-    }]
-  }];
-```
-
-### Allure Reporting
-It's also possible to generate local allure reports for analyzing and debugging results. [Allure](https://allurereport.org/) is a language agnostic reporting framework which enables useful features for developers and test-suite designers.
-
-To run the tests and browse the report, use the following commands:
-```bash
-# Running the tests
-npx mocha tests/
-
-# Running the reporting server
-allure serve allure-results
-```
-
-## Implementation
-
-To add your implementation to this test suite, add a test manifest describing
-your implementation to the
-[`w3c/vc-test-suite-implementations`](https://github.com/w3c/vc-test-suite-implementations)
-repo by following the
-[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
-instructions.
-
-All endpoints will need the tag `vc2.0`. A simplified manifest will roughly
-look like the following:
-
-```js
-{
-  "name": "My Company",
-  "implementation": "My implementation",
-  "issuers": [{
-    "id": "",
-    "endpoint": "https://issuer.mycompany.com/credentials/issue",
-    "tags": ["vc2.0"]
-  }],
-  "verifiers": [{
-    "id": "",
-    "endpoint": "https://verifier.mycompany.com/credentials/verify",
-    "tags": ["vc2.0"]
-  }],
-  "vpVerifiers": [{
-    "id": "",
-    "endpoint": "https://verifier.mycompany.com/presentations/verify",
-    "tags": ["vc2.0"]
-  }]
-}
-```
-
-The example above is for a set of unauthenticated endpoints. You can add
-[ZCAP](https://w3c-ccg.github.io/zcap-spec/)
-or [OAuth2 authentication](https://oauth.net/2/client-authentication/) to your endpoints.
-
-See
-[Adding a new implementation](https://github.com/w3c/vc-test-suite-implementations/tree/main?tab=readme-ov-file#adding-a-new-implementation)
-for more information.
 
 ### Enveloping Proof
 Implementers who rely on an enveloping proof securing mechanism can add the `EnvelopingProof` tag to their implementation registration.
