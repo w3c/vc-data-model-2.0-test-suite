@@ -26,6 +26,6 @@ export const envelopedPresentation = {
 export const relatedResource = {
   id: 'https://www.w3.org/ns/credentials/v2',
   mediaType: 'application/ld+json',
-  digestSRI: 'sha384-NSOcNpmdIVUxIJGvGUoe22FjTWrXiaXlsZ8q6912LdnR3KraQO2n75Ica4wK4Qeg',
+  digestSRI: 'sha384-l/HrjlBCNWyAX91hr6LFV2Y3heB5Tcr6IeE4/Tje8YyzYBM8IhqjHWiWpr8+ZbYU',
   digestMultibase: 'uJKGMkOmFbVJhEfKTduMC2XCyvRAYLjOVmZWwIH1wQ7k',
 };
