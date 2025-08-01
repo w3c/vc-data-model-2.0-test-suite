@@ -26,7 +26,8 @@ export class TestEndpoints {
   async issue(credential) {
     const {issuer} = this;
     const issueBody = createRequestBody({issuer, vc: credential});
-    return post(issuer, issueBody);
+    const response = await post(issuer, issueBody);
+    return response?.verifiableCredential || response;
   }
   // FIXME implement createVp for implementation endpoints in the future
   // @see https://w3c-ccg.github.io/vc-api/#create-presentation
