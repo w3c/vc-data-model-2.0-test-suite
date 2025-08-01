@@ -27,5 +27,5 @@ export const relatedResource = {
   id: 'https://www.w3.org/ns/credentials/v2',
   mediaType: 'application/ld+json',
   digestSRI: 'sha384-l/HrjlBCNWyAX91hr6LFV2Y3heB5Tcr6IeE4/Tje8YyzYBM8IhqjHWiWpr8+ZbYU',
-  digestMultibase: 'uJKGMkOmFbVJhEfKTduMC2XCyvRAYLjOVmZWwIH1wQ7k',
+  digestMultibase: 'uEiBZlVztZpfWHgPyslVv6-UwirFoQoRvW1htfx963sknNA',
 };
