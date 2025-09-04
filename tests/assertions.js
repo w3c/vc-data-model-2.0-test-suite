@@ -75,7 +75,6 @@ export function shouldBeIssuedVc({issuedVc}) {
  * @param {string} options.reason - The reason the negativeTest should fail.
  *
  * @returns {Promise<{error, result}>} Returns the result and error.
- *
  */
 export async function shouldRejectEitherIssueOrVerify({
   endpoints,

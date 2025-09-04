@@ -64,7 +64,7 @@ describe('Advanced Concepts', function() {
         // digestSRI positive test
         positiveFixture.relatedResource = {
           id: relatedResource.id,
-          digestSRI: relatedResource.digestSRI,
+          digestSRI: relatedResource.digestSRI
         };
         await assert.doesNotReject(endpoints.issue(positiveFixture),
           'Failed to accept a VC with valid relatedResource objects.');
@@ -72,7 +72,7 @@ describe('Advanced Concepts', function() {
         // digestMultibase positive test
         positiveFixture.relatedResource = {
           id: relatedResource.id,
-          digestMultibase: relatedResource.digestMultibase,
+          digestMultibase: relatedResource.digestMultibase
         };
         await assert.doesNotReject(endpoints.issue(positiveFixture),
           'Failed to accept a VC with valid relatedResource objects.');
@@ -81,7 +81,7 @@ describe('Advanced Concepts', function() {
         positiveFixture.relatedResource = [{
           id: relatedResource.id,
           mediaType: relatedResource.mediaType,
-          digestSRI: relatedResource.digestSRI,
+          digestSRI: relatedResource.digestSRI
         }];
         await assert.doesNotReject(endpoints.issue(positiveFixture),
           'Failed to accept a VC with valid relatedResource mediaType.');
@@ -103,7 +103,7 @@ describe('Advanced Concepts', function() {
 
         // Missing ID negative test
         negativeFixture.relatedResource = [{
-          digestMultibase: relatedResource.digestMultibase,
+          digestMultibase: relatedResource.digestMultibase
         }];
         await assert.rejects(endpoints.issue(negativeFixture),
           'Failed to reject a VC with a relatedResource with no `id` field.');
@@ -117,10 +117,10 @@ describe('Advanced Concepts', function() {
         // Duplicate ID negative test
         negativeFixture.relatedResource = [{
           id: relatedResource.id,
-          digestSRI: relatedResource.digestSRI,
+          digestSRI: relatedResource.digestSRI
         }, {
           id: relatedResource.id,
-          digestMultibase: relatedResource.digestMultibase,
+          digestMultibase: relatedResource.digestMultibase
         }];
         await assert.rejects(endpoints.issue(negativeFixture),
           'Failed to reject a VC with a relatedResource with ' +

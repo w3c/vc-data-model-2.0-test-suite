@@ -80,7 +80,7 @@ describe('Names and Descriptions', function() {
           `${fixturePath}/credential-description-language-en-ok.json`)),
         'Failed to accept a VC using `description` in a defined language.');
         await assert.doesNotReject(endpoints.issue(require(
-          // eslint-disable-next-line max-len
+          /* eslint-disable @stylistic/max-len */
           `${fixturePath}/credential-description-language-direction-en-ok.json`)),
         'Failed to accept a VC using `description` with language & direction ' +
         'expressed.');
@@ -89,7 +89,6 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC with `description` in multiple languages.');
         await assert.rejects(endpoints.issue(require(
           `${fixturePath}/credential-description-extra-prop-en-fail.json`)),
-
         'Failed to reject a VC with `description` containing extra ' +
         'properties.');
       });
@@ -136,7 +135,6 @@ describe('Names and Descriptions', function() {
         'Failed to accept a VC using `issuer.description` in a defined ' +
         'language.');
         await assert.doesNotReject(endpoints.issue(require(
-          // eslint-disable-next-line max-len
           `${fixturePath}/issuer-description-language-direction-en-ok.json`)),
         'Failed to accept a VC using `issuer.description` with language & ' +
         'direction expressed.');

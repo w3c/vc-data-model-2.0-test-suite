@@ -18,7 +18,7 @@ export async function makeZcapRequest(settings, body) {
   const zcapClient = new ZcapClient({
     SuiteClass: Ed25519Signature2020,
     invocationSigner: verificationKeyPair.signer(),
-    delegationSigner: verificationKeyPair.signer(),
+    delegationSigner: verificationKeyPair.signer()
   });
   const response = await zcapClient.write({
     url: settings.endpoint,
