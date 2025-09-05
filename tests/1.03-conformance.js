@@ -8,7 +8,7 @@ import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import {checkRequiredProperties, shouldBeSecured} from './assertions.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
 

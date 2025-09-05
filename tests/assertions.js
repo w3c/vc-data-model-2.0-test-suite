@@ -5,7 +5,7 @@
  */
 import assert from 'node:assert/strict';
 import chai from 'chai';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 import {createTimeStamp} from './data-generator.js';
 import {extractIfEnveloped} from './helpers.js';
 import {TestEndpoints} from './TestEndpoints.js';
