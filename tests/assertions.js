@@ -220,5 +220,6 @@ export async function injectOrReject(endpoints, inputFile) {
   } catch(err) {
     await assert.rejects(endpoints.issue(require(inputFile)),
       'Failed to reject a VC without a missing or incomplete `@context`.');
+    console.error(err);
   }
 }
