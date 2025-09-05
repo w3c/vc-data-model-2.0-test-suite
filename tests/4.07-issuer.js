@@ -33,7 +33,7 @@ describe('Issuer', function() {
           this.test.link = `https://w3c.github.io/vc-data-model/#issuer:~:text=A%20verifiable%20credential%20MUST%20have%20an%20issuer%20property.`;
           const vc = await endpoints.issue(
             require('./input/credential-ok.json'));
-          vc.hasOwnProperty('issuer');
+          vc.should.have.property('issuer');
         });
       it('The value of the issuer property MUST be either a URL or an ' +
         'object containing an id property whose value is a URL; ' +
