@@ -22,7 +22,7 @@ const {match} = filterByTag({tags: [tag]});
 
 // 4.9 Validity Period https://w3c.github.io/vc-data-model/#validity-period
 describe('Validity Period', function() {
-  setupMatrix.call(this, match);
+  setupMatrix.call(this, match, 'Issuer');
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 

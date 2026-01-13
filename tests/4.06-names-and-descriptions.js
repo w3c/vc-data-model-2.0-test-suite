@@ -32,7 +32,7 @@ const {match} = filterByTag({tags: [tag]});
 // and test for conformat member properties (`@language` and `@direction`) and
 // fail on the existence of any other properties.
 describe('Names and Descriptions', function() {
-  setupMatrix.call(this, match);
+  setupMatrix.call(this, match, 'Issuer');
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 

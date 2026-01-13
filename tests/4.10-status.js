@@ -21,7 +21,7 @@ const {match} = filterByTag({tags: [tag]});
 
 // 4.10 Status https://w3c.github.io/vc-data-model/#status
 describe('Status', function() {
-  setupMatrix.call(this, match);
+  setupMatrix.call(this, match, 'Issuer');
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 

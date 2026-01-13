@@ -22,7 +22,7 @@ const {match} = filterByTag({tags: [tag]});
 
 // 5. Advanced Concepts https://w3c.github.io/vc-data-model/#advanced-concepts
 describe('Advanced Concepts', function() {
-  setupMatrix.call(this, match);
+  setupMatrix.call(this, match, 'Issuer');
   let positiveFixture;
   let negativeFixture;
   for(const [name, implementation] of match) {

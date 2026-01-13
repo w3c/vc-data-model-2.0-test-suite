@@ -21,7 +21,7 @@ const {match} = filterByTag({tags: [tag]});
 
 // 4.8 Credential Subject https://w3c.github.io/vc-data-model/#credential-subject
 describe('Credential Subject', function() {
-  setupMatrix.call(this, match);
+  setupMatrix.call(this, match, 'Issuer');
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 

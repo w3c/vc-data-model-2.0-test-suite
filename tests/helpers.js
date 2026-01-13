@@ -1,14 +1,14 @@
 import {challenge} from './fixtures.js';
 import {makeZcapRequest} from './zcapHandler.js';
 
-export function setupMatrix(match) {
+export function setupMatrix(match, columnLabel) {
   // this will tell the report
   // to make an interop matrix with this suite
   this.matrix = true;
   this.report = true;
   this.implemented = [...match.keys()];
   this.rowLabel = 'Test Name';
-  this.columnLabel = 'Implementer';
+  this.columnLabel = columnLabel || 'Implementation';
 }
 export function addPerTestMetadata() {
   // append test meta data to the it/test this.

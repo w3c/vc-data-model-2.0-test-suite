@@ -23,7 +23,7 @@ const {match} = filterByTag({tags: [tag]});
 
 // 4.13 Verifiable Presentations https://w3c.github.io/vc-data-model/#verifiable-presentations
 describe('Verifiable Presentations', function() {
-  setupMatrix.call(this, match);
+  setupMatrix.call(this, match, 'Verifier');
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 

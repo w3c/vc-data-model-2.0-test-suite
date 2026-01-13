@@ -21,7 +21,7 @@ const {match} = filterByTag({tags: [tag]});
 
 // 4.4 Identifiers https://w3c.github.io/vc-data-model/#identifiers
 describe('Identifiers', function() {
-  setupMatrix.call(this, match);
+  setupMatrix.call(this, match, 'Issuer');
   for(const [name, implementation] of match) {
     const endpoints = new TestEndpoints({implementation, tag});
 
