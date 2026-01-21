@@ -9,7 +9,7 @@ import {addPerTestMetadata, setupMatrix}
 import assert from 'node:assert/strict';
 import chai from 'chai';
 import {createLocalVp} from './data-generator.js';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {TestEndpoints} from './TestEndpoints.js';
 

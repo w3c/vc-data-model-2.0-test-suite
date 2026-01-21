@@ -42,7 +42,7 @@ export function extractIfEnveloped(input) {
 
 export const secureCredential = async ({
   issuer,
-  credential,
+  credential
 }) => {
   const {settings: {id: issuerId, options = {}}} = issuer;
   credential.issuer = issuerId;
@@ -62,7 +62,7 @@ export const secureCredential = async ({
 
 export const verifyCredential = async ({
   verifier,
-  verifiableCredential,
+  verifiableCredential
 }) => {
   const {settings: {options = {}}} = verifier;
   const body = {verifiableCredential, options};
@@ -81,7 +81,7 @@ export const verifyCredential = async ({
 
 export const verifyPresentation = async ({
   vpVerifier,
-  verifiablePresentation,
+  verifiablePresentation
 }) => {
   const {settings: {options = {}}} = vpVerifier;
   options.challenge = challenge;

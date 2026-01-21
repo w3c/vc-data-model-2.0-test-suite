@@ -8,7 +8,7 @@ import {addPerTestMetadata, setupMatrix} from './helpers.js';
 import {createInvalidVp, createLocalVp} from './data-generator.js';
 import assert from 'node:assert/strict';
 import chai from 'chai';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 import {filterByTag} from 'vc-test-suite-implementations';
 import {injectOrReject} from './assertions.js';
 import {klona} from 'klona';

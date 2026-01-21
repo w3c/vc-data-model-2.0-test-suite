@@ -32,7 +32,7 @@ export const createVerifyRequestBody = ({vc}) => {
   const body = {
     verifiableCredential: vc,
     options: {
-      checks: ['proof'],
+      checks: ['proof']
     }
   };
   return body;

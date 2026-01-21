@@ -57,7 +57,7 @@ async function getKeys() {
     controller: 'did:key:z6MkpJySvETLnxhQG9DzEdmKJtysBDjuuTeDfUj1uNNCUqcj',
     publicKeyMultibase,
     secretKeyMultibase: 'zrv1a6V2qqSGkBz7QPw4yJedKc8X9dEdug7c3MEzNUDVEmkyV' +
-      'cXtTWNLQLArgKXzN7LbGMTVjqE2CbdrqpnxqtxmY1M',
+      'cXtTWNLQLArgKXzN7LbGMTVjqE2CbdrqpnxqtxmY1M'
   });
   const signer = verificationKeyPair.signer();
   signer.id = `did:key:${publicKeyMultibase}#${publicKeyMultibase}`;

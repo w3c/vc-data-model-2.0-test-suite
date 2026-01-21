@@ -9,7 +9,7 @@ import {
   createRequestBody,
   createVerifyRequestBody
 } from './mock.data.js';
-import http from 'http';
+import http from 'node:http';
 import receiveJson from './receive-json.js';
 
 export class TestEndpoints {

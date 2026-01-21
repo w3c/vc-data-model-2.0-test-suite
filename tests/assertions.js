@@ -5,7 +5,7 @@
  */
 import assert from 'node:assert/strict';
 import chai from 'chai';
-import {createRequire} from 'module';
+import {createRequire} from 'node:module';
 import {createTimeStamp} from './data-generator.js';
 import {extractIfEnveloped} from './helpers.js';
 import {TestEndpoints} from './TestEndpoints.js';
@@ -75,7 +75,6 @@ export function shouldBeIssuedVc({issuedVc}) {
  * @param {string} options.reason - The reason the negativeTest should fail.
  *
  * @returns {Promise<{error, result}>} Returns the result and error.
- *
  */
 export async function shouldRejectEitherIssueOrVerify({
   endpoints,
@@ -221,5 +220,6 @@ export async function injectOrReject(endpoints, inputFile) {
   } catch(err) {
     await assert.rejects(endpoints.issue(require(inputFile)),
       'Failed to reject a VC without a missing or incomplete `@context`.');
+    console.error(err);
   }
 }
