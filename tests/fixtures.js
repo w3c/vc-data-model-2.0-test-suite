@@ -23,9 +23,15 @@ export const envelopedPresentation = {
   type: 'EnvelopedVerifiablePresentation',
   id: `data:application/vp+jwt,${vp_jwt}`
 };
+// Pre–Feb 2025 digests (July 2024 context bytes); stale after w3c/vc-data-model context
+// updates — https://github.com/w3c/vc-data-model-2.0-test-suite/issues/166
+export const relatedResourceDigestsJuly2024 = {
+  digestSRI: 'sha384-NSOcNpmdIVUxIJGvGUoe22FjTWrXiaXlsZ8q6912LdnR3KraQO2n75Ica4wK4Qeg',
+  digestMultibase: 'uJKGMkOmFbVJhEfKTduMC2XCyvRAYLjOVmZWwIH1wQ7k',
+};
 export const relatedResource = {
   id: 'https://www.w3.org/ns/credentials/v2',
   mediaType: 'application/ld+json',
-  digestSRI: 'sha384-NSOcNpmdIVUxIJGvGUoe22FjTWrXiaXlsZ8q6912LdnR3KraQO2n75Ica4wK4Qeg',
-  digestMultibase: 'uJKGMkOmFbVJhEfKTduMC2XCyvRAYLjOVmZWwIH1wQ7k',
+  digestSRI: 'sha384-l/HrjlBCNWyAX91hr6LFV2Y3heB5Tcr6IeE4/Tje8YyzYBM8IhqjHWiWpr8+ZbYU',
+  digestMultibase: 'uWZVc7WaX1h4D8rJVb-vlMIqxaEKEb1tYbX8fet7JJzQ',
 };
