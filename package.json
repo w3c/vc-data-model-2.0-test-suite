@@ -36,7 +36,8 @@
     "undici": "^6.24.1",
     "@digitalbazaar/zcap": "^9.0.1",
     "@digitalbazaar/http-client": "^4.3.0",
-    "jsonld": "^8.3.3"
+    "jsonld": "^8.3.3",
+    "uuid": "^11.1.1"
   },
   "bugs": {
     "url": "https://github.com/w3c/vc-data-model-2.0-test-suite/issues"
