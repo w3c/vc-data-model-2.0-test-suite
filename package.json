@@ -28,7 +28,7 @@
   },
   "license": "(LicenseRef-w3c-3-clause-bsd-license-2008 OR LicenseRef-w3c-test-suite-license-2023)",
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "overrides": {
     "serialize-javascript": "^7.0.5",
