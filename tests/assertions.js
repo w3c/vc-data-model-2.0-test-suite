@@ -186,7 +186,7 @@ export function shouldHaveEnvelopedProof(name, issuedVc) {
   issuedVc.should.have.property('id').that.does
     .include('data:');
   const credential = extractIfEnveloped(issuedVc);
-  credential.should.exist();
+  should.exist(credential);
 }
 
 export function checkRequiredProperties(name, issuedVc) {
