@@ -185,7 +185,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>19 July 2026 at 6:12 am UTC</time>
+        These tests were run on <time>26 July 2026 at 6:14 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -2579,12 +2579,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC with a &#x60;name&#x60; as a string.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a &#x60;name&#x60; as a string.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.06-names-and-descriptions.js:48:9)</pre>
+                        <summary>Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.06-names-and-descriptions.js)</summary>
+                        <pre>Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.06-names-and-descriptions.js)
+                        at listOnTimeout (node:internal/timers:581:17)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -2973,9 +2971,16 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.</summary>
+                        <pre>TimeoutError: Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.
+                        at Timeout.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/utils/timeout.js:9:20)
+                        at listOnTimeout (node:internal/timers:581:17)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="failed not-optional highlight-on-hover text-center">
@@ -4089,12 +4094,10 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Got unwanted rejection: Failed to accept a VC with a valid &#x60;credentialStatus&#x60;.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;</summary>
-                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with a valid &#x60;credentialStatus&#x60;.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;
-                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.10-status.js:79:9)</pre>
+                        <summary>Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.10-status.js)</summary>
+                        <pre>Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.10-status.js)
+                        at listOnTimeout (node:internal/timers:581:17)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
                       </details>
                     </div>
                   </td>
@@ -4304,9 +4307,15 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.11-data-schemas.js)</summary>
+                        <pre>Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.11-data-schemas.js)
+                        at listOnTimeout (node:internal/timers:581:17)
+                        at process.processTimers (node:internal/timers:519:7)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -4508,9 +4517,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Expected verifier OpSecId to verify a VP with a valid id.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                    Actual message: &quot;Request to &quot;https://vc.opsec.id/presentations/verify&quot; timed out.&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Expected verifier OpSecId to verify a VP with a valid id.
-                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
+                    Actual message: &quot;Request to &quot;https://vc.opsec.id/presentations/verify&quot; timed out.&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.13-verifiable-presentations.js:39:9)</pre>
                       </details>
@@ -6016,10 +6025,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js)</summary>
-                        <pre>Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js)
-                        at listOnTimeout (node:internal/timers:581:17)
-                        at process.processTimers (node:internal/timers:519:7)</pre>
+                        <summary>Got unwanted rejection.
+                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection.
+                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/5-advanced-concepts.js:210:9)</pre>
                       </details>
                     </div>
                   </td>
