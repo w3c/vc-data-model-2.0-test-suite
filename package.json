@@ -8,7 +8,7 @@
   },
   "type": "module",
   "scripts": {
-    "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options abstract=\"$PWD/abstract.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/respecConfig.json\",suiteLog='./suite.log',templateData=\"$PWD/reports/index.json\",title=\"VC v2.0 Interoperability Report\" --timeout 15000 --preserve-symlinks",
+    "test": "mocha tests/ --reporter @digitalbazaar/mocha-w3c-interop-reporter --reporter-options abstract=\"$PWD/config/abstract.hbs\",reportDir=\"$PWD/reports\",respec=\"$PWD/config/respecConfig.json\",suiteLog='./suite.log',templateData=\"$PWD/reports/index.json\",title=\"VC v2.0 Interoperability Report\" --timeout 15000 --preserve-symlinks",
     "lint": "eslint ."
   },
   "repository": {

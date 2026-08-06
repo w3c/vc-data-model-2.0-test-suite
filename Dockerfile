@@ -2,7 +2,8 @@ FROM node:18
 
 WORKDIR /test-suite
 
-COPY package.json respecConfig.json abstract.hbs ./
+COPY package.json ./
+COPY config/ ./config
 COPY tests/ ./tests
 COPY reports/ ./reports
 
