@@ -66,6 +66,11 @@ files are used in a verifiable credential or a verifiable presentation:
 
 ## Usage
 
+Tests always run against the tip of `vc-test-suite-implementations`'s
+`main` branch (see `pretest` in `package.json`); the commit pinned for it
+in `package-lock.json` is a stale snapshot, not what tests actually run
+against.
+
 To add your implementation to this test suite, add a test manifest describing
 your implementation to the
 [`w3c/vc-test-suite-implementations`](https://github.com/w3c/vc-test-suite-implementations)
