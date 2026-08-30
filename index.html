@@ -185,7 +185,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>27 August 2026 at 9:27 pm UTC</time>
+        These tests were run on <time>30 August 2026 at 5:25 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -819,16 +819,9 @@
                     <div class="relative-pos">
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Request to &quot;https://w3ctest.dev.trustvc.tech/credentials/imda/issue&quot; timed out.</summary>
-                        <pre>TimeoutError: Request to &quot;https://w3ctest.dev.trustvc.tech/credentials/imda/issue&quot; timed out.
-                        at Timeout.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/node_modules/ky/distribution/utils/timeout.js:9:20)
-                        at listOnTimeout (node:internal/timers:635:17)
-                        at process.processTimers (node:internal/timers:571:7)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -894,9 +887,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: verifier OpSecId rejected VP with valid @context.
-                    Actual message: &quot;Request failed with status code 502 Bad Gateway: POST https://vc.opsec.id/presentations/verify&quot;</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: verifier OpSecId rejected VP with valid @context.
-                    Actual message: &quot;Request failed with status code 502 Bad Gateway: POST https://vc.opsec.id/presentations/verify&quot;
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.03-contexts.js:57:11)</pre>
                       </details>
@@ -3282,10 +3275,12 @@
                     <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
                       <details class="err hide">
-                        <summary>Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.08-credential-subject.js)</summary>
-                        <pre>Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.08-credential-subject.js)
-                        at listOnTimeout (node:internal/timers:635:17)
-                        at process.processTimers (node:internal/timers:571:7)</pre>
+                        <summary>Got unwanted rejection: Failed to accept a VC with multiple &#x60;credentialSubject&#x60;s.
+                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;</summary>
+                        <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to accept a VC with multiple &#x60;credentialSubject&#x60;s.
+                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/issue&quot; timed out.&quot;
+                        at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+                        at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.08-credential-subject.js:49:9)</pre>
                       </details>
                     </div>
                   </td>
@@ -4312,15 +4307,9 @@
                       </details>
                     </div>
                   </td>
-                  <td class="failed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">❌</div>
+                  <td class="passed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">✓</div>
                     <div class="relative-pos">
-                      <details class="err hide">
-                        <summary>Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.11-data-schemas.js)</summary>
-                        <pre>Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.11-data-schemas.js)
-                        at listOnTimeout (node:internal/timers:635:17)
-                        at process.processTimers (node:internal/timers:571:7)</pre>
-                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
