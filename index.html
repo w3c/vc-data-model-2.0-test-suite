@@ -185,7 +185,7 @@
     <section class="informative" id="conformance-testing-results">
       <h2> Conformance Testing Results </h2>
       <p>
-        These tests were run on <time>1 November 2026 at 5:23 am UTC</time>
+        These tests were run on <time>8 November 2026 at 5:23 am UTC</time>
       </p>
       <section class="informative" id="Key">
         <h3>Key</h3>
@@ -612,9 +612,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to verify credential.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/verify&quot; timed out.&quot;</summary>
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error: POST https://vc.opsec.id/credentials/verify&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to verify credential.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/credentials/verify&quot; timed out.&quot;
+                    Actual message: &quot;Request failed with status code 500 Internal Server Error: POST https://vc.opsec.id/credentials/verify&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/1.03-conformance.js:70:9)</pre>
                       </details>
@@ -699,9 +699,15 @@
                       </details>
                     </div>
                   </td>
-                  <td class="passed not-optional highlight-on-hover text-center">
-                    <div class= "highlight-on-hover">✓</div>
+                  <td class="failed not-optional highlight-on-hover text-center">
+                    <div class= "highlight-on-hover">❌</div>
                     <div class="relative-pos">
+                      <details class="err hide">
+                        <summary>Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/1.03-conformance.js)</summary>
+                        <pre>Error: Timeout of 15000ms exceeded. For async tests and hooks, ensure &quot;done()&quot; is called; if returning a Promise, ensure it resolves. (/home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/1.03-conformance.js)
+                        at listOnTimeout (node:internal/timers:685:17)
+                        at process.processTimers (node:internal/timers:618:7)</pre>
+                      </details>
                     </div>
                   </td>
                   <td class="passed not-optional highlight-on-hover text-center">
@@ -1373,9 +1379,9 @@
                     <div class="relative-pos">
                       <details class="err hide">
                         <summary>Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/presentations/verify&quot; timed out.&quot;</summary>
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;</summary>
                         <pre>AssertionError [ERR_ASSERTION]: Got unwanted rejection: Failed to support multiple &#x60;@context&#x60; URLs in a VP.
-                    Actual message: &quot;Request to &quot;https://vc.opsec.id/presentations/verify&quot; timed out.&quot;
+                    Actual message: &quot;Request failed with status code 400 Bad Request: POST https://vc.opsec.id/presentations/verify&quot;
                         at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
                         at async Context.&lt;anonymous&gt; (file:///home/runner/work/vc-data-model-2.0-test-suite/vc-data-model-2.0-test-suite/tests/4.03-contexts.js:132:9)</pre>
                       </details>
